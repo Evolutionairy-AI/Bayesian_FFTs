@@ -1,0 +1,252 @@
+{
+  "files_hashed": 161,
+  "datasets": [
+    {
+      "code": "BANK",
+      "raw_rows": 50,
+      "woike_n": 50,
+      "n_status": "exact",
+      "split_status": "exact",
+      "verified": true
+    },
+    {
+      "code": "SOLV",
+      "raw_rows": 52,
+      "woike_n": 52,
+      "n_status": "exact",
+      "split_status": "exact",
+      "verified": true
+    },
+    {
+      "code": "ECHO",
+      "raw_rows": 132,
+      "woike_n": 62,
+      "n_status": "explained",
+      "split_status": "exact_after_reduction",
+      "verified": true
+    },
+    {
+      "code": "POST",
+      "raw_rows": 90,
+      "woike_n": 86,
+      "n_status": "explained",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "BWAY",
+      "raw_rows": 95,
+      "woike_n": 89,
+      "n_status": "explained",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "CRED",
+      "raw_rows": 100,
+      "woike_n": 100,
+      "n_status": "exact",
+      "split_status": "exact",
+      "verified": true
+    },
+    {
+      "code": "ZOO",
+      "raw_rows": 101,
+      "woike_n": 101,
+      "n_status": "exact",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "IRIS",
+      "raw_rows": 150,
+      "woike_n": 150,
+      "n_status": "exact",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "HEPA",
+      "raw_rows": 155,
+      "woike_n": 153,
+      "n_status": "explained",
+      "split_status": "exact_after_reduction",
+      "verified": true
+    },
+    {
+      "code": "STRK",
+      "raw_rows": 163,
+      "woike_n": 163,
+      "n_status": "exact",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "WINE",
+      "raw_rows": 178,
+      "woike_n": 178,
+      "n_status": "exact",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "CYY",
+      "raw_rows": 189,
+      "woike_n": 189,
+      "n_status": "exact",
+      "split_status": "exact",
+      "verified": true
+    },
+    {
+      "code": "GLAS",
+      "raw_rows": 214,
+      "woike_n": 214,
+      "n_status": "exact",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "HORS",
+      "raw_rows": 368,
+      "woike_n": 218,
+      "n_status": "unexplained",
+      "split_status": "not_reproduced",
+      "verified": true
+    },
+    {
+      "code": "SPCT",
+      "raw_rows": 267,
+      "woike_n": 267,
+      "n_status": "exact",
+      "split_status": "exact",
+      "verified": true
+    },
+    {
+      "code": "HUNG",
+      "raw_rows": 294,
+      "woike_n": 294,
+      "n_status": "exact",
+      "split_status": "exact",
+      "verified": true
+    },
+    {
+      "code": "CLEV",
+      "raw_rows": 303,
+      "woike_n": 297,
+      "n_status": "explained",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "ALCO",
+      "raw_rows": 345,
+      "woike_n": 345,
+      "n_status": "exact",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "IONO",
+      "raw_rows": 351,
+      "woike_n": 351,
+      "n_status": "exact",
+      "split_status": "exact",
+      "verified": true
+    },
+    {
+      "code": "TOUR",
+      "raw_rows": 412,
+      "woike_n": 365,
+      "n_status": "explained",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "VOTE",
+      "raw_rows": 435,
+      "woike_n": 402,
+      "n_status": "unexplained",
+      "split_status": "not_reproduced",
+      "verified": true
+    },
+    {
+      "code": "EDUC",
+      "raw_rows": 500,
+      "woike_n": 435,
+      "n_status": "explained",
+      "split_status": "exact_after_reduction",
+      "verified": true
+    },
+    {
+      "code": "CARD",
+      "raw_rows": 558,
+      "woike_n": 558,
+      "n_status": "exact",
+      "split_status": "exact",
+      "verified": true
+    },
+    {
+      "code": "FOOT",
+      "raw_rows": 672,
+      "woike_n": 672,
+      "n_status": "exact",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "BCW",
+      "raw_rows": 699,
+      "woike_n": 683,
+      "n_status": "explained",
+      "split_status": "exact_after_reduction",
+      "verified": true
+    },
+    {
+      "code": "PIMA",
+      "raw_rows": 768,
+      "woike_n": 786,
+      "n_status": "explained",
+      "split_status": "exact",
+      "verified": true
+    },
+    {
+      "code": "AUTH",
+      "raw_rows": 841,
+      "woike_n": 841,
+      "n_status": "exact",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "HOF",
+      "raw_rows": 1340,
+      "woike_n": 1320,
+      "n_status": "explained",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "YEAS",
+      "raw_rows": 1484,
+      "woike_n": 1484,
+      "n_status": "exact",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    },
+    {
+      "code": "SCOT",
+      "raw_rows": 4052,
+      "woike_n": 4052,
+      "n_status": "exact",
+      "split_status": "reproduced_by_rule",
+      "verified": true
+    }
+  ],
+  "n_status_tally": {
+    "exact": 18,
+    "explained": 10,
+    "unexplained": 2
+  },
+  "problems": [],
+  "result": "PASS"
+}

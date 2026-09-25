@@ -1,0 +1,87 @@
+BANK: Ak=98.0 kmax=2 CV spine=86.2 full=86.6 margin=7.0
+SOLV: Ak=92.3 kmax=1 CV spine=75.2 full=80.4 margin=5.0
+ECHO: Ak=85.5 kmax=2 CV spine=73.4 full=75.2 margin=-1.0
+POST: Ak=95.3 kmax=1 CV spine=72.0 full=69.9 margin=-1.0
+BWAY: Ak=74.2 kmax=1 CV spine=67.6 full=77.4 margin=-4.0
+CRED: Ak=69.0 kmax=1 CV spine=76.4 full=84.8 margin=22.0
+ZOO: Ak=100.0 kmax=2 CV spine=99.7 full=100.0 margin=6.0
+IRIS: Ak=100.0 kmax=3 CV spine=62.9 full=67.5 margin=27.0
+HEPA: Ak=72.5 kmax=1 CV spine=78.6 full=81.7 margin=9.0
+STRK: Ak=96.9 kmax=1 CV spine=74.5 full=75.1 margin=-4.0
+WINE: Ak=88.8 kmax=1 CV spine=84.7 full=92.0 margin=4.0
+CYY: Ak=53.4 kmax=1 CV spine=77.2 full=67.9 margin=16.0
+GLAS: Ak=75.2 kmax=1 CV spine=72.7 full=81.3 margin=2.0
+HORS: Ak=83.1 kmax=2 CV spine=67.2 full=67.7 margin=-8.0
+SPCT: Ak=68.9 kmax=1 CV spine=79.4 full=79.1 margin=13.0
+HUNG: Ak=79.6 kmax=1 CV spine=78.6 full=81.1 margin=1.0
+CLEV: Ak=79.5 kmax=1 CV spine=73.0 full=83.2 margin=6.0
+ALCO: Ak=79.7 kmax=1 CV spine=75.1 full=78.4 margin=-1.0
+IONO: Ak=81.8 kmax=1 CV spine=62.0 full=74.8 margin=17.0
+TOUR: Ak=88.5 kmax=2 CV spine=76.4 full=78.5 margin=9.0
+VOTE: Ak=93.6 kmax=2 CV spine=95.6 full=90.4 margin=1.0
+EDUC: Ak=81.8 kmax=1 CV spine=70.3 full=77.5 margin=3.0
+CARD: Ak=78.7 kmax=1 CV spine=84.1 full=76.6 margin=8.0
+FOOT: Ak=100.0 kmax=3 CV spine=67.1 full=66.9 margin=3.0
+BCW: Ak=91.7 kmax=1 CV spine=90.0 full=96.1 margin=1.0
+PIMA: Ak=86.8 kmax=2 CV spine=72.2 full=70.4 margin=5.0
+AUTH: Ak=77.6 kmax=1 CV spine=79.4 full=97.8 margin=12.0
+HOF: Ak=68.9 kmax=1 CV spine=90.6 full=77.3 margin=24.0
+YEAS: Ak=89.6 kmax=1 CV spine=68.8 full=69.4 margin=3.0
+SCOT: Ak=100.0 kmax=2 CV spine=95.8 full=95.8 margin=0.0
+{
+  "prespecification_sha256": "91d2a59caf902cc39d2e8e8492114333c2fe4bd32b60628957e778efed632a5c",
+  "protocol": {
+    "repeats": 10,
+    "folds": 10,
+    "seed": 20260918,
+    "permutations": 20000
+  },
+  "tests_rho_p_one_sided": {
+    "H1_Ak_vs_margin": [
+      -0.324,
+      0.0413
+    ],
+    "H2_Ak_vs_cv_spine_accuracy": [
+      -0.016,
+      0.531
+    ],
+    "S_a_H1_without_HORS_VOTE": [
+      -0.334,
+      0.042
+    ],
+    "S_b_H1_CART_minus_Zig": [
+      -0.193,
+      0.1516
+    ],
+    "S_c_H1_nondegenerate_only": [
+      0.057,
+      0.5887
+    ]
+  },
+  "n_nondegenerate": 17,
+  "counts": {
+    "datasets": 30,
+    "condition_over_all_attributes": 0,
+    "certified_prefix_deeper_than_one": 10,
+    "attributes_kept": 389,
+    "attributes_outweighing_prior": 80,
+    "spine_cv_at_least_full": [
+      "POST",
+      "CYY",
+      "SPCT",
+      "VOTE",
+      "CARD",
+      "FOOT",
+      "PIMA",
+      "HOF",
+      "SCOT"
+    ],
+    "spine_cv_within_1.5_of_full": [
+      "BANK",
+      "ZOO",
+      "STRK",
+      "HORS",
+      "YEAS"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+# Raw files are downloaded by fetch_data.py and are not redistributed; the analysis files are rebuilt from them.
+Holte-16/raw/
+Holte-16/references/
+Holte-16/data/*.csv
+MKW08-30/raw/
+MKW08-30/references/
+MKW08-30/data/*.csv
+MKW08-30/data-woike/
+MKW08-30/woike-original/
+TabArena-Binary/raw/
+TabArena-Binary/results_artifact/
+TabArena-Binary/references/*.pdf
+TabArena-Binary/references/*.html
+TabArena-Binary/references/*.txt
+TabArena-Binary/data/*.csv
+TabArena-Binary/analysis/tabarena_checkpoint.pkl
+TabArena-Binary/analysis/tabarena_results_partial.csv
+figures/*_DRAFT_*
+Holte-16/analysis/fig_condition_vs_margin.*
+__pycache__/
+*.part
+# The frozen pre-specification and addenda are not part of this repository for now; the drivers read them from here.
+MKW08-30/analysis/PRESPECIFICATION_FROZEN.md
+MKW08-30/analysis/ADDENDUM_A_FROZEN.md
+MKW08-30/analysis/ADDENDUM_B_FROZEN.md

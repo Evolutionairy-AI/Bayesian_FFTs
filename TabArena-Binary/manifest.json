@@ -1,0 +1,3791 @@
+{
+ "schema_version": "1.0",
+ "package_name": "TabArena-Binary raw-acquisition package",
+ "stage": "raw acquisition only; no built data files; HELD OUT for a pre-specified confirmatory run",
+ "created_utc_date": "2026-09-19",
+ "retrieval_date": "2026-09-19",
+ "benchmark": {
+  "title": "TabArena: A Living Benchmark for Machine Learning on Tabular Data",
+  "authors": "Nick Erickson, Lennart Purucker, Andrej Tschalzev, David Holzmueller, Prateek Mutalik Desai, David Salinas, Frank Hutter",
+  "venue": "NeurIPS 2025, Datasets and Benchmarks Track; arXiv:2506.16791v4 (3 Nov 2025)",
+  "openml_suite": 457,
+  "openml_suite_alias": "tabarena-v0.1",
+  "repo": "https://github.com/autogluon/tabarena",
+  "repo_commit_read": "60d0f66771c87bb8a255c3d595476119324aaf41"
+ },
+ "selection_rule": "OpenML suite 457 lists 51 tasks; 38 are Supervised Classification; the 30 whose target feature declares exactly two nominal values are kept. The same 30 are marked problem_type=binary in the repo's curated_tabarena_dataset_metadata.csv and carry the AUC metric in Table F.1.",
+ "counting_rules": {
+  "row": "a non-empty, non-comment line after @DATA with as many fields as declared attributes",
+  "missing": "an unquoted '?' (the ARFF missing token). OpenML's feature records and the parquet nulls agree with this on every column.",
+  "pseudo_missing": "literal values such as nan, unknown, Not Available are ordinary values in the files and are NOT counted as missing; they are tallied per column in measured-column-counts.csv",
+  "distinct": "exact for nominal and STRING columns; for numeric columns exact up to 1000, else '>1000'"
+ },
+ "tools": {
+  "downloader": "curl (sequential, at most two retries, no credentials)",
+  "python": "3.13",
+  "build_only_third_party": [
+   "pypdf 6.10.2",
+   "pandas",
+   "pyarrow"
+  ],
+  "verifier": "scripts/verify.py, standard library only"
+ },
+ "published_results": {
+  "file": "published_results.csv",
+  "rows": 1530,
+  "models": [
+   "AutoGluon",
+   "CatBoost",
+   "EBM",
+   "ExtraTrees",
+   "FastAIMLP",
+   "KNN",
+   "LightGBM",
+   "Linear",
+   "MNCA",
+   "RF",
+   "RealMLP",
+   "TabDPT",
+   "TabICL",
+   "TabM",
+   "TabPFNv2",
+   "TorchMLP",
+   "XGBoost"
+  ],
+  "regimes": [
+   "default",
+   "tuned",
+   "tuned_ensemble"
+  ],
+  "metric": "roc_auc",
+  "pdf_dataset_name_aliases": {
+   "HR_Analytics_Job_Change_of_Data_Scientists": "HR_Analytics_Job_Change"
+  },
+  "crosscheck_status_counts": {
+   "agree": 1319,
+   "not_run_dash_in_pdf_imputed_in_artifact": 31,
+   "not_run_dash_in_pdf_absent_in_artifact": 180
+  },
+  "artifact_suites": {
+   "tabarena-2025-06-12": "all methods except Linear and KNN",
+   "tabarena-2025-10-20": "LinearModel and KNeighbors (camera-ready re-run)"
+  }
+ },
+ "not_acquired": [
+  {
+   "item": "OpenML task split files (Task_<id>_splits.arff)",
+   "reason": "not needed for counting; public, one URL per dataset recorded under openml_split_file_url_NOT_DOWNLOADED"
+  },
+  {
+   "item": "TabArena raw and processed prediction artifacts",
+   "reason": "about 100 GB and 10 GB per method according to the repo README; only the small results tier was taken"
+  },
+  {
+   "item": "original upstream sources (Kaggle, UCI, FICO)",
+   "reason": "Kaggle downloads are gated behind a login; this package holds the OpenML versions that TabArena evaluates"
+  }
+ ],
+ "datasets": [
+  {
+   "name": "Amazon_employee_access",
+   "openml_data_id": 46905,
+   "openml_task_id": 363613,
+   "openml_version": 3,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T19:53:54",
+   "licence_as_displayed": "Public Domain",
+   "original_data_url": "https://www.kaggle.com/c/amazon-employee-access-challenge",
+   "citation_as_displayed": "Ben Hamner, kenmonta, and Will Cukierski. Amazon.com - Employee Access Challenge. https://kaggle.com/competitions/amazon-employee-access-challenge, 2013. Kaggle.",
+   "target": "ResourceApproved",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363613.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363613/Task_363613_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "False",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/Amazon_employee_access/Amazon_employee_access.arff",
+   "files": [
+    {
+     "path": "raw/Amazon_employee_access/Amazon_employee_access.arff",
+     "bytes": 2215094,
+     "sha256": "6b6494c6d49b4e1f8bc850756a7fc95c52167658bd2b585d84af30f88edac5ae",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125216/Amazon_employee_access.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "608cd52013f708e4d565451425be6e24",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/Amazon_employee_access/dataset_46905.pq",
+     "bytes": 438403,
+     "sha256": "d1be0e14e9f48fd596aa5767fbd6b0f0d4b430902ffdf06b0e78e9e29a805f63",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46905/dataset_46905.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/Amazon_employee_access/openml_description_46905.json",
+     "bytes": 2356,
+     "sha256": "3f50a630b579d8336d3c10aca2b803d963991edcc5d9a1ec5eb35c71eaad4212",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46905",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/Amazon_employee_access/openml_features_46905.json",
+     "bytes": 129491,
+     "sha256": "6238986ab8c019055b2bea7abd5d5efa792bcf035319919a7ac2aace1179071d",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46905",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/Amazon_employee_access/openml_qualities_46905.json",
+     "bytes": 1026,
+     "sha256": "6a05d415ba18d35ca0d3afc960f43099043c9f58c2bb3c75c94822b28b7763c5",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46905",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "32769",
+    "n_columns_incl_target": "10",
+    "n_features": "9",
+    "n_numeric_columns": "0",
+    "n_nominal_columns": "10",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "ResourceApproved",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=1897;Yes=30872",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_high_cardinality_gt50": "RESOURCE=7518;MGR_ID=4243;ROLE_ROLLUP_1=128;ROLE_ROLLUP_2=177;ROLE_DEPTNAME=449;ROLE_TITLE=343;ROLE_FAMILY_DESC=2358;ROLE_FAMILY=67;ROLE_CODE=343",
+    "flag_id_like_by_name": "MGR_ID",
+    "note_redundancy_by_name_NOT_MEASURED": "ROLE_TITLE and ROLE_CODE both declare 343 values",
+    "flag_differs_from_original": "ROWS: Kaggle training file only."
+   }
+  },
+  {
+   "name": "APSFailure",
+   "openml_data_id": 46908,
+   "openml_task_id": 363616,
+   "openml_version": 2,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T19:54:32",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C5V60Q",
+   "citation_as_displayed": "IDA2016Challenge [Dataset]. (2016). UCI Machine Learning Repository. https://doi.org/10.24432/C5V60Q.",
+   "target": "AirPressureSystemFailure",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363616.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363616/Task_363616_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "False",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/APSFailure/APSFailure.arff",
+   "files": [
+    {
+     "path": "raw/APSFailure/APSFailure.arff",
+     "bytes": 78323905,
+     "sha256": "14fd7b78bb6d1257eb8165f6294f720f6f867fc60bb413f0e4398ef6e5a2bb00",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125219/APSFailure.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "3896ad0c77f3c96cc9eafad55b268863",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/APSFailure/dataset_46908.pq",
+     "bytes": 35142382,
+     "sha256": "b43f3448ca335258b2b813adea6104daa8cd3e18d5ed62243da43065a4fb4504",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46908/dataset_46908.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/APSFailure/openml_description_46908.json",
+     "bytes": 2383,
+     "sha256": "d18d6442b145f374672126ad807473b38700655c66b7a4e905d507c597fed4a1",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46908",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/APSFailure/openml_features_46908.json",
+     "bytes": 26564,
+     "sha256": "9eca576ecb3b85454813f8358a99de638090e2bcbe40ea289b298b2651a3a6b0",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46908",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/APSFailure/openml_qualities_46908.json",
+     "bytes": 1095,
+     "sha256": "e00f612ef4099d07fd24989d260979b347fdacd721ceb13f210201b57cb68701",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46908",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "76000",
+    "n_columns_incl_target": "171",
+    "n_features": "170",
+    "n_numeric_columns": "170",
+    "n_nominal_columns": "1",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "1078695",
+    "n_rows_with_missing": "75244",
+    "n_columns_with_missing": "169",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "AirPressureSystemFailure",
+    "target_declared_values": "neg;pos",
+    "class_counts": "neg=74625;pos=1375",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_constant_columns": "cd_000",
+    "flag_differs_from_original": "ROWS: original training and test files combined; 'na' strings turned into missing values."
+   }
+  },
+  {
+   "name": "bank-marketing",
+   "openml_data_id": 46910,
+   "openml_task_id": 363618,
+   "openml_version": 10,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T19:54:48",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C5K306",
+   "citation_as_displayed": "Moro, Sergio, Paulo Cortez, and Paulo Rita. 'A data-driven approach to predict the success of bank telemarketing.' Decision Support Systems 62 (2014): 22-31. https://doi.org/10.1016/j.dss.2014.03.001",
+   "target": "SubscribeTermDeposit",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363618.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363618/Task_363618_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "False",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/bank-marketing/bank-marketing.arff",
+   "files": [
+    {
+     "path": "raw/bank-marketing/bank-marketing.arff",
+     "bytes": 3233844,
+     "sha256": "fe21d939814fea2e4dab62b0ec5d3599667ef2ab3b9e46419a3f8833e9aa9cb1",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125221/bank-marketing.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "75c124340aed0a1ce542c51c68489418",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/bank-marketing/dataset_46910.pq",
+     "bytes": 320466,
+     "sha256": "6ff0f63c357ed5e31ab264621ed8f78290951cf9823017b9555b84efd1efcddc",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46910/dataset_46910.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/bank-marketing/openml_description_46910.json",
+     "bytes": 2420,
+     "sha256": "c458b4215621a086f8f1a07a7b8929ef9733dba8b3118de455130f538f8bc2d2",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46910",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/bank-marketing/openml_features_46910.json",
+     "bytes": 2606,
+     "sha256": "37b1adce2d95f3ec13ab63d75de8328eb568ffe8ce7335362293590e659f47bf",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46910",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/bank-marketing/openml_qualities_46910.json",
+     "bytes": 1068,
+     "sha256": "850114c9dcf889eea6e5b51f384b789360aa3758a75ffa4fa65102f9d3b60d3b",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46910",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "45211",
+    "n_columns_incl_target": "14",
+    "n_features": "13",
+    "n_numeric_columns": "5",
+    "n_nominal_columns": "8",
+    "n_string_columns": "1",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "SubscribeTermDeposit",
+    "target_declared_values": "no;yes",
+    "class_counts": "no=39922;yes=5289",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_string_typed": "poutcome",
+    "n_columns_with_pseudo_missing_literals": "4",
+    "flag_leakage_candidates_by_name_NOT_MEASURED": "campaign (number of contacts in the current campaign, known only once the campaign is over); the curators already removed duration, month and day_of_week for this reason",
+    "flag_differs_from_original": "COLUMNS: duration, month and day_of_week removed by the curators."
+   }
+  },
+  {
+   "name": "Bank_Customer_Churn",
+   "openml_data_id": 46911,
+   "openml_task_id": 363619,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T19:55:01",
+   "licence_as_displayed": "Public",
+   "original_data_url": "https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset",
+   "citation_as_displayed": "Topre, Gaurav. 'Bank Customer Churn Dataset.' Kaggle, 2022, https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset.",
+   "target": "churn",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363619.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363619/Task_363619_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/Bank_Customer_Churn/Bank_Customer_Churn.arff",
+   "files": [
+    {
+     "path": "raw/Bank_Customer_Churn/Bank_Customer_Churn.arff",
+     "bytes": 482669,
+     "sha256": "88fcfc1f7709a6d914a1c908b4bedfd3fe51ba81ef9bf12207d1fed087d736ed",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125222/Bank_Customer_Churn.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "6ddf75fffeef527a8a3f38179c4353c5",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/Bank_Customer_Churn/dataset_46911.pq",
+     "bytes": 174754,
+     "sha256": "6f3d4f9bd184d860799df33d8101fcc708dd54bc4e07e27ab810b84c2f821611",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46911/dataset_46911.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/Bank_Customer_Churn/openml_description_46911.json",
+     "bytes": 2183,
+     "sha256": "32e2ce0ca0a71ad63da92b137f0bab54fb84cee944b810e5c425f45bd439ede2",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46911",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/Bank_Customer_Churn/openml_features_46911.json",
+     "bytes": 1887,
+     "sha256": "74a8293481a86a7768188b70240d1ee13c14b5b9c195e5a79998f87243f0bbee",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46911",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/Bank_Customer_Churn/openml_qualities_46911.json",
+     "bytes": 1039,
+     "sha256": "719bbbc8e0f63534145679401ce37f2eb4a7298de32eb79cea9b5269466be213",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46911",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "10000",
+    "n_columns_incl_target": "11",
+    "n_features": "10",
+    "n_numeric_columns": "6",
+    "n_nominal_columns": "5",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "churn",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=7963;Yes=2037",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_differs_from_original": "COLUMNS: ID column dropped."
+   }
+  },
+  {
+   "name": "Bioresponse",
+   "openml_data_id": 46912,
+   "openml_task_id": 363620,
+   "openml_version": 4,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T19:55:15",
+   "licence_as_displayed": "Public Domain",
+   "original_data_url": "https://www.kaggle.com/c/bioresponse",
+   "citation_as_displayed": "Ben Hamner, dcthompson, and Jorg. Predicting a Biological Response. https://kaggle.com/competitions/bioresponse, 2012. Kaggle.",
+   "target": "MoleculeElicitsResponse",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363620.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363620/Task_363620_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "False",
+    "can_run_tabicl": "False"
+   },
+   "primary_data_file": "raw/Bioresponse/Bioresponse.arff",
+   "files": [
+    {
+     "path": "raw/Bioresponse/Bioresponse.arff",
+     "bytes": 23970797,
+     "sha256": "cae8d700c08b6cf1334e79d0be8e2f3c925347b1921b27aa55242e8fd6cdb77e",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125223/Bioresponse.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "3cb639b0f5434e0a9ad236ae0cbab2da",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/Bioresponse/dataset_46912.pq",
+     "bytes": 3795277,
+     "sha256": "44ec2028029fc3a234e63483dbcd69455c70c353a7a6c1df8952fff823dc096e",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46912/dataset_46912.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/Bioresponse/openml_description_46912.json",
+     "bytes": 2256,
+     "sha256": "35f60fa87cd879202b9bf4ca970733001088d567df28ef2f83dc41a46cd893bb",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46912",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/Bioresponse/openml_features_46912.json",
+     "bytes": 269741,
+     "sha256": "1d6dc7b4bb0d4e4ba3ccd51e97f8d9557279b9c8175f783f8c2d855fd27b4f14",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46912",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/Bioresponse/openml_qualities_46912.json",
+     "bytes": 1073,
+     "sha256": "7adfdfe09d673b7e02653c15a97ee03de9fba21557727655b69efbaaecc970a0",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46912",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "3751",
+    "n_columns_incl_target": "1777",
+    "n_features": "1776",
+    "n_numeric_columns": "1776",
+    "n_nominal_columns": "1",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "MoleculeElicitsResponse",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=1717;Yes=2034",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_differs_from_original": "ROWS: Kaggle training file only."
+   }
+  },
+  {
+   "name": "blood-transfusion-service-center",
+   "openml_data_id": 46913,
+   "openml_task_id": 363621,
+   "openml_version": 2,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T19:55:21",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C5GS39",
+   "citation_as_displayed": "Yeh, I-Cheng, King-Jang Yang, and Tao-Ming Ting. 'Knowledge discovery on RFM model using Bernoulli sequence.' Expert Systems with applications 36.3 (2009): 5866-5871. https://doi.org/10.1016/j.eswa.2008.07.018",
+   "target": "DonatedBloodInMarch2007",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363621.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363621/Task_363621_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 10,
+    "splits": 30,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/blood-transfusion-service-center/blood-transfusion-service-center.arff",
+   "files": [
+    {
+     "path": "raw/blood-transfusion-service-center/blood-transfusion-service-center.arff",
+     "bytes": 12921,
+     "sha256": "80945cb11b502743c86236bb60dce8ca5b6ec53732a2d3be59838eb3d3561488",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125224/blood-transfusion-service-center.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "22bfec0eb6cceb5715439912fdcb2275",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/blood-transfusion-service-center/dataset_46913.pq",
+     "bytes": 7858,
+     "sha256": "8e9fecb0a04af9e4c8d3c625c8cd1c173a15de655254ddaed480d77a9008d00a",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46913/dataset_46913.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/blood-transfusion-service-center/openml_description_46913.json",
+     "bytes": 2354,
+     "sha256": "4b922b3596aac64603c20a8c579b2139e3258c5fcec819037c9bda55f4652113",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46913",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/blood-transfusion-service-center/openml_features_46913.json",
+     "bytes": 888,
+     "sha256": "68b1424a0a46c91e2092c47073346ff0c1dc9d35d6e001fb58b3f59f3ed7d179",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46913",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/blood-transfusion-service-center/openml_qualities_46913.json",
+     "bytes": 1022,
+     "sha256": "8d86b2530a9467ef5144c521bf9efad4cfc9135398376bb385635c8d07509f0b",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46913",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "748",
+    "n_columns_incl_target": "5",
+    "n_features": "4",
+    "n_numeric_columns": "4",
+    "n_nominal_columns": "1",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "DonatedBloodInMarch2007",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=570;Yes=178",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_differs_from_original": "CODING: features renamed only (curators note 29% duplicate rows)."
+   }
+  },
+  {
+   "name": "churn",
+   "openml_data_id": 46915,
+   "openml_task_id": 363623,
+   "openml_version": 4,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:15:23",
+   "licence_as_displayed": "MIT License",
+   "original_data_url": "See Description",
+   "citation_as_displayed": "Marcoulides, George A. 'Discovering Knowledge in Data: an Introduction to Data Mining.' (2005): 1465-1465. https://www.tandfonline.com/doi/abs/10.1198/jasa.2005.s61",
+   "target": "CustomerChurned",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363623.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363623/Task_363623_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/churn/churn.arff",
+   "files": [
+    {
+     "path": "raw/churn/churn.arff",
+     "bytes": 475249,
+     "sha256": "87bc2dd76e08b5bffa37fdd97d3d418b41036fec3d4cbf7e31377542b8e85fb6",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125226/churn.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "86dd09210baaa4dfaa502a23703a9436",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/churn/dataset_46915.pq",
+     "bytes": 149708,
+     "sha256": "22960d2796ac7ec4fa7f2ba775095746ba82d42b3e4e798d3a4adb5b0a1907d7",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46915/dataset_46915.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/churn/openml_description_46915.json",
+     "bytes": 2294,
+     "sha256": "8edb52ca04014f28e4f975be488df259ce42b4e3cb8a8edec9bc0c280b37f881",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46915",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/churn/openml_features_46915.json",
+     "bytes": 3653,
+     "sha256": "2c881df0eaf61df1862b99f38d0c0da5827611a5bba52a554de322c25c1f9bd7",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46915",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/churn/openml_qualities_46915.json",
+     "bytes": 985,
+     "sha256": "b390f6d1137f1b3ec81939332f29937ba470743559e00c516bc7c041d72193ce",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46915",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "5000",
+    "n_columns_incl_target": "20",
+    "n_features": "19",
+    "n_numeric_columns": "15",
+    "n_nominal_columns": "5",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "CustomerChurned",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=4293;Yes=707",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_high_cardinality_gt50": "state=51",
+    "note_redundancy_by_name_NOT_MEASURED": "total_*_charge columns sit beside total_*_minutes columns (by name, a tariff multiple)",
+    "flag_differs_from_original": "COLUMNS: phone_number dropped. Original source lost; curators point to PMLB and OpenML 40701."
+   }
+  },
+  {
+   "name": "coil2000_insurance_policies",
+   "openml_data_id": 46916,
+   "openml_task_id": 363624,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:15:30",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C5630S",
+   "citation_as_displayed": "Van Der Putten, Peter, and Maarten van Someren. CoIL challenge 2000: The insurance company case. Technical Report 200009, Leiden Institute of Advanced Computer Science, Universiteit van Leiden. Available from:< http://www. liacs. nl/putten/library/cc2000, 2000.",
+   "target": "MobileHomePolicy",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363624.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363624/Task_363624_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/coil2000_insurance_policies/coil2000_insurance_policies.arff",
+   "files": [
+    {
+     "path": "raw/coil2000_insurance_policies/coil2000_insurance_policies.arff",
+     "bytes": 2357766,
+     "sha256": "a541ed40161a5d07b2c3ca6badd6eb5711a37ed52f1720417d5d4d0274288947",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125227/coil2000_insurance_policies.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "e4fd3362bf8126f724475ea2f318c123",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/coil2000_insurance_policies/dataset_46916.pq",
+     "bytes": 304980,
+     "sha256": "0ee5db0a99138321d9384ffc3db18e068da6a9f215ab7922bc7f0bc2f18b6796",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46916/dataset_46916.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/coil2000_insurance_policies/openml_description_46916.json",
+     "bytes": 2543,
+     "sha256": "277b0c91aa34902c7844918ab05e97c92e6210ea3665d7245f546a4a36d859ae",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46916",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/coil2000_insurance_policies/openml_features_46916.json",
+     "bytes": 15795,
+     "sha256": "97664094042c0ffe290aa9181169a6f46bf4c64f12598bb8b197334dac71bac4",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46916",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/coil2000_insurance_policies/openml_qualities_46916.json",
+     "bytes": 1064,
+     "sha256": "56bf029cd4763be0475fa7ba328be7aa43203c2764371eb1f025da2f123f3ea4",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46916",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "9822",
+    "n_columns_incl_target": "86",
+    "n_features": "85",
+    "n_numeric_columns": "80",
+    "n_nominal_columns": "4",
+    "n_string_columns": "2",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "MobileHomePolicy",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=9236;Yes=586",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_string_typed": "avgAge;contributionPrivateThirdPartyInsurance",
+    "flag_differs_from_original": "ROWS+CODING: original training and validation data combined; ordinal codes turned back into labels where possible."
+   }
+  },
+  {
+   "name": "credit-g",
+   "openml_data_id": 46918,
+   "openml_task_id": 363626,
+   "openml_version": 5,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:15:41",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C5NC77",
+   "citation_as_displayed": "Hofmann, H. (1994). Statlog (German Credit Data) [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5NC77.",
+   "target": "good_or_bad_customer",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363626.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363626/Task_363626_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 10,
+    "splits": 30,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/credit-g/credit-g.arff",
+   "files": [
+    {
+     "path": "raw/credit-g/credit-g.arff",
+     "bytes": 242375,
+     "sha256": "6149f09b7aee6fb8573afa4abe24113656c4a18a0f15568a386ff703611e8d84",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125229/credit-g.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "4a6d9d5ac9ef10ced7b8c5b499499c26",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/credit-g/dataset_46918.pq",
+     "bytes": 29802,
+     "sha256": "bb071acb26470d6f7b6d0c8aa8fcfac7ced2d2172bee74f41fbbd82e4e84f31a",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46918/dataset_46918.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/credit-g/openml_description_46918.json",
+     "bytes": 2095,
+     "sha256": "6c9ead02448e1aa0a8d6142fdbfd128a23bd02a8897850f5e534ca3e83d9a974",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46918",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/credit-g/openml_features_46918.json",
+     "bytes": 4730,
+     "sha256": "394b9356cba928a65f21e7cfe39830de4858b0c84538326a1df16763c4cc4b40",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46918",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/credit-g/openml_qualities_46918.json",
+     "bytes": 1022,
+     "sha256": "7ba4b2cf736f415173ec1dd0494217112e6343f4364a3eee81548d3cc7db84a2",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46918",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "1000",
+    "n_columns_incl_target": "21",
+    "n_features": "20",
+    "n_numeric_columns": "7",
+    "n_nominal_columns": "14",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "good_or_bad_customer",
+    "target_declared_values": "bad;good",
+    "class_counts": "bad=300;good=700",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "n_columns_with_pseudo_missing_literals": "3",
+    "flag_differs_from_original": "CODING: the original ordinal encoding reversed into labels (Statlog German Credit)."
+   }
+  },
+  {
+   "name": "credit_card_clients_default",
+   "openml_data_id": 46919,
+   "openml_task_id": 363627,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:15:48",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C55S3H",
+   "citation_as_displayed": "Yeh, I-Cheng, and Che-hui Lien. 'The comparisons of data mining techniques for the predictive accuracy of probability of default of credit card clients.' Expert systems with applications 36.2 (2009): 2473-2480. https://doi.org/10.1016/j.eswa.2007.12.020",
+   "target": "DefaultOnPaymentNextMonth",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363627.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363627/Task_363627_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "False",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/credit_card_clients_default/credit_card_clients_default.arff",
+   "files": [
+    {
+     "path": "raw/credit_card_clients_default/credit_card_clients_default.arff",
+     "bytes": 2736789,
+     "sha256": "9cabdf980c8067dd2d56d05f99a17fc44b1c3220e3dd7c167c15c9a2c585b493",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125230/credit_card_clients_default.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "14af3e5dd1fa9af94c8d0f34c0068711",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/credit_card_clients_default/dataset_46919.pq",
+     "bytes": 1587743,
+     "sha256": "b49c5ab1e36de1a512f30523be95e996070327acf79d503745686bcdf2fc6e77",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46919/dataset_46919.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/credit_card_clients_default/openml_description_46919.json",
+     "bytes": 2459,
+     "sha256": "cd16e248707366f06c79b9e0c1ea12f276917ae3713f96bb8598fa054c0cd8d9",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46919",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/credit_card_clients_default/openml_features_46919.json",
+     "bytes": 3848,
+     "sha256": "08cc1d9116016bab7885797467513f7efef6f55c9b17cbe1462ca961ee30b1a5",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46919",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/credit_card_clients_default/openml_qualities_46919.json",
+     "bytes": 1041,
+     "sha256": "b78601496ad24ade5df7cb379a2b467d15cdc2ff9b5ddd4f05bf9825cf858440",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46919",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "30000",
+    "n_columns_incl_target": "24",
+    "n_features": "23",
+    "n_numeric_columns": "20",
+    "n_nominal_columns": "4",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "DefaultOnPaymentNextMonth",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=23364;Yes=6636",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_differs_from_original": "COLUMNS: ID column dropped; class names restored."
+   }
+  },
+  {
+   "name": "customer_satisfaction_in_airline",
+   "openml_data_id": 46920,
+   "openml_task_id": 363628,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:16:00",
+   "licence_as_displayed": "CC0: Public Domain",
+   "original_data_url": "https://www.kaggle.com/datasets/yakhyojon/customer-satisfaction-in-airline",
+   "citation_as_displayed": "Kaggle User Yakhyojon. 'Customer Satisfaction in Airline.' Kaggle, 2023, https://www.kaggle.com/datasets/yakhyojon/customer-satisfaction-in-airline.",
+   "target": "satisfaction",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363628.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363628/Task_363628_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "False",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/customer_satisfaction_in_airline/customer_satisfaction_in_airline.arff",
+   "files": [
+    {
+     "path": "raw/customer_satisfaction_in_airline/customer_satisfaction_in_airline.arff",
+     "bytes": 12501030,
+     "sha256": "89caa5fa6151c3f715b6783fc759a9222940c91af1899f8be97045e6d9c54707",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125231/customer_satisfaction_in_airline.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "e14d70c49aa285f50dde1889d75cf4bb",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/customer_satisfaction_in_airline/dataset_46920.pq",
+     "bytes": 1387320,
+     "sha256": "fe1e17384dba5214792d92b2a32786374730726f9fcf384cfd55b37f7912990b",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46920/dataset_46920.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/customer_satisfaction_in_airline/openml_description_46920.json",
+     "bytes": 2251,
+     "sha256": "9b66b61e47eaf8d4aa2c19fde77eee1b330e7315bbbac78083bab6989838cb56",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46920",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/customer_satisfaction_in_airline/openml_features_46920.json",
+     "bytes": 4297,
+     "sha256": "89b74c4b25e2e8cfec102dc158a13949241690b2bc1ab3359bfeb40fe061be43",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46920",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/customer_satisfaction_in_airline/openml_qualities_46920.json",
+     "bytes": 1107,
+     "sha256": "5de5317fd684e8e4079cbd14c83a6134ec08442a8a3e338b0914719315a85c6d",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46920",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "129880",
+    "n_columns_incl_target": "22",
+    "n_features": "21",
+    "n_numeric_columns": "5",
+    "n_nominal_columns": "17",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "393",
+    "n_rows_with_missing": "393",
+    "n_columns_with_missing": "1",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "satisfaction",
+    "target_declared_values": "dissatisfied;satisfied",
+    "class_counts": "dissatisfied=58793;satisfied=71087",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_rows_gt_100k": "yes",
+    "flag_leakage_candidates_by_name_NOT_MEASURED": "the 14 service-rating columns Seatcomfort ... Onlineboarding (answers from the same passenger survey that yields the target satisfaction)"
+   }
+  },
+  {
+   "name": "diabetes",
+   "openml_data_id": 46921,
+   "openml_task_id": 363629,
+   "openml_version": 7,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:16:05",
+   "licence_as_displayed": "CC0: Public Domain",
+   "original_data_url": "See Description",
+   "citation_as_displayed": "Smith, Jack W., et al. 'Using the ADAP learning algorithm to forecast the onset of diabetes mellitus.' Proceedings of the annual symposium on computer application in medical care. 1988. https://pmc.ncbi.nlm.nih.gov/articles/PMC2245318/",
+   "target": "TestedPositiveForDiabetes",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363629.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363629/Task_363629_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 10,
+    "splits": 30,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/diabetes/diabetes.arff",
+   "files": [
+    {
+     "path": "raw/diabetes/diabetes.arff",
+     "bytes": 25945,
+     "sha256": "a6e55bf62d63d74807c5f8b6ee73d934469330bb8233ee0aa70b03d0f9ded7d9",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125232/diabetes.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "ddedbab6af35854821113175f6d37863",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/diabetes/dataset_46921.pq",
+     "bytes": 17939,
+     "sha256": "4bd1b10df159f3212a7f82546105388cf77abb6239abc591be3c9a6cdf4691f3",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46921/dataset_46921.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/diabetes/openml_description_46921.json",
+     "bytes": 2488,
+     "sha256": "fb44f16d3c6f2223292759e8c2de9eb08b1f4bee03fdf582f6f069032a038e67",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46921",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/diabetes/openml_features_46921.json",
+     "bytes": 1470,
+     "sha256": "eed90e840ed9cd44ed9b7d53bde86cf612919befacf8ac1bb607c4253a0671d0",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46921",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/diabetes/openml_qualities_46921.json",
+     "bytes": 1049,
+     "sha256": "d11f39f278be7d35fdb3e68b35a3ceb2e83301a4571c0d21087c556c643955ed",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46921",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "768",
+    "n_columns_incl_target": "9",
+    "n_features": "8",
+    "n_numeric_columns": "8",
+    "n_nominal_columns": "1",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "TestedPositiveForDiabetes",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=500;Yes=268",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_differs_from_original": "SAME DATA AS AN EARLIER COLLECTION: this is the Pima Indians Diabetes set (OpenML 37 with the target renamed), already held as PIMA in DATA_SETS/MKW08-30."
+   }
+  },
+  {
+   "name": "Diabetes130US",
+   "openml_data_id": 46922,
+   "openml_task_id": 363630,
+   "openml_version": 4,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:16:21",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C5230J",
+   "citation_as_displayed": "Strack, Beata, et al. 'Impact of HbA1c measurement on hospital readmission rates: analysis of 70,000 clinical database patient records.' BioMed research international 2014.1 (2014): 781670. https://doi.org/10.1155/2014/781670",
+   "target": "EarlyReadmission",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363630.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363630/Task_363630_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "False",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/Diabetes130US/Diabetes130US.arff",
+   "files": [
+    {
+     "path": "raw/Diabetes130US/Diabetes130US.arff",
+     "bytes": 15535457,
+     "sha256": "74d17c07b833dc4c19efec35b42985dc18796581575b65f2bf6b3c09e3246420",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125233/Diabetes130US.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "44b1975f531a75709635016145544fec",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/Diabetes130US/dataset_46922.pq",
+     "bytes": 999825,
+     "sha256": "ef4db493d52450dec9e3dbb9e633c8b735a5ab459ba446cfff7e8d1c752b4e18",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46922/dataset_46922.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/Diabetes130US/openml_description_46922.json",
+     "bytes": 3129,
+     "sha256": "69a1e1f8068e353561ad584f2afed0ad69199c142d4c04c32af694ca02f1e8f7",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46922",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/Diabetes130US/openml_features_46922.json",
+     "bytes": 25891,
+     "sha256": "2de5031fffff011a12d2d427b8b41943264fc7970abca458286f5843eaa5c46e",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46922",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/Diabetes130US/openml_qualities_46922.json",
+     "bytes": 1105,
+     "sha256": "7ccff28142bfa3f7ceb74c4f1d82a2bab83c2d9322bce6b1b2f94777cfeeb32e",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46922",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "71518",
+    "n_columns_incl_target": "48",
+    "n_features": "47",
+    "n_numeric_columns": "8",
+    "n_nominal_columns": "40",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "137663",
+    "n_rows_with_missing": "70601",
+    "n_columns_with_missing": "7",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "EarlyReadmission",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=65225;Yes=6293",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_high_cardinality_gt50": "medical_specialty=70;diag_1=696;diag_2=725;diag_3=758",
+    "flag_id_like_by_name": "admission_type_id;discharge_disposition_id;admission_source_id",
+    "flag_constant_columns": "examide;citoglipton;glimepiride-pioglitazone",
+    "n_columns_with_pseudo_missing_literals": "5",
+    "flag_leakage_candidates_by_name_NOT_MEASURED": "discharge_disposition_id (its categories include 'Expired' and hospice discharges, after which an early readmission cannot occur)",
+    "flag_differs_from_original": "ROWS+TARGET: one encounter per patient kept; encounter_id and patient_nbr dropped; binary target built from 'readmitted'. UCI record 296 reports 101,766 instances (UCI API)."
+   }
+  },
+  {
+   "name": "E-CommereShippingData",
+   "openml_data_id": 46924,
+   "openml_task_id": 363632,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:16:35",
+   "licence_as_displayed": "Public Domain",
+   "original_data_url": "https://www.kaggle.com/datasets/prachi13/customer-analytics",
+   "citation_as_displayed": "Prachi Gopalani. 'E-Commerce Shipping Data.' Kaggle, 2021, https://www.kaggle.com/datasets/prachi13/customer-analytics.",
+   "target": "ArrivedLate",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363632.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363632/Task_363632_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/E-CommereShippingData/E-CommereShippingData.arff",
+   "files": [
+    {
+     "path": "raw/E-CommereShippingData/E-CommereShippingData.arff",
+     "bytes": 393860,
+     "sha256": "2cfe74fbc7ff64647d1cd1b20f0e527d745a08038f4b7f4b7f96ac73b6f2d48c",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125235/E-CommereShippingData.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "a55d48a03307e6ef6a63c15bb80d18ac",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/E-CommereShippingData/dataset_46924.pq",
+     "bytes": 88617,
+     "sha256": "a66d12fb54521e405bd98321a1b89bd0c076144a609e0bb56059b15309ba932e",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46924/dataset_46924.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/E-CommereShippingData/openml_description_46924.json",
+     "bytes": 2473,
+     "sha256": "e8dfbc1c1b22d1cde5a3ca07f4590d251c1c18445cf002cd8946e5b883b71303",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46924",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/E-CommereShippingData/openml_features_46924.json",
+     "bytes": 1963,
+     "sha256": "370eb7249862bcda45cae44d488eec4d731ab2f2ed779b64bc196ee50a307178",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46924",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/E-CommereShippingData/openml_qualities_46924.json",
+     "bytes": 1066,
+     "sha256": "43780fc5ed697d9168c369e0583c56974fdd688a1e4bd77d567a04ec4d0426cf",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46924",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "10999",
+    "n_columns_incl_target": "11",
+    "n_features": "10",
+    "n_numeric_columns": "6",
+    "n_nominal_columns": "5",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "ArrivedLate",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=4436;Yes=6563",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_leakage_candidates_by_name_NOT_MEASURED": "Discount_offered (UNVERIFIED recollection of public discussion of this Kaggle set; the curators note that 'the target and task seems somewhat disconnected from the features')",
+    "flag_differs_from_original": "COLUMNS: ID column dropped."
+   }
+  },
+  {
+   "name": "Fitness_Club",
+   "openml_data_id": 46927,
+   "openml_task_id": 363671,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:16:53",
+   "licence_as_displayed": "Public Domain",
+   "original_data_url": "https://www.kaggle.com/datasets/ddosad/datacamps-data-science-associate-certification",
+   "citation_as_displayed": "Kaggle User Ddosad. 'Fitness Club Dataset for ML Classification.' Kaggle, 2023, https://www.kaggle.com/datasets/ddosad/datacamps-data-science-associate-certification.",
+   "target": "attended",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363671.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363671/Task_363671_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 10,
+    "splits": 30,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/Fitness_Club/Fitness_Club.arff",
+   "files": [
+    {
+     "path": "raw/Fitness_Club/Fitness_Club.arff",
+     "bytes": 43343,
+     "sha256": "890a327d1e00a1c98beed59557914196321f7c02693e9e93f48207d72fe14b40",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125238/Fitness_Club.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "8e13e2646ca3c13c07f975551fc1c26b",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/Fitness_Club/dataset_46927.pq",
+     "bytes": 17741,
+     "sha256": "24ad1662eeaa9ebf3f269dd86631d2466cc136075a0af6de8b7b18384459e617",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46927/dataset_46927.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/Fitness_Club/openml_description_46927.json",
+     "bytes": 2504,
+     "sha256": "9d1e7c98ee4aa40332be2b5158722cd02f064c6d12363de1e4b49ff9633c5c90",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46927",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/Fitness_Club/openml_features_46927.json",
+     "bytes": 1291,
+     "sha256": "d3f49207530314c07d4c91aa8d25f27d8f97c7e9aa943a1789ce69c5c336473c",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46927",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/Fitness_Club/openml_qualities_46927.json",
+     "bytes": 1096,
+     "sha256": "c83aae39d1434e270626dd2f857a7c70f6daec26c893557145064b4c535d0078",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46927",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "1500",
+    "n_columns_incl_target": "7",
+    "n_features": "6",
+    "n_numeric_columns": "3",
+    "n_nominal_columns": "4",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "20",
+    "n_rows_with_missing": "20",
+    "n_columns_with_missing": "1",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "attended",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=1046;Yes=454",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_differs_from_original": "COLUMNS+CODING: ID column dropped; days_before and day_of_week cleaned; target '-0' read as '0'."
+   }
+  },
+  {
+   "name": "GiveMeSomeCredit",
+   "openml_data_id": 46929,
+   "openml_task_id": 363673,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:17:08",
+   "licence_as_displayed": "Public",
+   "original_data_url": "https://www.kaggle.com/competitions/GiveMeSomeCredit",
+   "citation_as_displayed": "Credit Fusion and Will Cukierski. Give Me Some Credit. https://kaggle.com/competitions/GiveMeSomeCredit, 2011. Kaggle.",
+   "target": "FinancialDistressNextTwoYears",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363673.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363673/Task_363673_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "False",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/GiveMeSomeCredit/GiveMeSomeCredit.arff",
+   "files": [
+    {
+     "path": "raw/GiveMeSomeCredit/GiveMeSomeCredit.arff",
+     "bytes": 7226796,
+     "sha256": "92c897782a049feef5de124c1e5b82a61ed9373aa7e78565f03aea3aa3be21da",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125240/GiveMeSomeCredit.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "6d013a631b97b13d5372f097697e25a1",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/GiveMeSomeCredit/dataset_46929.pq",
+     "bytes": 3343752,
+     "sha256": "bd4eeb5341b179a4caaa48a6e673f8198014455608f5afe21a3f6f1a900498f9",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46929/dataset_46929.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/GiveMeSomeCredit/openml_description_46929.json",
+     "bytes": 2102,
+     "sha256": "7b03d2cc5e674264aa28de9dc084174e5355c4e3211adad9e79231453b4eb1fc",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46929",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/GiveMeSomeCredit/openml_features_46929.json",
+     "bytes": 1924,
+     "sha256": "cc76590257a4bd72f57265aea81ad10ff69a20bb152129d40b850c7f4607f944",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46929",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/GiveMeSomeCredit/openml_qualities_46929.json",
+     "bytes": 1093,
+     "sha256": "d3b796feeba32675e8528d5f3c2e1a242e76e6026088c23d245a2418a8ffa9d6",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46929",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "150000",
+    "n_columns_incl_target": "11",
+    "n_features": "10",
+    "n_numeric_columns": "10",
+    "n_nominal_columns": "1",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "33655",
+    "n_rows_with_missing": "29731",
+    "n_columns_with_missing": "2",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "FinancialDistressNextTwoYears",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=139974;Yes=10026",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_rows_gt_100k": "yes"
+   }
+  },
+  {
+   "name": "hazelnut-spread-contaminant-detection",
+   "openml_data_id": 46930,
+   "openml_task_id": 363674,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:17:13",
+   "licence_as_displayed": "CC BY-SA",
+   "original_data_url": "https://www.openml.org/search?type=data&status=active&id=45538",
+   "citation_as_displayed": "Ricci, Marco, et al. 'Machine-learning-based microwave sensing: A case study for the food industry.' IEEE Journal on Emerging and Selected Topics in Circuits and Systems 11.3 (2021): 503-514. https://doi.org/10.1109/JETCAS.2021.3097699; Urbinati, Luca, et al. 'A machine-learning based microwave sensing approach to food contaminant detection.' 2020 IEEE International Symposium on Circuits and Systems (ISCAS). IEEE, 2020. https://doi.org/10.1109/ISCAS45731.2020.9181293",
+   "target": "Contaminated",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363674.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363674/Task_363674_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 10,
+    "splits": 30,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/hazelnut-spread-contaminant-detection/hazelnut-spread-contaminant-detection.arff",
+   "files": [
+    {
+     "path": "raw/hazelnut-spread-contaminant-detection/hazelnut-spread-contaminant-detection.arff",
+     "bytes": 686161,
+     "sha256": "79b224319a1ca21284aae19a97c42adc1eccabf292c82c3b66f40f5d87028897",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125241/hazelnut-spread-contaminant-detection.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "ee22c35dc7f819618eab65c6360157ed",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/hazelnut-spread-contaminant-detection/dataset_46930.pq",
+     "bytes": 401854,
+     "sha256": "e77e8942836e009170196386614de7e378cde967787bef2445e241aaaa98791e",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46930/dataset_46930.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/hazelnut-spread-contaminant-detection/openml_description_46930.json",
+     "bytes": 3098,
+     "sha256": "2f01d456beb7e08a34257c096411694618107885f2adafcbe7d9296746c86a89",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46930",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/hazelnut-spread-contaminant-detection/openml_features_46930.json",
+     "bytes": 4674,
+     "sha256": "edd5d447dadb565af3877f62ca6f13b2bdd3cf2128d08266369f92aca0e6d12c",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46930",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/hazelnut-spread-contaminant-detection/openml_qualities_46930.json",
+     "bytes": 1037,
+     "sha256": "20f76b9fcf7730e8f3cfd3af7913ddd3e0642deabdbcb0fd08645e17d09db734",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46930",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "2400",
+    "n_columns_incl_target": "31",
+    "n_features": "30",
+    "n_numeric_columns": "30",
+    "n_nominal_columns": "1",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "Contaminated",
+    "target_declared_values": "0;1",
+    "class_counts": "0=1200;1=1200",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_differs_from_original": "COLUMNS: features of a single frequency (10 GHz) selected from OpenML 45538."
+   }
+  },
+  {
+   "name": "heloc",
+   "openml_data_id": 46932,
+   "openml_task_id": 363676,
+   "openml_version": 3,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:17:32",
+   "licence_as_displayed": "Public",
+   "original_data_url": "https://www.kaggle.com/datasets/averkiyoliabev/home-equity-line-of-creditheloc",
+   "citation_as_displayed": "Kaggle User Averkiyoliabev. 'Home Equity Line of Credit (HELOC).' Kaggle, 2021, https://www.kaggle.com/datasets/averkiyoliabev/home-equity-line-of-creditheloc.",
+   "target": "RiskPerformance",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363676.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363676/Task_363676_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/heloc/heloc.arff",
+   "files": [
+    {
+     "path": "raw/heloc/heloc.arff",
+     "bytes": 669721,
+     "sha256": "6041d6e0c6a92515614be3631771e3bf1e575db5b964a67ebd419297bafaea7d",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125243/heloc.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "68e008a9677230f547d9cc75b141a501",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/heloc/dataset_46932.pq",
+     "bytes": 209550,
+     "sha256": "65cec2870c8bebfcd83c3923a3486155955faf5d64e3fc5b8e0ff6630eb85531",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46932/dataset_46932.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/heloc/openml_description_46932.json",
+     "bytes": 2254,
+     "sha256": "f9bbcc8ba6c6b95533f0996a28a5340d17ec372052b5f0132929705dae5d41ab",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46932",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/heloc/openml_features_46932.json",
+     "bytes": 4074,
+     "sha256": "7e6fee7a240fec85fe74c8fa5de3d129dd446d064c858aab9594531fc54dc1a8",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46932",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/heloc/openml_qualities_46932.json",
+     "bytes": 1067,
+     "sha256": "833fb6844f9dc49aae5ec7d0cd1100c69e77c0870158e16bab49354de2803842",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46932",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "10459",
+    "n_columns_incl_target": "24",
+    "n_features": "23",
+    "n_numeric_columns": "23",
+    "n_nominal_columns": "1",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "RiskPerformance",
+    "target_declared_values": "Bad;Good",
+    "class_counts": "Bad=5459;Good=5000",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_leakage_candidates_by_name_NOT_MEASURED": "ExternalRiskEstimate (an external consolidated risk score, itself a model output)",
+    "flag_differs_from_original": "SOURCE: taken from a Kaggle upload (averkiyoliabev), not from FICO; OpenML licence field 'Public'."
+   }
+  },
+  {
+   "name": "HR_Analytics_Job_Change_of_Data_Scientists",
+   "openml_data_id": 46935,
+   "openml_task_id": 363679,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:18:03",
+   "licence_as_displayed": "CC0: Public Domain",
+   "original_data_url": "https://www.kaggle.com/datasets/arashnic/hr-analytics-job-change-of-data-scientists",
+   "citation_as_displayed": "Kaggle User Arashnic. 'HR Analytics: Job Change of Data Scientists.' Kaggle, 2021, https://www.kaggle.com/datasets/arashnic/hr-analytics-job-change-of-data-scientists.",
+   "target": "LookingForJobChange",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363679.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363679/Task_363679_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "False",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/HR_Analytics_Job_Change_of_Data_Scientists/HR_Analytics_Job_Change_of_Data_Scientists.arff",
+   "files": [
+    {
+     "path": "raw/HR_Analytics_Job_Change_of_Data_Scientists/HR_Analytics_Job_Change_of_Data_Scientists.arff",
+     "bytes": 1952388,
+     "sha256": "3103d37cf2da26fca6ea890a52d18db30c56e1d0f8da76438489218fbb57fd63",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125246/HR_Analytics_Job_Change_of_Data_Scientists.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "d8beae0a8dc31dbc6a7370b682d9d9c9",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/HR_Analytics_Job_Change_of_Data_Scientists/dataset_46935.pq",
+     "bytes": 131894,
+     "sha256": "78a3794c05892d9af21223e83d3ee797a2feae80a4bd0c1bd501a6c8b504e998",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46935/dataset_46935.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/HR_Analytics_Job_Change_of_Data_Scientists/openml_description_46935.json",
+     "bytes": 2359,
+     "sha256": "c4216b7619f3687d1be2cf7791e92844fda490f830874804a5878fdc270282fa",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46935",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/HR_Analytics_Job_Change_of_Data_Scientists/openml_features_46935.json",
+     "bytes": 4044,
+     "sha256": "d941bc85f60dd15d24eae77545a9010f02fa57c2a8564365e1481b121411563d",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46935",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/HR_Analytics_Job_Change_of_Data_Scientists/openml_qualities_46935.json",
+     "bytes": 1102,
+     "sha256": "134ebbb98f51d126ec45f0aed1cfbd1af8977ba5b201e64be4c2fba091b48e0e",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46935",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "19158",
+    "n_columns_incl_target": "13",
+    "n_features": "12",
+    "n_numeric_columns": "2",
+    "n_nominal_columns": "10",
+    "n_string_columns": "1",
+    "n_date_columns": "0",
+    "n_missing_cells": "65",
+    "n_rows_with_missing": "65",
+    "n_columns_with_missing": "1",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "LookingForJobChange",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=14381;Yes=4777",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_high_cardinality_gt50": "city=123",
+    "flag_string_typed": "experience",
+    "n_columns_with_pseudo_missing_literals": "7",
+    "note_redundancy_by_name_NOT_MEASURED": "city_development_index sits beside city (by name, a property of the city)",
+    "flag_differs_from_original": "COLUMNS: ID column dropped."
+   }
+  },
+  {
+   "name": "in_vehicle_coupon_recommendation",
+   "openml_data_id": 46937,
+   "openml_task_id": 363681,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:18:19",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C5GS4P",
+   "citation_as_displayed": "Wang, Tong, et al. 'A bayesian framework for learning rule sets for interpretable classification.' Journal of Machine Learning Research 18.70 (2017): 1-37. https://www.jmlr.org/papers/v18/16-003.html",
+   "target": "AcceptCoupon",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363681.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363681/Task_363681_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/in_vehicle_coupon_recommendation/in_vehicle_coupon_recommendation.arff",
+   "files": [
+    {
+     "path": "raw/in_vehicle_coupon_recommendation/in_vehicle_coupon_recommendation.arff",
+     "bytes": 2272860,
+     "sha256": "a1f67b534b8e91e8b300e0b5350094dda0fa2f7c20382538bab201d1f163e261",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125248/in_vehicle_coupon_recommendation.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "598027997d18534e3843587ce4b54edc",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/in_vehicle_coupon_recommendation/dataset_46937.pq",
+     "bytes": 110071,
+     "sha256": "283ffe518c4d0f7ff119896002716d64de4962c4346aec752a128bc92d644962",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46937/dataset_46937.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/in_vehicle_coupon_recommendation/openml_description_46937.json",
+     "bytes": 2586,
+     "sha256": "d32ccd8234bf688d19cb03499cf8af23138595d8a2429fb161b0b59124bdb6d9",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46937",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/in_vehicle_coupon_recommendation/openml_features_46937.json",
+     "bytes": 5886,
+     "sha256": "3f872f4d3537ad6066387922bc38f87e04eb746603fcc82a14cb865c0f32cbaf",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46937",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/in_vehicle_coupon_recommendation/openml_qualities_46937.json",
+     "bytes": 1025,
+     "sha256": "5870e624bc918808b26f4fc1a01a4ddd569c47520cf0fc9602abb3dd60305c4d",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46937",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "12684",
+    "n_columns_incl_target": "25",
+    "n_features": "24",
+    "n_numeric_columns": "2",
+    "n_nominal_columns": "22",
+    "n_string_columns": "1",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "AcceptCoupon",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=5474;Yes=7210",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_string_typed": "coupon",
+    "n_columns_with_pseudo_missing_literals": "6",
+    "flag_differs_from_original": "COLUMNS: constant columns dropped; 'time' made numeric; a feature-name typo fixed."
+   }
+  },
+  {
+   "name": "Is-this-a-good-customer",
+   "openml_data_id": 46938,
+   "openml_task_id": 363682,
+   "openml_version": 2,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:18:25",
+   "licence_as_displayed": "CC0: Public Domain",
+   "original_data_url": "https://www.kaggle.com/datasets/podsyp/is-this-a-good-customer",
+   "citation_as_displayed": "Kaggle User Podsyp. 'Is This a Good Customer?' Kaggle, 2020, https://www.kaggle.com/datasets/podsyp/is-this-a-good-customer.",
+   "target": "bad_client_target",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363682.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363682/Task_363682_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 10,
+    "splits": 30,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/Is-this-a-good-customer/Is-this-a-good-customer.arff",
+   "files": [
+    {
+     "path": "raw/Is-this-a-good-customer/Is-this-a-good-customer.arff",
+     "bytes": 150528,
+     "sha256": "07410aa7b4cd51d48f1b675e43ec8db330156c7e3857ba33afc4c72723401de0",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125249/Is-this-a-good-customer.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "239616ad0cb51a7873a91bb7254339dc",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/Is-this-a-good-customer/dataset_46938.pq",
+     "bytes": 24119,
+     "sha256": "3aaa17c39e531131573284fcdcf511c1a763d4593ff9d8b87f61536af912ddcf",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46938/dataset_46938.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/Is-this-a-good-customer/openml_description_46938.json",
+     "bytes": 2165,
+     "sha256": "0c4a2007a49d3c2f966d7e97c480790a69d3708721e51a52680acd7d18c35e57",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46938",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/Is-this-a-good-customer/openml_features_46938.json",
+     "bytes": 2969,
+     "sha256": "0ae0ff51bb4be28c9c013e667ce9d62076b48567cbd5397ce9ba00e3ed8e0bc7",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46938",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/Is-this-a-good-customer/openml_qualities_46938.json",
+     "bytes": 1063,
+     "sha256": "7ecaaf77fb21b1de723964f03d9ef02756b7a0ce41bb956dd306b41fc41bff5b",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46938",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "1723",
+    "n_columns_incl_target": "14",
+    "n_features": "13",
+    "n_numeric_columns": "5",
+    "n_nominal_columns": "9",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "bad_client_target",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=1527;Yes=196",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {}
+  },
+  {
+   "name": "kddcup09_appetency",
+   "openml_data_id": 46939,
+   "openml_task_id": 363683,
+   "openml_version": 2,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:18:41",
+   "licence_as_displayed": "Public",
+   "original_data_url": "https://kdd.org/kdd-cup/view/kdd-cup-2009/Intro",
+   "citation_as_displayed": "Guyon, Isabelle, et al. 'Analysis of the kdd cup 2009: Fast scoring on a large orange customer database.' KDD-Cup 2009 Competition. PMLR, 2009. https://proceedings.mlr.press/v7/guyon09.html",
+   "target": "appetency",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363683.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363683/Task_363683_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "False",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/kddcup09_appetency/kddcup09_appetency.arff",
+   "files": [
+    {
+     "path": "raw/kddcup09_appetency/kddcup09_appetency.arff",
+     "bytes": 37428824,
+     "sha256": "91230b3ebf0a8ec22f937382300a63325595a5be7abe9a053a04a7b76f76fa8a",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125250/kddcup09_appetency.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "d8c4ff84954f0ed2fc5ab283eade19b1",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/kddcup09_appetency/dataset_46939.pq",
+     "bytes": 6812625,
+     "sha256": "a09221ace7ce4cff48b0c795ca46ce6a13dece2c2c62bf2337b4628ab3ab7e0e",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46939/dataset_46939.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/kddcup09_appetency/openml_description_46939.json",
+     "bytes": 2617,
+     "sha256": "e7b794cc4b46a7d9c8f5cb6b90d7cb5caabfbb4217c45de3852a9ddde739ea26",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46939",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/kddcup09_appetency/openml_features_46939.json",
+     "bytes": 706924,
+     "sha256": "ff789614e36d060b0b11dc5a828a062e85b8fdf26815a793816314239a4ed466",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46939",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/kddcup09_appetency/openml_qualities_46939.json",
+     "bytes": 1057,
+     "sha256": "84eb92756fb5b4e4f17309f71e097810074732b3ee51604300c64a0a7df2a660",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46939",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "50000",
+    "n_columns_incl_target": "213",
+    "n_features": "212",
+    "n_numeric_columns": "174",
+    "n_nominal_columns": "39",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "6727959",
+    "n_rows_with_missing": "50000",
+    "n_columns_with_missing": "171",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "appetency",
+    "target_declared_values": "-1;1",
+    "class_counts": "-1=49110;1=890",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_high_cardinality_gt50": "Var192=362;Var193=51;Var197=226;Var198=4291;Var199=5074;Var200=15416;Var202=5714;Var204=100;Var212=81;Var214=15416;Var216=2016;Var217=13991;Var220=4291;Var222=4291",
+    "flag_constant_columns": "Var118",
+    "n_columns_with_pseudo_missing_literals": "22",
+    "flag_differs_from_original": "ROWS+COLUMNS: the small (230-feature) training data; 18 empty columns dropped; label = appetency."
+   }
+  },
+  {
+   "name": "Marketing_Campaign",
+   "openml_data_id": 46940,
+   "openml_task_id": 363684,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:18:46",
+   "licence_as_displayed": "Public",
+   "original_data_url": "https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign",
+   "citation_as_displayed": "Saldanha, Rodolfo. 'Marketing Campaign.' Kaggle, 2020, https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign.",
+   "target": "Response",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363684.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363684/Task_363684_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 10,
+    "splits": 30,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/Marketing_Campaign/Marketing_Campaign.arff",
+   "files": [
+    {
+     "path": "raw/Marketing_Campaign/Marketing_Campaign.arff",
+     "bytes": 204688,
+     "sha256": "9efadbe4dacefaca7064052d95b0306b0614a6dfe71a951cabbd6fbe576f397d",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125251/Marketing_Campaign.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "07b40facb21d922723bf016501fd99e9",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/Marketing_Campaign/dataset_46940.pq",
+     "bytes": 75082,
+     "sha256": "e468d6379be297953dac8780594ccdd98af606a6c5bd7ee43408365a27a360a6",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46940/dataset_46940.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/Marketing_Campaign/openml_description_46940.json",
+     "bytes": 2160,
+     "sha256": "c3b7f129c3a4805fc0b95fda0691eb421ed8bb81f38aaf29af0965160ba171be",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46940",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/Marketing_Campaign/openml_features_46940.json",
+     "bytes": 4465,
+     "sha256": "f24e20fcef285e314104019eb3727efac9410105d0b7dccf1c937b457bf97cab",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46940",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/Marketing_Campaign/openml_qualities_46940.json",
+     "bytes": 1098,
+     "sha256": "bd982a6c413b321965e064bd2d9d75a7ed4ff1458c5a329c3693638d44804d31",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46940",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "2240",
+    "n_columns_incl_target": "26",
+    "n_features": "25",
+    "n_numeric_columns": "16",
+    "n_nominal_columns": "9",
+    "n_string_columns": "1",
+    "n_date_columns": "0",
+    "n_missing_cells": "24",
+    "n_rows_with_missing": "24",
+    "n_columns_with_missing": "1",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "Response",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=1906;Yes=334",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_high_cardinality_gt50": "Dt_Customer=663",
+    "flag_string_typed": "Dt_Customer",
+    "flag_leakage_candidates_by_name_NOT_MEASURED": "AcceptedCmp1..AcceptedCmp5 (responses to earlier campaigns; legitimate if earlier in time, which the file does not state); Dt_Customer is a date stored as STRING",
+    "flag_differs_from_original": "COLUMNS: ID column and constant columns dropped."
+   }
+  },
+  {
+   "name": "NATICUSdroid",
+   "openml_data_id": 46969,
+   "openml_task_id": 363689,
+   "openml_version": 3,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T22:28:30",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C5FS64",
+   "citation_as_displayed": "Mathur, Akshay, et al. 'NATICUSdroid: A malware detection framework for Android using native and custom permissions.' Journal of Information Security and Applications 58 (2021): 102696. https://doi.org/10.1016/j.jisa.2020.102696",
+   "target": "Malware",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363689.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363689/Task_363689_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/NATICUSdroid/NATICUSdroid.arff",
+   "files": [
+    {
+     "path": "raw/NATICUSdroid/NATICUSdroid.arff",
+     "bytes": 1319985,
+     "sha256": "b2fd768e817907d8300e89d05522daae2df254152e5ea82df0101b0a3a21c825",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125386/NATICUSdroid.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "7d290894bf8f7454baf61d6998aa2d56",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/NATICUSdroid/dataset_46969.pq",
+     "bytes": 150973,
+     "sha256": "8f328b5d8912578b7bbf702e0eeeba46a3891ba3e858bba920603dddf7292885",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46969/dataset_46969.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/NATICUSdroid/openml_description_46969.json",
+     "bytes": 2468,
+     "sha256": "7c8f782c13d83489aa01888f634e6ccc78c5308587b584755dec670e486fbf3d",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46969",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/NATICUSdroid/openml_features_46969.json",
+     "bytes": 18332,
+     "sha256": "ae19cbbbe7d4744825a3cfc3f8340135e3eff563daa21cb5533b82a4752c9057",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46969",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/NATICUSdroid/openml_qualities_46969.json",
+     "bytes": 1027,
+     "sha256": "0641dcef9d4257301b3960bec08e2dc8cc17644ad339467e3eede6f169030e79",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46969",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "7491",
+    "n_columns_incl_target": "87",
+    "n_features": "86",
+    "n_numeric_columns": "0",
+    "n_nominal_columns": "87",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "Malware",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=4867;Yes=2624",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_differs_from_original": "ROWS: curators dropped all duplicate rows ('Originally, the data has 75% duplicates and a perfect class balance'). UCI record 722 reports 29,333 instances (UCI API)."
+   }
+  },
+  {
+   "name": "online_shoppers_intention",
+   "openml_data_id": 46947,
+   "openml_task_id": 363691,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:19:31",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C5F88Q",
+   "citation_as_displayed": "Sakar, C. Okan, et al. 'Real-time prediction of online shoppers purchasing intention using multilayer perceptron and LSTM recurrent neural networks.' Neural Computing and Applications 31.10 (2019): 6893-6908.  https://doi.org/10.1007/s00521-018-3523-0",
+   "target": "Revenue",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363691.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363691/Task_363691_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/online_shoppers_intention/online_shoppers_intention.arff",
+   "files": [
+    {
+     "path": "raw/online_shoppers_intention/online_shoppers_intention.arff",
+     "bytes": 1158800,
+     "sha256": "db34ad0b4506b39b6ff10a18b5d649d6dc09cc41d6551ad7da96757c38534706",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125258/online_shoppers_intention.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "793c609105b8eacb5ed5acdcce64c00d",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/online_shoppers_intention/dataset_46947.pq",
+     "bytes": 328478,
+     "sha256": "0c2e251ee858a9fade1822ba109f9e1ae70fdf0c7ebd76e5ff5d290d0b48e580",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46947/dataset_46947.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/online_shoppers_intention/openml_description_46947.json",
+     "bytes": 2374,
+     "sha256": "54b4acbe395b85dbaee7db0b3c7be38c3648257c2033fdd380ddd29b3840d9c8",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46947",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/online_shoppers_intention/openml_features_46947.json",
+     "bytes": 3359,
+     "sha256": "bf48e72379f9a2c53c22cbd6080e2f252c4f93364802ba17b7e4afc90a27638e",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46947",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/online_shoppers_intention/openml_qualities_46947.json",
+     "bytes": 1066,
+     "sha256": "32cd15906ff44ead977b6b7d8905eb41037c78fa7a17c2769dfbfc784c426bce",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46947",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "12330",
+    "n_columns_incl_target": "18",
+    "n_features": "17",
+    "n_numeric_columns": "10",
+    "n_nominal_columns": "8",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "Revenue",
+    "target_declared_values": "False;True",
+    "class_counts": "False=10422;True=1908",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_leakage_candidates_by_name_NOT_MEASURED": "PageValues (a Google Analytics value derived from e-commerce transactions; the target Revenue is whether the session ended in a transaction)"
+   }
+  },
+  {
+   "name": "polish_companies_bankruptcy",
+   "openml_data_id": 46950,
+   "openml_task_id": 363694,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:19:51",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C5F600",
+   "citation_as_displayed": "Zieba, Maciej, Sebastian K. Tomczak, and Jakub M. Tomczak. 'Ensemble boosted trees with synthetic features generation in application to bankruptcy prediction.' Expert systems with applications 58 (2016): 93-101. https://doi.org/10.1016/j.eswa.2016.04.001",
+   "target": "company_bankrupt",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363694.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363694/Task_363694_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/polish_companies_bankruptcy/polish_companies_bankruptcy.arff",
+   "files": [
+    {
+     "path": "raw/polish_companies_bankruptcy/polish_companies_bankruptcy.arff",
+     "bytes": 2923681,
+     "sha256": "113352098b5c0285853cf983c940777e1893a87810111e9915ff744fbc5fcabc",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125261/polish_companies_bankruptcy.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "7bb8841d3c0426943845f6a7e1997e83",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/polish_companies_bankruptcy/dataset_46950.pq",
+     "bytes": 3126979,
+     "sha256": "afe5fcf497e005cd4da0e6c36ce87e899f8b3080abe53b0e52f6e6d92f3d24e1",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46950/dataset_46950.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/polish_companies_bankruptcy/openml_description_46950.json",
+     "bytes": 2527,
+     "sha256": "69c8399ab8d9eb626263a5ba76f99d0a18562341058646d5ae8997b507066fc1",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46950",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/polish_companies_bankruptcy/openml_features_46950.json",
+     "bytes": 11548,
+     "sha256": "e1f19cc6fdff9271567335287184d69d3e889c4d34702823132280538d21656c",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46950",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/polish_companies_bankruptcy/openml_qualities_46950.json",
+     "bytes": 1100,
+     "sha256": "a82c80b3acd2c7b4fc78a40c5c97aa7fa2804e2e825bd0b3bc8ede76d188f0fc",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46950",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "5910",
+    "n_columns_incl_target": "65",
+    "n_features": "64",
+    "n_numeric_columns": "64",
+    "n_nominal_columns": "1",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "4666",
+    "n_rows_with_missing": "2879",
+    "n_columns_with_missing": "49",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "company_bankrupt",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=5500;Yes=410",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_differs_from_original": "ROWS: curators use the year-5 file only. UCI record 365 reports 10,503 instances (UCI API)."
+   }
+  },
+  {
+   "name": "qsar-biodeg",
+   "openml_data_id": 46952,
+   "openml_task_id": 363696,
+   "openml_version": 2,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:20:04",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C5H60M",
+   "citation_as_displayed": "Mansouri, Kamel, et al. 'Quantitative structureactivity relationship models for ready biodegradability of chemicals.' Journal of chemical information and modeling 53.4 (2013): 867-878. https://doi.org/10.1021/ci4000213",
+   "target": "Biodegradable",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363696.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363696/Task_363696_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 10,
+    "splits": 30,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/qsar-biodeg/qsar-biodeg.arff",
+   "files": [
+    {
+     "path": "raw/qsar-biodeg/qsar-biodeg.arff",
+     "bytes": 161514,
+     "sha256": "558eb643ae68638cc40aa3f0e869a5f665dd4afe18af5651c36afb89074096df",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125263/qsar-biodeg.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "48f4696362b73acc569fc13a1510b8c8",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/qsar-biodeg/dataset_46952.pq",
+     "bytes": 105768,
+     "sha256": "864c269749defdf2e50e52fa631fa89d4ad8360f3bf82bcd47e2ceaf0f48773d",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46952/dataset_46952.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/qsar-biodeg/openml_description_46952.json",
+     "bytes": 2327,
+     "sha256": "c7863cb6de0d2d33bc72248304bc36991ec572fe6ebb4ca4c299140108dc8852",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46952",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/qsar-biodeg/openml_features_46952.json",
+     "bytes": 7302,
+     "sha256": "5a2580c848a28dccffa72a53fe1cae14b1764067913fd26f0c885a4624a6fea5",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46952",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/qsar-biodeg/openml_qualities_46952.json",
+     "bytes": 1062,
+     "sha256": "79ae5f2dcdcd32495832198e0c76745b88ef987c0e035ac813c7bdf819f0408d",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46952",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "1054",
+    "n_columns_incl_target": "42",
+    "n_features": "41",
+    "n_numeric_columns": "36",
+    "n_nominal_columns": "6",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "Biodegradable",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=699;Yes=355",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_differs_from_original": "CODING: features renamed only."
+   }
+  },
+  {
+   "name": "seismic-bumps",
+   "openml_data_id": 46956,
+   "openml_task_id": 363700,
+   "openml_version": 4,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:20:44",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C5W902",
+   "citation_as_displayed": "Sikora, Marek, and ukasz Wrobel. 'Application of rule induction algorithms for analysis of data collected by seismic hazard monitoring systems in coal mines.' Archives of Mining Sciences 55.1 (2010): 91-114. http://yadda.icm.edu.pl/baztech/element/bwmeta1.element.baztech-article-BPZ5-0008-0008",
+   "target": "HighEnergySeismicBump",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363700.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363700/Task_363700_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/seismic-bumps/seismic-bumps.arff",
+   "files": [
+    {
+     "path": "raw/seismic-bumps/seismic-bumps.arff",
+     "bytes": 173522,
+     "sha256": "457abff74c716dee5e9836f779874369bfb8b61091dae3f7b011beca10d6b25b",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125267/seismic-bumps.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "4eb73b1e0e9b5233d1b0b3f457af662b",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/seismic-bumps/dataset_46956.pq",
+     "bytes": 53840,
+     "sha256": "907dfa3a1301742a86bd6d3e2901814d8f50489567530ce99429a4002c426a4b",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46956/dataset_46956.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/seismic-bumps/openml_description_46956.json",
+     "bytes": 2487,
+     "sha256": "2a7845eb3012d65e19edbe4bfec65d6cab1d4cc2d897d8f460d74deb0fb7c1bd",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46956",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/seismic-bumps/openml_features_46956.json",
+     "bytes": 2595,
+     "sha256": "1141eb38f2a40605c6d6a3de8abc045687dd9f6d4f91b00fc417c92f03c35d0b",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46956",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/seismic-bumps/openml_qualities_46956.json",
+     "bytes": 1026,
+     "sha256": "97d54f4e40e63bfdc4e245d416777f7edd5c02bd7be0afbec232c1339e10b036",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46956",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "2584",
+    "n_columns_incl_target": "16",
+    "n_features": "15",
+    "n_numeric_columns": "11",
+    "n_nominal_columns": "4",
+    "n_string_columns": "1",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "HighEnergySeismicBump",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=2414;Yes=170",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_string_typed": "ghazard",
+    "flag_leakage_candidates_by_name_NOT_MEASURED": "seismic, seismoacoustic, ghazard (hazard assessments produced by other methods for the same shift)",
+    "flag_differs_from_original": "COLUMNS: constant columns nbumps6, nbumps7, nbumps89 dropped; target renamed and relabelled."
+   }
+  },
+  {
+   "name": "taiwanese_bankruptcy_prediction",
+   "openml_data_id": 46962,
+   "openml_task_id": 363706,
+   "openml_version": 1,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-04-30T20:21:31",
+   "licence_as_displayed": "CC BY 4.0",
+   "original_data_url": "https://doi.org/10.24432/C5004D",
+   "citation_as_displayed": "Liang, Deron, et al. 'Financial ratios and corporate governance indicators in bankruptcy prediction: A comprehensive study.' European journal of operational research 252.2 (2016): 561-572. https://doi.org/10.1016/j.ejor.2016.01.012",
+   "target": "Bankrupt",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363706.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363706/Task_363706_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/taiwanese_bankruptcy_prediction/taiwanese_bankruptcy_prediction.arff",
+   "files": [
+    {
+     "path": "raw/taiwanese_bankruptcy_prediction/taiwanese_bankruptcy_prediction.arff",
+     "bytes": 11348172,
+     "sha256": "e8c347eaef969f92b9ef19ab8f62b3ea53803ffa75d0f43c698114a4644e6c71",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125273/taiwanese_bankruptcy_prediction.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "30a27e4516c9d069c4945857e7138f6c",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/taiwanese_bankruptcy_prediction/dataset_46962.pq",
+     "bytes": 4681502,
+     "sha256": "0c39553394605c0807d94797ec59b9ac7cb1ab88be24b31bfe2f284a752ba55d",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46962/dataset_46962.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/taiwanese_bankruptcy_prediction/openml_description_46962.json",
+     "bytes": 2646,
+     "sha256": "7d36a4ec6bd13cd3ad9c24680b2e19b94bcb44a41289c7cea8f803ab8e44b1b7",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46962",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/taiwanese_bankruptcy_prediction/openml_features_46962.json",
+     "bytes": 16329,
+     "sha256": "21ed65bdc4eb5b9aeadea59360b909d6fa9759e63fc27e072ddf26a576c5897d",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46962",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/taiwanese_bankruptcy_prediction/openml_qualities_46962.json",
+     "bytes": 1065,
+     "sha256": "ba3dd8e06eab7ab2074359a1067f7cc83475afecfb358875519387349b396f8e",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46962",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "6819",
+    "n_columns_incl_target": "95",
+    "n_features": "94",
+    "n_numeric_columns": "94",
+    "n_nominal_columns": "1",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "0",
+    "n_rows_with_missing": "0",
+    "n_columns_with_missing": "0",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "Bankrupt",
+    "target_declared_values": "No;Yes",
+    "class_counts": "No=6599;Yes=220",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_differs_from_original": "COLUMNS: constant column Net_Income_Flag dropped; features renamed."
+   }
+  },
+  {
+   "name": "jm1",
+   "openml_data_id": 46979,
+   "openml_task_id": 363712,
+   "openml_version": 3,
+   "openml_version_label": "tabular-ml-iid-study-0.0.1",
+   "openml_upload_date": "2025-05-06T10:46:18",
+   "licence_as_displayed": "Public Domain",
+   "original_data_url": "https://www.openml.org/d/1053",
+   "citation_as_displayed": "How Good is Your Blind Spot Sampling Policy?; 2003; Tim Menzies and Justin S. Di Stefano; 2004 IEEE Conference on High Assurance Software Engineering (http://menzies.us/pdf/03blind.pdf).",
+   "target": "defects",
+   "status": "acquired",
+   "task_record": "suite/tasks/task_363712.json",
+   "openml_split_file_url_NOT_DOWNLOADED": "https://openml.org/api_splits/get/363712/Task_363712_splits.arff",
+   "tabarena_protocol": {
+    "outer_folds": 3,
+    "repeats_used": 3,
+    "splits": 9,
+    "can_run_tabpfnv2": "True",
+    "can_run_tabicl": "True"
+   },
+   "primary_data_file": "raw/jm1/jm1.arff",
+   "files": [
+    {
+     "path": "raw/jm1/jm1.arff",
+     "bytes": 1157472,
+     "sha256": "fdbcb4b9c4b04e3fb716de33b34ce3b9ce72a0358031efa99dd858f11f730873",
+     "origin": "downloaded",
+     "url": "https://openml.org/data/v1/download/22125396/jm1.arff",
+     "retrieved": "2026-09-19",
+     "openml_md5": "879ec0e136c85f164775651f2eec099f",
+     "role": "primary data file (ARFF, plain text)"
+    },
+    {
+     "path": "raw/jm1/dataset_46979.pq",
+     "bytes": 406647,
+     "sha256": "fe4cf507abfccad54b41207526ff81d1edebf5970ba89ddc47435fdfcb80a5b0",
+     "origin": "downloaded",
+     "url": "https://data.openml.org/datasets/0004/46979/dataset_46979.pq",
+     "retrieved": "2026-09-19",
+     "role": "OpenML's parquet copy of the same table"
+    },
+    {
+     "path": "raw/jm1/openml_description_46979.json",
+     "bytes": 2367,
+     "sha256": "58669069b652c012bd1c791ae245f337ce6a6f9e89a21687458498cc4198235d",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/46979",
+     "retrieved": "2026-09-19",
+     "role": "OpenML dataset description"
+    },
+    {
+     "path": "raw/jm1/openml_features_46979.json",
+     "bytes": 3381,
+     "sha256": "d72110486411a7a4cb9ffc50385bac3e7fd2a6f3355bc6b07efa7123e6c76d6c",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/features/46979",
+     "retrieved": "2026-09-19",
+     "role": "OpenML feature list"
+    },
+    {
+     "path": "raw/jm1/openml_qualities_46979.json",
+     "bytes": 1101,
+     "sha256": "7473e0e66165746be60843bc74d2f2863cb14b66b890719b08373c1e5d9af401",
+     "origin": "downloaded",
+     "url": "https://www.openml.org/api/v1/json/data/qualities/46979",
+     "retrieved": "2026-09-19",
+     "role": "OpenML qualities"
+    }
+   ],
+   "measured": {
+    "n_rows": "10885",
+    "n_columns_incl_target": "22",
+    "n_features": "21",
+    "n_numeric_columns": "21",
+    "n_nominal_columns": "1",
+    "n_string_columns": "0",
+    "n_date_columns": "0",
+    "n_missing_cells": "25",
+    "n_rows_with_missing": "5",
+    "n_columns_with_missing": "5",
+    "n_data_lines_with_wrong_field_count": "0",
+    "target": "defects",
+    "target_declared_values": "False;True",
+    "class_counts": "False=8779;True=2106",
+    "target_missing": "0"
+   },
+   "measured_equals_openml_qualities": "yes",
+   "flags": {
+    "flag_differs_from_original": "SOURCE: copy of OpenML 1053, chosen by the curators as the largest of a family of software-defect sets."
+   }
+  }
+ ],
+ "shared_files": [
+  {
+   "path": "suite/nonbinary_classification/46906_description.json",
+   "bytes": 2162,
+   "sha256": "869a024f4a4730880319c301efb17067734f5dc772a0000a9181fbde65e41804",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/46906",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46906_features.json",
+   "bytes": 7269,
+   "sha256": "89342e524ddec4a0307d8e87ed406513089cb13d506df909e0a2e2da5f38d00c",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/features/46906",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46906_qualities.json",
+   "bytes": 1060,
+   "sha256": "62318f03e3b26a0a15dcbba184531b5555b8d8796b760cbb0af1bcdd697b1f5b",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/qualities/46906",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46933_description.json",
+   "bytes": 2295,
+   "sha256": "0731d8aa6571c12bdbb6abe8ca65b53b56431998ef56d2f039a7acd142264d1c",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/46933",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46933_features.json",
+   "bytes": 331112,
+   "sha256": "89347f8542babe313f4f166859bda4ce158fedc795f475b9aaf5ea5078b9637d",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/features/46933",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46933_qualities.json",
+   "bytes": 1041,
+   "sha256": "de0b419205896586b4923d688016cfa6db1f6d09cc804783cc02e77017f329f1",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/qualities/46933",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46941_description.json",
+   "bytes": 2497,
+   "sha256": "c0d11a1f69566d87bd806e6bcdfdd9d414cd27205535a3fe9236a4f025ea016d",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/46941",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46941_features.json",
+   "bytes": 1149,
+   "sha256": "b63a0a250c73beec10ce67d35468d8a1b8abce08004ee4bf1e2fc391f1143bd5",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/features/46941",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46941_qualities.json",
+   "bytes": 1047,
+   "sha256": "823b50675ff9355a59d75bec550c3fc103d1de8d3238d200c8823613b816c7a2",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/qualities/46941",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46955_description.json",
+   "bytes": 2520,
+   "sha256": "13aea2a04da9c9691c2d0ab0d145cb6e555ddc6f97030f053ab35f5af3cd021a",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/46955",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46955_features.json",
+   "bytes": 51316,
+   "sha256": "53392426953488d3632a37ef5979b9f4b6f491f777bda8606aba9352f564cbb4",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/features/46955",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46955_qualities.json",
+   "bytes": 1029,
+   "sha256": "585a7e45dd847684f0c2fc9cfbdf8cf8654a1660b6c1d5bbff76587f490fd35f",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/qualities/46955",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46958_description.json",
+   "bytes": 2398,
+   "sha256": "106eeb1ca5a91a3cbe237a89d9da1ad0dfcf71056bf44fc39b71d37657624d27",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/46958",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46958_features.json",
+   "bytes": 11866,
+   "sha256": "8f56f648672e5727d6661bf0a9c40c7f991461806020501ecdf7dce151e6901c",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/features/46958",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46958_qualities.json",
+   "bytes": 1025,
+   "sha256": "7c6b07d16c82317da765a301503f743cdda916a991af2807e42f92f40e4ab74e",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/qualities/46958",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46960_description.json",
+   "bytes": 2538,
+   "sha256": "24e23b35b9e847d34e51c5ce3577d43452769229df838bda28180fdeec2f8b78",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/46960",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46960_features.json",
+   "bytes": 13092,
+   "sha256": "1e357584712d9f5186cc09759a6beffff7bc2d86db43c22fae48f8ae4b9138e9",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/features/46960",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46960_qualities.json",
+   "bytes": 1064,
+   "sha256": "3e12954dfbbcb1a9b7f06ff7d1b7c42492730a2478241d72a8f3cfa531fefd8c",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/qualities/46960",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46963_description.json",
+   "bytes": 2340,
+   "sha256": "8f712cb69e33e8e0c35ac69f922783b7efa6db5945901f7afd3f87d61edfb2d8",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/46963",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46963_features.json",
+   "bytes": 2102,
+   "sha256": "369aba0b9fcbd55be5b3da0e4fee885ee8e49b013135a01bb592f08e9ee7e4d4",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/features/46963",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46963_qualities.json",
+   "bytes": 1024,
+   "sha256": "052fe68529ba313c69eaca4f8bac70c9065b9b488abf3d5bb09ce47a1284caaa",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/qualities/46963",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46980_description.json",
+   "bytes": 2593,
+   "sha256": "b553401ce4d80738fc27acfcbe47a31078e9cfb9aadff844e3fe1ff15342fd82",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/46980",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46980_features.json",
+   "bytes": 21248,
+   "sha256": "b926714f336be545aa23e3fd96b63a2aab556a4deada44f2fb02eef9fd4f529c",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/features/46980",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/nonbinary_classification/46980_qualities.json",
+   "bytes": 1088,
+   "sha256": "3a589494ec279c773735e3f61d2bda2570035ff88d03b38be54a3a6d163078bb",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/data/qualities/46980",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/study_457.json",
+   "bytes": 1588,
+   "sha256": "0421355639e8b804023c569c92ce0159057cd54067de9e3f7b3a2a6ace974d15",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/study/457",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363612.json",
+   "bytes": 855,
+   "sha256": "c26d8e341657a760652396e218f49231e8dbed3ed04ec245d6fc958350598c9b",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363612",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363613.json",
+   "bytes": 995,
+   "sha256": "f91668a8554d4db646563f6bec6011cb05ac37b1f0d745ee378d2d9f07aefa8a",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363613",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363614.json",
+   "bytes": 970,
+   "sha256": "da8bdc7e26579956c74755f206bdac60343ae35015844fdaf80885afc6f8a9e0",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363614",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363615.json",
+   "bytes": 853,
+   "sha256": "284552dc65f25719eb39b7f9fb66597711751ac40d37acd5477f9ab8b1103a17",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363615",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363616.json",
+   "bytes": 991,
+   "sha256": "590deee9459863c1a2cc515a1baf9ce7146bc4c60178581150bbbe0192c60d0b",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363616",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363618.json",
+   "bytes": 991,
+   "sha256": "37737805a715d775f5bef44a3818ca507feafc93b0d44555663f6eb230699c07",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363618",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363619.json",
+   "bytes": 981,
+   "sha256": "eb6bc1083cd1a87e084cc8b34c2cb30249a37b7e5c5bc5d6fe3528998951707d",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363619",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363620.json",
+   "bytes": 991,
+   "sha256": "dc2e00ba3d3c3ac57ac24a71e1b1a48a99e5489e52837f9dee87949812c93ddb",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363620",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363621.json",
+   "bytes": 1012,
+   "sha256": "c409777eae9e8bad2cdf1dc115421ba605e9a6bd1d5575c2ad104a91bc7dad61",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363621",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363623.json",
+   "bytes": 977,
+   "sha256": "1f5cd9f89b77e5b5c4f6ea8e0a37b5d73661db737470633b47b8e0fb60c54a63",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363623",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363624.json",
+   "bytes": 1000,
+   "sha256": "db0ae2124d9923aa464d9e560841200db45bdbb1fcdc73f4f1e26f9c958b4f15",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363624",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363625.json",
+   "bytes": 872,
+   "sha256": "0752e3a393a22456d0fd295367def4f5bda0aef1aa48c43b50739a003e2352e0",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363625",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363626.json",
+   "bytes": 985,
+   "sha256": "7eaf14d71fd06cc4016c54302d03b69d5c3a35e161d989cc30346d7cfacc2c64",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363626",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363627.json",
+   "bytes": 1009,
+   "sha256": "8cb0e0085e8b25f0a0505f0825e57d0c29a98bc0c818838b535d8deb468c5f86",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363627",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363628.json",
+   "bytes": 1001,
+   "sha256": "c763fdb62d453f4e48ee70f13a43e34843e3fe0e1e5be168b6bca0e9ed399f15",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363628",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363629.json",
+   "bytes": 990,
+   "sha256": "ba2300bd55fe0e88197f00e075831571f4e18ce6979aa5608fa95d019046e803",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363629",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363630.json",
+   "bytes": 986,
+   "sha256": "a47e87f9e5beb2f9ac1dc75b28b76d8641ab3e04c312536e5fab63a3153e4686",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363630",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363631.json",
+   "bytes": 829,
+   "sha256": "adabd070c57b594148a869298fd44093f73d3a73e9cb285c759bd06471ab80a7",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363631",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363632.json",
+   "bytes": 989,
+   "sha256": "5ec7d34b2635d9bf0425d932d8f29073da8d8c38c3a537bb1477c242042e4473",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363632",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363671.json",
+   "bytes": 977,
+   "sha256": "5e72c59f9941da1f5535f8a18a5b28292ece226e8183e81485fcadccdcb12fc8",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363671",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363672.json",
+   "bytes": 849,
+   "sha256": "68e863ebd7d59daa94e297fbbc33372fc2bc78e19b412d1a40054b51587fd2e0",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363672",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363673.json",
+   "bytes": 1002,
+   "sha256": "7c16168eaf004108cb442c467ccf431bab955fa5ce715ad3352d7dfd48566af9",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363673",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363674.json",
+   "bytes": 1006,
+   "sha256": "d6a9c01e5bdec1fd35ca31c5f10b69545668129764c7b46c15b9e712cb223e57",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363674",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363675.json",
+   "bytes": 852,
+   "sha256": "b277fa970f2df9bf6b3bf886633db9beacc309e2c9d858275761c5af331e6da7",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363675",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363676.json",
+   "bytes": 977,
+   "sha256": "5227e113d1bc0795be3b34da3bac93585f62dbe080f3d07cc3a8cac5692f9fa5",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363676",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363677.json",
+   "bytes": 986,
+   "sha256": "22bd4ba9bd86410013a5040279353ecea4d96c565d0fef76f1b562711afe1c8f",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363677",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363678.json",
+   "bytes": 840,
+   "sha256": "2dd47b84f0e38b5166e9214f8661b9b5d2368df36354a49db5db8e05af9f4996",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363678",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363679.json",
+   "bytes": 1018,
+   "sha256": "852133cb245a5fd14a4fc2838adef1f8f71ea0753db824cc5113bd9e0c04b0db",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363679",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363681.json",
+   "bytes": 1001,
+   "sha256": "84bcd33f27deea9d7a8eb9a3cd6967d876fce243d58be89ce899ba9ea964c245",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363681",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363682.json",
+   "bytes": 997,
+   "sha256": "bc471c1a2633e2560b68e1c77e9552072517b3ae3460217dbeb44e1b5d590144",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363682",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363683.json",
+   "bytes": 984,
+   "sha256": "3c320fe1b2c626c3b4deaecb17e563baad37986fe5bdd8f46bcbdde70165ce67",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363683",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363684.json",
+   "bytes": 983,
+   "sha256": "6e7670db6cd8b05ccdd59fa0914f46020bf815f2684e930f6a65f69e6fcf32a3",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363684",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363685.json",
+   "bytes": 986,
+   "sha256": "a0f5f0f83bca48f510b6b5113a72ea662ea4ddcd7986fb4a2a19a1a506aadd79",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363685",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363686.json",
+   "bytes": 837,
+   "sha256": "60c99a15226b80dd5375d642f9afcefc38945b0aa15e95e3a1b335042597aa97",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363686",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363689.json",
+   "bytes": 976,
+   "sha256": "2e2bc4583afa00fe6ba7ee17ecc3ae9f680fa311d260d24953a57379248852ab",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363689",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363691.json",
+   "bytes": 989,
+   "sha256": "7381ecb6d055c4923f796fd6ec52eb4f76211149bf763dd782d1844dbac7b8c8",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363691",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363693.json",
+   "bytes": 850,
+   "sha256": "18a42451d0493498ba73e3e4ee097e708018c5b44fa779d4ec805572af477664",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363693",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363694.json",
+   "bytes": 1000,
+   "sha256": "7486f9365f20f0ab8c24606d2d123b0896d1534af0a787d33616ebc724a7cfd4",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363694",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363696.json",
+   "bytes": 981,
+   "sha256": "fb757a8c7b2c80a033eda745befda5772c8732052e3826effac21fa39f257d1f",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363696",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363697.json",
+   "bytes": 839,
+   "sha256": "a6d22949cb8873035ffb12021ea5b7fb067656c20c94d11aa03160b5e6f6e92f",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363697",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363698.json",
+   "bytes": 838,
+   "sha256": "a0602739499e635d5abf011973c87e647caa8d2d20452d72a52d7c74c7814a5a",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363698",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363699.json",
+   "bytes": 973,
+   "sha256": "7abe9c89b97446bffd47500ec13f5ef2645999bc10f2ffed677276f3be2e55ef",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363699",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363700.json",
+   "bytes": 991,
+   "sha256": "c70a8da2a74e01e9d4e1e80f5f923ac792c9e48f0fb521f4fd795c518a09b8f1",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363700",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363702.json",
+   "bytes": 971,
+   "sha256": "36fc41e4788edad8b1a00ab21299f4d0fddb1dfa4e44b0108ce5edb1c178c6c0",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363702",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363704.json",
+   "bytes": 1009,
+   "sha256": "712af4ba7fbba4060e7a10e39628119076f879ae915cdc344a0c5a95e0151c76",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363704",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363705.json",
+   "bytes": 846,
+   "sha256": "e17c9ff0097eb40ecf4788c4993da593a5b2738d250560c63f185a631ef94463",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363705",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363706.json",
+   "bytes": 996,
+   "sha256": "7675c5efb455cb0936653971e3bbc0ebfa652661910844b49962761a21a51eea",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363706",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363707.json",
+   "bytes": 984,
+   "sha256": "c2a5f427a319523813b5218f5c0867b0a845f3f7e5d99450c92bfd77d2e7c874",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363707",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363708.json",
+   "bytes": 847,
+   "sha256": "cd91de0fdf10f03c419fb5e0276f3fc629787aa0891df3d58e45a7450648b2df",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363708",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363711.json",
+   "bytes": 966,
+   "sha256": "9db5a676189a6587822310bd0b7fd721e581a92710533d1a9a7ad6397a2d3554",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363711",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "suite/tasks/task_363712.json",
+   "bytes": 967,
+   "sha256": "5106d6cabe02aee76ee7abc286c20efa6f89afa017b50f71fb85e30d004f126b",
+   "origin": "downloaded",
+   "url": "https://www.openml.org/api/v1/json/task/363712",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/TabArena_arXiv_2506.16791v4.html",
+   "bytes": 2042389,
+   "sha256": "f8f6fc06988c5e0234103e90f56e8e2448c02d51ab1a9a8ad2c94817e1c690d5",
+   "origin": "downloaded",
+   "url": "https://arxiv.org/html/2506.16791v4",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/TabArena_arXiv_2506.16791v4.pdf",
+   "bytes": 1964941,
+   "sha256": "8853fd1a1eb09ee7c25bf6f48a194a8e718103774d39af5bcc402b2c41a735e5",
+   "origin": "downloaded",
+   "url": "https://arxiv.org/pdf/2506.16791",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/TabArena_arXiv_2506.16791v4_pypdf_text.txt",
+   "bytes": 235741,
+   "sha256": "f5eda5abe768419dc4f2dd47dc62b5f68e8aad76c11be75d66ec0898a1be6076",
+   "origin": "derived",
+   "derived_by": "pypdf text layer of the arXiv PDF, page by page"
+  },
+  {
+   "path": "references/TabArena_arXiv_2506.16791v4_TableF1_html_parsed.csv",
+   "bytes": 133229,
+   "sha256": "335c2be94a64c2c590aa045b454fd437267c879b891fd72e33b4cff1cfce4f99",
+   "origin": "derived",
+   "derived_by": "scripts/crosscheck_pdf_vs_html.py on the arXiv HTML"
+  },
+  {
+   "path": "references/TabArena_arXiv_2506.16791v4_TableF1_parsed.csv",
+   "bytes": 141041,
+   "sha256": "ddd1b3852ad2da05d005be3f5f1bf9f1ab73770931d29a8801206388ebadf927",
+   "origin": "derived",
+   "derived_by": "scripts/parse_pdf_table_f1.py on the arXiv PDF"
+  },
+  {
+   "path": "references/TabArena_NeurIPS2025_Paper.pdf",
+   "bytes": 1680337,
+   "sha256": "2884b32e2e27f9e575e8871dca55bf073e571e0e3b16545b38ebcd0bd8d353d0",
+   "origin": "downloaded",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/1697e3fb412da11dc9488249f9e7bbc9-Paper-Datasets_and_Benchmarks_Track.pdf",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/TabArena_NeurIPS2025_Paper_TableF1_parsed.csv",
+   "bytes": 141041,
+   "sha256": "ddd1b3852ad2da05d005be3f5f1bf9f1ab73770931d29a8801206388ebadf927",
+   "origin": "derived",
+   "derived_by": "scripts/parse_pdf_table_f1.py on the proceedings PDF"
+  },
+  {
+   "path": "references/TabArena_NeurIPS2025_Supplemental.pdf",
+   "bytes": 751449,
+   "sha256": "ee493dce15ac8fbc4670d63c79a8fd0d64e805f963ed2571702369efa20eb351",
+   "origin": "downloaded",
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/1697e3fb412da11dc9488249f9e7bbc9-Supplemental-Datasets_and_Benchmarks_Track.pdf",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/tabarena_repo/examples__reproducibility__run_generate_main_leaderboard_neurips2025.py",
+   "bytes": 1401,
+   "sha256": "3ef907d6c51afb11d13dc3b9b00fc97ce4ad00801841bdfe713c5c9e3cb1bf12",
+   "origin": "downloaded",
+   "url": "https://raw.githubusercontent.com/autogluon/tabarena/60d0f66771c87bb8a255c3d595476119324aaf41/examples/reproducibility/run_generate_main_leaderboard_neurips2025.py",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/tabarena_repo/LICENSE",
+   "bytes": 11357,
+   "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+   "origin": "downloaded",
+   "url": "https://raw.githubusercontent.com/autogluon/tabarena/60d0f66771c87bb8a255c3d595476119324aaf41/LICENSE",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/tabarena_repo/packages__tabarena__src__tabarena__benchmark__task__metadata__data__curated_tabarena_dataset_metadata.csv",
+   "bytes": 13854,
+   "sha256": "b45fa1f33e7fdf992326fb638b146939d1aab09a21ecfb6af5093b0805387b2a",
+   "origin": "downloaded",
+   "url": "https://raw.githubusercontent.com/autogluon/tabarena/60d0f66771c87bb8a255c3d595476119324aaf41/packages/tabarena/src/tabarena/benchmark/task/metadata/data/curated_tabarena_dataset_metadata.csv",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/tabarena_repo/packages__tabarena__src__tabarena__contexts__tabarena___tabarena_method_metadata_2025_06_12.py",
+   "bytes": 6232,
+   "sha256": "20204842b7c29e7d7638424aed5f115fbc3e843070f5f8fceabeabfc6df3a01a",
+   "origin": "downloaded",
+   "url": "https://raw.githubusercontent.com/autogluon/tabarena/60d0f66771c87bb8a255c3d595476119324aaf41/packages/tabarena/src/tabarena/contexts/tabarena/_tabarena_method_metadata_2025_06_12.py",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/tabarena_repo/packages__tabarena__src__tabarena__contexts__tabarena__methods.py",
+   "bytes": 12220,
+   "sha256": "b7e3e43dd5ef7cc4d0842368487f8f952a1da4897930ebdd86327068ae236b9e",
+   "origin": "downloaded",
+   "url": "https://raw.githubusercontent.com/autogluon/tabarena/60d0f66771c87bb8a255c3d595476119324aaf41/packages/tabarena/src/tabarena/contexts/tabarena/methods.py",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/tabarena_repo/packages__tabarena__src__tabarena__models___method_metadata.py",
+   "bytes": 69047,
+   "sha256": "7cf18b668d7c20da6a10bc970026885b7193832af3de44aae76a49946a5942e4",
+   "origin": "downloaded",
+   "url": "https://raw.githubusercontent.com/autogluon/tabarena/60d0f66771c87bb8a255c3d595476119324aaf41/packages/tabarena/src/tabarena/models/_method_metadata.py",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/tabarena_repo/packages__tabarena__src__tabarena__models__knn__info.py",
+   "bytes": 895,
+   "sha256": "0fc4c9b1d49352f7e1efc649a66948f182c2cf6eec0a469493c51eb27ff44fc6",
+   "origin": "downloaded",
+   "url": "https://raw.githubusercontent.com/autogluon/tabarena/60d0f66771c87bb8a255c3d595476119324aaf41/packages/tabarena/src/tabarena/models/knn/info.py",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/tabarena_repo/packages__tabarena__src__tabarena__models__lr__info.py",
+   "bytes": 947,
+   "sha256": "5edb332c71a33f175932c70c58578c3df62f17c160e11954887b094486a62be4",
+   "origin": "downloaded",
+   "url": "https://raw.githubusercontent.com/autogluon/tabarena/60d0f66771c87bb8a255c3d595476119324aaf41/packages/tabarena/src/tabarena/models/lr/info.py",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/uci_metadata/uci_296.json",
+   "bytes": 19603,
+   "sha256": "6e6e0934d175afe24f54f2199f9895eab21844205fe46be7970c106a104725e9",
+   "origin": "downloaded",
+   "url": "https://archive.ics.uci.edu/api/dataset?id=296",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/uci_metadata/uci_365.json",
+   "bytes": 14973,
+   "sha256": "6a2ee78e34e8317eac25882898f17c7a93a3dc6aec669d38ebc82af4e5b447f0",
+   "origin": "downloaded",
+   "url": "https://archive.ics.uci.edu/api/dataset?id=365",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "references/uci_metadata/uci_722.json",
+   "bytes": 15614,
+   "sha256": "067080961f0058e05f84af9b67793fa03c40b4147faf648393d9e104cd18b2c8",
+   "origin": "downloaded",
+   "url": "https://archive.ics.uci.edu/api/dataset?id=722",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/AutoGluon_v130/results/model_results.parquet",
+   "bytes": 19744,
+   "sha256": "d0be4cb809205df634f1f7cf186a52ccc6617db386d94d5cfd7d17541b287dbb",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/AutoGluon_v130/results/model_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/CatBoost/results/hpo_results.parquet",
+   "bytes": 62977,
+   "sha256": "62959452d2014306b68ef4aa0124d9a74d57d85dbd615ab004494eb0ae997b90",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/CatBoost/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/ExplainableBM/results/hpo_results.parquet",
+   "bytes": 62412,
+   "sha256": "a6110f54d5eb685b9897098fd5af9672bd3f6d6a77dfb27140d0c8f8093c28f9",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/ExplainableBM/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/ExtraTrees/results/hpo_results.parquet",
+   "bytes": 60642,
+   "sha256": "b3314dc966c6c835d258606eb35f812d97a8637e1a3d2585b00cba640c83ae56",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/ExtraTrees/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/KNeighbors/results/hpo_results.parquet",
+   "bytes": 57929,
+   "sha256": "3ce73d3bf5674465e4338a1a8bb32c8b9830a338b6aea32d51d68aae21ebd939",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/KNeighbors/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/LightGBM/results/hpo_results.parquet",
+   "bytes": 63273,
+   "sha256": "ff1dcadc450a21fc6a8a730fdec9860273c809b7e8240b504566a65dd5dea9d4",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/LightGBM/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/LinearModel/results/hpo_results.parquet",
+   "bytes": 54662,
+   "sha256": "f62d21c9007563620d7f0a7817db0346023f14b722431a8d0e1509165179ab92",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/LinearModel/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/ModernNCA_GPU/results/hpo_results.parquet",
+   "bytes": 63859,
+   "sha256": "a7cad50898c9df37e45ea83c904a9d2d9d8666a7a7a390ff9c65fe1bbec4585b",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/ModernNCA_GPU/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/NeuralNetFastAI/results/hpo_results.parquet",
+   "bytes": 63644,
+   "sha256": "03d2c23c5e0677d7da2a0ec512d0315b9b8a4eed3d240662c3ed396092baffc8",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/NeuralNetFastAI/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/NeuralNetTorch/results/hpo_results.parquet",
+   "bytes": 63717,
+   "sha256": "a75fe4f418abad9fd7baf867aa61935fbc85bc8fc39d30f3c3c99886b9dfd201",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/NeuralNetTorch/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/RandomForest/results/hpo_results.parquet",
+   "bytes": 58869,
+   "sha256": "ba21e8769f8b4a364cfe995bf14364737cee7564f37a25ada7bc1205d8bb65a3",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/RandomForest/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/RealMLP/results/hpo_results.parquet",
+   "bytes": 64053,
+   "sha256": "0760a1b3545804a9067b6f39980f09a3115ee54746329ef91cb48ee741d7c9d9",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/RealMLP/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/TabDPT_GPU/results/hpo_results.parquet",
+   "bytes": 25633,
+   "sha256": "b4e9e2db230cf3ef56a175db25d116ece4680e2638d9e1d9c97e908eb8d90450",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/TabDPT_GPU/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/TabICL_GPU/results/hpo_results.parquet",
+   "bytes": 25534,
+   "sha256": "7f79aca61a3a12fd1899c6239b9c9388434bd5eeb87e1360d12aa4beb0b73666",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/TabICL_GPU/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/TabM_GPU/results/hpo_results.parquet",
+   "bytes": 63542,
+   "sha256": "91692229ad1c4823a902960fd0d73996d90792a0ade0a05a198ac063ae85640c",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/TabM_GPU/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/TabPFNv2_GPU/results/hpo_results.parquet",
+   "bytes": 57859,
+   "sha256": "146e54cd6d169731c61310740a59521124558e6796fe89d0040fa7485230e780",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/TabPFNv2_GPU/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-06-12/methods/XGBoost/results/hpo_results.parquet",
+   "bytes": 62853,
+   "sha256": "fb37a4ac13ee540ffc2b599b91500b81c8e2d60e68e87d5800d87063a48fdd25",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-06-12/methods/XGBoost/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-10-20/methods/KNeighbors/results/hpo_results.parquet",
+   "bytes": 78123,
+   "sha256": "cc76c4b1b2fbc4ae890b725917608c326ec480f6055412985ce5a05985246170",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-10-20/methods/KNeighbors/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  },
+  {
+   "path": "results_artifact/tabarena-2025-10-20/methods/LinearModel/results/hpo_results.parquet",
+   "bytes": 77799,
+   "sha256": "1a647b07b416e51876605c08a35fd6f1246ef0543b9130401ed003e3d43a28e8",
+   "origin": "downloaded",
+   "url": "https://tabarena.s3.amazonaws.com/cache/artifacts/tabarena-2025-10-20/methods/LinearModel/results/hpo_results.parquet",
+   "retrieved": "2026-09-19"
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+  "status": "robustness check, not confirmatory",
+  "prespecification_sha256": "91d2a59caf902cc39d2e8e8492114333c2fe4bd32b60628957e778efed632a5c",
+  "addendum_a_sha256": "6aec075c1e1f28c5b9ed338d2eb9968aaf54ce120b5f6a22e843eef95116078e",
+  "protocol": {
+    "repeats": 10,
+    "folds": 10,
+    "seed": 20260918,
+    "permutations": 20000
+  },
+  "tests_rho_p_one_sided": {
+    "H1_Ak_vs_margin": [
+      -0.214,
+      0.1279
+    ],
+    "H2_Ak_vs_cv_spine_accuracy": [
+      0.067,
+      0.3578
+    ],
+    "S_a_H1_without_HORS_VOTE": [
+      -0.22,
+      0.1302
+    ],
+    "S_b_H1_CART_minus_Zig": [
+      -0.192,
+      0.1521
+    ],
+    "S_c_H1_nondegenerate_only": [
+      -0.006,
+      0.4926
+    ]
+  },
+  "n_nondegenerate": 17,
+  "counts": {
+    "datasets": 30,
+    "condition_over_all_attributes": 0,
+    "certified_prefix_deeper_than_one": 9,
+    "attributes_kept": 336,
+    "attributes_outweighing_prior": 77,
+    "spine_cv_at_least_full": [
+      "POST",
+      "HEPA",
+      "CYY",
+      "SPCT",
+      "TOUR",
+      "VOTE",
+      "CARD",
+      "FOOT",
+      "PIMA",
+      "HOF",
+      "SCOT"
+    ],
+    "spine_cv_within_1.5_of_full": [
+      "BANK",
+      "ZOO",
+      "STRK",
+      "YEAS"
+    ]
+  }
+}

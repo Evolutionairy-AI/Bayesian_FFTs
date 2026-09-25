@@ -1,0 +1,307 @@
+{
+  "schema_version": "1.0",
+  "package_name": "Holte-16 acquisition and reconstruction package",
+  "created_utc_date": "2026-08-25",
+  "missing_value_symbol": "?",
+  "paper": {
+    "title": "Very Simple Classification Rules Perform Well on Most Commonly Used Datasets",
+    "author": "Robert C. Holte",
+    "year": 1993,
+    "doi": "10.1023/A:1022631118932",
+    "author_hosted_url": "https://webdocs.cs.ualberta.ca/~holte/Publications/simple_rules.pdf",
+    "local_path": "references/holte-1993.pdf",
+    "sha256": "e326cdd181ea03dac696b20aed42a1d1a596ab4d2d0fb1d47ffc4d9be4d05d2d",
+    "evidence_pages": {
+      "table_2_pdf_page": 3,
+      "appendix_b_pdf_page": 22
+    }
+  },
+  "uci_bundles": [
+    {
+      "uci_id": 14,
+      "name": "Breast Cancer",
+      "doi": "10.24432/C51P4M",
+      "landing_page": "https://archive.ics.uci.edu/dataset/14/breast+cancer",
+      "bundle_url": "https://archive.ics.uci.edu/static/public/14/breast+cancer.zip",
+      "local_path": "raw/uci-bundles/uci-14.zip",
+      "sha256": "28062914fae034311a75eb061ef30d4d968fb1744dad49568c35b72dcf828de4"
+    },
+    {
+      "uci_id": 22,
+      "name": "Chess (King-Rook vs. King-Pawn)",
+      "doi": "10.24432/C5DK5C",
+      "landing_page": "https://archive.ics.uci.edu/dataset/22/chess+king+rook+vs+king+pawn",
+      "bundle_url": "https://archive.ics.uci.edu/static/public/22/chess+king+rook+vs+king+pawn.zip",
+      "local_path": "raw/uci-bundles/uci-22.zip",
+      "sha256": "bd2c3201aa5a70369bc4ab047180be3dda1805073a483d372cd7b1f31d0f1eb2"
+    },
+    {
+      "uci_id": 42,
+      "name": "Glass Identification",
+      "doi": "10.24432/C5WW2P",
+      "landing_page": "https://archive.ics.uci.edu/dataset/42/glass+identification",
+      "bundle_url": "https://archive.ics.uci.edu/static/public/42/glass+identification.zip",
+      "local_path": "raw/uci-bundles/uci-42.zip",
+      "sha256": "499c07a17115bf63100bb19cc1fdefad7f464bf5dc2b168930fa2071fd6b6e65"
+    },
+    {
+      "uci_id": 45,
+      "name": "Heart Disease",
+      "doi": "10.24432/C52P4X",
+      "landing_page": "https://archive.ics.uci.edu/dataset/45/heart+disease",
+      "bundle_url": "https://archive.ics.uci.edu/static/public/45/heart+disease.zip",
+      "local_path": "raw/uci-bundles/uci-45.zip",
+      "sha256": "b17cd273da9ce1caa4710fce80227ea454d4dbf9fcbc8e6a9121672751563adc"
+    },
+    {
+      "uci_id": 46,
+      "name": "Hepatitis",
+      "doi": "10.24432/C5Q59J",
+      "landing_page": "https://archive.ics.uci.edu/dataset/46/hepatitis",
+      "bundle_url": "https://archive.ics.uci.edu/static/public/46/hepatitis.zip",
+      "local_path": "raw/uci-bundles/uci-46.zip",
+      "sha256": "8573c2898714fb32ef8162291dcabd483a1ba9701123cab262f5acace3112d87"
+    },
+    {
+      "uci_id": 47,
+      "name": "Horse Colic",
+      "doi": "10.24432/C58W23",
+      "landing_page": "https://archive.ics.uci.edu/dataset/47/horse+colic",
+      "bundle_url": "https://archive.ics.uci.edu/static/public/47/horse+colic.zip",
+      "local_path": "raw/uci-bundles/uci-47.zip",
+      "sha256": "e4a2d4e77573e521057b75ce00992060f2f002a1658d5a8e430138b60c3c8053"
+    },
+    {
+      "uci_id": 53,
+      "name": "Iris",
+      "doi": "10.24432/C56C76",
+      "landing_page": "https://archive.ics.uci.edu/dataset/53/iris",
+      "bundle_url": "https://archive.ics.uci.edu/static/public/53/iris.zip",
+      "local_path": "raw/uci-bundles/uci-53.zip",
+      "sha256": "d11fe30213d36434a0879aab7cb00ce3c812eb7ba2495874438abff7b7b762e9"
+    },
+    {
+      "uci_id": 56,
+      "name": "Labor Relations",
+      "doi": "10.24432/C5CP4Q",
+      "landing_page": "https://archive.ics.uci.edu/dataset/56/labor+relations",
+      "bundle_url": "https://archive.ics.uci.edu/static/public/56/labor+relations.zip",
+      "local_path": "raw/uci-bundles/uci-56.zip",
+      "sha256": "24f8053308c963dc7090234f4d4d96c41f99a99dc37509fd8ab438f08dd913b3"
+    },
+    {
+      "uci_id": 63,
+      "name": "Lymphography",
+      "doi": "10.24432/C54598",
+      "landing_page": "https://archive.ics.uci.edu/dataset/63/lymphography",
+      "bundle_url": "https://archive.ics.uci.edu/static/public/63/lymphography.zip",
+      "local_path": "raw/uci-bundles/uci-63.zip",
+      "sha256": "082ff211040ad7dc2122e92441aa3eee494ab6496fecdcd86a440fe863ee5b6f"
+    },
+    {
+      "uci_id": 73,
+      "name": "Mushroom",
+      "doi": "10.24432/C5959T",
+      "landing_page": "https://archive.ics.uci.edu/dataset/73/mushroom",
+      "bundle_url": "https://archive.ics.uci.edu/static/public/73/mushroom.zip",
+      "local_path": "raw/uci-bundles/uci-73.zip",
+      "sha256": "face32f32647e0d939f6233f36dd30dd5d619ae9f3f9b8e10bea4ac7e1f60b1a"
+    },
+    {
+      "uci_id": 91,
+      "name": "Soybean (Small)",
+      "doi": "10.24432/C5DS3P",
+      "landing_page": "https://archive.ics.uci.edu/dataset/91/soybean+small",
+      "bundle_url": "https://archive.ics.uci.edu/static/public/91/soybean+small.zip",
+      "local_path": "raw/uci-bundles/uci-91.zip",
+      "sha256": "d43a282da82eeb4f93b7c98dbe1dbfee98fe533274b0e12f838fda1fac8d5270"
+    },
+    {
+      "uci_id": 102,
+      "name": "Thyroid Disease",
+      "doi": "10.24432/C5D010",
+      "landing_page": "https://archive.ics.uci.edu/dataset/102/thyroid+disease",
+      "bundle_url": "https://archive.ics.uci.edu/static/public/102/thyroid+disease.zip",
+      "local_path": "raw/uci-bundles/uci-102.zip",
+      "sha256": "a0982569a7442c03a20815db58f271245e7a111b10ac46f6c6b5fa6feee4c1f4"
+    },
+    {
+      "uci_id": 105,
+      "name": "Congressional Voting Records",
+      "doi": "10.24432/C5C01P",
+      "landing_page": "https://archive.ics.uci.edu/dataset/105/congressional+voting+records",
+      "bundle_url": "https://archive.ics.uci.edu/static/public/105/congressional+voting+records.zip",
+      "local_path": "raw/uci-bundles/uci-105.zip",
+      "sha256": "ffec9d9328f28f151d95d2f8d36fd94ed8d2b0cdd0c9bd284bd8e65031a5e6a6"
+    }
+  ],
+  "datasets": [
+    {
+      "code": "BC",
+      "name": "Breast Cancer",
+      "origin": "original",
+      "raw_files": [{"uci_id": 14, "path": "breast-cancer.data", "sha256": "ca7d3fa97b62ff967b6894ffbb3acaaf4a51062e0149e5950b3ad6f685970b65"}],
+      "transformation": "Move source class field 1 to final output column; otherwise unchanged.",
+      "holte_expected": {"rows": 286, "features": 9, "classes": 2, "baseline_percent": 70.3, "has_missing": true},
+      "current_expected": {"rows": 286, "class_counts": {"no-recurrence-events": 201, "recurrence-events": 85}, "missing_tokens": 9},
+      "historical_fidelity": "exact"
+    },
+    {
+      "code": "CH",
+      "name": "Chess King-Rook vs. King-Pawn",
+      "origin": "original",
+      "raw_files": [{"uci_id": 22, "path": "kr-vs-kp.data", "sha256": "70a5540902b4063d3977d3e820ac5b9fe5624eb5d93709eee5d50d7a94fca205"}],
+      "transformation": "None; target already final.",
+      "holte_expected": {"rows": 3196, "features": 36, "classes": 2, "baseline_percent": 52.2, "has_missing": false},
+      "current_expected": {"rows": 3196, "class_counts": {"nowin": 1527, "won": 1669}, "missing_tokens": 0},
+      "historical_fidelity": "exact"
+    },
+    {
+      "code": "GL",
+      "name": "Glass Identification",
+      "origin": "original",
+      "raw_files": [{"uci_id": 42, "path": "glass.data", "sha256": "dd67373f4baf2807345df02cbfef2093d342e61ad0d82a4fb79af43ef8ce449d"}],
+      "transformation": "Delete first source field (ID).",
+      "holte_expected": {"rows": 214, "features": 9, "classes": 6, "baseline_percent": 35.5, "has_missing": false},
+      "current_expected": {"rows": 214, "class_counts": {"1": 70, "2": 76, "3": 17, "5": 13, "6": 9, "7": 29}, "missing_tokens": 0},
+      "historical_fidelity": "exact"
+    },
+    {
+      "code": "G2",
+      "name": "Glass derived two-class",
+      "origin": "derived_from_GL",
+      "raw_files": [{"uci_id": 42, "path": "glass.data", "sha256": "dd67373f4baf2807345df02cbfef2093d342e61ad0d82a4fb79af43ef8ce449d"}],
+      "transformation": "Apply GL ID deletion; retain source classes 1,2,3; map class 3 to 1; discard 5,6,7 (4 absent).",
+      "holte_expected": {"rows": 163, "features": 9, "classes": 2, "baseline_percent": 53.4, "has_missing": false},
+      "current_expected": {"rows": 163, "class_counts": {"1": 87, "2": 76}, "missing_tokens": 0},
+      "historical_fidelity": "exact_derived"
+    },
+    {
+      "code": "HD",
+      "name": "Cleveland Heart Disease",
+      "origin": "original",
+      "raw_files": [{"uci_id": 45, "path": "cleve.mod", "sha256": "a1d2a0369d138b45a761522e897f34dc49d779a1b8f7c323dd9732d632ecc83d"}],
+      "transformation": "Ignore percent-comment lines; parse whitespace; delete final diagnosis-code field and retain penultimate binary buff/sick class.",
+      "holte_expected": {"rows": 303, "features": 13, "classes": 2, "baseline_percent": 54.5, "has_missing": true},
+      "current_expected": {"rows": 303, "class_counts": {"buff": 165, "sick": 138}, "missing_tokens": 7},
+      "historical_fidelity": "exact"
+    },
+    {
+      "code": "HE",
+      "name": "Hepatitis",
+      "origin": "original",
+      "raw_files": [{"uci_id": 46, "path": "hepatitis.data", "sha256": "9971f9d18abb4fc9dd6749eefb0f864b36fa7bdd59f54188c0b148a5c28214bc"}],
+      "transformation": "Move source class field 1 to final output column; otherwise unchanged.",
+      "holte_expected": {"rows": 155, "features": 19, "classes": 2, "baseline_percent": 79.4, "has_missing": true},
+      "current_expected": {"rows": 155, "class_counts": {"1": 32, "2": 123}, "missing_tokens": 167},
+      "historical_fidelity": "exact"
+    },
+    {
+      "code": "HO",
+      "name": "Horse Colic",
+      "origin": "original",
+      "raw_files": [
+        {"uci_id": 47, "path": "horse-colic.data", "sha256": "270db486c78796143ffa84b4808118b3d4b96d1bd0f70bf22b3bb0bfca21e547"},
+        {"uci_id": 47, "path": "horse-colic.test", "sha256": "2c14b28c71da2a4778a6f161819804e032545a1c13f73fddf5d5b220c7ae3853"}
+      ],
+      "transformation": "Concatenate data then test; class=V24; delete V3 and V25-V28; retain V1,V2,V4-V23.",
+      "holte_expected": {"rows": 368, "features": 22, "classes": 2, "baseline_percent": 63.0, "has_missing": true},
+      "current_expected": {"rows": 368, "class_counts": {"1": 232, "2": 136}, "missing_tokens": 1927},
+      "historical_fidelity": "exact"
+    },
+    {
+      "code": "HY",
+      "name": "Hypothyroid",
+      "origin": "original",
+      "raw_files": [{"uci_id": 102, "path": "hypothyroid.data", "sha256": "ffba466e9844cf7d6d8fde1f89209c6ab1d583c865abb449bb6ab8c70875f4c4"}],
+      "transformation": "Move source class field 1 to final output column; otherwise unchanged.",
+      "holte_expected": {"rows": 3163, "features": 25, "classes": 2, "baseline_percent": 95.2, "has_missing": true},
+      "current_expected": {"rows": 3163, "class_counts": {"hypothyroid": 151, "negative": 3012}, "missing_tokens": 5329},
+      "historical_fidelity": "exact"
+    },
+    {
+      "code": "IR",
+      "name": "Iris",
+      "origin": "original",
+      "raw_files": [{"uci_id": 53, "path": "iris.data", "sha256": "6f608b71a7317216319b4d27b4d9bc84e6abd734eda7872b71a458569e2656c0"}],
+      "transformation": "None; target already final.",
+      "holte_expected": {"rows": 150, "features": 4, "classes": 3, "baseline_percent": 33.3, "has_missing": false},
+      "current_expected": {"rows": 150, "class_counts": {"Iris-setosa": 50, "Iris-versicolor": 50, "Iris-virginica": 50}, "missing_tokens": 0},
+      "historical_fidelity": "exact"
+    },
+    {
+      "code": "LA",
+      "name": "Labor Relations",
+      "origin": "original_replacement_copy",
+      "raw_files": [
+        {"uci_id": 56, "path": "C4.5/labor-neg.data", "sha256": "e495700535a20b7451d57fbcb650073e3c012a9492affdc8a3bd95e8ef22f356"},
+        {"uci_id": 56, "path": "C4.5/labor-neg.test", "sha256": "a2fb5b9027523f854be41b914672b1ebaaa5e5e4fd899b03636bac8ef3825b06"}
+      ],
+      "transformation": "Concatenate usable C4.5 data then test; otherwise unchanged.",
+      "holte_expected": {"rows": 57, "features": 16, "classes": 2, "baseline_percent": 64.9, "has_missing": true},
+      "current_expected": {"rows": 57, "class_counts": {"bad": 20, "good": 37}, "missing_tokens": 326},
+      "historical_fidelity": "exact"
+    },
+    {
+      "code": "LY",
+      "name": "Lymphography",
+      "origin": "original_with_version_drift",
+      "raw_files": [{"uci_id": 63, "path": "lymphography.data", "sha256": "e17d22d071341af08a505a10eb558afc835e302b02c8b381c1fa3dd305731935"}],
+      "transformation": "Move source class field 1 to final output column; no Holte transformation.",
+      "holte_expected": {"rows": 141, "features": 18, "classes": 4, "baseline_percent": 56.7, "has_missing": false},
+      "current_expected": {"rows": 148, "class_counts": {"1": 2, "2": 81, "3": 61, "4": 4}, "baseline_percent": 54.7, "missing_tokens": 0},
+      "historical_fidelity": "version_drift_unresolved",
+      "fidelity_note": "No authoritative record-level copy of Holte's 141-row April-1990 version was located; no rows are guessed or deleted."
+    },
+    {
+      "code": "MU",
+      "name": "Mushroom",
+      "origin": "original",
+      "raw_files": [{"uci_id": 73, "path": "agaricus-lepiota.data", "sha256": "e65d082030501a3ebcbcd7c9f7c71aa9d28fdfff463bf4cf4716a3fe13ac360e"}],
+      "transformation": "Move source class field 1 to final output column; otherwise unchanged.",
+      "holte_expected": {"rows": 8124, "features": 22, "classes": 2, "baseline_percent": 51.8, "has_missing": true},
+      "current_expected": {"rows": 8124, "class_counts": {"e": 4208, "p": 3916}, "missing_tokens": 2480},
+      "historical_fidelity": "exact"
+    },
+    {
+      "code": "SE",
+      "name": "Sick Euthyroid",
+      "origin": "original",
+      "raw_files": [{"uci_id": 102, "path": "sick-euthyroid.data", "sha256": "6b93c0a10c6a1760d47864eb9f4592750cbfac389d9a64b9feec17f2690374c4"}],
+      "transformation": "Move source class field 1 to final output column; otherwise unchanged.",
+      "holte_expected": {"rows": 3163, "features": 25, "classes": 2, "baseline_percent": 90.7, "has_missing": true},
+      "current_expected": {"rows": 3163, "class_counts": {"negative": 2870, "sick-euthyroid": 293}, "missing_tokens": 5329},
+      "historical_fidelity": "exact"
+    },
+    {
+      "code": "SO",
+      "name": "Soybean Small",
+      "origin": "original",
+      "raw_files": [{"uci_id": 91, "path": "soybean-small.data", "sha256": "f096d1675db0270071311c9f46813b204372370bd68252a5a417bdcff5879717"}],
+      "transformation": "None; target already final.",
+      "holte_expected": {"rows": 47, "features": 35, "classes": 4, "baseline_percent": 36.2, "has_missing": false},
+      "current_expected": {"rows": 47, "class_counts": {"D1": 10, "D2": 10, "D3": 10, "D4": 17}, "missing_tokens": 0},
+      "historical_fidelity": "exact"
+    },
+    {
+      "code": "VO",
+      "name": "Congressional Voting Records",
+      "origin": "original",
+      "raw_files": [{"uci_id": 105, "path": "house-votes-84.data", "sha256": "c87c14110a5ba91d4a1e313ec7392824458152bf071fa5f5452340488337936e"}],
+      "transformation": "Move source class field 1 to final output column; otherwise unchanged.",
+      "holte_expected": {"rows": 435, "features": 16, "classes": 2, "baseline_percent": 61.4, "has_missing": true},
+      "current_expected": {"rows": 435, "class_counts": {"democrat": 267, "republican": 168}, "missing_tokens": 392},
+      "historical_fidelity": "exact"
+    },
+    {
+      "code": "V1",
+      "name": "Voting Records without physician-fee-freeze",
+      "origin": "derived_from_VO",
+      "raw_files": [{"uci_id": 105, "path": "house-votes-84.data", "sha256": "c87c14110a5ba91d4a1e313ec7392824458152bf071fa5f5452340488337936e"}],
+      "transformation": "Delete the fourth predictor, physician-fee-freeze; move class to final output column.",
+      "holte_expected": {"rows": 435, "features": 15, "classes": 2, "baseline_percent": 61.4, "has_missing": true},
+      "current_expected": {"rows": 435, "class_counts": {"democrat": 267, "republican": 168}, "missing_tokens": 381},
+      "historical_fidelity": "exact_derived"
+    }
+  ]
+}

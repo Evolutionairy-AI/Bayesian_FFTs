@@ -1,0 +1,3351 @@
+{
+  "schema_version": "1.0",
+  "package_name": "MKW08-30 raw-acquisition package",
+  "stage": "raw acquisition only; no built data files",
+  "created_utc_date": "2026-09-18",
+  "retrieval_date": "2026-09-18",
+  "paper": {
+    "title": "Categorization with limited resources: A family of simple heuristics",
+    "authors": "Laura Martignon, Konstantinos V. Katsikopoulos, Jan K. Woike",
+    "year": 2008,
+    "journal": "Journal of Mathematical Psychology 52, 352-361"
+  },
+  "identification_source": {
+    "title": "Die paradoxe Rationalitaet einfacher Heuristiken (doctoral dissertation, Ruhr-Universitaet Bochum)",
+    "author": "Jan K. Woike",
+    "year": 2008,
+    "urn": "urn:nbn:de:hbz:294-21536",
+    "evidence": "Tabelle 6.9, printed p. 212, and the per-dataset paragraphs on pp. 211-214",
+    "local_path": "references/Woike_2008_Dissertation_Bochum.pdf",
+    "sha256": "2946bbf61025acd4fdcbf0b87823b9b8774b9770c76b93d7a7f908349d647c73",
+    "extract_path": "references/Woike_2008_Tabelle_6.9_pp211-214_extract.txt",
+    "extract_sha256": "375d0c6ee7bf3505beea37e493e71e2ffcbd19fe0d75635b680168d15e520774",
+    "secondary": {
+      "citation": "Woike, Hoffrage & Martignon (2017), Decision 4(4), Table 1 (the 11 medical sets)",
+      "local_path": "references/Woike_Hoffrage_Martignon_2017_Decision.pdf",
+      "sha256": "5ebb654bcec104e3b9447dc3670a99944a478f2d94653e26c5883c0ac12df4e4"
+    }
+  },
+  "status_vocabulary": {
+    "n_status": {
+      "exact": "raw row count equals Woike's n with no reduction",
+      "explained": "raw count differs; a stated, measured reduction (or a documented misprint) yields Woike's n AND his split",
+      "unexplained": "raw count differs and no tested rule reproduces Woike's n with his split"
+    },
+    "split_status": {
+      "exact": "natively binary class column; raw counts equal n1/n0",
+      "exact_after_reduction": "natively binary class column; counts equal n1/n0 after the explained row reduction",
+      "reproduced_by_rule": "criterion needs a binarization (merging classes or thresholding a number); the stated rule reproduces n1/n0. The rule is a finding, not a decision",
+      "not_reproduced": "no tested rule reproduces n1/n0"
+    }
+  },
+  "missing_tokens_counted_by_the_script": [
+    "",
+    ".",
+    "?",
+    "NA"
+  ],
+  "datasets": [
+    {
+      "code": "BANK",
+      "woike_order": 1,
+      "woike_label": "Bankruptcy",
+      "source": {
+        "family": "ACD",
+        "record": "Companion data to J. S. Simonoff, Analyzing Categorical Data (Springer, 2003)",
+        "landing_page": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/BANK/bankruptcy.csv",
+          "bytes": 2290,
+          "sha256": "f41e95d9fe0506d83a80934f1cee0eb612b72dd883d14c7a2b31cc546fed1d2a",
+          "origin": "downloaded",
+          "url": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/Comma_separated/bankruptcy.csv",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "cross_check": "byte-identical to the member of the same name in raw/_ACD_bundle/data.zip"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/BANK/bankruptcy.csv",
+          "parser": "csv_header",
+          "rows": 50,
+          "field_counts": {
+            "7": 50
+          }
+        }
+      ],
+      "raw_rows": 50,
+      "raw_attribute_count": 7,
+      "raw_attribute_note": "7 columns: Company (identifier), five financial ratios, Bankrupt. Five predictors, as in Tabelle 6.9.",
+      "raw_class": {
+        "column": "Bankrupt",
+        "counts": {
+          "0": 25,
+          "1": 25
+        }
+      },
+      "woike_expected": {
+        "n": 50,
+        "cues": 5,
+        "n1": 25,
+        "n0": 25,
+        "smaller_share": 0.5,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 0,
+          "continuous": 5
+        },
+        "source_tag": "ACD"
+      },
+      "criterion": "Bankrupt (1) or not (0); natively binary.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "exact",
+        "measured": {},
+        "explanation": "50 data rows, no blank cells; Bankrupt 25/25."
+      },
+      "decisions_needed": [
+        "Drop the identifier column Company."
+      ]
+    },
+    {
+      "code": "SOLV",
+      "woike_order": 2,
+      "woike_label": "Solvency",
+      "source": {
+        "family": "ACD",
+        "record": "Companion data to J. S. Simonoff, Analyzing Categorical Data (Springer, 2003)",
+        "landing_page": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/SOLV/japansolvent.csv",
+          "bytes": 3788,
+          "sha256": "2a2990e13ebf6e0af41e50e10036fccf7e4163c8438997c543a4c6459a814543",
+          "origin": "downloaded",
+          "url": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/Comma_separated/japansolvent.csv",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "cross_check": "byte-identical to the member of the same name in raw/_ACD_bundle/data.zip"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/SOLV/japansolvent.csv",
+          "parser": "csv_header",
+          "rows": 52,
+          "field_counts": {
+            "10": 52
+          }
+        }
+      ],
+      "acd_mapping": {
+        "status": "confirmed",
+        "file": "japansolvent.csv",
+        "evidence": "52 rows = Woike n; 8 continuous predictors = Woike cues and type profile; Solvent 1/0 = 27/25 = Woike n1/n0."
+      },
+      "raw_rows": 52,
+      "raw_attribute_count": 10,
+      "raw_attribute_note": "10 columns: Firm (identifier), Solvent, eight financial ratios. Eight predictors, as in Tabelle 6.9.",
+      "raw_class": {
+        "column": "Solvent",
+        "counts": {
+          "0": 25,
+          "1": 27
+        }
+      },
+      "woike_expected": {
+        "n": 52,
+        "cues": 8,
+        "n1": 27,
+        "n0": 25,
+        "smaller_share": 0.481,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 0,
+          "continuous": 8
+        },
+        "source_tag": "ACD"
+      },
+      "criterion": "Solvent (1) or not (0); natively binary.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "exact",
+        "measured": {},
+        "explanation": "File mapping CONFIRMED (was inferred from the file name): 52 rows, eight continuous ratios, Solvent 27/25."
+      },
+      "decisions_needed": [
+        "Drop the identifier column Firm."
+      ]
+    },
+    {
+      "code": "ECHO",
+      "woike_order": 3,
+      "woike_label": "Echocardiogram",
+      "source": {
+        "family": "UCI",
+        "record": "Echocardiogram",
+        "uci_id": 38,
+        "doi": "10.24432/C5QW24",
+        "landing_page": "https://archive.ics.uci.edu/dataset/38/echocardiogram"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/ECHO/uci-38.zip",
+          "bytes": 4562,
+          "sha256": "11debc93f3975f7f91b35324a659e82097878495c6db64c2a7c07a0e51741509",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/static/public/38/echocardiogram.zip",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/ECHO/uci-38-metadata.json",
+          "bytes": 5008,
+          "sha256": "a5def622ee4afb5f6d64b7a7f6a5c1d95297ec6c8b437335c512437fe48036d5",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=38",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/ECHO/extracted/Index",
+          "bytes": 135,
+          "sha256": "5a9a0a96bd8deab401fe2a932046019e12dfa46a73e9db89580fcdee6e2d4265",
+          "origin": "extracted",
+          "archive": "raw/ECHO/uci-38.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/ECHO/extracted/echocardiogram.data",
+          "bytes": 6107,
+          "sha256": "3d7dc4b3daef837f1b3b3c042e561697d6add718a2d6694de824faf1f1e340d4",
+          "origin": "extracted",
+          "archive": "raw/ECHO/uci-38.zip",
+          "member": "echocardiogram.data"
+        },
+        {
+          "path": "raw/ECHO/extracted/echocardiogram.names",
+          "bytes": 5111,
+          "sha256": "b94c280c000fa07a7efaafaaba250f3d5f77d8f3e02c89f69634969fe9216b59",
+          "origin": "extracted",
+          "archive": "raw/ECHO/uci-38.zip",
+          "member": "echocardiogram.names"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/ECHO/extracted/echocardiogram.data",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 132,
+          "field_counts": {
+            "13": 131,
+            "14": 1
+          }
+        }
+      ],
+      "raw_rows": 132,
+      "raw_attribute_count": 13,
+      "raw_attribute_note": "13 fields per record (line 50 has a stray leading comma, hence 14). echocardiogram.names says attributes 10-12 (mult, name, group) are to be ignored and 1, 2 and 13 (survival, still-alive, alive-at-1) carry the outcome; that leaves seven clinical attributes (3-9), of which pericardial-effusion is binary: the 1 + 6 profile of Tabelle 6.9.",
+      "raw_class": null,
+      "woike_expected": {
+        "n": 62,
+        "cues": 7,
+        "n1": 18,
+        "n0": 44,
+        "smaller_share": 0.29,
+        "predictor_types": {
+          "binary": 1,
+          "categorical": 0,
+          "continuous": 6
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Survival for at least 12 months after the heart attack. The raw file ships a derived column alive-at-1 (attribute 13) that is '?' for 57 of the 131 well-formed rows.",
+      "comparison": {
+        "n_status": "explained",
+        "split_status": "exact_after_reduction",
+        "measured": {
+          "rows_with_13_fields": 131,
+          "alive_at_1_unknown": 57,
+          "complete_attrs3to9_and_alive_at_1": 62,
+          "alive_at_1=1": 18,
+          "alive_at_1=0": 44
+        },
+        "explanation": "132 raw lines. Rows with alive-at-1 known AND attributes 3-9 complete: 62, with alive-at-1 = 1 for 18 and 0 for 44, which is Woike's n and split exactly. CAUTION, measured on these 62 rows: the shipped alive-at-1 column does not follow its own definition in echocardiogram.names (1 = alive at one year). Of the 44 rows coded 0, 42 have survival >= 12 months (38 died later, 4 still alive) and 2 died within 12 months; of the 18 rows coded 1, 17 are still alive but were followed for fewer than 12 months (the names file says such patients cannot be used) and 1 has survival missing. Woike's 18/44 matches the column as shipped, not a re-derivation from survival and still-alive (which gives 42 survived, 2 died, 18 undeterminable)."
+      },
+      "decisions_needed": [
+        "Row policy: 62 complete cases versus all rows with a determinable criterion.",
+        "Criterion: alive-at-1 as shipped (matches Woike, but contradicts the names-file definition on these rows) or a re-derivation from survival and still-alive.",
+        "Line 50 is malformed (leading comma, nearly all '?').",
+        "Cue set: the seven attributes 3-9, per the names file."
+      ]
+    },
+    {
+      "code": "POST",
+      "woike_order": 4,
+      "woike_label": "Post-Operative",
+      "source": {
+        "family": "UCI",
+        "record": "Post-Operative Patient",
+        "uci_id": 82,
+        "doi": "10.24432/C5DG6Q",
+        "landing_page": "https://archive.ics.uci.edu/dataset/82/post+operative+patient"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/POST/uci-82.zip",
+          "bytes": 2171,
+          "sha256": "eed2652e7d4b2c2653b94e383d991dd1806631a1566ea07ea2cdfb0c1cc16f25",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/static/public/82/post+operative+patient.zip",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/POST/uci-82-metadata.json",
+          "bytes": 4054,
+          "sha256": "e490f208d56582f80f107d5341ed5bc55a091e208d79136506c5405fa111a37d",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=82",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/POST/extracted/Index",
+          "bytes": 147,
+          "sha256": "252def79b0070648a1024d80de7763a754dd59afd76ca1176d46cab28d29aa0d",
+          "origin": "extracted",
+          "archive": "raw/POST/uci-82.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/POST/extracted/post-operative.data",
+          "bytes": 4379,
+          "sha256": "dca524352b089db5417ac78c0e4aeb5f1753bc5265aec82568c2dbcbc1461a2e",
+          "origin": "extracted",
+          "archive": "raw/POST/uci-82.zip",
+          "member": "post-operative.data"
+        },
+        {
+          "path": "raw/POST/extracted/post-operative.names",
+          "bytes": 2695,
+          "sha256": "a8b002b0a017c2b807f5ddfbfd523be532d2d6b9fa14e25e4a4fc63ccec45e7e",
+          "origin": "extracted",
+          "archive": "raw/POST/uci-82.zip",
+          "member": "post-operative.names"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/POST/extracted/post-operative.data",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 90,
+          "field_counts": {
+            "9": 90
+          }
+        }
+      ],
+      "raw_rows": 90,
+      "raw_attribute_count": 9,
+      "raw_attribute_note": "9 fields: eight attributes (seven categorical, COMFORT numeric) and the decision ADM-DECS.",
+      "raw_class": {
+        "column": -1,
+        "counts": {
+          "A": 64,
+          "I": 2,
+          "S": 24
+        }
+      },
+      "woike_expected": {
+        "n": 86,
+        "cues": 8,
+        "n1": 24,
+        "n0": 62,
+        "smaller_share": 0.279,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 7,
+          "continuous": 1
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Discharge decision ADM-DECS with three values: A (general ward), S (home), I (intensive care).",
+      "comparison": {
+        "n_status": "explained",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "complete_rows": 87,
+          "complete_rows_excluding_class_I": 86,
+          "S": 24,
+          "A": 62
+        },
+        "explanation": "90 raw rows (A 64, S 24, I 2; line 4 carries the token 'A ' with a trailing space, counted here as A). Three rows have '?' in COMFORT (two A, one I); 87 are complete. Removing the one remaining class-I row gives 86 = S 24 / A 62, Woike's n and split. Merging I into either class cannot give 24/62 on the complete rows (it would be 87)."
+      },
+      "decisions_needed": [
+        "Class I (2 rows): drop or merge.",
+        "Three rows with '?' in COMFORT.",
+        "Positive class: Tabelle 6.9 has n1 = 24 (S); Woike et al. (2017) Table 1 reports base rate .721 (A, 'keep patient in hospital')."
+      ]
+    },
+    {
+      "code": "BWAY",
+      "woike_order": 5,
+      "woike_label": "Broadway",
+      "source": {
+        "family": "ACD",
+        "record": "Companion data to J. S. Simonoff, Analyzing Categorical Data (Springer, 2003)",
+        "landing_page": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/BWAY/broadway.csv",
+          "bytes": 6384,
+          "sha256": "4f3b371d3352a2efa323ba7dd800f8c81328f370c8d8120dc03aab95f7349313",
+          "origin": "downloaded",
+          "url": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/Comma_separated/broadway.csv",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "cross_check": "byte-identical to the member of the same name in raw/_ACD_bundle/data.zip"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/BWAY/broadway.csv",
+          "parser": "csv_header",
+          "rows": 95,
+          "field_counts": {
+            "10": 95
+          }
+        }
+      ],
+      "raw_rows": 95,
+      "raw_attribute_count": 10,
+      "raw_attribute_note": "10 columns: Show (identifier), Type, Revival, NYT rating, DN rating, Tony awards, Tony nominations, Week 1 attendance, Show run (five ordered categories), Show run code. Seven candidate predictors; Woike used five (3 categorical, 2 continuous); which five is not stated.",
+      "raw_class": {
+        "column": "Show run",
+        "counts": {
+          "1-2 years": 11,
+          "2-3 years": 1,
+          "6-12 months": 11,
+          "Less than 6 months": 68,
+          "More than 3 years": 4
+        }
+      },
+      "woike_expected": {
+        "n": 89,
+        "cues": 5,
+        "n1": 27,
+        "n0": 62,
+        "smaller_share": 0.303,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 3,
+          "continuous": 2
+        },
+        "source_tag": "ACD"
+      },
+      "criterion": "Whether the show ran six months or more; from the five-category column Show run.",
+      "comparison": {
+        "n_status": "explained",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "complete_rows": 89,
+          "run_less_than_6_months": 62,
+          "run_6_months_or_more": 27
+        },
+        "explanation": "95 raw rows; 9 blank cells (NYT rating 2, DN rating 3, Week 1 attendance 4) spread over 6 rows; 89 complete rows, of which 'Less than 6 months' 62 and longer 27: Woike's n and split."
+      },
+      "decisions_needed": [
+        "Row policy: 6 rows with blank ratings/attendance.",
+        "Which five of the seven candidate predictors.",
+        "Binarization of Show run at six months."
+      ]
+    },
+    {
+      "code": "CRED",
+      "woike_order": 6,
+      "woike_label": "Credit Score",
+      "source": {
+        "family": "ACD",
+        "record": "Companion data to J. S. Simonoff, Analyzing Categorical Data (Springer, 2003)",
+        "landing_page": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/CRED/creditscore.csv",
+          "bytes": 2245,
+          "sha256": "39d6051846f0a57db01e4793b806d0db4aaeb14f28609464ee28df09d71033aa",
+          "origin": "downloaded",
+          "url": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/Comma_separated/creditscore.csv",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "cross_check": "byte-identical to the member of the same name in raw/_ACD_bundle/data.zip"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/CRED/creditscore.csv",
+          "parser": "csv_header",
+          "rows": 100,
+          "field_counts": {
+            "7": 100
+          }
+        }
+      ],
+      "raw_rows": 100,
+      "raw_attribute_count": 7,
+      "raw_attribute_note": "7 columns: six applicant attributes and Application.accepted. Six predictors, as in Tabelle 6.9.",
+      "raw_class": {
+        "column": "Application.accepted",
+        "counts": {
+          "0": 27,
+          "1": 73
+        }
+      },
+      "woike_expected": {
+        "n": 100,
+        "cues": 6,
+        "n1": 73,
+        "n0": 27,
+        "smaller_share": 0.27,
+        "predictor_types": {
+          "binary": 2,
+          "categorical": 1,
+          "continuous": 3
+        },
+        "source_tag": "ACD"
+      },
+      "criterion": "Application accepted (1) or not (0); natively binary.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "exact",
+        "measured": {},
+        "explanation": "100 rows, no blank cells; accepted 73 / rejected 27."
+      },
+      "decisions_needed": []
+    },
+    {
+      "code": "ZOO",
+      "woike_order": 7,
+      "woike_label": "Zoo",
+      "source": {
+        "family": "UCI",
+        "record": "Zoo",
+        "uci_id": 111,
+        "doi": "10.24432/C5R59V",
+        "landing_page": "https://archive.ics.uci.edu/dataset/111/zoo"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/ZOO/uci-111.zip",
+          "bytes": 2496,
+          "sha256": "d49013253628277182bb172f5ab1bf3befad090b54bbb7e52733c9c9534e240a",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/static/public/111/zoo.zip",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/ZOO/uci-111-metadata.json",
+          "bytes": 3993,
+          "sha256": "0f933fb3de00877e9cb9174bc9aef309187a53731855c5d4431321c9298809c3",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=111",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/ZOO/extracted/Index",
+          "bytes": 102,
+          "sha256": "c47bf2593d4cd6c4dce40f86388d55e3b1a4d8b641224c101caf72d03be571d7",
+          "origin": "extracted",
+          "archive": "raw/ZOO/uci-111.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/ZOO/extracted/zoo.data",
+          "bytes": 4126,
+          "sha256": "cddc71c26ab9bc82795b8f4ff114cade41885d92720c6af29ffb69bcf73f0315",
+          "origin": "extracted",
+          "archive": "raw/ZOO/uci-111.zip",
+          "member": "zoo.data"
+        },
+        {
+          "path": "raw/ZOO/extracted/zoo.names",
+          "bytes": 2587,
+          "sha256": "db3dd334beb643c9e14b75603360ea5edcac90a6ac19302e1896039f0c20d428",
+          "origin": "extracted",
+          "archive": "raw/ZOO/uci-111.zip",
+          "member": "zoo.names"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/ZOO/extracted/zoo.data",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 101,
+          "field_counts": {
+            "18": 101
+          }
+        }
+      ],
+      "raw_rows": 101,
+      "raw_attribute_count": 18,
+      "raw_attribute_note": "18 fields: animal name (identifier), 15 boolean attributes, legs (numeric, six values), type (1-7). Sixteen predictors.",
+      "raw_class": {
+        "column": -1,
+        "counts": {
+          "1": 41,
+          "2": 20,
+          "3": 5,
+          "4": 13,
+          "5": 4,
+          "6": 8,
+          "7": 10
+        }
+      },
+      "woike_expected": {
+        "n": 101,
+        "cues": 16,
+        "n1": 41,
+        "n0": 60,
+        "smaller_share": 0.406,
+        "predictor_types": {
+          "binary": 15,
+          "categorical": 1,
+          "continuous": 0
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Mammal versus not; from the seven-valued attribute type.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "type_1_mammal": 41,
+          "rest": 60
+        },
+        "explanation": "101 rows; type 1 (mammal) = 41, all other types = 60."
+      },
+      "decisions_needed": [
+        "Binarization: type 1 versus the rest.",
+        "Drop the identifier column; legs is multi-valued."
+      ]
+    },
+    {
+      "code": "IRIS",
+      "woike_order": 8,
+      "woike_label": "Iris",
+      "source": {
+        "family": "UCI",
+        "record": "Iris",
+        "uci_id": 53,
+        "doi": "10.24432/C56C76",
+        "landing_page": "https://archive.ics.uci.edu/dataset/53/iris"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/IRIS/uci-53.zip",
+          "bytes": 3738,
+          "sha256": "d11fe30213d36434a0879aab7cb00ce3c812eb7ba2495874438abff7b7b762e9",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/static/public/53/iris.zip",
+          "copied_from": "DATA_SETS/Holte-16/raw/uci-bundles/uci-53.zip",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition; SHA-256 equals Holte-16/manifest.json)",
+          "upstream_recheck": "2026-09-18: a fresh download of the same URL was byte-identical"
+        },
+        {
+          "path": "raw/IRIS/uci-53-metadata.json",
+          "bytes": 2861,
+          "sha256": "0387b83840adbdefd10030c96e9e2ba80dc0419b6494efa7745d69bc927b9f15",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=53",
+          "copied_from": "DATA_SETS/Holte-16/raw/metadata/uci-53.json",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition)"
+        },
+        {
+          "path": "raw/IRIS/extracted/Index",
+          "bytes": 105,
+          "sha256": "fc3a4464fd2138ca649be5e0311270f5cf1f045c8e3ff1cd458f663dfe4f6790",
+          "origin": "extracted",
+          "archive": "raw/IRIS/uci-53.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/IRIS/extracted/bezdekIris.data",
+          "bytes": 4551,
+          "sha256": "0fed2a99db77ec533a62dc66894d3ec6df3b58b6a8f3cf4a6b47e4086b7f97dc",
+          "origin": "extracted",
+          "archive": "raw/IRIS/uci-53.zip",
+          "member": "bezdekIris.data"
+        },
+        {
+          "path": "raw/IRIS/extracted/iris.data",
+          "bytes": 4551,
+          "sha256": "6f608b71a7317216319b4d27b4d9bc84e6abd734eda7872b71a458569e2656c0",
+          "origin": "extracted",
+          "archive": "raw/IRIS/uci-53.zip",
+          "member": "iris.data"
+        },
+        {
+          "path": "raw/IRIS/extracted/iris.names",
+          "bytes": 2998,
+          "sha256": "71a09fb3ee237614cdb9c09d06e8ae1f610ce2a274c0d77272fea8a233e5eea3",
+          "origin": "extracted",
+          "archive": "raw/IRIS/uci-53.zip",
+          "member": "iris.names"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/IRIS/extracted/iris.data",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 150,
+          "field_counts": {
+            "5": 150
+          }
+        }
+      ],
+      "raw_rows": 150,
+      "raw_attribute_count": 5,
+      "raw_attribute_note": "5 fields: four measurements and the species.",
+      "raw_class": {
+        "column": -1,
+        "counts": {
+          "Iris-setosa": 50,
+          "Iris-versicolor": 50,
+          "Iris-virginica": 50
+        }
+      },
+      "woike_expected": {
+        "n": 150,
+        "cues": 4,
+        "n1": 50,
+        "n0": 100,
+        "smaller_share": 0.333,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 0,
+          "continuous": 4
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "One of the three species versus the other two; Woike does not say which species.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "smallest_species": 50,
+          "largest_species": 50,
+          "rows_minus_one_species": 100
+        },
+        "explanation": "150 rows, 50 per species, so any one-versus-rest coding gives 50/100. The bundle also holds bezdekIris.data, which differs from iris.data on lines 35 and 38 (measured)."
+      },
+      "decisions_needed": [
+        "Which species is the positive class (not recoverable from the counts).",
+        "iris.data versus bezdekIris.data."
+      ]
+    },
+    {
+      "code": "HEPA",
+      "woike_order": 9,
+      "woike_label": "Hepatitis",
+      "source": {
+        "family": "UCI",
+        "record": "Hepatitis",
+        "uci_id": 46,
+        "doi": "10.24432/C5Q59J",
+        "landing_page": "https://archive.ics.uci.edu/dataset/46/hepatitis"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/HEPA/uci-46.zip",
+          "bytes": 6235,
+          "sha256": "8573c2898714fb32ef8162291dcabd483a1ba9701123cab262f5acace3112d87",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/static/public/46/hepatitis.zip",
+          "copied_from": "DATA_SETS/Holte-16/raw/uci-bundles/uci-46.zip",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition; SHA-256 equals Holte-16/manifest.json)",
+          "upstream_recheck": "2026-09-18: a fresh download of the same URL was byte-identical"
+        },
+        {
+          "path": "raw/HEPA/uci-46-metadata.json",
+          "bytes": 5183,
+          "sha256": "9cf2ba8fd949f4a6d69b19b3e81dd279f8628f3d11751c21fa3917623c0240b0",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=46",
+          "copied_from": "DATA_SETS/Holte-16/raw/metadata/uci-46.json",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition)"
+        },
+        {
+          "path": "raw/HEPA/extracted/Index",
+          "bytes": 147,
+          "sha256": "71827315118dd8ce43b932ec39c2b4bc4f1c6e797cda01e6110f84dffd20285a",
+          "origin": "extracted",
+          "archive": "raw/HEPA/uci-46.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/HEPA/extracted/costs/Index",
+          "bytes": 230,
+          "sha256": "f6532f29f5e4ae14d3cdb00b66b6a236f0ca0b1f2c98e9adb4cbe688feecb0ce",
+          "origin": "extracted",
+          "archive": "raw/HEPA/uci-46.zip",
+          "member": "costs/Index"
+        },
+        {
+          "path": "raw/HEPA/extracted/costs/hepatitis.README",
+          "bytes": 2109,
+          "sha256": "d034e3baa67a017de3e81b3a4e3b1ba97b65b29f3c35f655d670e7961a80556b",
+          "origin": "extracted",
+          "archive": "raw/HEPA/uci-46.zip",
+          "member": "costs/hepatitis.README"
+        },
+        {
+          "path": "raw/HEPA/extracted/costs/hepatitis.cost",
+          "bytes": 301,
+          "sha256": "cf33bd51aea605fc22726e35892948668c49d056bb8129282017408d41a8fb33",
+          "origin": "extracted",
+          "archive": "raw/HEPA/uci-46.zip",
+          "member": "costs/hepatitis.cost"
+        },
+        {
+          "path": "raw/HEPA/extracted/costs/hepatitis.delay",
+          "bytes": 405,
+          "sha256": "f03bf9088205fabe233df47b95799b315d0c608782cc750ef3e18fab03bf73ce",
+          "origin": "extracted",
+          "archive": "raw/HEPA/uci-46.zip",
+          "member": "costs/hepatitis.delay"
+        },
+        {
+          "path": "raw/HEPA/extracted/costs/hepatitis.expense",
+          "bytes": 415,
+          "sha256": "64c32ae1b9efa63f379a1dd0a033eb42c3a13deecab68285aa9c4994e1b46bf7",
+          "origin": "extracted",
+          "archive": "raw/HEPA/uci-46.zip",
+          "member": "costs/hepatitis.expense"
+        },
+        {
+          "path": "raw/HEPA/extracted/costs/hepatitis.group",
+          "bytes": 75,
+          "sha256": "184a051e1fbe9d124de175219b77c82a42df5efd2d12b94e69d6941598b80dae",
+          "origin": "extracted",
+          "archive": "raw/HEPA/uci-46.zip",
+          "member": "costs/hepatitis.group"
+        },
+        {
+          "path": "raw/HEPA/extracted/hepatitis.data",
+          "bytes": 7545,
+          "sha256": "9971f9d18abb4fc9dd6749eefb0f864b36fa7bdd59f54188c0b148a5c28214bc",
+          "origin": "extracted",
+          "archive": "raw/HEPA/uci-46.zip",
+          "member": "hepatitis.data"
+        },
+        {
+          "path": "raw/HEPA/extracted/hepatitis.names",
+          "bytes": 3098,
+          "sha256": "d8ada8cb753e2cbba61ba7254c5a4f25a316e3f38cc77011a1ea6007c1c86e95",
+          "origin": "extracted",
+          "archive": "raw/HEPA/uci-46.zip",
+          "member": "hepatitis.names"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/HEPA/extracted/hepatitis.data",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 155,
+          "field_counts": {
+            "20": 155
+          }
+        }
+      ],
+      "raw_rows": 155,
+      "raw_attribute_count": 20,
+      "raw_attribute_note": "20 fields: class first, then 19 attributes (AGE and five laboratory values continuous, 13 binary). Woike used 7 (6 binary, 1 continuous); which seven is not stated.",
+      "raw_class": {
+        "column": 0,
+        "counts": {
+          "1": 32,
+          "2": 123
+        }
+      },
+      "woike_expected": {
+        "n": 153,
+        "cues": 7,
+        "n1": 121,
+        "n0": 32,
+        "smaller_share": 0.209,
+        "predictor_types": {
+          "binary": 6,
+          "categorical": 0,
+          "continuous": 1
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Class: 1 = die, 2 = live; natively binary.",
+      "comparison": {
+        "n_status": "explained",
+        "split_status": "exact_after_reduction",
+        "measured": {
+          "complete_rows_all_19_attrs": 80,
+          "complete_on_8_low_missing_attrs": 153,
+          "class_2_live": 121,
+          "class_1_die": 32
+        },
+        "explanation": "155 raw rows (die 32, live 123); only 80 rows are complete on all 19 attributes. Eight attributes have at most one '?' (AGE, SEX, STEROID, ANTIVIRALS, FATIGUE, MALAISE, ANOREXIA, HISTOLOGY); complete cases on those eight are 153 rows (lines 4 and 57 drop out, both 'live'), giving live 121 / die 32 = Woike's n and split. Exhaustive check: with AGE as the continuous cue, 6 of the 1,716 six-subsets of the 13 binary attributes give 153 rows and 32/121, all drawn from those seven low-missingness binary attributes. The mechanism is identified; the exact seven cues are not."
+      },
+      "decisions_needed": [
+        "Row policy: 2 rows versus 75 rows with any '?'.",
+        "Cue subset: 7 of 19 (six candidate subsets are consistent with n = 153)."
+      ]
+    },
+    {
+      "code": "STRK",
+      "woike_order": 10,
+      "woike_label": "Strikes",
+      "source": {
+        "family": "ACD",
+        "record": "Companion data to J. S. Simonoff, Analyzing Categorical Data (Springer, 2003)",
+        "landing_page": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/STRK/wildcat.csv",
+          "bytes": 3651,
+          "sha256": "212e20f9fcf320b1e34e0e9fc896a191f0041d78a2d88c16cedb8005f39fea52",
+          "origin": "downloaded",
+          "url": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/Comma_separated/wildcat.csv",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "cross_check": "byte-identical to the member of the same name in raw/_ACD_bundle/data.zip"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/STRK/wildcat.csv",
+          "parser": "csv_header",
+          "rows": 163,
+          "field_counts": {
+            "6": 163
+          }
+        }
+      ],
+      "acd_mapping": {
+        "status": "confirmed",
+        "file": "wildcat.csv",
+        "evidence": "163 rows = Woike n; 4 distinct predictors with a 2 binary + 2 continuous profile; strikes>0 / =0 = 86/77 = Woike n1/n0."
+      },
+      "raw_rows": 163,
+      "raw_attribute_count": 6,
+      "raw_attribute_note": "6 columns: Grievances, Rotate, Union, Workforce, Log workforce, Wildcat strikes. 'Log workforce' equals ln(Workforce) to 5e-6 (measured), so there are four distinct predictors, two binary (Rotate, Union) and two continuous: Woike's profile.",
+      "raw_class": null,
+      "woike_expected": {
+        "n": 163,
+        "cues": 4,
+        "n1": 86,
+        "n0": 77,
+        "smaller_share": 0.472,
+        "predictor_types": {
+          "binary": 2,
+          "categorical": 0,
+          "continuous": 2
+        },
+        "source_tag": "ACD"
+      },
+      "criterion": "Number of wildcat strikes: a COUNT (0-22), dichotomized by Woike.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "Wildcat strikes>0": 86,
+          "Wildcat strikes=0": 77
+        },
+        "explanation": "File mapping CONFIRMED: 163 rows; strikes > 0 in 86 rows and = 0 in 77 rows, Woike's split exactly."
+      },
+      "decisions_needed": [
+        "Threshold for the numeric criterion (any strike versus none reproduces Woike).",
+        "Workforce versus Log workforce (the same cue after a median split)."
+      ]
+    },
+    {
+      "code": "WINE",
+      "woike_order": 11,
+      "woike_label": "Wine",
+      "source": {
+        "family": "UCI",
+        "record": "Wine",
+        "uci_id": 109,
+        "doi": "10.24432/C5PC7J",
+        "landing_page": "https://archive.ics.uci.edu/dataset/109/wine"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/WINE/uci-109.zip",
+          "bytes": 6038,
+          "sha256": "2bae62c4481220623579d4c4fb36b55652b6b75e06e49fa1981b8198362dfdab",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/static/public/109/wine.zip",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/WINE/uci-109-metadata.json",
+          "bytes": 4496,
+          "sha256": "ac0e877a4f06e3e9e686e2cc3d61f65577dcafa3c808049af03e95c110aeeccb",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=109",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/WINE/extracted/Index",
+          "bytes": 105,
+          "sha256": "c24d1f17df97bdde234913bb0a3334227215eefd0ad3d6a9988151d49971cba7",
+          "origin": "extracted",
+          "archive": "raw/WINE/uci-109.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/WINE/extracted/wine.data",
+          "bytes": 10782,
+          "sha256": "6be6b1203f3d51df0b553a70e57b8a723cd405683958204f96d23d7cd6aea659",
+          "origin": "extracted",
+          "archive": "raw/WINE/uci-109.zip",
+          "member": "wine.data"
+        },
+        {
+          "path": "raw/WINE/extracted/wine.names",
+          "bytes": 3036,
+          "sha256": "f1b84f2ef845e0bdebf13e14fa7a213e56de4f1baa40c5974dbd1ee51c5ae710",
+          "origin": "extracted",
+          "archive": "raw/WINE/uci-109.zip",
+          "member": "wine.names"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/WINE/extracted/wine.data",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 178,
+          "field_counts": {
+            "14": 178
+          }
+        }
+      ],
+      "raw_rows": 178,
+      "raw_attribute_count": 14,
+      "raw_attribute_note": "14 fields: cultivar class first, then 13 chemical measurements.",
+      "raw_class": {
+        "column": 0,
+        "counts": {
+          "1": 59,
+          "2": 71,
+          "3": 48
+        }
+      },
+      "woike_expected": {
+        "n": 178,
+        "cues": 13,
+        "n1": 71,
+        "n0": 107,
+        "smaller_share": 0.399,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 0,
+          "continuous": 13
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "One of three cultivars versus the other two.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "class_2": 71,
+          "rest": 107
+        },
+        "explanation": "178 rows; classes 59 / 71 / 48. Only class 2 has 71 members, so Woike's 71/107 is class 2 versus the rest."
+      },
+      "decisions_needed": [
+        "Positive class: class 2 reproduces Tabelle 6.9."
+      ]
+    },
+    {
+      "code": "CYY",
+      "woike_order": 12,
+      "woike_label": "Baseball CYY",
+      "source": {
+        "family": "ACD",
+        "record": "Companion data to J. S. Simonoff, Analyzing Categorical Data (Springer, 2003)",
+        "landing_page": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/CYY/cyyoung8092.csv",
+          "bytes": 5233,
+          "sha256": "46c8a1278b7163e2a805fb5be1905cb703068f7e11a595c9d71b6e5caab66983",
+          "origin": "downloaded",
+          "url": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/Comma_separated/cyyoung8092.csv",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "cross_check": "byte-identical to the member of the same name in raw/_ACD_bundle/data.zip"
+        },
+        {
+          "path": "raw/CYY/cyyoung9302.csv",
+          "bytes": 5123,
+          "sha256": "4bf100def3dc7471dc8545026eb0d8a0e6b5ccaf345bac51da5b6580a13b575a",
+          "origin": "downloaded",
+          "url": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/Comma_separated/cyyoung9302.csv",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "cross_check": "byte-identical to the member of the same name in raw/_ACD_bundle/data.zip"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/CYY/cyyoung8092.csv",
+          "parser": "csv_header",
+          "rows": 97,
+          "field_counts": {
+            "11": 97
+          }
+        },
+        {
+          "path": "raw/CYY/cyyoung9302.csv",
+          "parser": "csv_header",
+          "rows": 92,
+          "field_counts": {
+            "11": 92
+          }
+        }
+      ],
+      "acd_mapping": {
+        "status": "confirmed",
+        "file": "cyyoung8092.csv + cyyoung9302.csv (pooled)",
+        "evidence": "97 + 92 = 189 rows = Woike n; 9 predictors with a 2/1/6 type profile; Cy Young 1/0 = 43/146 = Woike n1/n0."
+      },
+      "raw_rows": 189,
+      "raw_attribute_count": 11,
+      "raw_attribute_note": "11 columns in both files (identical headers): Year, Pitcher (identifier), League, Type, six performance statistics, Cy Young. Excluding Pitcher leaves nine predictors: 2 binary (League, Type), 1 categorical (Year), 6 continuous, which is Woike's profile.",
+      "raw_class": {
+        "column": "Cy Young",
+        "counts": {
+          "0": 146,
+          "1": 43
+        }
+      },
+      "woike_expected": {
+        "n": 189,
+        "cues": 9,
+        "n1": 43,
+        "n0": 146,
+        "smaller_share": 0.228,
+        "predictor_types": {
+          "binary": 2,
+          "categorical": 1,
+          "continuous": 6
+        },
+        "source_tag": "ACD"
+      },
+      "criterion": "Cy Young award won (1) or not (0); natively binary.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "exact",
+        "measured": {},
+        "explanation": "File mapping CONFIRMED: 97 rows (1980-92) + 92 rows (1993-2002) = 189; Cy Young 43 / 146 pooled. Neither file alone matches."
+      },
+      "decisions_needed": [
+        "Pooling of the two files (Simonoff uses the second as a validation sample).",
+        "Whether Year is a cue."
+      ]
+    },
+    {
+      "code": "GLAS",
+      "woike_order": 13,
+      "woike_label": "Forensic Glass",
+      "source": {
+        "family": "UCI",
+        "record": "Glass Identification",
+        "uci_id": 42,
+        "doi": "10.24432/C5WW2P",
+        "landing_page": "https://archive.ics.uci.edu/dataset/42/glass+identification"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/GLAS/uci-42.zip",
+          "bytes": 6380,
+          "sha256": "499c07a17115bf63100bb19cc1fdefad7f464bf5dc2b168930fa2071fd6b6e65",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/static/public/42/glass+identification.zip",
+          "copied_from": "DATA_SETS/Holte-16/raw/uci-bundles/uci-42.zip",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition; SHA-256 equals Holte-16/manifest.json)",
+          "upstream_recheck": "2026-09-18: a fresh download of the same URL was byte-identical"
+        },
+        {
+          "path": "raw/GLAS/uci-42-metadata.json",
+          "bytes": 4085,
+          "sha256": "67bcb40304226b900d8395160873e657c4e2972d864e500ee726bd5223688091",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=42",
+          "copied_from": "DATA_SETS/Holte-16/raw/metadata/uci-42.json",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition)"
+        },
+        {
+          "path": "raw/GLAS/extracted/Index",
+          "bytes": 139,
+          "sha256": "27d4d85c7fc6f222a9eb23754dd1d8142ac1a5d633d24f67086e1a463c7e267f",
+          "origin": "extracted",
+          "archive": "raw/GLAS/uci-42.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/GLAS/extracted/glass.data",
+          "bytes": 11903,
+          "sha256": "dd67373f4baf2807345df02cbfef2093d342e61ad0d82a4fb79af43ef8ce449d",
+          "origin": "extracted",
+          "archive": "raw/GLAS/uci-42.zip",
+          "member": "glass.data"
+        },
+        {
+          "path": "raw/GLAS/extracted/glass.names",
+          "bytes": 3506,
+          "sha256": "5921d4b93ed323aa092a2c17cc0bab3bafbf66b7085f5d98880d9c5ea0c51d42",
+          "origin": "extracted",
+          "archive": "raw/GLAS/uci-42.zip",
+          "member": "glass.names"
+        },
+        {
+          "path": "raw/GLAS/extracted/glass.tag",
+          "bytes": 780,
+          "sha256": "86ed4cf181eae8f1978efc526112f578ea4ab9e8e88cd555f21700ae53a79488",
+          "origin": "extracted",
+          "archive": "raw/GLAS/uci-42.zip",
+          "member": "glass.tag"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/GLAS/extracted/glass.data",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 214,
+          "field_counts": {
+            "11": 214
+          }
+        }
+      ],
+      "raw_rows": 214,
+      "raw_attribute_count": 11,
+      "raw_attribute_note": "11 fields: Id, refractive index, eight oxide contents, type. Nine predictors as in Tabelle 6.9 (Woike's text says eight).",
+      "raw_class": {
+        "column": -1,
+        "counts": {
+          "1": 70,
+          "2": 76,
+          "3": 17,
+          "5": 13,
+          "6": 9,
+          "7": 29
+        }
+      },
+      "woike_expected": {
+        "n": 214,
+        "cues": 9,
+        "n1": 146,
+        "n0": 68,
+        "smaller_share": 0.318,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 0,
+          "continuous": 9
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Window glass versus other glass; from the six-valued attribute type (1, 2, 3, 5, 6, 7 occur).",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "types_1+2_building_windows": 146,
+          "rest_after_1+2": 68,
+          "types_1+2+3_all_windows": 163,
+          "rest_after_1+2+3": 51
+        },
+        "explanation": "214 rows; types 70/76/17/13/9/29. Woike's 146/68 equals types 1+2 (building windows) versus the rest. Counting vehicle windows (type 3) as window glass gives 163/51, which is NOT Woike's split."
+      },
+      "decisions_needed": [
+        "Definition of 'window glass': types 1+2 (reproduces Woike) or types 1+2+3.",
+        "Drop the Id column."
+      ]
+    },
+    {
+      "code": "HORS",
+      "woike_order": 14,
+      "woike_label": "Horse Colic",
+      "source": {
+        "family": "UCI",
+        "record": "Horse Colic",
+        "uci_id": 47,
+        "doi": "10.24432/C58W23",
+        "landing_page": "https://archive.ics.uci.edu/dataset/47/horse+colic"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/HORS/uci-47.zip",
+          "bytes": 14785,
+          "sha256": "e4a2d4e77573e521057b75ce00992060f2f002a1658d5a8e430138b60c3c8053",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/static/public/47/horse+colic.zip",
+          "copied_from": "DATA_SETS/Holte-16/raw/uci-bundles/uci-47.zip",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition; SHA-256 equals Holte-16/manifest.json)",
+          "upstream_recheck": "2026-09-18: a fresh download of the same URL was byte-identical"
+        },
+        {
+          "path": "raw/HORS/uci-47-metadata.json",
+          "bytes": 13665,
+          "sha256": "a10b4167e652dce5b60a0791c36d9cbbb653aa9968830b6ba396b6ab4187daa4",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=47",
+          "copied_from": "DATA_SETS/Holte-16/raw/metadata/uci-47.json",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition)"
+        },
+        {
+          "path": "raw/HORS/extracted/Index",
+          "bytes": 212,
+          "sha256": "be7e128cbd5c381cf3680a7673d1cbdc3d361c1a9c2216362dd54a4780c34d03",
+          "origin": "extracted",
+          "archive": "raw/HORS/uci-47.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/HORS/extracted/horse-colic.data",
+          "bytes": 25437,
+          "sha256": "270db486c78796143ffa84b4808118b3d4b96d1bd0f70bf22b3bb0bfca21e547",
+          "origin": "extracted",
+          "archive": "raw/HORS/uci-47.zip",
+          "member": "horse-colic.data"
+        },
+        {
+          "path": "raw/HORS/extracted/horse-colic.names",
+          "bytes": 9045,
+          "sha256": "36d88c8c17fb621153fa42ba8addd50b0c97a74af79da3dddae15ed697b9bef4",
+          "origin": "extracted",
+          "archive": "raw/HORS/uci-47.zip",
+          "member": "horse-colic.names"
+        },
+        {
+          "path": "raw/HORS/extracted/horse-colic.names.original",
+          "bytes": 9599,
+          "sha256": "b95e8efc11ba05f301319851fc947296b61afed7d0977b868db6f233f201b8b5",
+          "origin": "extracted",
+          "archive": "raw/HORS/uci-47.zip",
+          "member": "horse-colic.names.original"
+        },
+        {
+          "path": "raw/HORS/extracted/horse-colic.test",
+          "bytes": 5807,
+          "sha256": "2c14b28c71da2a4778a6f161819804e032545a1c13f73fddf5d5b220c7ae3853",
+          "origin": "extracted",
+          "archive": "raw/HORS/uci-47.zip",
+          "member": "horse-colic.test"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/HORS/extracted/horse-colic.data",
+          "parser": "delimited",
+          "sep": "ws",
+          "rows": 300,
+          "field_counts": {
+            "28": 300
+          }
+        },
+        {
+          "path": "raw/HORS/extracted/horse-colic.test",
+          "parser": "delimited",
+          "sep": "ws",
+          "rows": 68,
+          "field_counts": {
+            "28": 68
+          }
+        }
+      ],
+      "raw_rows": 368,
+      "raw_attribute_count": 28,
+      "raw_attribute_note": "28 whitespace-separated fields. Woike used 6 cues (1 binary, 1 categorical, 4 continuous); which six is not stated, and the dissertation has no descriptive paragraph for this set.",
+      "raw_class": {
+        "column": 0,
+        "counts": {
+          "1": 214,
+          "2": 152,
+          "?": 2
+        }
+      },
+      "woike_expected": {
+        "n": 218,
+        "cues": 6,
+        "n1": 128,
+        "n0": 90,
+        "smaller_share": 0.413,
+        "predictor_types": {
+          "binary": 1,
+          "categorical": 1,
+          "continuous": 4
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Not described in the dissertation. Woike et al. (2017) Table 1: 'Treated with surgery (yes/no)', base rate .587 = 128/218, which points to attribute 1 (surgery: 1 = yes, 2 = no). Holte's class for the same file is attribute 24 (surgical lesion).",
+      "comparison": {
+        "n_status": "unexplained",
+        "split_status": "not_reproduced",
+        "measured": {},
+        "explanation": "300 + 68 = 368 raw rows; attribute 1: 214 yes, 152 no, 2 '?'. Woike's 218 (128/90) was NOT reproduced. Checked, for the criteria surgery (attr 1), outcome lived/not (attr 23) and surgical lesion (attr 24), on data+test, data only and test only: (a) complete cases on 4 of the 7 continuous attributes plus any two other attributes: no combination gives 218 with 128/90; (b) complete cases on ANY six of the 23 usable attributes (100,947 subsets per criterion and scope): 218 rows with a 128/90 split occur for 4 subsets with surgery on data+test (all built on attributes {6, 9, 10, 12, 20}), 5 with surgical lesion on data+test, 4 with surgery and 1 with surgical lesion on data only, none with outcome. Not one of these 14 subsets contains four continuous attributes, so none has Woike's 1/1/4 profile, and with this many subsets chance hits are expected. They are recorded as candidates, not as an explanation."
+      },
+      "decisions_needed": [
+        "Everything: criterion column, row policy, cue subset, pooling of .data and .test. Needs Woike's file or his recollection."
+      ]
+    },
+    {
+      "code": "SPCT",
+      "woike_order": 15,
+      "woike_label": "SPECT",
+      "source": {
+        "family": "UCI",
+        "record": "SPECT Heart",
+        "uci_id": 95,
+        "doi": "10.24432/C5P304",
+        "landing_page": "https://archive.ics.uci.edu/dataset/95/spect+heart"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/SPCT/uci-95.zip",
+          "bytes": 3669,
+          "sha256": "0df4ab4903ce89626df28e9f8436d84399a68bc45d6d16a4c1f0dd53028449fa",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/static/public/95/spect+heart.zip",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/SPCT/uci-95-metadata.json",
+          "bytes": 6458,
+          "sha256": "6f7d6a5c8ae0646e320469912bc6c835f628ca9a37b0928c196470e23eba5518",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=95",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/SPCT/extracted/DonorNote.txt",
+          "bytes": 370,
+          "sha256": "7a4b0013a43cfcf6d2d326bfc6fe49a7d0a6b7f3c8ce015d58c2c770b28f2d38",
+          "origin": "extracted",
+          "archive": "raw/SPCT/uci-95.zip",
+          "member": "DonorNote.txt"
+        },
+        {
+          "path": "raw/SPCT/extracted/SPECT.test",
+          "bytes": 8787,
+          "sha256": "a152d1812a84da3ad18e759ac3433e57f407a6871c2f2fe0dda6779c90d58b82",
+          "origin": "extracted",
+          "archive": "raw/SPCT/uci-95.zip",
+          "member": "SPECT.test"
+        },
+        {
+          "path": "raw/SPCT/extracted/SPECT.train",
+          "bytes": 3758,
+          "sha256": "0fd0258bfc8eb986623a45890676465ee92e738a95fdc01a6aef893d9c920115",
+          "origin": "extracted",
+          "archive": "raw/SPCT/uci-95.zip",
+          "member": "SPECT.train"
+        },
+        {
+          "path": "raw/SPCT/extracted/SPECT.names",
+          "bytes": 3694,
+          "sha256": "3e3d2a3b273e6700b9c71112c9335b07f40179dcb025f1f9a05e0ceb257dc20f",
+          "origin": "extracted",
+          "archive": "raw/SPCT/uci-95.zip",
+          "member": "SPECT.names"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/SPCT/extracted/SPECT.train",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 80,
+          "field_counts": {
+            "23": 80
+          }
+        },
+        {
+          "path": "raw/SPCT/extracted/SPECT.test",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 187,
+          "field_counts": {
+            "23": 187
+          }
+        }
+      ],
+      "raw_rows": 267,
+      "raw_attribute_count": 23,
+      "raw_attribute_note": "23 fields: diagnosis first, then 22 binary features.",
+      "raw_class": {
+        "column": 0,
+        "counts": {
+          "0": 55,
+          "1": 212
+        }
+      },
+      "woike_expected": {
+        "n": 267,
+        "cues": 22,
+        "n1": 212,
+        "n0": 55,
+        "smaller_share": 0.206,
+        "predictor_types": {
+          "binary": 22,
+          "categorical": 0,
+          "continuous": 0
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Overall diagnosis (1 abnormal, 0 normal); natively binary.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "exact",
+        "measured": {},
+        "explanation": "80 (train) + 187 (test) = 267 rows; diagnosis 1 = 212, 0 = 55 pooled."
+      },
+      "decisions_needed": [
+        "Pooling of the donor's train and test files (train alone is 40/40)."
+      ]
+    },
+    {
+      "code": "HUNG",
+      "woike_order": 16,
+      "woike_label": "Heart (Hungaria)",
+      "source": {
+        "family": "UCI",
+        "record": "Heart Disease",
+        "uci_id": 45,
+        "doi": "10.24432/C52P4X",
+        "landing_page": "https://archive.ics.uci.edu/dataset/45/heart+disease"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/HUNG/uci-45.zip",
+          "bytes": 128894,
+          "sha256": "b17cd273da9ce1caa4710fce80227ea454d4dbf9fcbc8e6a9121672751563adc",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/static/public/45/heart+disease.zip",
+          "copied_from": "DATA_SETS/Holte-16/raw/uci-bundles/uci-45.zip",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition; SHA-256 equals Holte-16/manifest.json)",
+          "upstream_recheck": "2026-09-18: a fresh download of the same URL was byte-identical"
+        },
+        {
+          "path": "raw/HUNG/uci-45-metadata.json",
+          "bytes": 9622,
+          "sha256": "88cbc5a8918cb2f0103134233989b71efc52178dc3f2c197c32711e300c3d14b",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=45",
+          "copied_from": "DATA_SETS/Holte-16/raw/metadata/uci-45.json",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition)"
+        },
+        {
+          "path": "raw/HUNG/extracted/Index",
+          "bytes": 644,
+          "sha256": "d41af1035979b6068dd812c7acf3533dff92195f060b71b805d0cf476dc129cc",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/HUNG/extracted/WARNING",
+          "bytes": 407,
+          "sha256": "01ae7cb6ab43a387b206f7127ce81869639d9d3076d447c12d7df17ad583f954",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "WARNING"
+        },
+        {
+          "path": "raw/HUNG/extracted/ask-detrano",
+          "bytes": 587,
+          "sha256": "9c6fd6da312d211b92686e999d31472d9df375e5961003d975e2b1b4adfba732",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "ask-detrano"
+        },
+        {
+          "path": "raw/HUNG/extracted/bak",
+          "bytes": 6737,
+          "sha256": "256ce8acebd722879c364199b4b62b94abc9dd9373a0c15c7677508f1e1aafd1",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "bak"
+        },
+        {
+          "path": "raw/HUNG/extracted/cleve.mod",
+          "bytes": 23941,
+          "sha256": "a1d2a0369d138b45a761522e897f34dc49d779a1b8f7c323dd9732d632ecc83d",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "cleve.mod"
+        },
+        {
+          "path": "raw/HUNG/extracted/cleveland.data",
+          "bytes": 60669,
+          "sha256": "9278214845d1cf45cdce6404038b232ce23dedaf801709650712f6d145d1b7b7",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "cleveland.data"
+        },
+        {
+          "path": "raw/HUNG/extracted/costs/Index",
+          "bytes": 250,
+          "sha256": "0f6a2a6e449c0897b66bb4ad6743052416b6d0fd1785d75da2cbcbfe4e9721a3",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "costs/Index"
+        },
+        {
+          "path": "raw/HUNG/extracted/costs/heart-disease.README",
+          "bytes": 2558,
+          "sha256": "2eabbf5ba4931bdad358fb724d85f1145216179fad6d969eb712612e24ab1ec5",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "costs/heart-disease.README"
+        },
+        {
+          "path": "raw/HUNG/extracted/costs/heart-disease.cost",
+          "bytes": 185,
+          "sha256": "d7dd7d4e6988e0fd372cde12807bb274ee7ffc9f806fb284e018b1fbceb562a6",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "costs/heart-disease.cost"
+        },
+        {
+          "path": "raw/HUNG/extracted/costs/heart-disease.delay",
+          "bytes": 234,
+          "sha256": "3ab763060ee82642a50043f21cd6f2b5a6af1ad27b879de6737447b4da415811",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "costs/heart-disease.delay"
+        },
+        {
+          "path": "raw/HUNG/extracted/costs/heart-disease.expense",
+          "bytes": 279,
+          "sha256": "1a760067be382086895a6fe3bc6a4c1f532d5f06b4c201c6654fce28af73dafe",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "costs/heart-disease.expense"
+        },
+        {
+          "path": "raw/HUNG/extracted/costs/heart-disease.group",
+          "bytes": 94,
+          "sha256": "5304099521b34ba089857a8e1550221fc32f16d537cae080848a6a958aa37770",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "costs/heart-disease.group"
+        },
+        {
+          "path": "raw/HUNG/extracted/heart-disease.names",
+          "bytes": 10060,
+          "sha256": "ec7ed5aa4ed8321097808f47b836301c2a0c36f3bb09c40b8b43b622363e6b61",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "heart-disease.names"
+        },
+        {
+          "path": "raw/HUNG/extracted/hungarian.data",
+          "bytes": 62192,
+          "sha256": "b8e4bbd06b9bf9ec831c992ba397639f22815e525c43b489e1a6e75b3be29a75",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "hungarian.data"
+        },
+        {
+          "path": "raw/HUNG/extracted/long-beach-va.data",
+          "bytes": 39892,
+          "sha256": "16d44b28ccb139d07509ee17f22c51fcd568caea8beb607d1503e4a679133353",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "long-beach-va.data"
+        },
+        {
+          "path": "raw/HUNG/extracted/new.data",
+          "bytes": 389771,
+          "sha256": "2a75652db155d77b76c506b172848d73a58869cb707943474d265f8415de6c4c",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "new.data"
+        },
+        {
+          "path": "raw/HUNG/extracted/processed.cleveland.data",
+          "bytes": 18461,
+          "sha256": "a74b7efa387bc9d108d7d0115d831fe9b414b29ae7124f331b622b4efa0427c8",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "processed.cleveland.data"
+        },
+        {
+          "path": "raw/HUNG/extracted/processed.hungarian.data",
+          "bytes": 10263,
+          "sha256": "d1ad108f785768cd3d7e82dc522e6f5a61eea93cccfb3a46ee8076f73fc3d796",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "processed.hungarian.data"
+        },
+        {
+          "path": "raw/HUNG/extracted/processed.switzerland.data",
+          "bytes": 4109,
+          "sha256": "834a405ccf5b66ab4056bb77794adc8df0b7125186454c0a1d002d33c6c3b314",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "processed.switzerland.data"
+        },
+        {
+          "path": "raw/HUNG/extracted/processed.va.data",
+          "bytes": 6737,
+          "sha256": "e7c93d8d0d2acdadfa4c5e8de768e2191e7f618b952e29623f1f0d5949ff6b8f",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "processed.va.data"
+        },
+        {
+          "path": "raw/HUNG/extracted/reprocessed.hungarian.data",
+          "bytes": 11058,
+          "sha256": "b699122ef9f81fd06363083ab2646bcb225a3775abe801edb81c3093c8f92819",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "reprocessed.hungarian.data"
+        },
+        {
+          "path": "raw/HUNG/extracted/switzerland.data",
+          "bytes": 24674,
+          "sha256": "fe1618a50ec2fc99f57ec1ca3fa93bd1fcad93b9daf92d49704476e3a3e4d0b2",
+          "origin": "extracted",
+          "archive": "raw/HUNG/uci-45.zip",
+          "member": "switzerland.data"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/HUNG/extracted/processed.hungarian.data",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 294,
+          "field_counts": {
+            "14": 294
+          }
+        }
+      ],
+      "raw_rows": 294,
+      "raw_attribute_count": 14,
+      "raw_attribute_note": "14 fields: 13 attributes and num. slope, ca and thal are '?' in 190, 291 and 266 of the 294 rows (measured), which is presumably why Woike has 10 cues; the dissertation does not name them.",
+      "raw_class": {
+        "column": -1,
+        "counts": {
+          "0": 188,
+          "1": 106
+        }
+      },
+      "woike_expected": {
+        "n": 294,
+        "cues": 10,
+        "n1": 106,
+        "n0": 188,
+        "smaller_share": 0.361,
+        "predictor_types": {
+          "binary": 1,
+          "categorical": 4,
+          "continuous": 5
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Heart disease present (num = 1) or absent (0); binary in processed.hungarian.data. reprocessed.hungarian.data carries num 0-4 (188/37/26/28/15) for the same 294 patients.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "exact",
+        "measured": {
+          "missing_slope": 190,
+          "missing_ca": 291,
+          "missing_thal": 266,
+          "complete_on_first_10_attrs": 261
+        },
+        "explanation": "294 rows, num 1 = 106, 0 = 188: Woike's n and split with NO row deletion, although 293 rows contain a '?' somewhere. Side observation, not Tabelle 6.9: Woike et al. (2017) Table 1 prints 262 objects and base rate .374 for this set; complete cases on the first ten attributes are 261 (98 positive, .375), so the 2017 figure is near but not reproduced."
+      },
+      "decisions_needed": [
+        "Which Hungarian file (processed, reprocessed, or the 76-attribute hungarian.data).",
+        "Cue subset: 10 of 13.",
+        "Missing-value policy for chol (23 '?'), fbs (8) and four single cells."
+      ]
+    },
+    {
+      "code": "CLEV",
+      "woike_order": 17,
+      "woike_label": "Heart (Cleveland)",
+      "source": {
+        "family": "UCI",
+        "record": "Heart Disease",
+        "uci_id": 45,
+        "doi": "10.24432/C52P4X",
+        "landing_page": "https://archive.ics.uci.edu/dataset/45/heart+disease"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/CLEV/uci-45.zip",
+          "bytes": 128894,
+          "sha256": "b17cd273da9ce1caa4710fce80227ea454d4dbf9fcbc8e6a9121672751563adc",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/static/public/45/heart+disease.zip",
+          "copied_from": "DATA_SETS/Holte-16/raw/uci-bundles/uci-45.zip",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition; SHA-256 equals Holte-16/manifest.json)",
+          "upstream_recheck": "2026-09-18: a fresh download of the same URL was byte-identical"
+        },
+        {
+          "path": "raw/CLEV/uci-45-metadata.json",
+          "bytes": 9622,
+          "sha256": "88cbc5a8918cb2f0103134233989b71efc52178dc3f2c197c32711e300c3d14b",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=45",
+          "copied_from": "DATA_SETS/Holte-16/raw/metadata/uci-45.json",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition)"
+        },
+        {
+          "path": "raw/CLEV/extracted/Index",
+          "bytes": 644,
+          "sha256": "d41af1035979b6068dd812c7acf3533dff92195f060b71b805d0cf476dc129cc",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/CLEV/extracted/WARNING",
+          "bytes": 407,
+          "sha256": "01ae7cb6ab43a387b206f7127ce81869639d9d3076d447c12d7df17ad583f954",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "WARNING"
+        },
+        {
+          "path": "raw/CLEV/extracted/ask-detrano",
+          "bytes": 587,
+          "sha256": "9c6fd6da312d211b92686e999d31472d9df375e5961003d975e2b1b4adfba732",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "ask-detrano"
+        },
+        {
+          "path": "raw/CLEV/extracted/bak",
+          "bytes": 6737,
+          "sha256": "256ce8acebd722879c364199b4b62b94abc9dd9373a0c15c7677508f1e1aafd1",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "bak"
+        },
+        {
+          "path": "raw/CLEV/extracted/cleve.mod",
+          "bytes": 23941,
+          "sha256": "a1d2a0369d138b45a761522e897f34dc49d779a1b8f7c323dd9732d632ecc83d",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "cleve.mod"
+        },
+        {
+          "path": "raw/CLEV/extracted/cleveland.data",
+          "bytes": 60669,
+          "sha256": "9278214845d1cf45cdce6404038b232ce23dedaf801709650712f6d145d1b7b7",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "cleveland.data"
+        },
+        {
+          "path": "raw/CLEV/extracted/costs/Index",
+          "bytes": 250,
+          "sha256": "0f6a2a6e449c0897b66bb4ad6743052416b6d0fd1785d75da2cbcbfe4e9721a3",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "costs/Index"
+        },
+        {
+          "path": "raw/CLEV/extracted/costs/heart-disease.README",
+          "bytes": 2558,
+          "sha256": "2eabbf5ba4931bdad358fb724d85f1145216179fad6d969eb712612e24ab1ec5",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "costs/heart-disease.README"
+        },
+        {
+          "path": "raw/CLEV/extracted/costs/heart-disease.cost",
+          "bytes": 185,
+          "sha256": "d7dd7d4e6988e0fd372cde12807bb274ee7ffc9f806fb284e018b1fbceb562a6",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "costs/heart-disease.cost"
+        },
+        {
+          "path": "raw/CLEV/extracted/costs/heart-disease.delay",
+          "bytes": 234,
+          "sha256": "3ab763060ee82642a50043f21cd6f2b5a6af1ad27b879de6737447b4da415811",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "costs/heart-disease.delay"
+        },
+        {
+          "path": "raw/CLEV/extracted/costs/heart-disease.expense",
+          "bytes": 279,
+          "sha256": "1a760067be382086895a6fe3bc6a4c1f532d5f06b4c201c6654fce28af73dafe",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "costs/heart-disease.expense"
+        },
+        {
+          "path": "raw/CLEV/extracted/costs/heart-disease.group",
+          "bytes": 94,
+          "sha256": "5304099521b34ba089857a8e1550221fc32f16d537cae080848a6a958aa37770",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "costs/heart-disease.group"
+        },
+        {
+          "path": "raw/CLEV/extracted/heart-disease.names",
+          "bytes": 10060,
+          "sha256": "ec7ed5aa4ed8321097808f47b836301c2a0c36f3bb09c40b8b43b622363e6b61",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "heart-disease.names"
+        },
+        {
+          "path": "raw/CLEV/extracted/hungarian.data",
+          "bytes": 62192,
+          "sha256": "b8e4bbd06b9bf9ec831c992ba397639f22815e525c43b489e1a6e75b3be29a75",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "hungarian.data"
+        },
+        {
+          "path": "raw/CLEV/extracted/long-beach-va.data",
+          "bytes": 39892,
+          "sha256": "16d44b28ccb139d07509ee17f22c51fcd568caea8beb607d1503e4a679133353",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "long-beach-va.data"
+        },
+        {
+          "path": "raw/CLEV/extracted/new.data",
+          "bytes": 389771,
+          "sha256": "2a75652db155d77b76c506b172848d73a58869cb707943474d265f8415de6c4c",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "new.data"
+        },
+        {
+          "path": "raw/CLEV/extracted/processed.cleveland.data",
+          "bytes": 18461,
+          "sha256": "a74b7efa387bc9d108d7d0115d831fe9b414b29ae7124f331b622b4efa0427c8",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "processed.cleveland.data"
+        },
+        {
+          "path": "raw/CLEV/extracted/processed.hungarian.data",
+          "bytes": 10263,
+          "sha256": "d1ad108f785768cd3d7e82dc522e6f5a61eea93cccfb3a46ee8076f73fc3d796",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "processed.hungarian.data"
+        },
+        {
+          "path": "raw/CLEV/extracted/processed.switzerland.data",
+          "bytes": 4109,
+          "sha256": "834a405ccf5b66ab4056bb77794adc8df0b7125186454c0a1d002d33c6c3b314",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "processed.switzerland.data"
+        },
+        {
+          "path": "raw/CLEV/extracted/processed.va.data",
+          "bytes": 6737,
+          "sha256": "e7c93d8d0d2acdadfa4c5e8de768e2191e7f618b952e29623f1f0d5949ff6b8f",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "processed.va.data"
+        },
+        {
+          "path": "raw/CLEV/extracted/reprocessed.hungarian.data",
+          "bytes": 11058,
+          "sha256": "b699122ef9f81fd06363083ab2646bcb225a3775abe801edb81c3093c8f92819",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "reprocessed.hungarian.data"
+        },
+        {
+          "path": "raw/CLEV/extracted/switzerland.data",
+          "bytes": 24674,
+          "sha256": "fe1618a50ec2fc99f57ec1ca3fa93bd1fcad93b9daf92d49704476e3a3e4d0b2",
+          "origin": "extracted",
+          "archive": "raw/CLEV/uci-45.zip",
+          "member": "switzerland.data"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/CLEV/extracted/processed.cleveland.data",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 303,
+          "field_counts": {
+            "14": 303
+          }
+        }
+      ],
+      "raw_rows": 303,
+      "raw_attribute_count": 14,
+      "raw_attribute_note": "14 fields: 13 attributes and num (0-4). The bundle also holds cleve.mod (Holte's file) and the 76-attribute cleveland.data.",
+      "raw_class": {
+        "column": -1,
+        "counts": {
+          "0": 164,
+          "1": 55,
+          "2": 36,
+          "3": 35,
+          "4": 13
+        }
+      },
+      "woike_expected": {
+        "n": 297,
+        "cues": 13,
+        "n1": 137,
+        "n0": 160,
+        "smaller_share": 0.461,
+        "predictor_types": {
+          "binary": 3,
+          "categorical": 5,
+          "continuous": 5
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Heart disease present (num > 0) versus absent (num = 0); ordinal 0-4 binarized.",
+      "comparison": {
+        "n_status": "explained",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "complete_rows": 297,
+          "num=0": 160,
+          "num>0": 137
+        },
+        "explanation": "303 raw rows (num = 0: 164, > 0: 139); 6 rows contain '?' (ca in 4, thal in 2); the 297 complete rows split 137 (num > 0) / 160 (num = 0): Woike's n and split."
+      },
+      "decisions_needed": [
+        "Row policy: 6 rows with '?'.",
+        "Binarization num > 0.",
+        "Which Cleveland file."
+      ]
+    },
+    {
+      "code": "ALCO",
+      "woike_order": 18,
+      "woike_label": "Alcohol",
+      "source": {
+        "family": "UCI",
+        "record": "Liver Disorders",
+        "uci_id": 60,
+        "doi": "10.24432/C54G67",
+        "landing_page": "https://archive.ics.uci.edu/dataset/60/liver+disorders"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/ALCO/uci-60.zip",
+          "bytes": 5985,
+          "sha256": "839c8b8c3cd0383e2106afa9b97be01305a905c854813de054e87e9efaa52a1c",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/static/public/60/liver+disorders.zip",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/ALCO/uci-60-metadata.json",
+          "bytes": 3653,
+          "sha256": "035bd0a019a070ab4138d82a01cd4db2cb6f7039fbf9010bd97263ed45f7b8d7",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=60",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/ALCO/extracted/Index",
+          "bytes": 143,
+          "sha256": "4796d73141df84884f9b531fa948aa624a504b7e226f22288b1fc296e76ef2a5",
+          "origin": "extracted",
+          "archive": "raw/ALCO/uci-60.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/ALCO/extracted/bupa.data",
+          "bytes": 7297,
+          "sha256": "a166a3e7a6f4dc41aaaedc59a107e57d8adcaeb8821f0873d756982f1ea74c92",
+          "origin": "extracted",
+          "archive": "raw/ALCO/uci-60.zip",
+          "member": "bupa.data"
+        },
+        {
+          "path": "raw/ALCO/extracted/bupa.names",
+          "bytes": 1272,
+          "sha256": "b8c348733ec58bd1cb489a5307409f60226b9afa30fd99b24fb593e9abc08dfe",
+          "origin": "extracted",
+          "archive": "raw/ALCO/uci-60.zip",
+          "member": "bupa.names"
+        },
+        {
+          "path": "raw/ALCO/extracted/costs/Index",
+          "bytes": 235,
+          "sha256": "7016bca5a1a7c8dae5793c2f86298d249ab0bc341deb3c48f9edb42a1528437f",
+          "origin": "extracted",
+          "archive": "raw/ALCO/uci-60.zip",
+          "member": "costs/Index"
+        },
+        {
+          "path": "raw/ALCO/extracted/costs/bupa-liver.README",
+          "bytes": 2126,
+          "sha256": "9f7b0e8a2cdaa6b2c3de3eaba0115a222ef70761887a0f0f79127f0b58108eb1",
+          "origin": "extracted",
+          "archive": "raw/ALCO/uci-60.zip",
+          "member": "costs/bupa-liver.README"
+        },
+        {
+          "path": "raw/ALCO/extracted/costs/bupa-liver.cost",
+          "bytes": 64,
+          "sha256": "3f81ab3648ef0111880d79293a4de0f1c17da9b5abe98fbebc3843605529307e",
+          "origin": "extracted",
+          "archive": "raw/ALCO/uci-60.zip",
+          "member": "costs/bupa-liver.cost"
+        },
+        {
+          "path": "raw/ALCO/extracted/costs/bupa-liver.delay",
+          "bytes": 84,
+          "sha256": "8f41ca20f1f4df579a0cfe2df0c4cbb6d0eeb3bceb3002a027a5a5b1519ed4ae",
+          "origin": "extracted",
+          "archive": "raw/ALCO/uci-60.zip",
+          "member": "costs/bupa-liver.delay"
+        },
+        {
+          "path": "raw/ALCO/extracted/costs/bupa-liver.expense",
+          "bytes": 94,
+          "sha256": "53cb509cf4adb4801b852a3e3eb13a8193d55ee63fcf41f56bcac4df46fd0ce8",
+          "origin": "extracted",
+          "archive": "raw/ALCO/uci-60.zip",
+          "member": "costs/bupa-liver.expense"
+        },
+        {
+          "path": "raw/ALCO/extracted/costs/bupa-liver.group",
+          "bytes": 58,
+          "sha256": "de4e0b3023a2f2f957115c5929d4d73adaa1004aa5125367759b6337020edf90",
+          "origin": "extracted",
+          "archive": "raw/ALCO/uci-60.zip",
+          "member": "costs/bupa-liver.group"
+        },
+        {
+          "path": "raw/ALCO/extracted/noteDuplicates.txt",
+          "bytes": 252,
+          "sha256": "ef9a8e56a473ec9edb206dda05cb9f90db12321edb726ac21e52d428cfbc3546",
+          "origin": "extracted",
+          "archive": "raw/ALCO/uci-60.zip",
+          "member": "noteDuplicates.txt"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/ALCO/extracted/bupa.data",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 345,
+          "field_counts": {
+            "7": 345
+          }
+        }
+      ],
+      "raw_rows": 345,
+      "raw_attribute_count": 7,
+      "raw_attribute_note": "7 fields: five blood tests, drinks (half-pint equivalents per day), selector. Five predictors. NB selector is the donor's train/test flag (145/200), not a class; it is recorded below only because it is the last field.",
+      "raw_class": null,
+      "woike_expected": {
+        "n": 345,
+        "cues": 5,
+        "n1": 88,
+        "n0": 257,
+        "smaller_share": 0.255,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 0,
+          "continuous": 5
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Alcohol consumption: a NUMERIC variable (drinks), dichotomized by Woike at 'more than 2.5 pints per day'.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "drinks>5_half_pints": 88,
+          "drinks<=5_half_pints": 257
+        },
+        "explanation": "345 rows. drinks > 5 half-pints (= 2.5 pints) in 88 rows, <= 5 in 257: Woike's split exactly. (drinks >= 5 gives 105.) noteDuplicates.txt in the bundle lists four duplicated rows; Woike kept them (n = 345)."
+      },
+      "decisions_needed": [
+        "Threshold on drinks (strictly more than 5 half-pints reproduces Woike).",
+        "Do not use selector as a cue or class."
+      ]
+    },
+    {
+      "code": "IONO",
+      "woike_order": 19,
+      "woike_label": "Ionosphere",
+      "source": {
+        "family": "UCI",
+        "record": "Ionosphere",
+        "uci_id": 52,
+        "doi": "10.24432/C5W01B",
+        "landing_page": "https://archive.ics.uci.edu/dataset/52/ionosphere"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/IONO/uci-52.zip",
+          "bytes": 29983,
+          "sha256": "4d218ece62756c99659011a13052d06464f13cb2b3d0410ce2aef16de1403860",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/static/public/52/ionosphere.zip",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/IONO/uci-52-metadata.json",
+          "bytes": 6604,
+          "sha256": "b9659d2e4129196c80a56587b9b14932c1d3b2e988925b51fe0e31f867862ae9",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=52",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/IONO/extracted/Index",
+          "bytes": 123,
+          "sha256": "f9628bd26052d1e26a7ffa8914cabef454c7d6d7a4ac6427285a00e16212c4fc",
+          "origin": "extracted",
+          "archive": "raw/IONO/uci-52.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/IONO/extracted/ionosphere.data",
+          "bytes": 76467,
+          "sha256": "46d52186b84e20be52918adb93e8fb9926b34795ff7504c24350ae0616a04bbd",
+          "origin": "extracted",
+          "archive": "raw/IONO/uci-52.zip",
+          "member": "ionosphere.data"
+        },
+        {
+          "path": "raw/IONO/extracted/ionosphere.names",
+          "bytes": 3116,
+          "sha256": "a368e4fd9b910a3ac97fa306add17446c13105367e17f5b691455db2ea8411cf",
+          "origin": "extracted",
+          "archive": "raw/IONO/uci-52.zip",
+          "member": "ionosphere.names"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/IONO/extracted/ionosphere.data",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 351,
+          "field_counts": {
+            "35": 351
+          }
+        }
+      ],
+      "raw_rows": 351,
+      "raw_attribute_count": 35,
+      "raw_attribute_note": "35 fields: 34 attributes and the class. Attribute 2 is 0 in all 351 rows (measured), which leaves 33 informative predictors, Woike's count.",
+      "raw_class": {
+        "column": -1,
+        "counts": {
+          "b": 126,
+          "g": 225
+        }
+      },
+      "woike_expected": {
+        "n": 351,
+        "cues": 33,
+        "n1": 225,
+        "n0": 126,
+        "smaller_share": 0.359,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 0,
+          "continuous": 33
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Radar return good (g) or bad (b); natively binary.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "exact",
+        "measured": {
+          "distinct_values_in_attribute_2": 1
+        },
+        "explanation": "351 rows; g 225 / b 126."
+      },
+      "decisions_needed": [
+        "Attribute 2 is constant.",
+        "Attribute 1 is binary (0/1) although Woike lists all 33 as continuous."
+      ]
+    },
+    {
+      "code": "TOUR",
+      "woike_order": 20,
+      "woike_label": "Tourism",
+      "source": {
+        "family": "ACD",
+        "record": "Companion data to J. S. Simonoff, Analyzing Categorical Data (Springer, 2003)",
+        "landing_page": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/TOUR/braziltourism.csv",
+          "bytes": 15191,
+          "sha256": "8cc78497da8b647cd6b0ba72d57c1cff3f5f8df813c740e4e60bd9eaa87f8485",
+          "origin": "downloaded",
+          "url": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/Comma_separated/braziltourism.csv",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "cross_check": "byte-identical to the member of the same name in raw/_ACD_bundle/data.zip"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/TOUR/braziltourism.csv",
+          "parser": "csv_header",
+          "rows": 412,
+          "field_counts": {
+            "9": 412
+          }
+        }
+      ],
+      "acd_mapping": {
+        "status": "confirmed",
+        "file": "braziltourism.csv",
+        "evidence": "412 raw rows reduce to exactly 365 = Woike n under complete cases on four predictors matching his description, with trips>0 / =0 = 85/280 = Woike n1/n0."
+      },
+      "raw_rows": 412,
+      "raw_attribute_count": 9,
+      "raw_attribute_note": "9 columns: Age, Sex, Income, Travel cost, Access road, Active, Passive, Logged income, Trips. 'Logged income' equals ln(Income) (measured). Woike used 4 cues (1 binary, 3 continuous); Age, Sex, Income and Travel cost fit his description ('demographic data and financial information') and his type profile, but he does not name them.",
+      "raw_class": null,
+      "woike_expected": {
+        "n": 365,
+        "cues": 4,
+        "n1": 85,
+        "n0": 280,
+        "smaller_share": 0.233,
+        "predictor_types": {
+          "binary": 1,
+          "categorical": 0,
+          "continuous": 3
+        },
+        "source_tag": "ACD"
+      },
+      "criterion": "Whether any trip was taken: Trips is a COUNT (0-7), dichotomized.",
+      "comparison": {
+        "n_status": "explained",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "complete_rows_all_columns": 363,
+          "complete_on_Age_Sex_Income_TravelCost": 365,
+          "trips>0": 85,
+          "trips=0": 280
+        },
+        "explanation": "File mapping CONFIRMED: 412 raw rows (Trips 0: 318, > 0: 94); blank cells in Income/Logged income (44), Travel cost (3), Active (2), Age, Sex, Passive (1 each). Complete cases on Age, Sex, Income, Travel cost: 365 rows with trips > 0 in 85 and = 0 in 280 = Woike's n and split exactly. (Complete on all nine columns: 363; on Sex, Income, Travel cost, Access road: 366.) Line 307 has the out-of-range value Sex = 4 and is inside the 365."
+      },
+      "decisions_needed": [
+        "Row policy: 47 rows with blank predictors.",
+        "Cue subset: 4 of 8 candidates.",
+        "Threshold Trips > 0.",
+        "The Sex = 4 record."
+      ]
+    },
+    {
+      "code": "VOTE",
+      "woike_order": 21,
+      "woike_label": "Voting",
+      "source": {
+        "family": "UCI",
+        "record": "Congressional Voting Records",
+        "uci_id": 105,
+        "doi": "10.24432/C5C01P",
+        "landing_page": "https://archive.ics.uci.edu/dataset/105/congressional+voting+records"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/VOTE/uci-105.zip",
+          "bytes": 4318,
+          "sha256": "ffec9d9328f28f151d95d2f8d36fd94ed8d2b0cdd0c9bd284bd8e65031a5e6a6",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/static/public/105/congressional+voting+records.zip",
+          "copied_from": "DATA_SETS/Holte-16/raw/uci-bundles/uci-105.zip",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition; SHA-256 equals Holte-16/manifest.json)",
+          "upstream_recheck": "2026-09-18: a fresh download of the same URL was byte-identical"
+        },
+        {
+          "path": "raw/VOTE/uci-105-metadata.json",
+          "bytes": 4603,
+          "sha256": "719386ae3e9579d3c66992e8e6d489e4496ecad9358abd456a8780a29077c5dd",
+          "origin": "copied_from_Holte-16",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=105",
+          "copied_from": "DATA_SETS/Holte-16/raw/metadata/uci-105.json",
+          "copied": "2026-09-18",
+          "retrieved": "2026-08-25 (Holte-16 acquisition)"
+        },
+        {
+          "path": "raw/VOTE/extracted/Index",
+          "bytes": 135,
+          "sha256": "ad071e01294a159cc03337fddd820dfe9b1cf3dac3809b307133b4141198d5f4",
+          "origin": "extracted",
+          "archive": "raw/VOTE/uci-105.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/VOTE/extracted/house-votes-84.data",
+          "bytes": 18171,
+          "sha256": "c87c14110a5ba91d4a1e313ec7392824458152bf071fa5f5452340488337936e",
+          "origin": "extracted",
+          "archive": "raw/VOTE/uci-105.zip",
+          "member": "house-votes-84.data"
+        },
+        {
+          "path": "raw/VOTE/extracted/house-votes-84.names",
+          "bytes": 6868,
+          "sha256": "5fab2dce4c8e311c2001c4eba22f8956273335698f2aab7714f85f694aad3449",
+          "origin": "extracted",
+          "archive": "raw/VOTE/uci-105.zip",
+          "member": "house-votes-84.names"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/VOTE/extracted/house-votes-84.data",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 435,
+          "field_counts": {
+            "17": 435
+          }
+        }
+      ],
+      "raw_rows": 435,
+      "raw_attribute_count": 17,
+      "raw_attribute_note": "17 fields: party first, then 16 votes (y / n / ?). Sixteen predictors; Woike types all 16 as categorical, which suggests '?' was kept as a third value.",
+      "raw_class": {
+        "column": 0,
+        "counts": {
+          "democrat": 267,
+          "republican": 168
+        }
+      },
+      "woike_expected": {
+        "n": 402,
+        "cues": 16,
+        "n1": 248,
+        "n0": 154,
+        "smaller_share": 0.383,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 16,
+          "continuous": 0
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Party: democrat or republican; natively binary.",
+      "comparison": {
+        "n_status": "unexplained",
+        "split_status": "not_reproduced",
+        "measured": {
+          "complete_rows": 232,
+          "rows_with_at_most_2_?": 399,
+          "rows_with_at_most_3_?": 415,
+          "distinct_rows": 342
+        },
+        "explanation": "435 raw rows (democrat 267, republican 168). Woike's 402 (248/154), i.e. 33 rows fewer (19 democrats, 14 republicans), was NOT reproduced. Checked: complete cases = 232; keeping rows with at most k '?' gives 399 (k = 2) and 415 (k = 3), never 402, also when up to two attributes are left out of the count (n = 402 occurs but never with 248/154); removing duplicate rows gives 342; the first or last 402 rows give 249/153 and 245/157. Complete cases on small attribute subsets do hit 402 with 248/154 (e.g. attributes {11, 14}, {3, 5, 8}, {6, 8, 14}), but Woike used all 16 votes and several subsets hit by chance, so none is an explanation."
+      },
+      "decisions_needed": [
+        "Row policy: Woike's 402 is unexplained; the full 435 is the defensible default.",
+        "'?' as a third category versus missing."
+      ]
+    },
+    {
+      "code": "EDUC",
+      "woike_order": 22,
+      "woike_label": "Education",
+      "source": {
+        "family": "StatLib",
+        "record": "irish.ed (Irish Educational Transitions Data)",
+        "landing_page": "https://lib.stat.cmu.edu/datasets/"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/EDUC/irish.ed",
+          "bytes": 12729,
+          "sha256": "138d15329c345a3071969326460a782d246da6240356a6030dd611197db9d53a",
+          "origin": "downloaded",
+          "url": "https://lib.stat.cmu.edu/datasets/irish.ed",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/EDUC/irish.ed",
+          "parser": "regex",
+          "pattern": "^\\s*\\d+\\s+\\d+\\s+\\d+\\s+\\d+\\s+\\d+\\s+\\d+\\s*$",
+          "rows": 500,
+          "field_counts": {
+            "6": 500
+          }
+        }
+      ],
+      "raw_rows": 500,
+      "raw_attribute_count": 6,
+      "raw_attribute_note": "6 integer fields per data line (lines 87-586 of the text file): sex, DVRT, educational level, Leaving Certificate, father's occupational prestige, type of school. Woike names his four cues: school type, test score, sex, father's prestige.",
+      "raw_class": {
+        "column": 3,
+        "counts": {
+          "1": 278,
+          "2": 222
+        }
+      },
+      "woike_expected": {
+        "n": 435,
+        "cues": 4,
+        "n1": 211,
+        "n0": 224,
+        "smaller_share": 0.485,
+        "predictor_types": {
+          "binary": 2,
+          "categorical": 0,
+          "continuous": 2
+        },
+        "source_tag": "O"
+      },
+      "criterion": "Leaving Certificate taken (2) or not (1); natively binary.",
+      "comparison": {
+        "n_status": "explained",
+        "split_status": "exact_after_reduction",
+        "measured": {
+          "edlevel=0": 6,
+          "edlevel=1": 37,
+          "prestige=0": 26,
+          "rows_edlevel>=2_and_prestige>0": 435,
+          "cert_taken": 211,
+          "cert_not_taken": 224
+        },
+        "explanation": "500 raw rows (not taken 278, taken 222). The file's own header says the simplified 441-case form removes primary terminal leavers and cases with missing data. Measured: dropping educational level 1 (37 primary terminal leavers = school type 9), educational level 0 (6 rows; an undocumented code, evidently missing) and prestige 0 (26 rows; documented as missing) leaves 435 rows, taken 211 / not taken 224 = Woike's n and split exactly. (Without the six level-0 rows it is 441 = 211/230.)"
+      },
+      "decisions_needed": [
+        "Row policy: primary terminal leavers and zero-coded missing values.",
+        "Educational level must not be a cue (it determines the criterion)."
+      ]
+    },
+    {
+      "code": "CARD",
+      "woike_order": 23,
+      "woike_label": "Cardiac",
+      "source": {
+        "family": "UCLA Statistics (dead) via hbiostat and the Internet Archive",
+        "record": "UCLA Stress Echocardiography Data (Garfinkel et al. 1999)",
+        "landing_page": "https://hbiostat.org/data/repo/stressEcho.html",
+        "original_url_dead": "http://www.stat.ucla.edu/projects/datasets/cardiac.dat (HTTP 404 on 2026-09-18)"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/CARD/stressEcho.csv",
+          "bytes": 66650,
+          "sha256": "fa5027902d21f1dc331fef59fbe061b975297268e9f7aa24a5021ed509f62eb4",
+          "origin": "downloaded",
+          "url": "https://hbiostat.org/data/repo/stressEcho.csv",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/CARD/stressEcho.html",
+          "bytes": 7791,
+          "sha256": "1b4638d31aa3802feb247aab34f657d04072a9989960cfe1443bfa4dcc1b491a",
+          "origin": "downloaded",
+          "url": "https://hbiostat.org/data/repo/stressEcho.html",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "note": "codebook page; the server redirects to https://hbiostat.org/data/repo/stressecho"
+        },
+        {
+          "path": "raw/CARD/wayback-20070701/cardiac.dat",
+          "bytes": 71084,
+          "sha256": "793097d8ca0d670dfc8b213ddea10e397c39f7139dca669d88ac8e13b35c28b2",
+          "origin": "downloaded",
+          "url": "https://web.archive.org/web/20070701100302id_/http://www.stat.ucla.edu/projects/datasets/cardiac.dat",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "note": "Internet Archive capture of 2007-07-01 of the original UCLA file, raw bytes (id_ mode)"
+        },
+        {
+          "path": "raw/CARD/wayback-20070701/cardiac-explanation.html",
+          "bytes": 6907,
+          "sha256": "2421605cedc3854924e7c1e1597a808810973f7b4660f83a32530d15106f47f3",
+          "origin": "downloaded",
+          "url": "https://web.archive.org/web/20070701100345id_/http://www.stat.ucla.edu/projects/datasets/cardiac-explanation.html",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "note": "Internet Archive capture of the original UCLA codebook"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/CARD/stressEcho.csv",
+          "parser": "csv_header",
+          "rows": 558,
+          "field_counts": {
+            "32": 558
+          }
+        }
+      ],
+      "alternate_data_files": [
+        {
+          "path": "raw/CARD/wayback-20070701/cardiac.dat",
+          "parser": "csv_header",
+          "rows": 558,
+          "field_counts": {
+            "42": 558
+          }
+        }
+      ],
+      "alternate_class_column": "any event",
+      "raw_rows": 558,
+      "raw_attribute_count": 32,
+      "raw_attribute_note": "hbiostat file: 32 columns (row index + 31 variables; several renamed and recoded, posECG/equivecg merged into ecg). Original UCLA file: 42 columns. Woike used 8 cues (1 binary, 7 continuous) per Tabelle 6.9 but 5 in his results tables; none is named.",
+      "raw_class": {
+        "column": "any.event",
+        "counts": {
+          "0": 469,
+          "1": 89
+        }
+      },
+      "woike_expected": {
+        "n": 558,
+        "cues": 8,
+        "n1": 469,
+        "n0": 89,
+        "smaller_share": 0.159,
+        "predictor_types": {
+          "binary": 1,
+          "categorical": 0,
+          "continuous": 7
+        },
+        "source_tag": "O"
+      },
+      "criterion": "Any cardiac event within a year (MI, PTCA, CABG or death). In the ORIGINAL UCLA coding 0 = yes; hbiostat recoded to 1 = yes.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "exact",
+        "measured": {},
+        "explanation": "558 rows in both files. hbiostat any.event: 1 (event) 89, 0 (no event) 469. Original UCLA 'any event': 0 (= yes, event) 89, 1 (no event) 469. NB Tabelle 6.9's n1 = 469 equals the count of raw code 1, which the UCLA codebook defines as NO event; Woike et al. (2017) label the same .841 base rate 'Heart disease'. Whether this is a labelling slip or a coding choice is for the authors."
+      },
+      "decisions_needed": [
+        "Which file: the archived original (what Woike downloaded in 2007) or the recoded hbiostat copy.",
+        "Polarity of the criterion (see comparison).",
+        "Cue subset: 8 (or 5) of about 30.",
+        "newMI, newPTCA, newCABG and death are components of the criterion and cannot be cues."
+      ],
+      "alternate_class_counts": {
+        "0": 89,
+        "1": 469
+      }
+    },
+    {
+      "code": "FOOT",
+      "woike_order": 24,
+      "woike_label": "Football",
+      "source": {
+        "family": "StatLib",
+        "record": "profb (Pro Football Scores, Hal Stern)",
+        "landing_page": "https://lib.stat.cmu.edu/datasets/"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/FOOT/profb",
+          "bytes": 27733,
+          "sha256": "95cd69fcdd090cb7898d75272e2aea14cac817320c8bb4b7ae468005efb1c7b3",
+          "origin": "downloaded",
+          "url": "https://lib.stat.cmu.edu/datasets/profb",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/FOOT/profb",
+          "parser": "regex",
+          "pattern": "^\\s*[01]\\s+\\d+\\s+\\d+\\s+[\\d.]+\\s+[A-Z]+\\s+[A-Z]+\\s+\\d+\\s+\\d+",
+          "rows": 672,
+          "field_counts": {
+            "8": 534,
+            "9": 132,
+            "10": 6
+          }
+        }
+      ],
+      "raw_rows": 672,
+      "raw_attribute_count": 8,
+      "raw_attribute_note": "8 fields per game (h/a, favorite points, underdog points, point spread, favorite, underdog, year, week) plus 0-2 optional indicator tokens (night/Monday/overtime). Woike used 4 cues (1 binary, 3 continuous); not named. The two points columns define the criterion and cannot be cues.",
+      "raw_class": null,
+      "woike_expected": {
+        "n": 672,
+        "cues": 4,
+        "n1": 451,
+        "n0": 221,
+        "smaller_share": 0.329,
+        "predictor_types": {
+          "binary": 1,
+          "categorical": 0,
+          "continuous": 3
+        },
+        "source_tag": "O"
+      },
+      "criterion": "Woike's TEXT: whether the home team wins. Derived from the two points columns; not a column of the file.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "favorite_wins": 451,
+          "favorite_does_not_win": 221,
+          "home_team_wins": 391,
+          "home_team_does_not_win": 281,
+          "ties": 1
+        },
+        "explanation": "672 games. Home team wins 391, does not win 281 (one tie): this is NOT Woike's split. Favorite wins 451, does not win 221: this IS Woike's 451/221 exactly. So the counts in Tabelle 6.9 correspond to 'favorite wins', not to 'home team wins' as the dissertation text says."
+      },
+      "decisions_needed": [
+        "Criterion: 'favorite wins' (matches Woike's numbers) or 'home team wins' (matches his words).",
+        "The single tie.",
+        "Cue subset: 4 (spread, h/a, year, week are the only non-outcome numeric fields)."
+      ]
+    },
+    {
+      "code": "BCW",
+      "woike_order": 25,
+      "woike_label": "Breast Cancer",
+      "source": {
+        "family": "UCI",
+        "record": "Breast Cancer Wisconsin (Original)",
+        "uci_id": 15,
+        "doi": "10.24432/C5HP4Z",
+        "landing_page": "https://archive.ics.uci.edu/dataset/15/breast+cancer+wisconsin+original"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/BCW/uci-15.zip",
+          "bytes": 86541,
+          "sha256": "3f91e49bceb30c0de8ea988344357236f26ed8bd536415ac594226015b6fd84d",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/static/public/15/breast+cancer+wisconsin+original.zip",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/BCW/uci-15-metadata.json",
+          "bytes": 5607,
+          "sha256": "ee82afd3ad879061a46f47eeead396f4d875abad2295eafb2327c66531c20013",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=15",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/BCW/extracted/Index",
+          "bytes": 326,
+          "sha256": "0778f3c2af44d38bbd86dbb38f5f45f6a515c91b719d63ca7bf6d87597b13573",
+          "origin": "extracted",
+          "archive": "raw/BCW/uci-15.zip",
+          "member": "Index"
+        },
+        {
+          "path": "raw/BCW/extracted/breast-cancer-wisconsin.data",
+          "bytes": 19889,
+          "sha256": "402c585309c399237740f635ef9919dc512cca12cbeb20de5e563a4593f22b64",
+          "origin": "extracted",
+          "archive": "raw/BCW/uci-15.zip",
+          "member": "breast-cancer-wisconsin.data"
+        },
+        {
+          "path": "raw/BCW/extracted/breast-cancer-wisconsin.names",
+          "bytes": 5657,
+          "sha256": "4bcd6e4e0e4f8ae54e313ebbf18013cc83b6827a207123707687f8f19d29dd2c",
+          "origin": "extracted",
+          "archive": "raw/BCW/uci-15.zip",
+          "member": "breast-cancer-wisconsin.names"
+        },
+        {
+          "path": "raw/BCW/extracted/unformatted-data",
+          "bytes": 21363,
+          "sha256": "ddb87e5d0561647d77df91866d76c91c9cd7912bc7d7bfba174e53ad2f666b64",
+          "origin": "extracted",
+          "archive": "raw/BCW/uci-15.zip",
+          "member": "unformatted-data"
+        },
+        {
+          "path": "raw/BCW/extracted/wdbc.data",
+          "bytes": 124103,
+          "sha256": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+          "origin": "extracted",
+          "archive": "raw/BCW/uci-15.zip",
+          "member": "wdbc.data"
+        },
+        {
+          "path": "raw/BCW/extracted/wdbc.names",
+          "bytes": 4708,
+          "sha256": "840e04e3f20f8a5b326892f3b9cbc01c4cd6f7e6c597630b701ef6c0ac79f5ef",
+          "origin": "extracted",
+          "archive": "raw/BCW/uci-15.zip",
+          "member": "wdbc.names"
+        },
+        {
+          "path": "raw/BCW/extracted/wpbc.data",
+          "bytes": 44234,
+          "sha256": "f2bd5ccdb6086fa832370dc043319907430cf6bfcfd3b96a3961a357be345c8e",
+          "origin": "extracted",
+          "archive": "raw/BCW/uci-15.zip",
+          "member": "wpbc.data"
+        },
+        {
+          "path": "raw/BCW/extracted/wpbc.names",
+          "bytes": 5671,
+          "sha256": "c1ef99d8ed4a6bc212bab59b6df3fab870f6b3ffd8a24d7ba93e53cae14f3461",
+          "origin": "extracted",
+          "archive": "raw/BCW/uci-15.zip",
+          "member": "wpbc.names"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/BCW/extracted/breast-cancer-wisconsin.data",
+          "parser": "delimited",
+          "sep": ",",
+          "rows": 699,
+          "field_counts": {
+            "11": 699
+          }
+        }
+      ],
+      "raw_rows": 699,
+      "raw_attribute_count": 11,
+      "raw_attribute_note": "11 fields: sample id, nine cytological attributes (1-10), class. Nine predictors. The bundle also holds the unrelated WDBC and WPBC files. NOT Holte's BC (that is UCI 14, Ljubljana).",
+      "raw_class": {
+        "column": -1,
+        "counts": {
+          "2": 458,
+          "4": 241
+        }
+      },
+      "woike_expected": {
+        "n": 683,
+        "cues": 9,
+        "n1": 444,
+        "n0": 239,
+        "smaller_share": 0.35,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 9,
+          "continuous": 0
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Benign (2) or malignant (4); natively binary.",
+      "comparison": {
+        "n_status": "explained",
+        "split_status": "exact_after_reduction",
+        "measured": {
+          "complete_rows": 683,
+          "class_2_benign": 444,
+          "class_4_malignant": 239
+        },
+        "explanation": "699 raw rows (benign 458, malignant 241); 16 rows have '?' in attribute 7 (bare nuclei); the 683 complete rows split 444 / 239 = Woike's n and split."
+      },
+      "decisions_needed": [
+        "Row policy: 16 rows with '?'.",
+        "Drop the id column (54 rows repeat an earlier id, measured)."
+      ]
+    },
+    {
+      "code": "PIMA",
+      "woike_order": 26,
+      "woike_label": "Diabetes",
+      "source": {
+        "family": "OpenML",
+        "record": "OpenML 37 'diabetes' (Pima Indians Diabetes; no longer hosted by UCI)",
+        "landing_page": "https://www.openml.org/d/37"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/PIMA/diabetes.arff",
+          "bytes": 37419,
+          "sha256": "4eddd5b2b64679e8888348e306520a393d6a28e1ddc9643cfb76fc5d912d6d40",
+          "origin": "downloaded",
+          "url": "https://openml.org/data/v1/download/37/diabetes.arff",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "md5": "3cbaa3e54586aa88cf6aacb4033e4470",
+          "cross_check": "MD5 equals the md5_checksum field of the OpenML description"
+        },
+        {
+          "path": "raw/PIMA/openml-37-description.json",
+          "bytes": 4761,
+          "sha256": "9c5737c190ab2ed1cfcc84bf1c0a281ece11acd3dce065706217d1b0f5e3d2e7",
+          "origin": "downloaded",
+          "url": "https://www.openml.org/api/v1/json/data/37",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/PIMA/diabetes.arff",
+          "parser": "arff",
+          "rows": 768,
+          "field_counts": {
+            "9": 768
+          }
+        }
+      ],
+      "woike_n_note": "786 as printed; the printed split sums to 768",
+      "raw_rows": 768,
+      "raw_attribute_count": 9,
+      "raw_attribute_note": "9 ARFF attributes: eight numeric predictors and class. Woike used 6; which two were dropped is not stated. Zero counts (measured): skin 227, insu 374, pres 35, mass 11, plas 5.",
+      "raw_class": {
+        "column": -1,
+        "counts": {
+          "tested_negative": 500,
+          "tested_positive": 268
+        }
+      },
+      "woike_expected": {
+        "n": 786,
+        "cues": 6,
+        "n1": 268,
+        "n0": 500,
+        "smaller_share": 0.349,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 0,
+          "continuous": 6
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "tested_positive / tested_negative; natively binary.",
+      "comparison": {
+        "n_status": "explained",
+        "split_status": "exact",
+        "measured": {},
+        "explanation": "768 rows, positive 268 / negative 500 = Woike's split exactly. Tabelle 6.9 and the text print n = 786, but 268 + 500 = 768 and Woike et al. (2017) Table 1 prints 768, so 786 is a digit transposition in the dissertation, not a different file."
+      },
+      "decisions_needed": [
+        "Cue subset: 6 of 8.",
+        "Zeros standing for missing values in several columns."
+      ]
+    },
+    {
+      "code": "AUTH",
+      "woike_order": 27,
+      "woike_label": "Authorship",
+      "source": {
+        "family": "ACD",
+        "record": "Companion data to J. S. Simonoff, Analyzing Categorical Data (Springer, 2003)",
+        "landing_page": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/AUTH/authorship.csv",
+          "bytes": 143447,
+          "sha256": "070119a49866acc0f367126544ea51d63129cb1f6431f3c0be2669cac7fb06b5",
+          "origin": "downloaded",
+          "url": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/Comma_separated/authorship.csv",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "cross_check": "byte-identical to the member of the same name in raw/_ACD_bundle/data.zip"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/AUTH/authorship.csv",
+          "parser": "csv_header",
+          "rows": 841,
+          "field_counts": {
+            "71": 841
+          }
+        }
+      ],
+      "raw_rows": 841,
+      "raw_attribute_count": 71,
+      "raw_attribute_note": "71 columns: 69 function-word counts, BookID, Author. Sixty-nine predictors.",
+      "raw_class": {
+        "column": "Author",
+        "counts": {
+          "Austen": 317,
+          "London": 296,
+          "Milton": 55,
+          "Shakespeare": 173
+        }
+      },
+      "woike_expected": {
+        "n": 841,
+        "cues": 69,
+        "n1": 173,
+        "n0": 668,
+        "smaller_share": 0.259,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 0,
+          "continuous": 69
+        },
+        "source_tag": "ACD"
+      },
+      "criterion": "Author is Shakespeare versus not; from the four-valued column Author.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "Shakespeare": 173,
+          "rest": 668
+        },
+        "explanation": "841 rows; Austen 317, London 296, Shakespeare 173, Milton 55; Shakespeare versus rest = 173/668."
+      },
+      "decisions_needed": [
+        "Binarization Shakespeare versus rest.",
+        "BookID must not be a cue (it identifies the author's books)."
+      ]
+    },
+    {
+      "code": "HOF",
+      "woike_order": 28,
+      "woike_label": "Baseball HoF",
+      "source": {
+        "family": "ACD",
+        "record": "Companion data to J. S. Simonoff, Analyzing Categorical Data (Springer, 2003)",
+        "landing_page": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/HOF/halloffame.csv",
+          "bytes": 124317,
+          "sha256": "b0dc892fecd2a2aeed2668c256b6649b4754eebb12cf2580b779b4be1ec28141",
+          "origin": "downloaded",
+          "url": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/Comma_separated/halloffame.csv",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "cross_check": "byte-identical to the member of the same name in raw/_ACD_bundle/data.zip"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/HOF/halloffame.csv",
+          "parser": "csv_header",
+          "rows": 1340,
+          "field_counts": {
+            "18": 1340
+          }
+        }
+      ],
+      "raw_rows": 1340,
+      "raw_attribute_count": 18,
+      "raw_attribute_note": "18 columns: Player (identifier), 15 numeric career statistics, Position, Hall of Fame. The 15 numeric columns are Woike's 15 cues.",
+      "raw_class": {
+        "column": "Hall of Fame",
+        "counts": {
+          "0": 1215,
+          "1": 57,
+          "2": 68
+        }
+      },
+      "woike_expected": {
+        "n": 1320,
+        "cues": 15,
+        "n1": 124,
+        "n0": 1196,
+        "smaller_share": 0.094,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 0,
+          "continuous": 15
+        },
+        "source_tag": "ACD"
+      },
+      "criterion": "Inducted into the Hall of Fame or not; the column has three codes (0, 1, 2).",
+      "comparison": {
+        "n_status": "explained",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "complete_rows": 1320,
+          "HoF=0": 1196,
+          "HoF=1or2": 124
+        },
+        "explanation": "1340 raw rows (code 0: 1215, 1: 57, 2: 68); Strikeouts is '.' (missing) in 20 rows; the 1320 complete rows split 0: 1196 versus 1 or 2: 124 = Woike's n and split."
+      },
+      "decisions_needed": [
+        "Row policy: 20 rows with Strikeouts missing ('.').",
+        "Merge Hall of Fame codes 1 and 2.",
+        "Position (categorical) was not among Woike's cues."
+      ]
+    },
+    {
+      "code": "YEAS",
+      "woike_order": 29,
+      "woike_label": "Yeast",
+      "source": {
+        "family": "UCI",
+        "record": "Yeast",
+        "uci_id": 110,
+        "doi": "10.24432/C5KG68",
+        "landing_page": "https://archive.ics.uci.edu/dataset/110/yeast"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/YEAS/uci-110.zip",
+          "bytes": 18938,
+          "sha256": "8fe9a4490edfa67532f1dee7ec11f1804437ad43f9f8b7536e32d5be8bce0bb5",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/static/public/110/yeast.zip",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/YEAS/uci-110-metadata.json",
+          "bytes": 3535,
+          "sha256": "971a1a3647c64b4d25267c0d40beb41c020def6bc92eb01796e8106b70a94caf",
+          "origin": "downloaded",
+          "url": "https://archive.ics.uci.edu/api/dataset?id=110",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/YEAS/extracted/yeast.data",
+          "bytes": 94976,
+          "sha256": "7cf61776fc04f527f93bf57a327b863893a1225d82df02d457e8950173218258",
+          "origin": "extracted",
+          "archive": "raw/YEAS/uci-110.zip",
+          "member": "yeast.data"
+        },
+        {
+          "path": "raw/YEAS/extracted/yeast.names",
+          "bytes": 3313,
+          "sha256": "c0b2d0e8708c1d2484e898749ab13f46fdc797ac49844c6294108db57bcad19e",
+          "origin": "extracted",
+          "archive": "raw/YEAS/uci-110.zip",
+          "member": "yeast.names"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/YEAS/extracted/yeast.data",
+          "parser": "delimited",
+          "sep": "ws",
+          "rows": 1484,
+          "field_counts": {
+            "10": 1484
+          }
+        }
+      ],
+      "raw_rows": 1484,
+      "raw_attribute_count": 10,
+      "raw_attribute_note": "10 whitespace-separated fields: sequence name (identifier), eight scores, localization site.",
+      "raw_class": {
+        "column": -1,
+        "counts": {
+          "CYT": 463,
+          "ERL": 5,
+          "EXC": 35,
+          "ME1": 44,
+          "ME2": 51,
+          "ME3": 163,
+          "MIT": 244,
+          "NUC": 429,
+          "POX": 20,
+          "VAC": 30
+        }
+      },
+      "woike_expected": {
+        "n": 1484,
+        "cues": 8,
+        "n1": 463,
+        "n0": 1021,
+        "smaller_share": 0.312,
+        "predictor_types": {
+          "binary": 0,
+          "categorical": 0,
+          "continuous": 8
+        },
+        "source_tag": "UCI"
+      },
+      "criterion": "Localization site 'cytosolic or cytoskeletal' (CYT) versus any other of the ten sites.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "CYT": 463,
+          "rest": 1021
+        },
+        "explanation": "1484 rows; CYT 463, all other sites 1021."
+      },
+      "decisions_needed": [
+        "Binarization CYT versus rest.",
+        "Drop the sequence-name column."
+      ]
+    },
+    {
+      "code": "SCOT",
+      "woike_order": 30,
+      "woike_label": "Supreme Court",
+      "source": {
+        "family": "ACD",
+        "record": "Companion data to J. S. Simonoff, Analyzing Categorical Data (Springer, 2003)",
+        "landing_page": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/"
+      },
+      "status": "acquired",
+      "files": [
+        {
+          "path": "raw/SCOT/supreme.csv",
+          "bytes": 178416,
+          "sha256": "61c847ceb3e46191790bd72acf9e3c579a94e96045e65c0a698884aff17ed217",
+          "origin": "downloaded",
+          "url": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/Comma_separated/supreme.csv",
+          "retrieved": "2026-09-18",
+          "http_status": 200,
+          "cross_check": "byte-identical to the member of the same name in raw/_ACD_bundle/data.zip"
+        }
+      ],
+      "primary_data_files": [
+        {
+          "path": "raw/SCOT/supreme.csv",
+          "parser": "csv_header",
+          "rows": 4052,
+          "field_counts": {
+            "8": 4052
+          }
+        }
+      ],
+      "raw_rows": 4052,
+      "raw_attribute_count": 8,
+      "raw_attribute_note": "8 columns: Actions taken, five binary decision attributes, Year of decision, Log exposure. Seven predictors (5/1/1 profile).",
+      "raw_class": null,
+      "woike_expected": {
+        "n": 4052,
+        "cues": 7,
+        "n1": 170,
+        "n0": 3882,
+        "smaller_share": 0.042,
+        "predictor_types": {
+          "binary": 5,
+          "categorical": 1,
+          "continuous": 1
+        },
+        "source_tag": "ACD"
+      },
+      "criterion": "Whether Congress took any action in response to the decision: Actions taken is a COUNT (0-11), dichotomized.",
+      "comparison": {
+        "n_status": "exact",
+        "split_status": "reproduced_by_rule",
+        "measured": {
+          "Actions taken>0": 170,
+          "Actions taken=0": 3882
+        },
+        "explanation": "4052 rows; Actions taken > 0 in 170 rows, = 0 in 3882."
+      },
+      "decisions_needed": [
+        "Threshold Actions taken > 0."
+      ]
+    }
+  ],
+  "shared_sources": [
+    {
+      "code": "_ACD_bundle",
+      "description": "Whole-site archive of the Analyzing Categorical Data companion files (84 datasets, .csv and .xls). Kept as a cross-check: each of the eleven per-file CSVs under raw/<CODE>/ is byte-identical to the member of the same name.",
+      "files": [
+        {
+          "path": "raw/_ACD_bundle/data.zip",
+          "bytes": 1222422,
+          "sha256": "293fa5627c679518cab408c46b755b0452f91eef093beffbb50c91c1c9d9f7e6",
+          "origin": "downloaded",
+          "url": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/data.zip",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        },
+        {
+          "path": "raw/_ACD_bundle/Data_index.html",
+          "bytes": 1346,
+          "sha256": "6790b4afc8f2754ea3643ce8e8fa2d1c879b4e8a6a9b94a76d3f189492738cb6",
+          "origin": "downloaded",
+          "url": "https://pages.stern.nyu.edu/~jsimonof/AnalCatData/Data/",
+          "retrieved": "2026-09-18",
+          "http_status": 200
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "protocol": {
+    "repeats": 10,
+    "folds": 10,
+    "seed": 20260918
+  },
+  "datasets_Y": 16,
+  "X_top_cue_beats_prior(k_d1>=1)": 11,
+  "X_top_cue_beats_prior_plus_next(k_d1>=2)": 3,
+  "X_condition_over_all_cues(slack_all>0)": 0,
+  "X_certified_prefix_deeper_than_one(kmax>=2)": 7,
+  "X_nondegenerate_certified_spine": 13,
+  "attributes_W": 273,
+  "Z_beats_prior": 100,
+  "Z_in_certified_prefix(sum kmax)": 24,
+  "Z_dominates_successors": 5,
+  "W_nonlast_positions": 257,
+  "spine_cv_at_least_full": [
+    "G2",
+    "HO",
+    "HY",
+    "MU",
+    "SE",
+    "SO",
+    "VO"
+  ],
+  "spine_cv_within_1.5_of_full": [
+    "BC",
+    "HE",
+    "V1"
+  ],
+  "spearman": {
+    "A1_agree_depth1|holte_margin|all16": {
+      "rho": -0.413,
+      "perm_p_two_sided": 0.114,
+      "n": 16
+    },
+    "A1_agree_depth1|holte_margin|binary12": {
+      "rho": -0.525,
+      "perm_p_two_sided": 0.08,
+      "n": 12
+    },
+    "A1_agree_depth1|cv_gap_full_minus_d1|all16": {
+      "rho": -0.505,
+      "perm_p_two_sided": 0.048,
+      "n": 16
+    },
+    "A1_agree_depth1|cv_gap_full_minus_d1|binary12": {
+      "rho": -0.543,
+      "perm_p_two_sided": 0.074,
+      "n": 12
+    },
+    "A1_agree_depth1|cv_gap_full_minus_spine|all16": {
+      "rho": -0.351,
+      "perm_p_two_sided": 0.183,
+      "n": 16
+    },
+    "A1_agree_depth1|cv_gap_full_minus_spine|binary12": {
+      "rho": -0.329,
+      "perm_p_two_sided": 0.296,
+      "n": 12
+    },
+    "A1_agree_depth1|cv_acc_depth1|all16": {
+      "rho": 0.577,
+      "perm_p_two_sided": 0.022,
+      "n": 16
+    },
+    "A1_agree_depth1|cv_acc_depth1|binary12": {
+      "rho": 0.522,
+      "perm_p_two_sided": 0.084,
+      "n": 12
+    },
+    "A1_agree_depth1|cv_acc_spine|all16": {
+      "rho": 0.545,
+      "perm_p_two_sided": 0.031,
+      "n": 16
+    },
+    "A1_agree_depth1|cv_acc_spine|binary12": {
+      "rho": 0.438,
+      "perm_p_two_sided": 0.154,
+      "n": 12
+    },
+    "A1_agree_depth1|cv_gain_spine_over_const|all16": {
+      "rho": 0.438,
+      "perm_p_two_sided": 0.092,
+      "n": 16
+    },
+    "A1_agree_depth1|cv_gain_spine_over_const|binary12": {
+      "rho": 0.495,
+      "perm_p_two_sided": 0.101,
+      "n": 12
+    },
+    "Ak_agree_spine|holte_margin|all16": {
+      "rho": -0.482,
+      "perm_p_two_sided": 0.058,
+      "n": 16
+    },
+    "Ak_agree_spine|holte_margin|binary12": {
+      "rho": -0.771,
+      "perm_p_two_sided": 0.005,
+      "n": 12
+    },
+    "Ak_agree_spine|cv_gap_full_minus_d1|all16": {
+      "rho": -0.461,
+      "perm_p_two_sided": 0.073,
+      "n": 16
+    },
+    "Ak_agree_spine|cv_gap_full_minus_d1|binary12": {
+      "rho": -0.413,
+      "perm_p_two_sided": 0.183,
+      "n": 12
+    },
+    "Ak_agree_spine|cv_gap_full_minus_spine|all16": {
+      "rho": -0.39,
+      "perm_p_two_sided": 0.136,
+      "n": 16
+    },
+    "Ak_agree_spine|cv_gap_full_minus_spine|binary12": {
+      "rho": -0.427,
+      "perm_p_two_sided": 0.168,
+      "n": 12
+    },
+    "Ak_agree_spine|cv_acc_depth1|all16": {
+      "rho": 0.54,
+      "perm_p_two_sided": 0.034,
+      "n": 16
+    },
+    "Ak_agree_spine|cv_acc_depth1|binary12": {
+      "rho": 0.517,
+      "perm_p_two_sided": 0.091,
+      "n": 12
+    },
+    "Ak_agree_spine|cv_acc_spine|all16": {
+      "rho": 0.596,
+      "perm_p_two_sided": 0.016,
+      "n": 16
+    },
+    "Ak_agree_spine|cv_acc_spine|binary12": {
+      "rho": 0.594,
+      "perm_p_two_sided": 0.045,
+      "n": 12
+    },
+    "Ak_agree_spine|cv_gain_spine_over_const|all16": {
+      "rho": 0.461,
+      "perm_p_two_sided": 0.076,
+      "n": 16
+    },
+    "Ak_agree_spine|cv_gain_spine_over_const|binary12": {
+      "rho": 0.616,
+      "perm_p_two_sided": 0.037,
+      "n": 12
+    },
+    "w_win_under_conflict|holte_margin|all16": {
+      "rho": -0.134,
+      "perm_p_two_sided": 0.619,
+      "n": 16
+    },
+    "w_win_under_conflict|holte_margin|binary12": {
+      "rho": -0.473,
+      "perm_p_two_sided": 0.122,
+      "n": 12
+    },
+    "w_win_under_conflict|cv_gap_full_minus_d1|all16": {
+      "rho": -0.376,
+      "perm_p_two_sided": 0.154,
+      "n": 16
+    },
+    "w_win_under_conflict|cv_gap_full_minus_d1|binary12": {
+      "rho": -0.336,
+      "perm_p_two_sided": 0.292,
+      "n": 12
+    },
+    "w_win_under_conflict|cv_gap_full_minus_spine|all16": {
+      "rho": -0.341,
+      "perm_p_two_sided": 0.191,
+      "n": 16
+    },
+    "w_win_under_conflict|cv_gap_full_minus_spine|binary12": {
+      "rho": -0.329,
+      "perm_p_two_sided": 0.299,
+      "n": 12
+    },
+    "w_win_under_conflict|cv_acc_depth1|all16": {
+      "rho": 0.241,
+      "perm_p_two_sided": 0.363,
+      "n": 16
+    },
+    "w_win_under_conflict|cv_acc_depth1|binary12": {
+      "rho": 0.203,
+      "perm_p_two_sided": 0.526,
+      "n": 12
+    },
+    "w_win_under_conflict|cv_acc_spine|all16": {
+      "rho": 0.259,
+      "perm_p_two_sided": 0.335,
+      "n": 16
+    },
+    "w_win_under_conflict|cv_acc_spine|binary12": {
+      "rho": 0.154,
+      "perm_p_two_sided": 0.63,
+      "n": 12
+    },
+    "w_win_under_conflict|cv_gain_spine_over_const|all16": {
+      "rho": 0.35,
+      "perm_p_two_sided": 0.188,
+      "n": 16
+    },
+    "w_win_under_conflict|cv_gain_spine_over_const|binary12": {
+      "rho": 0.364,
+      "perm_p_two_sided": 0.246,
+      "n": 12
+    },
+    "c_conflict|holte_margin|all16": {
+      "rho": 0.473,
+      "perm_p_two_sided": 0.066,
+      "n": 16
+    },
+    "c_conflict|holte_margin|binary12": {
+      "rho": 0.382,
+      "perm_p_two_sided": 0.22,
+      "n": 12
+    },
+    "c_conflict|cv_gap_full_minus_d1|all16": {
+      "rho": 0.411,
+      "perm_p_two_sided": 0.109,
+      "n": 16
+    },
+    "c_conflict|cv_gap_full_minus_d1|binary12": {
+      "rho": 0.441,
+      "perm_p_two_sided": 0.153,
+      "n": 12
+    },
+    "c_conflict|cv_gap_full_minus_spine|all16": {
+      "rho": 0.135,
+      "perm_p_two_sided": 0.617,
+      "n": 16
+    },
+    "c_conflict|cv_gap_full_minus_spine|binary12": {
+      "rho": -0.004,
+      "perm_p_two_sided": 0.996,
+      "n": 12
+    },
+    "c_conflict|cv_acc_depth1|all16": {
+      "rho": -0.652,
+      "perm_p_two_sided": 0.008,
+      "n": 16
+    },
+    "c_conflict|cv_acc_depth1|binary12": {
+      "rho": -0.62,
+      "perm_p_two_sided": 0.036,
+      "n": 12
+    },
+    "c_conflict|cv_acc_spine|all16": {
+      "rho": -0.503,
+      "perm_p_two_sided": 0.049,
+      "n": 16
+    },
+    "c_conflict|cv_acc_spine|binary12": {
+      "rho": -0.403,
+      "perm_p_two_sided": 0.196,
+      "n": 12
+    },
+    "c_conflict|cv_gain_spine_over_const|all16": {
+      "rho": -0.412,
+      "perm_p_two_sided": 0.113,
+      "n": 16
+    },
+    "c_conflict|cv_gain_spine_over_const|binary12": {
+      "rho": -0.488,
+      "perm_p_two_sided": 0.112,
+      "n": 12
+    },
+    "slack_all|holte_margin|all16": {
+      "rho": -0.177,
+      "perm_p_two_sided": 0.513,
+      "n": 16
+    },
+    "slack_all|holte_margin|binary12": {
+      "rho": -0.21,
+      "perm_p_two_sided": 0.513,
+      "n": 12
+    },
+    "slack_all|cv_gap_full_minus_d1|all16": {
+      "rho": -0.291,
+      "perm_p_two_sided": 0.28,
+      "n": 16
+    },
+    "slack_all|cv_gap_full_minus_d1|binary12": {
+      "rho": -0.392,
+      "perm_p_two_sided": 0.214,
+      "n": 12
+    },
+    "slack_all|cv_gap_full_minus_spine|all16": {
+      "rho": 0.277,
+      "perm_p_two_sided": 0.293,
+      "n": 16
+    },
+    "slack_all|cv_gap_full_minus_spine|binary12": {
+      "rho": 0.203,
+      "perm_p_two_sided": 0.526,
+      "n": 12
+    },
+    "slack_all|cv_acc_depth1|all16": {
+      "rho": -0.288,
+      "perm_p_two_sided": 0.282,
+      "n": 16
+    },
+    "slack_all|cv_acc_depth1|binary12": {
+      "rho": -0.14,
+      "perm_p_two_sided": 0.665,
+      "n": 12
+    },
+    "slack_all|cv_acc_spine|all16": {
+      "rho": -0.703,
+      "perm_p_two_sided": 0.003,
+      "n": 16
+    },
+    "slack_all|cv_acc_spine|binary12": {
+      "rho": -0.636,
+      "perm_p_two_sided": 0.031,
+      "n": 12
+    },
+    "slack_all|cv_gain_spine_over_const|all16": {
+      "rho": -0.243,
+      "perm_p_two_sided": 0.362,
+      "n": 16
+    },
+    "slack_all|cv_gain_spine_over_const|binary12": {
+      "rho": -0.06,
+      "perm_p_two_sided": 0.853,
+      "n": 12
+    }
+  }
+}

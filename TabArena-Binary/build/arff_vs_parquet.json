@@ -1,0 +1,187 @@
+{
+ "Amazon_employee_access": {
+  "parquet_rows": 32769,
+  "parquet_columns": 10,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "APSFailure": {
+  "parquet_rows": 76000,
+  "parquet_columns": 171,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "bank-marketing": {
+  "parquet_rows": 45211,
+  "parquet_columns": 14,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "Bank_Customer_Churn": {
+  "parquet_rows": 10000,
+  "parquet_columns": 11,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "Bioresponse": {
+  "parquet_rows": 3751,
+  "parquet_columns": 1777,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "blood-transfusion-service-center": {
+  "parquet_rows": 748,
+  "parquet_columns": 5,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "churn": {
+  "parquet_rows": 5000,
+  "parquet_columns": 20,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "coil2000_insurance_policies": {
+  "parquet_rows": 9822,
+  "parquet_columns": 86,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "credit-g": {
+  "parquet_rows": 1000,
+  "parquet_columns": 21,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "credit_card_clients_default": {
+  "parquet_rows": 30000,
+  "parquet_columns": 24,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "customer_satisfaction_in_airline": {
+  "parquet_rows": 129880,
+  "parquet_columns": 22,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "diabetes": {
+  "parquet_rows": 768,
+  "parquet_columns": 9,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "Diabetes130US": {
+  "parquet_rows": 71518,
+  "parquet_columns": 48,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "E-CommereShippingData": {
+  "parquet_rows": 10999,
+  "parquet_columns": 11,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "Fitness_Club": {
+  "parquet_rows": 1500,
+  "parquet_columns": 7,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "GiveMeSomeCredit": {
+  "parquet_rows": 150000,
+  "parquet_columns": 11,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "hazelnut-spread-contaminant-detection": {
+  "parquet_rows": 2400,
+  "parquet_columns": 31,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "heloc": {
+  "parquet_rows": 10459,
+  "parquet_columns": 24,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "HR_Analytics_Job_Change_of_Data_Scientists": {
+  "parquet_rows": 19158,
+  "parquet_columns": 13,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "in_vehicle_coupon_recommendation": {
+  "parquet_rows": 12684,
+  "parquet_columns": 25,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "Is-this-a-good-customer": {
+  "parquet_rows": 1723,
+  "parquet_columns": 14,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "kddcup09_appetency": {
+  "parquet_rows": 50000,
+  "parquet_columns": 213,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "Marketing_Campaign": {
+  "parquet_rows": 2240,
+  "parquet_columns": 26,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "NATICUSdroid": {
+  "parquet_rows": 7491,
+  "parquet_columns": 87,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "online_shoppers_intention": {
+  "parquet_rows": 12330,
+  "parquet_columns": 18,
+  "parquet_boolean_columns": [
+   "Weekend",
+   "Revenue"
+  ],
+  "disagreements": []
+ },
+ "polish_companies_bankruptcy": {
+  "parquet_rows": 5910,
+  "parquet_columns": 65,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "qsar-biodeg": {
+  "parquet_rows": 1054,
+  "parquet_columns": 42,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "seismic-bumps": {
+  "parquet_rows": 2584,
+  "parquet_columns": 16,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "taiwanese_bankruptcy_prediction": {
+  "parquet_rows": 6819,
+  "parquet_columns": 95,
+  "parquet_boolean_columns": [],
+  "disagreements": []
+ },
+ "jm1": {
+  "parquet_rows": 10885,
+  "parquet_columns": 22,
+  "parquet_boolean_columns": [
+   "defects"
+  ],
+  "disagreements": []
+ }
+}

@@ -1,0 +1,44 @@
+
+== the thirty (n = 30)
+   rho(base rate, G)            = -0.48
+   rho(S1, G) = -0.75 | rho(S1, base rate) = +0.89 | partial rho(S1, G | base rate) = -0.80 (one-sided perm p = 0.000)
+   rho(S2, G) = -0.71 | rho(S2, base rate) = +0.82 | partial rho(S2, G | base rate) = -0.62 (one-sided perm p = 0.001)
+   partial rho(base rate, G | S1) = +0.61
+
+== Holte's twelve (n = 12)
+   rho(base rate, G)            = -0.40
+   rho(S1, G) = -0.29 | rho(S1, base rate) = +0.73 | partial rho(S1, G | base rate) = -0.00 (one-sided perm p = 0.512)
+   rho(S2, G) = -0.44 | rho(S2, base rate) = +0.76 | partial rho(S2, G | base rate) = -0.23 (one-sided perm p = 0.269)
+   partial rho(base rate, G | S1) = -0.29
+
+== pooled 42 (n = 42)
+   rho(base rate, G)            = -0.43
+   rho(S1, G) = -0.63 | rho(S1, base rate) = +0.88 | partial rho(S1, G | base rate) = -0.58 (one-sided perm p = 0.000)
+   rho(S2, G) = -0.62 | rho(S2, base rate) = +0.79 | partial rho(S2, G | base rate) = -0.51 (one-sided perm p = 0.001)
+   partial rho(base rate, G | S1) = +0.33
+
+Flag = S1 > 0 (no attribute outweighs the prior). Flagged datasets, by gain share:
+   MKW   POST  base  72.1  best  70.0  G    -8%  S1 +0.82  S2 -0.24  K   7  majority-only tree: True
+   MKW   CARD  base  84.1  best  84.0  G    -1%  S1 +1.42  S2 +1.42  K   8  majority-only tree: True
+   MKW   TOUR  base  76.7  best  77.0  G     1%  S1 +0.87  S2 +0.87  K   4  majority-only tree: True
+   MKW   FOOT  base  67.1  best  68.0  G     3%  S1 +0.37  S2 +0.37  K   4  majority-only tree: True
+   MKW   YEAS  base  68.8  best  70.0  G     4%  S1 +0.45  S2 +0.45  K   7  majority-only tree: True
+   MKW   SCOT  base  95.8  best  96.0  G     5%  S1 +2.69  S2 +2.69  K   6  majority-only tree: True
+   Holte BC    base  70.3  best  72.0  G     6%  S1 +0.33  S2 -0.12  K   9  majority-only tree: False
+   MKW   ECHO  base  71.0  best  73.0  G     7%  S1 +0.00  S2 +0.00  K   7  majority-only tree: False
+   Holte HE    base  79.4  best  81.2  G     9%  S1 +0.49  S2 -0.72  K  19  majority-only tree: True
+   MKW   HEPA  base  79.1  best  81.0  G     9%  S1 +0.53  S2 +0.53  K   7  majority-only tree: True
+   MKW   ALCO  base  74.5  best  77.0  G    10%  S1 +0.43  S2 +0.43  K   5  majority-only tree: True
+   MKW   SPCT  base  79.4  best  82.0  G    13%  S1 +0.61  S2 +0.61  K  22  majority-only tree: True
+   MKW   BWAY  base  69.7  best  76.0  G    21%  S1 +0.13  S2 -0.79  K   5  majority-only tree: True
+   MKW   CYY   base  77.2  best  83.0  G    25%  S1 +0.41  S2 +0.41  K   9  majority-only tree: True
+   MKW   HOF   base  90.6  best  95.0  G    47%  S1 +1.41  S2 +1.41  K  15  majority-only tree: True
+   Holte SE    base  90.7  best  97.7  G    75%  S1 +1.24  S2 +0.39  K  23  majority-only tree: True
+   Holte HY    base  95.2  best  99.1  G    81%  S1 +2.09  S2 +2.09  K  24  majority-only tree: True
+   MKW   AUTH  base  79.4  best  98.0  G    90%  S1 +0.41  S2 +0.31  K  69  majority-only tree: True
+Unflagged: n = 24; with G < 25%: [('HORS', 18)]
+
+Rival predictor: the strongest attribute alone, without the prior
+   the thirty: rho(strongest weaker reading, G) = +0.81 | rho(S1, G) = -0.75 | partial rho(S1, G | strongest reading) = -0.31 | partial rho(strongest reading, G | prior) = +0.75
+   Holte's twelve: rho(strongest weaker reading, G) = +0.43 | rho(S1, G) = -0.29 | partial rho(S1, G | strongest reading) = +0.07 | partial rho(strongest reading, G | prior) = +0.37
+   pooled 42: rho(strongest weaker reading, G) = +0.72 | rho(S1, G) = -0.63 | partial rho(S1, G | strongest reading) = -0.20 | partial rho(strongest reading, G | prior) = +0.66

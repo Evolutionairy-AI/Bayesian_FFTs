@@ -1,0 +1,123 @@
+{
+  "addendum_b_sha256": "714b4331f569494443d68ca59829201a499c67215c937a9ac5c28223bae3d9f4",
+  "prespecification_sha256": "91d2a59caf902cc39d2e8e8492114333c2fe4bd32b60628957e778efed632a5c",
+  "selftest": {
+    "H4a_on_thirty": {
+      "partial_rho": -0.777,
+      "p_one_sided": 5e-05,
+      "n": 30
+    },
+    "H4b_on_thirty": {
+      "partial_rho": -0.344,
+      "p_one_sided": 0.0311,
+      "n": 30
+    }
+  },
+  "protocol": {
+    "folds": 10,
+    "seed": 20260918,
+    "permutations": 20000,
+    "repeats": "10 if n <= 10,000 else 1",
+    "sklearn": "1.7.2",
+    "ccp_alphas": [
+      0.0,
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01
+    ]
+  },
+  "resumed_after_datasets": [],
+  "tests": {
+    "H4a_S_G_given_base_rate": {
+      "partial_rho": -0.334,
+      "p_one_sided": 0.04935,
+      "n": 29
+    },
+    "H4b_S_G_given_strongest_reading": {
+      "partial_rho": -0.656,
+      "p_one_sided": 5e-05,
+      "n": 29
+    },
+    "H4_supported_against_both_rivals": true,
+    "H3_Ak_vs_auc_margin_secondary": {
+      "rho": -0.026,
+      "p_one_sided": 0.44768,
+      "n": 29
+    }
+  },
+  "descriptive": {
+    "H4a_with_S2": {
+      "partial_rho": -0.398,
+      "p_one_sided": 0.02485,
+      "n": 29
+    },
+    "H4b_with_S2": {
+      "partial_rho": -0.641,
+      "p_one_sided": 5e-05,
+      "n": 29
+    },
+    "H4a_with_one_verdict_indicator": {
+      "partial_rho": -0.18,
+      "p_one_sided": 0.17969,
+      "n": 29
+    },
+    "H4b_with_one_verdict_indicator": {
+      "partial_rho": -0.548,
+      "p_one_sided": 0.0018,
+      "n": 29
+    },
+    "H4a_without_leakage_candidates": {
+      "partial_rho": -0.289,
+      "p_one_sided": 0.10344,
+      "n": 21
+    },
+    "H4b_without_leakage_candidates": {
+      "partial_rho": -0.625,
+      "p_one_sided": 0.0022,
+      "n": 21
+    },
+    "flagged_S_gt_0": 20,
+    "median_G_flagged_unflagged": [
+      8.21,
+      46.83
+    ],
+    "price_all": {
+      "n": 29,
+      "median_disagreement": 14.4,
+      "median_q": 46.36,
+      "median_price": -0.38,
+      "negative": 17,
+      "within_1.5": 5,
+      "above_1.5": 7
+    },
+    "price_both_verdicts": {
+      "n": 13,
+      "median_disagreement": 14.4,
+      "median_q": 56.34,
+      "median_price": 1.7,
+      "negative": 4,
+      "within_1.5": 2,
+      "above_1.5": 7
+    },
+    "counts": {
+      "datasets": 29,
+      "units": 29,
+      "both_verdicts": 13,
+      "certified_depth": {
+        "2": 13,
+        "1": 14,
+        "3": 2
+      },
+      "questions_asked_both_verdict_trees": {
+        "2": 6,
+        "1": 6,
+        "3": 1
+      },
+      "identity_mismatch_cases": 0,
+      "identity_mismatch_profiles": 0,
+      "median_tree_gain_over_base_both_verdicts": 5.01
+    }
+  }
+}

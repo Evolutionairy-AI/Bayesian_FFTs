@@ -1,0 +1,9 @@
+# Python 3.13.5 was used. The harness (Holte-16/analysis), the builds and every post hoc script need the standard
+# library only. The versions below are those of the runs; tabarena_confirmatory.py asserts scikit-learn 1.7.2.
+numpy==2.2.6
+pandas==2.3.2
+scikit-learn==1.7.2
+matplotlib==3.10.5
+# Only for re-running the acquisition cross-checks (TabArena-Binary/scripts, MKW08-30/analysis/parse_woike_tables.py):
+pypdf==6.10.2
+pyarrow==21.0.0

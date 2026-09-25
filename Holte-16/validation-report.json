@@ -1,0 +1,663 @@
+{
+  "generated_at": "2026-08-25T12:55:34.218142+00:00",
+  "package": "Holte-16 acquisition and reconstruction package",
+  "current_authoritative_build_passes": true,
+  "strict_historical_build_passes": false,
+  "strict_historical_requested": false,
+  "summary": {
+    "historical_pass_count": 15,
+    "version_drift_count": 1,
+    "failure_count": 0
+  },
+  "datasets": [
+    {
+      "code": "BC",
+      "name": "Breast Cancer",
+      "status": "pass_historical",
+      "historical_fidelity": "exact",
+      "observed": {
+        "rows": 286,
+        "features": 9,
+        "classes": 2,
+        "class_counts": {
+          "no-recurrence-events": 201,
+          "recurrence-events": 85
+        },
+        "baseline_percent": 70.3,
+        "has_missing": true,
+        "missing_tokens": 9,
+        "row_widths": [
+          10
+        ],
+        "sha256": "39ca7f97770aa1dbb2b8b5b904704bc6f70e120ed5f0306c43eac17bc410b80b"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "CH",
+      "name": "Chess King-Rook vs. King-Pawn",
+      "status": "pass_historical",
+      "historical_fidelity": "exact",
+      "observed": {
+        "rows": 3196,
+        "features": 36,
+        "classes": 2,
+        "class_counts": {
+          "nowin": 1527,
+          "won": 1669
+        },
+        "baseline_percent": 52.2,
+        "has_missing": false,
+        "missing_tokens": 0,
+        "row_widths": [
+          37
+        ],
+        "sha256": "a3e5eee1290e27fef745dcb1b98c42e300476271b1a352a06961d211588543a5"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "GL",
+      "name": "Glass Identification",
+      "status": "pass_historical",
+      "historical_fidelity": "exact",
+      "observed": {
+        "rows": 214,
+        "features": 9,
+        "classes": 6,
+        "class_counts": {
+          "1": 70,
+          "2": 76,
+          "3": 17,
+          "5": 13,
+          "6": 9,
+          "7": 29
+        },
+        "baseline_percent": 35.5,
+        "has_missing": false,
+        "missing_tokens": 0,
+        "row_widths": [
+          10
+        ],
+        "sha256": "e052a1f541dfa48d988571ffafbb2794c0945281ee749b11020182fdcd4e5091"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "G2",
+      "name": "Glass derived two-class",
+      "status": "pass_historical",
+      "historical_fidelity": "exact_derived",
+      "observed": {
+        "rows": 163,
+        "features": 9,
+        "classes": 2,
+        "class_counts": {
+          "1": 87,
+          "2": 76
+        },
+        "baseline_percent": 53.4,
+        "has_missing": false,
+        "missing_tokens": 0,
+        "row_widths": [
+          10
+        ],
+        "sha256": "9170273ad0005bc52cbbaccc5e2fbe67c43467d204345bc2725f06ae0ab3aba0"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "HD",
+      "name": "Cleveland Heart Disease",
+      "status": "pass_historical",
+      "historical_fidelity": "exact",
+      "observed": {
+        "rows": 303,
+        "features": 13,
+        "classes": 2,
+        "class_counts": {
+          "buff": 165,
+          "sick": 138
+        },
+        "baseline_percent": 54.5,
+        "has_missing": true,
+        "missing_tokens": 7,
+        "row_widths": [
+          14
+        ],
+        "sha256": "d5506621ba6fe11a72b913d60acf37f1fc68571ac36c9f3322acf4ce055ef8ac"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "HE",
+      "name": "Hepatitis",
+      "status": "pass_historical",
+      "historical_fidelity": "exact",
+      "observed": {
+        "rows": 155,
+        "features": 19,
+        "classes": 2,
+        "class_counts": {
+          "1": 32,
+          "2": 123
+        },
+        "baseline_percent": 79.4,
+        "has_missing": true,
+        "missing_tokens": 167,
+        "row_widths": [
+          20
+        ],
+        "sha256": "d6271aff56e48f002247556ef7db461423d8fd142c7f2fd5fa09ce144c7a7738"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "HO",
+      "name": "Horse Colic",
+      "status": "pass_historical",
+      "historical_fidelity": "exact",
+      "observed": {
+        "rows": 368,
+        "features": 22,
+        "classes": 2,
+        "class_counts": {
+          "1": 232,
+          "2": 136
+        },
+        "baseline_percent": 63.0,
+        "has_missing": true,
+        "missing_tokens": 1927,
+        "row_widths": [
+          23
+        ],
+        "sha256": "44fd58c6e72c0fa28c8d246a12cc045c135bcaca7c6369b6c23efe59460c61c2"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "HY",
+      "name": "Hypothyroid",
+      "status": "pass_historical",
+      "historical_fidelity": "exact",
+      "observed": {
+        "rows": 3163,
+        "features": 25,
+        "classes": 2,
+        "class_counts": {
+          "hypothyroid": 151,
+          "negative": 3012
+        },
+        "baseline_percent": 95.2,
+        "has_missing": true,
+        "missing_tokens": 5329,
+        "row_widths": [
+          26
+        ],
+        "sha256": "5ffa77983a870cb7e6715b90a132c05006fa941be35c252e586cd8ad60fd1568"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "IR",
+      "name": "Iris",
+      "status": "pass_historical",
+      "historical_fidelity": "exact",
+      "observed": {
+        "rows": 150,
+        "features": 4,
+        "classes": 3,
+        "class_counts": {
+          "Iris-setosa": 50,
+          "Iris-versicolor": 50,
+          "Iris-virginica": 50
+        },
+        "baseline_percent": 33.3,
+        "has_missing": false,
+        "missing_tokens": 0,
+        "row_widths": [
+          5
+        ],
+        "sha256": "e1412f8c8c69c78fea91c42d8732f7edeb182234e9a67261b29617cc6097cc7b"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "LA",
+      "name": "Labor Relations",
+      "status": "pass_historical",
+      "historical_fidelity": "exact",
+      "observed": {
+        "rows": 57,
+        "features": 16,
+        "classes": 2,
+        "class_counts": {
+          "bad": 20,
+          "good": 37
+        },
+        "baseline_percent": 64.9,
+        "has_missing": true,
+        "missing_tokens": 326,
+        "row_widths": [
+          17
+        ],
+        "sha256": "a332988062adefe5a2a6f0eae11528f898bf92892fd06a9af3ba239d6faed7dd"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "LY",
+      "name": "Lymphography",
+      "status": "version_drift_unresolved",
+      "historical_fidelity": "version_drift_unresolved",
+      "observed": {
+        "rows": 148,
+        "features": 18,
+        "classes": 4,
+        "class_counts": {
+          "1": 2,
+          "2": 81,
+          "3": 61,
+          "4": 4
+        },
+        "baseline_percent": 54.7,
+        "has_missing": false,
+        "missing_tokens": 0,
+        "row_widths": [
+          19
+        ],
+        "sha256": "2f348ef723cda759d31ed6492250facb983e44da5f96e8a66aab52362d462f3a"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": false,
+        "features": true,
+        "classes": true,
+        "baseline_percent": false,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "MU",
+      "name": "Mushroom",
+      "status": "pass_historical",
+      "historical_fidelity": "exact",
+      "observed": {
+        "rows": 8124,
+        "features": 22,
+        "classes": 2,
+        "class_counts": {
+          "e": 4208,
+          "p": 3916
+        },
+        "baseline_percent": 51.8,
+        "has_missing": true,
+        "missing_tokens": 2480,
+        "row_widths": [
+          23
+        ],
+        "sha256": "0eaa019564ad2f7bcedcec8f798a99325c9e4b36264fc6c4a949a08578409fb5"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "SE",
+      "name": "Sick Euthyroid",
+      "status": "pass_historical",
+      "historical_fidelity": "exact",
+      "observed": {
+        "rows": 3163,
+        "features": 25,
+        "classes": 2,
+        "class_counts": {
+          "negative": 2870,
+          "sick-euthyroid": 293
+        },
+        "baseline_percent": 90.7,
+        "has_missing": true,
+        "missing_tokens": 5329,
+        "row_widths": [
+          26
+        ],
+        "sha256": "5168a24cc247bd1e52a155c51cf84b8883bf626f2382633692341c78244e7038"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "SO",
+      "name": "Soybean Small",
+      "status": "pass_historical",
+      "historical_fidelity": "exact",
+      "observed": {
+        "rows": 47,
+        "features": 35,
+        "classes": 4,
+        "class_counts": {
+          "D1": 10,
+          "D2": 10,
+          "D3": 10,
+          "D4": 17
+        },
+        "baseline_percent": 36.2,
+        "has_missing": false,
+        "missing_tokens": 0,
+        "row_widths": [
+          36
+        ],
+        "sha256": "3896fb390c5b5876915ebc45f793e8ffc50e765f9a0cd61e7f29b53e628127db"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "VO",
+      "name": "Congressional Voting Records",
+      "status": "pass_historical",
+      "historical_fidelity": "exact",
+      "observed": {
+        "rows": 435,
+        "features": 16,
+        "classes": 2,
+        "class_counts": {
+          "democrat": 267,
+          "republican": 168
+        },
+        "baseline_percent": 61.4,
+        "has_missing": true,
+        "missing_tokens": 392,
+        "row_widths": [
+          17
+        ],
+        "sha256": "da3d8120bbed4e1931709bb530704c262a81a0cd2205f46f5b3521fcbd98f1e7"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    },
+    {
+      "code": "V1",
+      "name": "Voting Records without physician-fee-freeze",
+      "status": "pass_historical",
+      "historical_fidelity": "exact_derived",
+      "observed": {
+        "rows": 435,
+        "features": 15,
+        "classes": 2,
+        "class_counts": {
+          "democrat": 267,
+          "republican": 168
+        },
+        "baseline_percent": 61.4,
+        "has_missing": true,
+        "missing_tokens": 381,
+        "row_widths": [
+          16
+        ],
+        "sha256": "a1c0d5c4de738064ea83b2fc1d9597897e5bfa0c8c2dbb8a3b0331d71e6b53d5"
+      },
+      "current_checks": {
+        "header_class_last": true,
+        "uniform_width": true,
+        "features": true,
+        "rows": true,
+        "classes": true,
+        "class_counts": true,
+        "baseline_percent": true,
+        "has_missing": true,
+        "missing_tokens": true
+      },
+      "historical_checks": {
+        "rows": true,
+        "features": true,
+        "classes": true,
+        "baseline_percent": true,
+        "has_missing": true
+      }
+    }
+  ]
+}

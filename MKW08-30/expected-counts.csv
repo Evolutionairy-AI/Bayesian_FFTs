@@ -1,0 +1,31 @@
+order,code,woike_label,woike_n,woike_cues,woike_n1,woike_n0,woike_smaller_share,woike_bin,woike_cat,woike_cont,woike_source_tag,raw_rows,raw_fields,n_status,split_status
+1,BANK,Bankruptcy,50,5,25,25,0.500,0,0,5,ACD,50,7,exact,exact
+2,SOLV,Solvency,52,8,27,25,0.481,0,0,8,ACD,52,10,exact,exact
+3,ECHO,Echocardiogram,62,7,18,44,0.290,1,0,6,UCI,132,13,explained,exact_after_reduction
+4,POST,Post-Operative,86,8,24,62,0.279,0,7,1,UCI,90,9,explained,reproduced_by_rule
+5,BWAY,Broadway,89,5,27,62,0.303,0,3,2,ACD,95,10,explained,reproduced_by_rule
+6,CRED,Credit Score,100,6,73,27,0.270,2,1,3,ACD,100,7,exact,exact
+7,ZOO,Zoo,101,16,41,60,0.406,15,1,0,UCI,101,18,exact,reproduced_by_rule
+8,IRIS,Iris,150,4,50,100,0.333,0,0,4,UCI,150,5,exact,reproduced_by_rule
+9,HEPA,Hepatitis,153,7,121,32,0.209,6,0,1,UCI,155,20,explained,exact_after_reduction
+10,STRK,Strikes,163,4,86,77,0.472,2,0,2,ACD,163,6,exact,reproduced_by_rule
+11,WINE,Wine,178,13,71,107,0.399,0,0,13,UCI,178,14,exact,reproduced_by_rule
+12,CYY,Baseball CYY,189,9,43,146,0.228,2,1,6,ACD,189,11,exact,exact
+13,GLAS,Forensic Glass,214,9,146,68,0.318,0,0,9,UCI,214,11,exact,reproduced_by_rule
+14,HORS,Horse Colic,218,6,128,90,0.413,1,1,4,UCI,368,28,unexplained,not_reproduced
+15,SPCT,SPECT,267,22,212,55,0.206,22,0,0,UCI,267,23,exact,exact
+16,HUNG,Heart (Hungaria),294,10,106,188,0.361,1,4,5,UCI,294,14,exact,exact
+17,CLEV,Heart (Cleveland),297,13,137,160,0.461,3,5,5,UCI,303,14,explained,reproduced_by_rule
+18,ALCO,Alcohol,345,5,88,257,0.255,0,0,5,UCI,345,7,exact,reproduced_by_rule
+19,IONO,Ionosphere,351,33,225,126,0.359,0,0,33,UCI,351,35,exact,exact
+20,TOUR,Tourism,365,4,85,280,0.233,1,0,3,ACD,412,9,explained,reproduced_by_rule
+21,VOTE,Voting,402,16,248,154,0.383,0,16,0,UCI,435,17,unexplained,not_reproduced
+22,EDUC,Education,435,4,211,224,0.485,2,0,2,O,500,6,explained,exact_after_reduction
+23,CARD,Cardiac,558,8,469,89,0.159,1,0,7,O,558,32,exact,exact
+24,FOOT,Football,672,4,451,221,0.329,1,0,3,O,672,8,exact,reproduced_by_rule
+25,BCW,Breast Cancer,683,9,444,239,0.350,0,9,0,UCI,699,11,explained,exact_after_reduction
+26,PIMA,Diabetes,786,6,268,500,0.349,0,0,6,UCI,768,9,explained,exact
+27,AUTH,Authorship,841,69,173,668,0.259,0,0,69,ACD,841,71,exact,reproduced_by_rule
+28,HOF,Baseball HoF,1320,15,124,1196,0.094,0,0,15,ACD,1340,18,explained,reproduced_by_rule
+29,YEAS,Yeast,1484,8,463,1021,0.312,0,0,8,UCI,1484,10,exact,reproduced_by_rule
+30,SCOT,Supreme Court,4052,7,170,3882,0.042,5,1,1,ACD,4052,8,exact,reproduced_by_rule

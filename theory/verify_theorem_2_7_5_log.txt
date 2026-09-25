@@ -1,0 +1,104 @@
+========================================================================
+PART A -- Theorem 2.7.5: exact FFH-FFT identity under (DD+/-)
+========================================================================
+  example profile (t=0, K=5): l+=['45.92', '19.33', '3.86', '1.28', '0.73'], l-=['-50.26', '-17.14', '-5.27', '-0.87', '-0.55']
+    cue 1 corresponds to P(x=1|C1)=1.000, P(x=1|C0)=0.000
+  profiles tested: 200; sample-wise comparisons: 288320
+  mismatches / construction failures: 0
+  depth-1 (k*-invariant, |L0| < slack_1) prior cases verified: 446
+  splitting-profile correspondence (fold + MKW08 encoding) verified in 5586 non-degenerate cases, 0 mismatches
+  tree-depth histogram: {1: 4566, 2: 1594, 3: 1798, 4: 868, 5: 585, 6: 403, 7: 236, 8: 120}
+========================================================================
+PART B -- Zig derivation: OSLA agent vs the 2008 Zig construction
+========================================================================
+  r=    1.3: OSLA run= 1, Zig rule k= 1, full 20-level architecture match=True
+  r=    1.7: OSLA run= 1, Zig rule k= 1, full 20-level architecture match=True
+  r=    2.5: OSLA run= 2, Zig rule k= 2, full 20-level architecture match=True
+  r=    3.0: OSLA run= 2, Zig rule k= 2, full 20-level architecture match=True
+  r=    3.9: OSLA run= 2, Zig rule k= 2, full 20-level architecture match=True
+  r=    5.0: OSLA run= 3, Zig rule k= 3, full 20-level architecture match=True
+  r=    6.3: OSLA run= 3, Zig rule k= 3, full 20-level architecture match=True
+  r=    7.7: OSLA run= 3, Zig rule k= 3, full 20-level architecture match=True
+  r=    9.5: OSLA run= 4, Zig rule k= 4, full 20-level architecture match=True
+  r=   12.0: OSLA run= 4, Zig rule k= 4, full 20-level architecture match=True
+  r=   15.8: OSLA run= 4, Zig rule k= 4, full 20-level architecture match=True
+  r=   21.0: OSLA run= 5, Zig rule k= 5, full 20-level architecture match=True
+  r=   27.0: OSLA run= 5, Zig rule k= 5, full 20-level architecture match=True
+  r=   45.0: OSLA run= 6, Zig rule k= 6, full 20-level architecture match=True
+  r=   77.0: OSLA run= 7, Zig rule k= 7, full 20-level architecture match=True
+  r=  100.0: OSLA run= 7, Zig rule k= 7, full 20-level architecture match=True
+  v=2/3 (one-bit cues): 16/16 exact architecture matches
+  generalized run-length prediction k(r,v) = ceil(ln r / ln odds(v)):
+    64/64 (v, r) cells match the generalized rule
+========================================================================
+PART C -- exact-optimality band (complete Zig) and minimal-horizon
+          run rule (truncated Zig / majority pectinate)
+========================================================================
+  C1 r= 1.7: optimal policy == complete Zig for c in [0.04552, 0.114] (as predicted)
+  C1 r= 2.5: optimal policy == complete Zig for c in [0.04552, 0.06846] (as predicted)
+  C1 r= 3.0: optimal policy == complete Zig for c in [0.04111, 0.06846] (as predicted)
+  C1 r= 3.9: optimal policy == complete Zig for c in [0.05041, 0.05041] (as predicted)
+  C1 r= 5.0: no meta-cost band (as predicted; complete Zig is not a stationary-threshold policy here)
+  C2: minimal-horizon tree == majority run + terminal in 32/32 (v, r) cells; run length = ceil(ln r / ln odds(v))
+  C1b r= 1.7 (k=1): inside 9/9, outside/none->Zig violations: 0/4
+  C1b r= 3.0 (k=2): inside 9/9, outside/none->Zig violations: 0/4
+  C1b r= 5.0 (k=3): outside/none->Zig violations: 0/235
+  C1b r= 7.7 (k=3): outside/none->Zig violations: 0/235
+========================================================================
+PART C3 -- census of exactly-optimal procedures for k >= 3 priors:
+           is ANY non-degenerate FFT ever exactly optimal?
+========================================================================
+  r=  4.5 (k=3): {'NOT_FFT': 84, 'CONSTANT': 36}
+  r=  5.0 (k=3): {'NOT_FFT': 82, 'CONSTANT': 38}
+  r=  6.3 (k=3): {'NOT_FFT': 79, 'CONSTANT': 41}
+  r=  7.7 (k=3): {'NOT_FFT': 77, 'CONSTANT': 43}
+  r= 12.0 (k=4): {'NOT_FFT': 71, 'CONSTANT': 49}
+  band-shape (interval continue set) violations across all (t, c, r): 0
+  confirmed: for k >= 3 the exact optimum is never a non-degenerate FFT (only NOT_FFT or CONSTANT)
+========================================================================
+PART D -- sharpness: uniform validities violate (DD+/-), no FFT
+========================================================================
+  profile: v=(0.7,0.7,0.7), l+=-l-=0.847, uniform prior
+  (DD+/-) holds: False
+  greedy spine construction returns: None
+  FFTs (fixed order, all exit structures/depths) matching Bayes (= majority rule): 0 of 7
+  witness x=(0, 1, 1): bayes=1, depth-1 tree would give 0
+========================================================================
+PART E -- finite-sample snapping: plug-in FFT vs plug-in linear vs
+          ridge-logistic in a (DD+/-) ecology
+========================================================================
+  ecology: K=4, mu0=0.65, (p,q) per cue: [(0.919, 0.102), (0.76, 0.28), (0.642, 0.409), (0.576, 0.471)]
+  min spine decisiveness slack Delta = 0.999; min profile margin gamma = 0.131 (Delta >= gamma: True)
+      N  P(tree==Bayes)  excess(FFT)  excess(lin)  excess(logit)  stuck%
+     10           0.325       0.0449       0.0472         0.0815    7.9%
+     20           0.415       0.0222       0.0227         0.0361    5.4%
+     40           0.422       0.0099       0.0119         0.0165    4.2%
+     80           0.475       0.0047       0.0062         0.0078    2.2%
+    160           0.530       0.0027       0.0029         0.0038    0.5%
+    320           0.627       0.0013       0.0013         0.0015    0.0%
+========================================================================
+PART F -- Lemma C.1 ingredients: submodularity of information gain;
+          v^P ordering vs information-gain ordering
+========================================================================
+  (a) submodularity: 200/200 random (ecology, prior, A, B) checks pass
+  (b) cue A (p=0.6, q=0.4): v^P=0.600, gain=0.0201 nats
+      cue B (p=0.99, q=0.86): v^P=0.565, gain=0.0359 nats
+      A beats B on lumped validity, B beats A on information gain: True
+      -> v^P is a surrogate, not the FEH-native order; orderings coincide for symmetric cues (q = 1-p)
+      symmetric-cue gain monotone in validity: True
+========================================================================
+PART G -- Lemma C.11: analytic closure of the k=3 loophole
+========================================================================
+  drift identity q(F)-p1(B) == (2v-1)(1-muF-muB): 114/114 exact
+  sign mu(F)+mu(B) > 1 (i.e. q(F) < p1(B)): 114/114
+  (C-F) and (S-B) jointly satisfiable somewhere on the (v, a, c) grid: 0 cells (Lemma predicts 0)
+  worked example r=5, v=2/3: q(F)=0.4286, p1(B)=0.4615, q(F)-p1(B)=-0.0330, VoI1(B)=0.0513
+========================================================================
+Part A  (Thm 2.7.5 identity + profiles):   PASS
+Part B  (Zig rule, OSLA derivation):       PASS
+Part C  (Zig bands + C.5 window + min-k*): PASS
+Part C3 (no non-degenerate FFT, k >= 3):   PASS
+Part D  (sharpness under DD violation):    PASS
+Part E  (finite-sample snapping):          PASS
+Part F  (Lemma C.1: submodularity, v^P):   PASS
+Part G  (Lemma C.11: k=3 loophole closed): PASS

@@ -1,0 +1,242 @@
+[
+  {
+    "code": "BANK",
+    "n": 50,
+    "n1_woike_category": 25,
+    "n0": 25,
+    "attributes": 5,
+    "woike_cues": 5
+  },
+  {
+    "code": "SOLV",
+    "n": 52,
+    "n1_woike_category": 27,
+    "n0": 25,
+    "attributes": 8,
+    "woike_cues": 8
+  },
+  {
+    "code": "ECHO",
+    "n": 62,
+    "n1_woike_category": 18,
+    "n0": 44,
+    "attributes": 7,
+    "woike_cues": 7
+  },
+  {
+    "code": "POST",
+    "n": 86,
+    "n1_woike_category": 24,
+    "n0": 62,
+    "attributes": 8,
+    "woike_cues": 8
+  },
+  {
+    "code": "BWAY",
+    "n": 89,
+    "n1_woike_category": 27,
+    "n0": 62,
+    "attributes": 7,
+    "woike_cues": 5
+  },
+  {
+    "code": "CRED",
+    "n": 100,
+    "n1_woike_category": 73,
+    "n0": 27,
+    "attributes": 6,
+    "woike_cues": 6
+  },
+  {
+    "code": "ZOO",
+    "n": 101,
+    "n1_woike_category": 41,
+    "n0": 60,
+    "attributes": 16,
+    "woike_cues": 16
+  },
+  {
+    "code": "IRIS",
+    "n": 150,
+    "n1_woike_category": 50,
+    "n0": 100,
+    "attributes": 4,
+    "woike_cues": 4
+  },
+  {
+    "code": "HEPA",
+    "n": 153,
+    "n1_woike_category": 121,
+    "n0": 32,
+    "attributes": 19,
+    "woike_cues": 7
+  },
+  {
+    "code": "STRK",
+    "n": 163,
+    "n1_woike_category": 86,
+    "n0": 77,
+    "attributes": 4,
+    "woike_cues": 4
+  },
+  {
+    "code": "WINE",
+    "n": 178,
+    "n1_woike_category": 71,
+    "n0": 107,
+    "attributes": 13,
+    "woike_cues": 13
+  },
+  {
+    "code": "CYY",
+    "n": 189,
+    "n1_woike_category": 43,
+    "n0": 146,
+    "attributes": 9,
+    "woike_cues": 9
+  },
+  {
+    "code": "GLAS",
+    "n": 214,
+    "n1_woike_category": 146,
+    "n0": 68,
+    "attributes": 9,
+    "woike_cues": 9
+  },
+  {
+    "code": "HORS",
+    "n": 366,
+    "n1_woike_category": 214,
+    "n0": 152,
+    "attributes": 20,
+    "woike_cues": 6
+  },
+  {
+    "code": "SPCT",
+    "n": 267,
+    "n1_woike_category": 212,
+    "n0": 55,
+    "attributes": 22,
+    "woike_cues": 22
+  },
+  {
+    "code": "HUNG",
+    "n": 294,
+    "n1_woike_category": 106,
+    "n0": 188,
+    "attributes": 13,
+    "woike_cues": 10
+  },
+  {
+    "code": "CLEV",
+    "n": 297,
+    "n1_woike_category": 137,
+    "n0": 160,
+    "attributes": 13,
+    "woike_cues": 13
+  },
+  {
+    "code": "ALCO",
+    "n": 345,
+    "n1_woike_category": 88,
+    "n0": 257,
+    "attributes": 5,
+    "woike_cues": 5
+  },
+  {
+    "code": "IONO",
+    "n": 351,
+    "n1_woike_category": 225,
+    "n0": 126,
+    "attributes": 34,
+    "woike_cues": 33
+  },
+  {
+    "code": "TOUR",
+    "n": 365,
+    "n1_woike_category": 85,
+    "n0": 280,
+    "attributes": 7,
+    "woike_cues": 4
+  },
+  {
+    "code": "VOTE",
+    "n": 435,
+    "n1_woike_category": 267,
+    "n0": 168,
+    "attributes": 16,
+    "woike_cues": 16
+  },
+  {
+    "code": "EDUC",
+    "n": 435,
+    "n1_woike_category": 211,
+    "n0": 224,
+    "attributes": 4,
+    "woike_cues": 4
+  },
+  {
+    "code": "CARD",
+    "n": 558,
+    "n1_woike_category": 469,
+    "n0": 89,
+    "attributes": 26,
+    "woike_cues": 8
+  },
+  {
+    "code": "FOOT",
+    "n": 672,
+    "n1_woike_category": 451,
+    "n0": 221,
+    "attributes": 4,
+    "woike_cues": 4
+  },
+  {
+    "code": "BCW",
+    "n": 683,
+    "n1_woike_category": 444,
+    "n0": 239,
+    "attributes": 9,
+    "woike_cues": 9
+  },
+  {
+    "code": "PIMA",
+    "n": 768,
+    "n1_woike_category": 268,
+    "n0": 500,
+    "attributes": 8,
+    "woike_cues": 6
+  },
+  {
+    "code": "AUTH",
+    "n": 841,
+    "n1_woike_category": 173,
+    "n0": 668,
+    "attributes": 69,
+    "woike_cues": 69
+  },
+  {
+    "code": "HOF",
+    "n": 1320,
+    "n1_woike_category": 124,
+    "n0": 1196,
+    "attributes": 16,
+    "woike_cues": 15
+  },
+  {
+    "code": "YEAS",
+    "n": 1484,
+    "n1_woike_category": 463,
+    "n0": 1021,
+    "attributes": 8,
+    "woike_cues": 8
+  },
+  {
+    "code": "SCOT",
+    "n": 4052,
+    "n1_woike_category": 170,
+    "n0": 3882,
+    "attributes": 7,
+    "woike_cues": 7
+  }
+]

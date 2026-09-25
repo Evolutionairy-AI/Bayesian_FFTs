@@ -1,0 +1,17 @@
+code,name,holte_rows,features,classes,holte_baseline_percent,holte_missing,current_build_rows,historical_fidelity
+BC,Breast Cancer,286,9,2,70.3,yes,286,exact
+CH,Chess King-Rook vs King-Pawn,3196,36,2,52.2,no,3196,exact
+GL,Glass Identification,214,9,6,35.5,no,214,exact
+G2,Glass derived two-class,163,9,2,53.4,no,163,exact_derived
+HD,Cleveland Heart Disease,303,13,2,54.5,yes,303,exact
+HE,Hepatitis,155,19,2,79.4,yes,155,exact
+HO,Horse Colic,368,22,2,63.0,yes,368,exact
+HY,Hypothyroid,3163,25,2,95.2,yes,3163,exact
+IR,Iris,150,4,3,33.3,no,150,exact
+LA,Labor Relations,57,16,2,64.9,yes,57,exact
+LY,Lymphography,141,18,4,56.7,no,148,version_drift_unresolved
+MU,Mushroom,8124,22,2,51.8,yes,8124,exact
+SE,Sick Euthyroid,3163,25,2,90.7,yes,3163,exact
+SO,Soybean Small,47,35,4,36.2,no,47,exact
+VO,Congressional Voting Records,435,16,2,61.4,yes,435,exact
+V1,Voting Records derived cue-removed,435,15,2,61.4,yes,435,exact_derived

@@ -1,0 +1,14 @@
+{
+ "cells": 1530,
+ "status_counts": {
+  "agree": 1319,
+  "not_run_dash_in_pdf_imputed_in_artifact": 31,
+  "not_run_dash_in_pdf_absent_in_artifact": 180
+ },
+ "cells_not_in_plain_agreement": [],
+ "superseded_linear_knn": {
+  "cells": 180,
+  "equal_to_published_table_to_3dp": 51,
+  "different_from_published_table": 129
+ }
+}

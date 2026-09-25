@@ -1,0 +1,1921 @@
+table,dataset,n,cues,block,model,accuracy
+6.10,Bankruptcy,50,5,fit95,MS,61
+6.10,Bankruptcy,50,5,fit95,ZS,83
+6.10,Bankruptcy,50,5,fit95,MV,61
+6.10,Bankruptcy,50,5,fit95,ZV,83
+6.10,Bankruptcy,50,5,fit95,MA,61
+6.10,Bankruptcy,50,5,pred15,MS,59
+6.10,Bankruptcy,50,5,pred15,ZS,70
+6.10,Bankruptcy,50,5,pred15,MV,54
+6.10,Bankruptcy,50,5,pred15,ZV,71
+6.10,Bankruptcy,50,5,pred15,MA,54
+6.10,Bankruptcy,50,5,pred50,MS,62
+6.10,Bankruptcy,50,5,pred50,ZS,82
+6.10,Bankruptcy,50,5,pred50,MV,56
+6.10,Bankruptcy,50,5,pred50,ZV,82
+6.10,Bankruptcy,50,5,pred50,MA,57
+6.10,Bankruptcy,50,5,pred90,MS,58
+6.10,Bankruptcy,50,5,pred90,ZS,81
+6.10,Bankruptcy,50,5,pred90,MV,52
+6.10,Bankruptcy,50,5,pred90,ZV,81
+6.10,Bankruptcy,50,5,pred90,MA,56
+6.10,Solvency,52,8,fit95,MS,56
+6.10,Solvency,52,8,fit95,ZS,84
+6.10,Solvency,52,8,fit95,MV,59
+6.10,Solvency,52,8,fit95,ZV,84
+6.10,Solvency,52,8,fit95,MA,58
+6.10,Solvency,52,8,pred15,MS,
+6.10,Solvency,52,8,pred15,ZS,
+6.10,Solvency,52,8,pred15,MV,
+6.10,Solvency,52,8,pred15,ZV,
+6.10,Solvency,52,8,pred15,MA,
+6.10,Solvency,52,8,pred50,MS,61
+6.10,Solvency,52,8,pred50,ZS,77
+6.10,Solvency,52,8,pred50,MV,53
+6.10,Solvency,52,8,pred50,ZV,77
+6.10,Solvency,52,8,pred50,MA,53
+6.10,Solvency,52,8,pred90,MS,56
+6.10,Solvency,52,8,pred90,ZS,79
+6.10,Solvency,52,8,pred90,MV,52
+6.10,Solvency,52,8,pred90,ZV,78
+6.10,Solvency,52,8,pred90,MA,41
+6.10,Echocardiogram,62,7,fit95,MS,71
+6.10,Echocardiogram,62,7,fit95,ZS,72
+6.10,Echocardiogram,62,7,fit95,MV,72
+6.10,Echocardiogram,62,7,fit95,ZV,67
+6.10,Echocardiogram,62,7,fit95,MA,72
+6.10,Echocardiogram,62,7,pred15,MS,51
+6.10,Echocardiogram,62,7,pred15,ZS,50
+6.10,Echocardiogram,62,7,pred15,MV,64
+6.10,Echocardiogram,62,7,pred15,ZV,56
+6.10,Echocardiogram,62,7,pred15,MA,71
+6.10,Echocardiogram,62,7,pred50,MS,64
+6.10,Echocardiogram,62,7,pred50,ZS,60
+6.10,Echocardiogram,62,7,pred50,MV,71
+6.10,Echocardiogram,62,7,pred50,ZV,60
+6.10,Echocardiogram,62,7,pred50,MA,72
+6.10,Echocardiogram,62,7,pred90,MS,69
+6.10,Echocardiogram,62,7,pred90,ZS,72
+6.10,Echocardiogram,62,7,pred90,MV,72
+6.10,Echocardiogram,62,7,pred90,ZV,64
+6.10,Echocardiogram,62,7,pred90,MA,72
+6.10,Post-Operative,86,8,fit95,MS,72
+6.10,Post-Operative,86,8,fit95,ZS,52
+6.10,Post-Operative,86,8,fit95,MV,72
+6.10,Post-Operative,86,8,fit95,ZV,61
+6.10,Post-Operative,86,8,fit95,MA,72
+6.10,Post-Operative,86,8,pred15,MS,66
+6.10,Post-Operative,86,8,pred15,ZS,48
+6.10,Post-Operative,86,8,pred15,MV,68
+6.10,Post-Operative,86,8,pred15,ZV,50
+6.10,Post-Operative,86,8,pred15,MA,71
+6.10,Post-Operative,86,8,pred50,MS,72
+6.10,Post-Operative,86,8,pred50,ZS,47
+6.10,Post-Operative,86,8,pred50,MV,72
+6.10,Post-Operative,86,8,pred50,ZV,50
+6.10,Post-Operative,86,8,pred50,MA,72
+6.10,Post-Operative,86,8,pred90,MS,72
+6.10,Post-Operative,86,8,pred90,ZS,41
+6.10,Post-Operative,86,8,pred90,MV,72
+6.10,Post-Operative,86,8,pred90,ZV,51
+6.10,Post-Operative,86,8,pred90,MA,72
+6.10,Broadway,89,5,fit95,MS,71
+6.10,Broadway,89,5,fit95,ZS,72
+6.10,Broadway,89,5,fit95,MV,72
+6.10,Broadway,89,5,fit95,ZV,67
+6.10,Broadway,89,5,fit95,MA,72
+6.10,Broadway,89,5,pred15,MS,51
+6.10,Broadway,89,5,pred15,ZS,50
+6.10,Broadway,89,5,pred15,MV,64
+6.10,Broadway,89,5,pred15,ZV,56
+6.10,Broadway,89,5,pred15,MA,71
+6.10,Broadway,89,5,pred50,MS,63
+6.10,Broadway,89,5,pred50,ZS,59
+6.10,Broadway,89,5,pred50,MV,71
+6.10,Broadway,89,5,pred50,ZV,60
+6.10,Broadway,89,5,pred50,MA,72
+6.10,Broadway,89,5,pred90,MS,68
+6.10,Broadway,89,5,pred90,ZS,71
+6.10,Broadway,89,5,pred90,MV,72
+6.10,Broadway,89,5,pred90,ZV,63
+6.10,Broadway,89,5,pred90,MA,72
+6.10,Credit Score,100,6,fit95,MS,75
+6.10,Credit Score,100,6,fit95,ZS,76
+6.10,Credit Score,100,6,fit95,MV,73
+6.10,Credit Score,100,6,fit95,ZV,83
+6.10,Credit Score,100,6,fit95,MA,73
+6.10,Credit Score,100,6,pred15,MS,68
+6.10,Credit Score,100,6,pred15,ZS,77
+6.10,Credit Score,100,6,pred15,MV,75
+6.10,Credit Score,100,6,pred15,ZV,78
+6.10,Credit Score,100,6,pred15,MA,71
+6.10,Credit Score,100,6,pred50,MS,75
+6.10,Credit Score,100,6,pred50,ZS,76
+6.10,Credit Score,100,6,pred50,MV,73
+6.10,Credit Score,100,6,pred50,ZV,81
+6.10,Credit Score,100,6,pred50,MA,73
+6.10,Credit Score,100,6,pred90,MS,76
+6.10,Credit Score,100,6,pred90,ZS,76
+6.10,Credit Score,100,6,pred90,MV,73
+6.10,Credit Score,100,6,pred90,ZV,81
+6.10,Credit Score,100,6,pred90,MA,73
+6.10,Zoo,101,16,fit95,MS,41
+6.10,Zoo,101,16,fit95,ZS,68
+6.10,Zoo,101,16,fit95,MV,100
+6.10,Zoo,101,16,fit95,ZV,89
+6.10,Zoo,101,16,fit95,MA,60
+6.10,Zoo,101,16,pred15,MS,
+6.10,Zoo,101,16,pred15,ZS,
+6.10,Zoo,101,16,pred15,MV,
+6.10,Zoo,101,16,pred15,ZV,
+6.10,Zoo,101,16,pred15,MA,
+6.10,Zoo,101,16,pred50,MS,44
+6.10,Zoo,101,16,pred50,ZS,71
+6.10,Zoo,101,16,pred50,MV,98
+6.10,Zoo,101,16,pred50,ZV,89
+6.10,Zoo,101,16,pred50,MA,62
+6.10,Zoo,101,16,pred90,MS,40
+6.10,Zoo,101,16,pred90,ZS,66
+6.10,Zoo,101,16,pred90,MV,99
+6.10,Zoo,101,16,pred90,ZV,87
+6.10,Zoo,101,16,pred90,MA,60
+6.10,Iris,150,4,fit95,MS,43
+6.10,Iris,150,4,fit95,ZS,66
+6.10,Iris,150,4,fit95,MV,69
+6.10,Iris,150,4,fit95,ZV,53
+6.10,Iris,150,4,fit95,MA,69
+6.10,Iris,150,4,pred15,MS,45
+6.10,Iris,150,4,pred15,ZS,54
+6.10,Iris,150,4,pred15,MV,66
+6.10,Iris,150,4,pred15,ZV,53
+6.10,Iris,150,4,pred15,MA,62
+6.10,Iris,150,4,pred50,MS,41
+6.10,Iris,150,4,pred50,ZS,58
+6.10,Iris,150,4,pred50,MV,67
+6.10,Iris,150,4,pred50,ZV,48
+6.10,Iris,150,4,pred50,MA,66
+6.10,Iris,150,4,pred90,MS,42
+6.10,Iris,150,4,pred90,ZS,65
+6.10,Iris,150,4,pred90,MV,68
+6.10,Iris,150,4,pred90,ZV,48
+6.10,Iris,150,4,pred90,MA,68
+6.10,Hepatitis,153,7,fit95,MS,53
+6.10,Hepatitis,153,7,fit95,ZS,71
+6.10,Hepatitis,153,7,fit95,MV,79
+6.10,Hepatitis,153,7,fit95,ZV,69
+6.10,Hepatitis,153,7,fit95,MA,79
+6.10,Hepatitis,153,7,pred15,MS,58
+6.10,Hepatitis,153,7,pred15,ZS,72
+6.10,Hepatitis,153,7,pred15,MV,79
+6.10,Hepatitis,153,7,pred15,ZV,69
+6.10,Hepatitis,153,7,pred15,MA,76
+6.10,Hepatitis,153,7,pred50,MS,57
+6.10,Hepatitis,153,7,pred50,ZS,71
+6.10,Hepatitis,153,7,pred50,MV,79
+6.10,Hepatitis,153,7,pred50,ZV,68
+6.10,Hepatitis,153,7,pred50,MA,79
+6.10,Hepatitis,153,7,pred90,MS,52
+6.10,Hepatitis,153,7,pred90,ZS,71
+6.10,Hepatitis,153,7,pred90,MV,79
+6.10,Hepatitis,153,7,pred90,ZV,68
+6.10,Hepatitis,153,7,pred90,MA,79
+6.10,Strikes,163,4,fit95,MS,71
+6.10,Strikes,163,4,fit95,ZS,72
+6.10,Strikes,163,4,fit95,MV,77
+6.10,Strikes,163,4,fit95,ZV,75
+6.10,Strikes,163,4,fit95,MA,71
+6.10,Strikes,163,4,pred15,MS,69
+6.10,Strikes,163,4,pred15,ZS,72
+6.10,Strikes,163,4,pred15,MV,67
+6.10,Strikes,163,4,pred15,ZV,74
+6.10,Strikes,163,4,pred15,MA,65
+6.10,Strikes,163,4,pred50,MS,71
+6.10,Strikes,163,4,pred50,ZS,72
+6.10,Strikes,163,4,pred50,MV,71
+6.10,Strikes,163,4,pred50,ZV,75
+6.10,Strikes,163,4,pred50,MA,67
+6.10,Strikes,163,4,pred90,MS,71
+6.10,Strikes,163,4,pred90,ZS,71
+6.10,Strikes,163,4,pred90,MV,75
+6.10,Strikes,163,4,pred90,ZV,74
+6.10,Strikes,163,4,pred90,MA,68
+6.10,Wine,178,13,fit95,MS,44
+6.10,Wine,178,13,fit95,ZS,77
+6.10,Wine,178,13,fit95,MV,60
+6.10,Wine,178,13,fit95,ZV,77
+6.10,Wine,178,13,fit95,MA,60
+6.10,Wine,178,13,pred15,MS,50
+6.10,Wine,178,13,pred15,ZS,74
+6.10,Wine,178,13,pred15,MV,61
+6.10,Wine,178,13,pred15,ZV,75
+6.10,Wine,178,13,pred15,MA,60
+6.10,Wine,178,13,pred50,MS,46
+6.10,Wine,178,13,pred50,ZS,77
+6.10,Wine,178,13,pred50,MV,60
+6.10,Wine,178,13,pred50,ZV,77
+6.10,Wine,178,13,pred50,MA,61
+6.10,Wine,178,13,pred90,MS,43
+6.10,Wine,178,13,pred90,ZS,77
+6.10,Wine,178,13,pred90,MV,60
+6.10,Wine,178,13,pred90,ZV,77
+6.10,Wine,178,13,pred90,MA,60
+6.10,Baseball CYY,189,9,fit95,MS,30
+6.10,Baseball CYY,189,9,fit95,ZS,55
+6.10,Baseball CYY,189,9,fit95,MV,78
+6.10,Baseball CYY,189,9,fit95,ZV,65
+6.10,Baseball CYY,189,9,fit95,MA,78
+6.10,Baseball CYY,189,9,pred15,MS,35
+6.10,Baseball CYY,189,9,pred15,ZS,59
+6.10,Baseball CYY,189,9,pred15,MV,77
+6.10,Baseball CYY,189,9,pred15,ZV,61
+6.10,Baseball CYY,189,9,pred15,MA,77
+6.10,Baseball CYY,189,9,pred50,MS,31
+6.10,Baseball CYY,189,9,pred50,ZS,59
+6.10,Baseball CYY,189,9,pred50,MV,78
+6.10,Baseball CYY,189,9,pred50,ZV,63
+6.10,Baseball CYY,189,9,pred50,MA,78
+6.10,Baseball CYY,189,9,pred90,MS,29
+6.10,Baseball CYY,189,9,pred90,ZS,54
+6.10,Baseball CYY,189,9,pred90,MV,77
+6.10,Baseball CYY,189,9,pred90,ZV,64
+6.10,Baseball CYY,189,9,pred90,MA,77
+6.10,Forensic Glass,214,9,fit95,MS,78
+6.10,Forensic Glass,214,9,fit95,ZS,78
+6.10,Forensic Glass,214,9,fit95,MV,73
+6.10,Forensic Glass,214,9,fit95,ZV,81
+6.10,Forensic Glass,214,9,fit95,MA,73
+6.10,Forensic Glass,214,9,pred15,MS,70
+6.10,Forensic Glass,214,9,pred15,ZS,79
+6.10,Forensic Glass,214,9,pred15,MV,72
+6.10,Forensic Glass,214,9,pred15,ZV,78
+6.10,Forensic Glass,214,9,pred15,MA,68
+6.10,Forensic Glass,214,9,pred50,MS,78
+6.10,Forensic Glass,214,9,pred50,ZS,79
+6.10,Forensic Glass,214,9,pred50,MV,73
+6.10,Forensic Glass,214,9,pred50,ZV,81
+6.10,Forensic Glass,214,9,pred50,MA,70
+6.10,Forensic Glass,214,9,pred90,MS,78
+6.10,Forensic Glass,214,9,pred90,ZS,78
+6.10,Forensic Glass,214,9,pred90,MV,73
+6.10,Forensic Glass,214,9,pred90,ZV,80
+6.10,Forensic Glass,214,9,pred90,MA,72
+6.10,Horse Colic,218,6,fit95,MS,45
+6.10,Horse Colic,218,6,fit95,ZS,74
+6.10,Horse Colic,218,6,fit95,MV,61
+6.10,Horse Colic,218,6,fit95,ZV,73
+6.10,Horse Colic,218,6,fit95,MA,50
+6.10,Horse Colic,218,6,pred15,MS,49
+6.10,Horse Colic,218,6,pred15,ZS,59
+6.10,Horse Colic,218,6,pred15,MV,60
+6.10,Horse Colic,218,6,pred15,ZV,67
+6.10,Horse Colic,218,6,pred15,MA,54
+6.10,Horse Colic,218,6,pred50,MS,49
+6.10,Horse Colic,218,6,pred50,ZS,63
+6.10,Horse Colic,218,6,pred50,MV,60
+6.10,Horse Colic,218,6,pred50,ZV,74
+6.10,Horse Colic,218,6,pred50,MA,54
+6.10,Horse Colic,218,6,pred90,MS,44
+6.10,Horse Colic,218,6,pred90,ZS,71
+6.10,Horse Colic,218,6,pred90,MV,60
+6.10,Horse Colic,218,6,pred90,ZV,73
+6.10,Horse Colic,218,6,pred90,MA,50
+6.10,SPECT,267,22,fit95,MS,36
+6.10,SPECT,267,22,fit95,ZS,74
+6.10,SPECT,267,22,fit95,MV,79
+6.10,SPECT,267,22,fit95,ZV,66
+6.10,SPECT,267,22,fit95,MA,79
+6.10,SPECT,267,22,pred15,MS,31
+6.10,SPECT,267,22,pred15,ZS,71
+6.10,SPECT,267,22,pred15,MV,79
+6.10,SPECT,267,22,pred15,ZV,61
+6.10,SPECT,267,22,pred15,MA,75
+6.10,SPECT,267,22,pred50,MS,33
+6.10,SPECT,267,22,pred50,ZS,72
+6.10,SPECT,267,22,pred50,MV,79
+6.10,SPECT,267,22,pred50,ZV,64
+6.10,SPECT,267,22,pred50,MA,79
+6.10,SPECT,267,22,pred90,MS,34
+6.10,SPECT,267,22,pred90,ZS,73
+6.10,SPECT,267,22,pred90,MV,79
+6.10,SPECT,267,22,pred90,ZV,64
+6.10,SPECT,267,22,pred90,MA,79
+6.10,Heart (Hungaria),294,10,fit95,MS,67
+6.10,Heart (Hungaria),294,10,fit95,ZS,56
+6.10,Heart (Hungaria),294,10,fit95,MV,65
+6.10,Heart (Hungaria),294,10,fit95,ZV,81
+6.10,Heart (Hungaria),294,10,fit95,MA,64
+6.10,Heart (Hungaria),294,10,pred15,MS,64
+6.10,Heart (Hungaria),294,10,pred15,ZS,60
+6.10,Heart (Hungaria),294,10,pred15,MV,70
+6.10,Heart (Hungaria),294,10,pred15,ZV,79
+6.10,Heart (Hungaria),294,10,pred15,MA,64
+6.10,Heart (Hungaria),294,10,pred50,MS,66
+6.10,Heart (Hungaria),294,10,pred50,ZS,56
+6.10,Heart (Hungaria),294,10,pred50,MV,68
+6.10,Heart (Hungaria),294,10,pred50,ZV,81
+6.10,Heart (Hungaria),294,10,pred50,MA,64
+6.10,Heart (Hungaria),294,10,pred90,MS,66
+6.10,Heart (Hungaria),294,10,pred90,ZS,56
+6.10,Heart (Hungaria),294,10,pred90,MV,65
+6.10,Heart (Hungaria),294,10,pred90,ZV,81
+6.10,Heart (Hungaria),294,10,pred90,MA,64
+6.10,Heart (Cleveland),297,13,fit95,MS,55
+6.10,Heart (Cleveland),297,13,fit95,ZS,62
+6.10,Heart (Cleveland),297,13,fit95,MV,75
+6.10,Heart (Cleveland),297,13,fit95,ZV,79
+6.10,Heart (Cleveland),297,13,fit95,MA,54
+6.10,Heart (Cleveland),297,13,pred15,MS,52
+6.10,Heart (Cleveland),297,13,pred15,ZS,58
+6.10,Heart (Cleveland),297,13,pred15,MV,62
+6.10,Heart (Cleveland),297,13,pred15,ZV,75
+6.10,Heart (Cleveland),297,13,pred15,MA,55
+6.10,Heart (Cleveland),297,13,pred50,MS,53
+6.10,Heart (Cleveland),297,13,pred50,ZS,60
+6.10,Heart (Cleveland),297,13,pred50,MV,66
+6.10,Heart (Cleveland),297,13,pred50,ZV,77
+6.10,Heart (Cleveland),297,13,pred50,MA,54
+6.10,Heart (Cleveland),297,13,pred90,MS,55
+6.10,Heart (Cleveland),297,13,pred90,ZS,62
+6.10,Heart (Cleveland),297,13,pred90,MV,70
+6.10,Heart (Cleveland),297,13,pred90,ZV,75
+6.10,Heart (Cleveland),297,13,pred90,MA,54
+6.10,Alcohol,345,5,fit95,MS,37
+6.10,Alcohol,345,5,fit95,ZS,56
+6.10,Alcohol,345,5,fit95,MV,79
+6.10,Alcohol,345,5,fit95,ZV,55
+6.10,Alcohol,345,5,fit95,MA,79
+6.10,Alcohol,345,5,pred15,MS,47
+6.10,Alcohol,345,5,pred15,ZS,56
+6.10,Alcohol,345,5,pred15,MV,78
+6.10,Alcohol,345,5,pred15,ZV,56
+6.10,Alcohol,345,5,pred15,MA,78
+6.10,Alcohol,345,5,pred50,MS,43
+6.10,Alcohol,345,5,pred50,ZS,57
+6.10,Alcohol,345,5,pred50,MV,79
+6.10,Alcohol,345,5,pred50,ZV,56
+6.10,Alcohol,345,5,pred50,MA,79
+6.10,Alcohol,345,5,pred90,MS,37
+6.10,Alcohol,345,5,pred90,ZS,55
+6.10,Alcohol,345,5,pred90,MV,79
+6.10,Alcohol,345,5,pred90,ZV,55
+6.10,Alcohol,345,5,pred90,MA,79
+6.10,Ionosphere,351,33,fit95,MS,75
+6.10,Ionosphere,351,33,fit95,ZS,73
+6.10,Ionosphere,351,33,fit95,MV,75
+6.10,Ionosphere,351,33,fit95,ZV,74
+6.10,Ionosphere,351,33,fit95,MA,65
+6.10,Ionosphere,351,33,pred15,MS,75
+6.10,Ionosphere,351,33,pred15,ZS,73
+6.10,Ionosphere,351,33,pred15,MV,75
+6.10,Ionosphere,351,33,pred15,ZV,71
+6.10,Ionosphere,351,33,pred15,MA,63
+6.10,Ionosphere,351,33,pred50,MS,75
+6.10,Ionosphere,351,33,pred50,ZS,73
+6.10,Ionosphere,351,33,pred50,MV,75
+6.10,Ionosphere,351,33,pred50,ZV,72
+6.10,Ionosphere,351,33,pred50,MA,64
+6.10,Ionosphere,351,33,pred90,MS,75
+6.10,Ionosphere,351,33,pred90,ZS,72
+6.10,Ionosphere,351,33,pred90,MV,75
+6.10,Ionosphere,351,33,pred90,ZV,71
+6.10,Ionosphere,351,33,pred90,MA,64
+6.10,Tourism,365,4,fit95,MS,28
+6.10,Tourism,365,4,fit95,ZS,41
+6.10,Tourism,365,4,fit95,MV,75
+6.10,Tourism,365,4,fit95,ZV,45
+6.10,Tourism,365,4,fit95,MA,75
+6.10,Tourism,365,4,pred15,MS,38
+6.10,Tourism,365,4,pred15,ZS,41
+6.10,Tourism,365,4,pred15,MV,74
+6.10,Tourism,365,4,pred15,ZV,41
+6.10,Tourism,365,4,pred15,MA,74
+6.10,Tourism,365,4,pred50,MS,33
+6.10,Tourism,365,4,pred50,ZS,41
+6.10,Tourism,365,4,pred50,MV,74
+6.10,Tourism,365,4,pred50,ZV,41
+6.10,Tourism,365,4,pred50,MA,74
+6.10,Tourism,365,4,pred90,MS,29
+6.10,Tourism,365,4,pred90,ZS,38
+6.10,Tourism,365,4,pred90,MV,74
+6.10,Tourism,365,4,pred90,ZV,42
+6.10,Tourism,365,4,pred90,MA,74
+6.10,Voting,402,16,fit95,MS,63
+6.10,Voting,402,16,fit95,ZS,96
+6.10,Voting,402,16,fit95,MV,64
+6.10,Voting,402,16,fit95,ZV,95
+6.10,Voting,402,16,fit95,MA,87
+6.10,Voting,402,16,pred15,MS,64
+6.10,Voting,402,16,pred15,ZS,94
+6.10,Voting,402,16,pred15,MV,70
+6.10,Voting,402,16,pred15,ZV,92
+6.10,Voting,402,16,pred15,MA,80
+6.10,Voting,402,16,pred50,MS,61
+6.10,Voting,402,16,pred50,ZS,96
+6.10,Voting,402,16,pred50,MV,64
+6.10,Voting,402,16,pred50,ZV,95
+6.10,Voting,402,16,pred50,MA,85
+6.10,Voting,402,16,pred90,MS,62
+6.10,Voting,402,16,pred90,ZS,97
+6.10,Voting,402,16,pred90,MV,64
+6.10,Voting,402,16,pred90,ZV,96
+6.10,Voting,402,16,pred90,MA,87
+6.10,Education,435,4,fit95,MS,51
+6.10,Education,435,4,fit95,ZS,75
+6.10,Education,435,4,fit95,MV,61
+6.10,Education,435,4,fit95,ZV,72
+6.10,Education,435,4,fit95,MA,52
+6.10,Education,435,4,pred15,MS,58
+6.10,Education,435,4,pred15,ZS,68
+6.10,Education,435,4,pred15,MV,64
+6.10,Education,435,4,pred15,ZV,70
+6.10,Education,435,4,pred15,MA,57
+6.10,Education,435,4,pred50,MS,55
+6.10,Education,435,4,pred50,ZS,68
+6.10,Education,435,4,pred50,MV,63
+6.10,Education,435,4,pred50,ZV,70
+6.10,Education,435,4,pred50,MA,57
+6.10,Education,435,4,pred90,MS,51
+6.10,Education,435,4,pred90,ZS,74
+6.10,Education,435,4,pred90,MV,59
+6.10,Education,435,4,pred90,ZV,70
+6.10,Education,435,4,pred90,MA,52
+6.10,Cardiac,558,5,fit95,MS,54
+6.10,Cardiac,558,5,fit95,ZS,71
+6.10,Cardiac,558,5,fit95,MV,84
+6.10,Cardiac,558,5,fit95,ZV,60
+6.10,Cardiac,558,5,fit95,MA,84
+6.10,Cardiac,558,5,pred15,MS,32
+6.10,Cardiac,558,5,pred15,ZS,68
+6.10,Cardiac,558,5,pred15,MV,84
+6.10,Cardiac,558,5,pred15,ZV,61
+6.10,Cardiac,558,5,pred15,MA,84
+6.10,Cardiac,558,5,pred50,MS,46
+6.10,Cardiac,558,5,pred50,ZS,71
+6.10,Cardiac,558,5,pred50,MV,84
+6.10,Cardiac,558,5,pred50,ZV,61
+6.10,Cardiac,558,5,pred50,MA,84
+6.10,Cardiac,558,5,pred90,MS,50
+6.10,Cardiac,558,5,pred90,ZS,71
+6.10,Cardiac,558,5,pred90,MV,84
+6.10,Cardiac,558,5,pred90,ZV,59
+6.10,Cardiac,558,5,pred90,MA,84
+6.10,Football,672,4,fit95,MS,63
+6.10,Football,672,4,fit95,ZS,63
+6.10,Football,672,4,fit95,MV,67
+6.10,Football,672,4,fit95,ZV,64
+6.10,Football,672,4,fit95,MA,67
+6.10,Football,672,4,pred15,MS,58
+6.10,Football,672,4,pred15,ZS,62
+6.10,Football,672,4,pred15,MV,66
+6.10,Football,672,4,pred15,ZV,62
+6.10,Football,672,4,pred15,MA,64
+6.10,Football,672,4,pred50,MS,62
+6.10,Football,672,4,pred50,ZS,63
+6.10,Football,672,4,pred50,MV,67
+6.10,Football,672,4,pred50,ZV,64
+6.10,Football,672,4,pred50,MA,67
+6.10,Football,672,4,pred90,MS,63
+6.10,Football,672,4,pred90,ZS,63
+6.10,Football,672,4,pred90,MV,67
+6.10,Football,672,4,pred90,ZV,64
+6.10,Football,672,4,pred90,MA,67
+6.10,Breast Cancer,683,9,fit95,MS,83
+6.10,Breast Cancer,683,9,fit95,ZS,85
+6.10,Breast Cancer,683,9,fit95,MV,87
+6.10,Breast Cancer,683,9,fit95,ZV,95
+6.10,Breast Cancer,683,9,fit95,MA,74
+6.10,Breast Cancer,683,9,pred15,MS,82
+6.10,Breast Cancer,683,9,pred15,ZS,88
+6.10,Breast Cancer,683,9,pred15,MV,85
+6.10,Breast Cancer,683,9,pred15,ZV,94
+6.10,Breast Cancer,683,9,pred15,MA,74
+6.10,Breast Cancer,683,9,pred50,MS,84
+6.10,Breast Cancer,683,9,pred50,ZS,86
+6.10,Breast Cancer,683,9,pred50,MV,84
+6.10,Breast Cancer,683,9,pred50,ZV,94
+6.10,Breast Cancer,683,9,pred50,MA,74
+6.10,Breast Cancer,683,9,pred90,MS,83
+6.10,Breast Cancer,683,9,pred90,ZS,85
+6.10,Breast Cancer,683,9,pred90,MV,85
+6.10,Breast Cancer,683,9,pred90,ZV,95
+6.10,Breast Cancer,683,9,pred90,MA,74
+6.10,Diabetes,786,6,fit95,MS,54
+6.10,Diabetes,786,6,fit95,ZS,64
+6.10,Diabetes,786,6,fit95,MV,68
+6.10,Diabetes,786,6,fit95,ZV,64
+6.10,Diabetes,786,6,fit95,MA,68
+6.10,Diabetes,786,6,pred15,MS,55
+6.10,Diabetes,786,6,pred15,ZS,64
+6.10,Diabetes,786,6,pred15,MV,68
+6.10,Diabetes,786,6,pred15,ZV,64
+6.10,Diabetes,786,6,pred15,MA,68
+6.10,Diabetes,786,6,pred50,MS,52
+6.10,Diabetes,786,6,pred50,ZS,63
+6.10,Diabetes,786,6,pred50,MV,68
+6.10,Diabetes,786,6,pred50,ZV,64
+6.10,Diabetes,786,6,pred50,MA,68
+6.10,Diabetes,786,6,pred90,MS,54
+6.10,Diabetes,786,6,pred90,ZS,63
+6.10,Diabetes,786,6,pred90,MV,68
+6.10,Diabetes,786,6,pred90,ZV,64
+6.10,Diabetes,786,6,pred90,MA,68
+6.10,Authorship,841,69,fit95,MS,21
+6.10,Authorship,841,69,fit95,ZS,60
+6.10,Authorship,841,69,fit95,MV,79
+6.10,Authorship,841,69,fit95,ZV,61
+6.10,Authorship,841,69,fit95,MA,79
+6.10,Authorship,841,69,pred15,MS,21
+6.10,Authorship,841,69,pred15,ZS,61
+6.10,Authorship,841,69,pred15,MV,79
+6.10,Authorship,841,69,pred15,ZV,63
+6.10,Authorship,841,69,pred15,MA,79
+6.10,Authorship,841,69,pred50,MS,21
+6.10,Authorship,841,69,pred50,ZS,61
+6.10,Authorship,841,69,pred50,MV,79
+6.10,Authorship,841,69,pred50,ZV,62
+6.10,Authorship,841,69,pred50,MA,79
+6.10,Authorship,841,69,pred90,MS,21
+6.10,Authorship,841,69,pred90,ZS,59
+6.10,Authorship,841,69,pred90,MV,79
+6.10,Authorship,841,69,pred90,ZV,61
+6.10,Authorship,841,69,pred90,MA,79
+6.10,Baseball HoF,1320,15,fit95,MS,16
+6.10,Baseball HoF,1320,15,fit95,ZS,57
+6.10,Baseball HoF,1320,15,fit95,MV,89
+6.10,Baseball HoF,1320,15,fit95,ZV,53
+6.10,Baseball HoF,1320,15,fit95,MA,89
+6.10,Baseball HoF,1320,15,pred15,MS,16
+6.10,Baseball HoF,1320,15,pred15,ZS,56
+6.10,Baseball HoF,1320,15,pred15,MV,90
+6.10,Baseball HoF,1320,15,pred15,ZV,53
+6.10,Baseball HoF,1320,15,pred15,MA,90
+6.10,Baseball HoF,1320,15,pred50,MS,16
+6.10,Baseball HoF,1320,15,pred50,ZS,57
+6.10,Baseball HoF,1320,15,pred50,MV,90
+6.10,Baseball HoF,1320,15,pred50,ZV,53
+6.10,Baseball HoF,1320,15,pred50,MA,90
+6.10,Baseball HoF,1320,15,pred90,MS,16
+6.10,Baseball HoF,1320,15,pred90,ZS,56
+6.10,Baseball HoF,1320,15,pred90,MV,89
+6.10,Baseball HoF,1320,15,pred90,ZV,52
+6.10,Baseball HoF,1320,15,pred90,MA,89
+6.10,Yeast,1484,8,fit95,MS,69
+6.10,Yeast,1484,8,fit95,ZS,57
+6.10,Yeast,1484,8,fit95,MV,69
+6.10,Yeast,1484,8,fit95,ZV,53
+6.10,Yeast,1484,8,fit95,MA,69
+6.10,Yeast,1484,8,pred15,MS,69
+6.10,Yeast,1484,8,pred15,ZS,55
+6.10,Yeast,1484,8,pred15,MV,69
+6.10,Yeast,1484,8,pred15,ZV,55
+6.10,Yeast,1484,8,pred15,MA,69
+6.10,Yeast,1484,8,pred50,MS,69
+6.10,Yeast,1484,8,pred50,ZS,55
+6.10,Yeast,1484,8,pred50,MV,69
+6.10,Yeast,1484,8,pred50,ZV,55
+6.10,Yeast,1484,8,pred50,MA,69
+6.10,Yeast,1484,8,pred90,MS,69
+6.10,Yeast,1484,8,pred90,ZS,56
+6.10,Yeast,1484,8,pred90,MV,69
+6.10,Yeast,1484,8,pred90,ZV,52
+6.10,Yeast,1484,8,pred90,MA,69
+6.10,Supreme Court,4052,7,fit95,MS,96
+6.10,Supreme Court,4052,7,fit95,ZS,54
+6.10,Supreme Court,4052,7,fit95,MV,96
+6.10,Supreme Court,4052,7,fit95,ZV,52
+6.10,Supreme Court,4052,7,fit95,MA,96
+6.10,Supreme Court,4052,7,pred15,MS,96
+6.10,Supreme Court,4052,7,pred15,ZS,54
+6.10,Supreme Court,4052,7,pred15,MV,96
+6.10,Supreme Court,4052,7,pred15,ZV,59
+6.10,Supreme Court,4052,7,pred15,MA,96
+6.10,Supreme Court,4052,7,pred50,MS,96
+6.10,Supreme Court,4052,7,pred50,ZS,54
+6.10,Supreme Court,4052,7,pred50,MV,96
+6.10,Supreme Court,4052,7,pred50,ZV,55
+6.10,Supreme Court,4052,7,pred50,MA,96
+6.10,Supreme Court,4052,7,pred90,MS,96
+6.10,Supreme Court,4052,7,pred90,ZS,54
+6.10,Supreme Court,4052,7,pred90,MV,96
+6.10,Supreme Court,4052,7,pred90,ZV,52
+6.10,Supreme Court,4052,7,pred90,MA,96
+6.11,Bankruptcy,50,5,fit95,SP,82
+6.11,Bankruptcy,50,5,fit95,SM,85
+6.11,Bankruptcy,50,5,fit95,SF,83
+6.11,Bankruptcy,50,5,fit95,VP,85
+6.11,Bankruptcy,50,5,fit95,VM,85
+6.11,Bankruptcy,50,5,fit95,VF,83
+6.11,Bankruptcy,50,5,pred15,SP,70
+6.11,Bankruptcy,50,5,pred15,SM,65
+6.11,Bankruptcy,50,5,pred15,SF,65
+6.11,Bankruptcy,50,5,pred15,VP,73
+6.11,Bankruptcy,50,5,pred15,VM,73
+6.11,Bankruptcy,50,5,pred15,VF,70
+6.11,Bankruptcy,50,5,pred50,SP,83
+6.11,Bankruptcy,50,5,pred50,SM,83
+6.11,Bankruptcy,50,5,pred50,SF,83
+6.11,Bankruptcy,50,5,pred50,VP,84
+6.11,Bankruptcy,50,5,pred50,VM,83
+6.11,Bankruptcy,50,5,pred50,VF,83
+6.11,Bankruptcy,50,5,pred90,SP,82
+6.11,Bankruptcy,50,5,pred90,SM,80
+6.11,Bankruptcy,50,5,pred90,SF,80
+6.11,Bankruptcy,50,5,pred90,VP,82
+6.11,Bankruptcy,50,5,pred90,VM,80
+6.11,Bankruptcy,50,5,pred90,VF,80
+6.11,Solvency,52,8,fit95,SP,83
+6.11,Solvency,52,8,fit95,SM,84
+6.11,Solvency,52,8,fit95,SF,84
+6.11,Solvency,52,8,fit95,VP,84
+6.11,Solvency,52,8,fit95,VM,84
+6.11,Solvency,52,8,fit95,VF,84
+6.11,Solvency,52,8,pred15,SP,
+6.11,Solvency,52,8,pred15,SM,
+6.11,Solvency,52,8,pred15,SF,
+6.11,Solvency,52,8,pred15,VP,
+6.11,Solvency,52,8,pred15,VM,
+6.11,Solvency,52,8,pred15,VF,
+6.11,Solvency,52,8,pred50,SP,79
+6.11,Solvency,52,8,pred50,SM,78
+6.11,Solvency,52,8,pred50,SF,78
+6.11,Solvency,52,8,pred50,VP,78
+6.11,Solvency,52,8,pred50,VM,78
+6.11,Solvency,52,8,pred50,VF,78
+6.11,Solvency,52,8,pred90,SP,80
+6.11,Solvency,52,8,pred90,SM,77
+6.11,Solvency,52,8,pred90,SF,77
+6.11,Solvency,52,8,pred90,VP,78
+6.11,Solvency,52,8,pred90,VM,78
+6.11,Solvency,52,8,pred90,VF,77
+6.11,Echocardiogram,62,7,fit95,SP,73
+6.11,Echocardiogram,62,7,fit95,SM,73
+6.11,Echocardiogram,62,7,fit95,SF,76
+6.11,Echocardiogram,62,7,fit95,VP,79
+6.11,Echocardiogram,62,7,fit95,VM,79
+6.11,Echocardiogram,62,7,fit95,VF,78
+6.11,Echocardiogram,62,7,pred15,SP,57
+6.11,Echocardiogram,62,7,pred15,SM,67
+6.11,Echocardiogram,62,7,pred15,SF,68
+6.11,Echocardiogram,62,7,pred15,VP,64
+6.11,Echocardiogram,62,7,pred15,VM,65
+6.11,Echocardiogram,62,7,pred15,VF,66
+6.11,Echocardiogram,62,7,pred50,SP,66
+6.11,Echocardiogram,62,7,pred50,SM,73
+6.11,Echocardiogram,62,7,pred50,SF,73
+6.11,Echocardiogram,62,7,pred50,VP,71
+6.11,Echocardiogram,62,7,pred50,VM,71
+6.11,Echocardiogram,62,7,pred50,VF,72
+6.11,Echocardiogram,62,7,pred90,SP,70
+6.11,Echocardiogram,62,7,pred90,SM,72
+6.11,Echocardiogram,62,7,pred90,SF,74
+6.11,Echocardiogram,62,7,pred90,VP,75
+6.11,Echocardiogram,62,7,pred90,VM,75
+6.11,Echocardiogram,62,7,pred90,VF,74
+6.11,Post-Operative,86,8,fit95,SP,72
+6.11,Post-Operative,86,8,fit95,SM,72
+6.11,Post-Operative,86,8,fit95,SF,72
+6.11,Post-Operative,86,8,fit95,VP,69
+6.11,Post-Operative,86,8,fit95,VM,69
+6.11,Post-Operative,86,8,fit95,VF,72
+6.11,Post-Operative,86,8,pred15,SP,67
+6.11,Post-Operative,86,8,pred15,SM,70
+6.11,Post-Operative,86,8,pred15,SF,70
+6.11,Post-Operative,86,8,pred15,VP,60
+6.11,Post-Operative,86,8,pred15,VM,62
+6.11,Post-Operative,86,8,pred15,VF,64
+6.11,Post-Operative,86,8,pred50,SP,72
+6.11,Post-Operative,86,8,pred50,SM,72
+6.11,Post-Operative,86,8,pred50,SF,72
+6.11,Post-Operative,86,8,pred50,VP,64
+6.11,Post-Operative,86,8,pred50,VM,64
+6.11,Post-Operative,86,8,pred50,VF,68
+6.11,Post-Operative,86,8,pred90,SP,73
+6.11,Post-Operative,86,8,pred90,SM,73
+6.11,Post-Operative,86,8,pred90,SF,73
+6.11,Post-Operative,86,8,pred90,VP,65
+6.11,Post-Operative,86,8,pred90,VM,66
+6.11,Post-Operative,86,8,pred90,VF,71
+6.11,Broadway,89,5,fit95,SP,81
+6.11,Broadway,89,5,fit95,SM,81
+6.11,Broadway,89,5,fit95,SF,79
+6.11,Broadway,89,5,fit95,VP,76
+6.11,Broadway,89,5,fit95,VM,76
+6.11,Broadway,89,5,fit95,VF,81
+6.11,Broadway,89,5,pred15,SP,72
+6.11,Broadway,89,5,pred15,SM,76
+6.11,Broadway,89,5,pred15,SF,75
+6.11,Broadway,89,5,pred15,VP,70
+6.11,Broadway,89,5,pred15,VM,72
+6.11,Broadway,89,5,pred15,VF,73
+6.11,Broadway,89,5,pred50,SP,79
+6.11,Broadway,89,5,pred50,SM,80
+6.11,Broadway,89,5,pred50,SF,80
+6.11,Broadway,89,5,pred50,VP,74
+6.11,Broadway,89,5,pred50,VM,75
+6.11,Broadway,89,5,pred50,VF,77
+6.11,Broadway,89,5,pred90,SP,81
+6.11,Broadway,89,5,pred90,SM,81
+6.11,Broadway,89,5,pred90,SF,79
+6.11,Broadway,89,5,pred90,VP,73
+6.11,Broadway,89,5,pred90,VM,73
+6.11,Broadway,89,5,pred90,VF,80
+6.11,Credit Score,100,6,fit95,SP,73
+6.11,Credit Score,100,6,fit95,SM,76
+6.11,Credit Score,100,6,fit95,SF,73
+6.11,Credit Score,100,6,fit95,VP,83
+6.11,Credit Score,100,6,fit95,VM,83
+6.11,Credit Score,100,6,fit95,VF,76
+6.11,Credit Score,100,6,pred15,SP,70
+6.11,Credit Score,100,6,pred15,SM,77
+6.11,Credit Score,100,6,pred15,SF,75
+6.11,Credit Score,100,6,pred15,VP,77
+6.11,Credit Score,100,6,pred15,VM,78
+6.11,Credit Score,100,6,pred15,VF,77
+6.11,Credit Score,100,6,pred50,SP,74
+6.11,Credit Score,100,6,pred50,SM,76
+6.11,Credit Score,100,6,pred50,SF,73
+6.11,Credit Score,100,6,pred50,VP,81
+6.11,Credit Score,100,6,pred50,VM,81
+6.11,Credit Score,100,6,pred50,VF,77
+6.11,Credit Score,100,6,pred90,SP,74
+6.11,Credit Score,100,6,pred90,SM,76
+6.11,Credit Score,100,6,pred90,SF,73
+6.11,Credit Score,100,6,pred90,VP,81
+6.11,Credit Score,100,6,pred90,VM,81
+6.11,Credit Score,100,6,pred90,VF,76
+6.11,Zoo,101,16,fit95,SP,68
+6.11,Zoo,101,16,fit95,SM,100
+6.11,Zoo,101,16,fit95,SF,100
+6.11,Zoo,101,16,fit95,VP,96
+6.11,Zoo,101,16,fit95,VM,96
+6.11,Zoo,101,16,fit95,VF,96
+6.11,Zoo,101,16,pred15,SP,
+6.11,Zoo,101,16,pred15,SM,
+6.11,Zoo,101,16,pred15,SF,
+6.11,Zoo,101,16,pred15,VP,
+6.11,Zoo,101,16,pred15,VM,
+6.11,Zoo,101,16,pred15,VF,
+6.11,Zoo,101,16,pred50,SP,70
+6.11,Zoo,101,16,pred50,SM,98
+6.11,Zoo,101,16,pred50,SF,97
+6.11,Zoo,101,16,pred50,VP,95
+6.11,Zoo,101,16,pred50,VM,95
+6.11,Zoo,101,16,pred50,VF,94
+6.11,Zoo,101,16,pred90,SP,67
+6.11,Zoo,101,16,pred90,SM,100
+6.11,Zoo,101,16,pred90,SF,100
+6.11,Zoo,101,16,pred90,VP,95
+6.11,Zoo,101,16,pred90,VM,95
+6.11,Zoo,101,16,pred90,VF,94
+6.11,Iris,150,4,fit95,SP,66
+6.11,Iris,150,4,fit95,SM,77
+6.11,Iris,150,4,fit95,SF,75
+6.11,Iris,150,4,fit95,VP,72
+6.11,Iris,150,4,fit95,VM,72
+6.11,Iris,150,4,fit95,VF,72
+6.11,Iris,150,4,pred15,SP,55
+6.11,Iris,150,4,pred15,SM,60
+6.11,Iris,150,4,pred15,SF,61
+6.11,Iris,150,4,pred15,VP,65
+6.11,Iris,150,4,pred15,VM,65
+6.11,Iris,150,4,pred15,VF,65
+6.11,Iris,150,4,pred50,SP,57
+6.11,Iris,150,4,pred50,SM,67
+6.11,Iris,150,4,pred50,SF,66
+6.11,Iris,150,4,pred50,VP,71
+6.11,Iris,150,4,pred50,VM,71
+6.11,Iris,150,4,pred50,VF,71
+6.11,Iris,150,4,pred90,SP,64
+6.11,Iris,150,4,pred90,SM,75
+6.11,Iris,150,4,pred90,SF,70
+6.11,Iris,150,4,pred90,VP,70
+6.11,Iris,150,4,pred90,VM,70
+6.11,Iris,150,4,pred90,VF,68
+6.11,Hepatitis,153,7,fit95,SP,53
+6.11,Hepatitis,153,7,fit95,SM,71
+6.11,Hepatitis,153,7,fit95,SF,78
+6.11,Hepatitis,153,7,fit95,VP,69
+6.11,Hepatitis,153,7,fit95,VM,69
+6.11,Hepatitis,153,7,fit95,VF,74
+6.11,Hepatitis,153,7,pred15,SP,59
+6.11,Hepatitis,153,7,pred15,SM,72
+6.11,Hepatitis,153,7,pred15,SF,77
+6.11,Hepatitis,153,7,pred15,VP,69
+6.11,Hepatitis,153,7,pred15,VM,69
+6.11,Hepatitis,153,7,pred15,VF,74
+6.11,Hepatitis,153,7,pred50,SP,56
+6.11,Hepatitis,153,7,pred50,SM,71
+6.11,Hepatitis,153,7,pred50,SF,78
+6.11,Hepatitis,153,7,pred50,VP,68
+6.11,Hepatitis,153,7,pred50,VM,68
+6.11,Hepatitis,153,7,pred50,VF,75
+6.11,Hepatitis,153,7,pred90,SP,53
+6.11,Hepatitis,153,7,pred90,SM,71
+6.11,Hepatitis,153,7,pred90,SF,77
+6.11,Hepatitis,153,7,pred90,VP,68
+6.11,Hepatitis,153,7,pred90,VM,68
+6.11,Hepatitis,153,7,pred90,VF,72
+6.11,Strikes,163,4,fit95,SP,72
+6.11,Strikes,163,4,fit95,SM,72
+6.11,Strikes,163,4,fit95,SF,72
+6.11,Strikes,163,4,fit95,VP,75
+6.11,Strikes,163,4,fit95,VM,75
+6.11,Strikes,163,4,fit95,VF,75
+6.11,Strikes,163,4,pred15,SP,71
+6.11,Strikes,163,4,pred15,SM,70
+6.11,Strikes,163,4,pred15,SF,71
+6.11,Strikes,163,4,pred15,VP,72
+6.11,Strikes,163,4,pred15,VM,72
+6.11,Strikes,163,4,pred15,VF,72
+6.11,Strikes,163,4,pred50,SP,72
+6.11,Strikes,163,4,pred50,SM,71
+6.11,Strikes,163,4,pred50,SF,71
+6.11,Strikes,163,4,pred50,VP,73
+6.11,Strikes,163,4,pred50,VM,74
+6.11,Strikes,163,4,pred50,VF,74
+6.11,Strikes,163,4,pred90,SP,72
+6.11,Strikes,163,4,pred90,SM,71
+6.11,Strikes,163,4,pred90,SF,71
+6.11,Strikes,163,4,pred90,VP,73
+6.11,Strikes,163,4,pred90,VM,74
+6.11,Strikes,163,4,pred90,VF,74
+6.11,Wine,178,13,fit95,SP,77
+6.11,Wine,178,13,fit95,SM,92
+6.11,Wine,178,13,fit95,SF,92
+6.11,Wine,178,13,fit95,VP,92
+6.11,Wine,178,13,fit95,VM,92
+6.11,Wine,178,13,fit95,VF,92
+6.11,Wine,178,13,pred15,SP,73
+6.11,Wine,178,13,pred15,SM,77
+6.11,Wine,178,13,pred15,SF,77
+6.11,Wine,178,13,pred15,VP,84
+6.11,Wine,178,13,pred15,VM,84
+6.11,Wine,178,13,pred15,VF,84
+6.11,Wine,178,13,pred50,SP,77
+6.11,Wine,178,13,pred50,SM,89
+6.11,Wine,178,13,pred50,SF,90
+6.11,Wine,178,13,pred50,VP,89
+6.11,Wine,178,13,pred50,VM,89
+6.11,Wine,178,13,pred50,VF,90
+6.11,Wine,178,13,pred90,SP,77
+6.11,Wine,178,13,pred90,SM,92
+6.11,Wine,178,13,pred90,SF,92
+6.11,Wine,178,13,pred90,VP,92
+6.11,Wine,178,13,pred90,VM,92
+6.11,Wine,178,13,pred90,VF,92
+6.11,Baseball CYY,189,9,fit95,SP,55
+6.11,Baseball CYY,189,9,fit95,SM,69
+6.11,Baseball CYY,189,9,fit95,SF,70
+6.11,Baseball CYY,189,9,fit95,VP,66
+6.11,Baseball CYY,189,9,fit95,VM,66
+6.11,Baseball CYY,189,9,fit95,VF,68
+6.11,Baseball CYY,189,9,pred15,SP,59
+6.11,Baseball CYY,189,9,pred15,SM,68
+6.11,Baseball CYY,189,9,pred15,SF,71
+6.11,Baseball CYY,189,9,pred15,VP,69
+6.11,Baseball CYY,189,9,pred15,VM,69
+6.11,Baseball CYY,189,9,pred15,VF,72
+6.11,Baseball CYY,189,9,pred50,SP,59
+6.11,Baseball CYY,189,9,pred50,SM,68
+6.11,Baseball CYY,189,9,pred50,SF,70
+6.11,Baseball CYY,189,9,pred50,VP,67
+6.11,Baseball CYY,189,9,pred50,VM,67
+6.11,Baseball CYY,189,9,pred50,VF,68
+6.11,Baseball CYY,189,9,pred90,SP,55
+6.11,Baseball CYY,189,9,pred90,SM,66
+6.11,Baseball CYY,189,9,pred90,SF,67
+6.11,Baseball CYY,189,9,pred90,VP,65
+6.11,Baseball CYY,189,9,pred90,VM,65
+6.11,Baseball CYY,189,9,pred90,VF,67
+6.11,Forensic Glass,214,9,fit95,SP,78
+6.11,Forensic Glass,214,9,fit95,SM,78
+6.11,Forensic Glass,214,9,fit95,SF,80
+6.11,Forensic Glass,214,9,fit95,VP,81
+6.11,Forensic Glass,214,9,fit95,VM,81
+6.11,Forensic Glass,214,9,fit95,VF,84
+6.11,Forensic Glass,214,9,pred15,SP,73
+6.11,Forensic Glass,214,9,pred15,SM,78
+6.11,Forensic Glass,214,9,pred15,SF,77
+6.11,Forensic Glass,214,9,pred15,VP,77
+6.11,Forensic Glass,214,9,pred15,VM,78
+6.11,Forensic Glass,214,9,pred15,VF,79
+6.11,Forensic Glass,214,9,pred50,SP,78
+6.11,Forensic Glass,214,9,pred50,SM,79
+6.11,Forensic Glass,214,9,pred50,SF,78
+6.11,Forensic Glass,214,9,pred50,VP,80
+6.11,Forensic Glass,214,9,pred50,VM,80
+6.11,Forensic Glass,214,9,pred50,VF,81
+6.11,Forensic Glass,214,9,pred90,SP,78
+6.11,Forensic Glass,214,9,pred90,SM,78
+6.11,Forensic Glass,214,9,pred90,SF,79
+6.11,Forensic Glass,214,9,pred90,VP,80
+6.11,Forensic Glass,214,9,pred90,VM,81
+6.11,Forensic Glass,214,9,pred90,VF,82
+6.11,Horse Colic,218,6,fit95,SP,59
+6.11,Horse Colic,218,6,fit95,SM,74
+6.11,Horse Colic,218,6,fit95,SF,74
+6.11,Horse Colic,218,6,fit95,VP,73
+6.11,Horse Colic,218,6,fit95,VM,73
+6.11,Horse Colic,218,6,fit95,VF,73
+6.11,Horse Colic,218,6,pred15,SP,56
+6.11,Horse Colic,218,6,pred15,SM,58
+6.11,Horse Colic,218,6,pred15,SF,58
+6.11,Horse Colic,218,6,pred15,VP,67
+6.11,Horse Colic,218,6,pred15,VM,66
+6.11,Horse Colic,218,6,pred15,VF,66
+6.11,Horse Colic,218,6,pred50,SP,58
+6.11,Horse Colic,218,6,pred50,SM,63
+6.11,Horse Colic,218,6,pred50,SF,63
+6.11,Horse Colic,218,6,pred50,VP,73
+6.11,Horse Colic,218,6,pred50,VM,73
+6.11,Horse Colic,218,6,pred50,VF,73
+6.11,Horse Colic,218,6,pred90,SP,59
+6.11,Horse Colic,218,6,pred90,SM,71
+6.11,Horse Colic,218,6,pred90,SF,71
+6.11,Horse Colic,218,6,pred90,VP,74
+6.11,Horse Colic,218,6,pred90,VM,74
+6.11,Horse Colic,218,6,pred90,VF,74
+6.11,SPECT,267,22,fit95,SP,51
+6.11,SPECT,267,22,fit95,SM,74
+6.11,SPECT,267,22,fit95,SF,77
+6.11,SPECT,267,22,fit95,VP,66
+6.11,SPECT,267,22,fit95,VM,66
+6.11,SPECT,267,22,fit95,VF,70
+6.11,SPECT,267,22,pred15,SP,47
+6.11,SPECT,267,22,pred15,SM,71
+6.11,SPECT,267,22,pred15,SF,77
+6.11,SPECT,267,22,pred15,VP,61
+6.11,SPECT,267,22,pred15,VM,61
+6.11,SPECT,267,22,pred15,VF,70
+6.11,SPECT,267,22,pred50,SP,48
+6.11,SPECT,267,22,pred50,SM,72
+6.11,SPECT,267,22,pred50,SF,78
+6.11,SPECT,267,22,pred50,VP,64
+6.11,SPECT,267,22,pred50,VM,64
+6.11,SPECT,267,22,pred50,VF,71
+6.11,SPECT,267,22,pred90,SP,49
+6.11,SPECT,267,22,pred90,SM,73
+6.11,SPECT,267,22,pred90,SF,77
+6.11,SPECT,267,22,pred90,VP,64
+6.11,SPECT,267,22,pred90,VM,64
+6.11,SPECT,267,22,pred90,VF,69
+6.11,Heart (Hungaria),294,10,fit95,SP,66
+6.11,Heart (Hungaria),294,10,fit95,SM,66
+6.11,Heart (Hungaria),294,10,fit95,SF,66
+6.11,Heart (Hungaria),294,10,fit95,VP,83
+6.11,Heart (Hungaria),294,10,fit95,VM,83
+6.11,Heart (Hungaria),294,10,fit95,VF,83
+6.11,Heart (Hungaria),294,10,pred15,SP,66
+6.11,Heart (Hungaria),294,10,pred15,SM,68
+6.11,Heart (Hungaria),294,10,pred15,SF,67
+6.11,Heart (Hungaria),294,10,pred15,VP,80
+6.11,Heart (Hungaria),294,10,pred15,VM,80
+6.11,Heart (Hungaria),294,10,pred15,VF,79
+6.11,Heart (Hungaria),294,10,pred50,SP,66
+6.11,Heart (Hungaria),294,10,pred50,SM,66
+6.11,Heart (Hungaria),294,10,pred50,SF,66
+6.11,Heart (Hungaria),294,10,pred50,VP,81
+6.11,Heart (Hungaria),294,10,pred50,VM,81
+6.11,Heart (Hungaria),294,10,pred50,VF,81
+6.11,Heart (Hungaria),294,10,pred90,SP,66
+6.11,Heart (Hungaria),294,10,pred90,SM,66
+6.11,Heart (Hungaria),294,10,pred90,SF,66
+6.11,Heart (Hungaria),294,10,pred90,VP,82
+6.11,Heart (Hungaria),294,10,pred90,VM,82
+6.11,Heart (Hungaria),294,10,pred90,VF,82
+6.11,Heart (Cleveland),297,13,fit95,SP,55
+6.11,Heart (Cleveland),297,13,fit95,SM,55
+6.11,Heart (Cleveland),297,13,fit95,SF,55
+6.11,Heart (Cleveland),297,13,fit95,VP,80
+6.11,Heart (Cleveland),297,13,fit95,VM,80
+6.11,Heart (Cleveland),297,13,fit95,VF,80
+6.11,Heart (Cleveland),297,13,pred15,SP,53
+6.11,Heart (Cleveland),297,13,pred15,SM,52
+6.11,Heart (Cleveland),297,13,pred15,SF,52
+6.11,Heart (Cleveland),297,13,pred15,VP,75
+6.11,Heart (Cleveland),297,13,pred15,VM,74
+6.11,Heart (Cleveland),297,13,pred15,VF,74
+6.11,Heart (Cleveland),297,13,pred50,SP,54
+6.11,Heart (Cleveland),297,13,pred50,SM,54
+6.11,Heart (Cleveland),297,13,pred50,SF,53
+6.11,Heart (Cleveland),297,13,pred50,VP,76
+6.11,Heart (Cleveland),297,13,pred50,VM,77
+6.11,Heart (Cleveland),297,13,pred50,VF,77
+6.11,Heart (Cleveland),297,13,pred90,SP,54
+6.11,Heart (Cleveland),297,13,pred90,SM,54
+6.11,Heart (Cleveland),297,13,pred90,SF,54
+6.11,Heart (Cleveland),297,13,pred90,VP,76
+6.11,Heart (Cleveland),297,13,pred90,VM,77
+6.11,Heart (Cleveland),297,13,pred90,VF,77
+6.11,Alcohol,345,5,fit95,SP,56
+6.11,Alcohol,345,5,fit95,SM,71
+6.11,Alcohol,345,5,fit95,SF,79
+6.11,Alcohol,345,5,fit95,VP,75
+6.11,Alcohol,345,5,fit95,VM,75
+6.11,Alcohol,345,5,fit95,VF,78
+6.11,Alcohol,345,5,pred15,SP,60
+6.11,Alcohol,345,5,pred15,SM,73
+6.11,Alcohol,345,5,pred15,SF,77
+6.11,Alcohol,345,5,pred15,VP,71
+6.11,Alcohol,345,5,pred15,VM,71
+6.11,Alcohol,345,5,pred15,VF,76
+6.11,Alcohol,345,5,pred50,SP,58
+6.11,Alcohol,345,5,pred50,SM,74
+6.11,Alcohol,345,5,pred50,SF,78
+6.11,Alcohol,345,5,pred50,VP,72
+6.11,Alcohol,345,5,pred50,VM,72
+6.11,Alcohol,345,5,pred50,VF,78
+6.11,Alcohol,345,5,pred90,SP,56
+6.11,Alcohol,345,5,pred90,SM,72
+6.11,Alcohol,345,5,pred90,SF,79
+6.11,Alcohol,345,5,pred90,VP,74
+6.11,Alcohol,345,5,pred90,VM,74
+6.11,Alcohol,345,5,pred90,VF,78
+6.11,Ionosphere,351,33,fit95,SP,73
+6.11,Ionosphere,351,33,fit95,SM,73
+6.11,Ionosphere,351,33,fit95,SF,73
+6.11,Ionosphere,351,33,fit95,VP,73
+6.11,Ionosphere,351,33,fit95,VM,74
+6.11,Ionosphere,351,33,fit95,VF,74
+6.11,Ionosphere,351,33,pred15,SP,73
+6.11,Ionosphere,351,33,pred15,SM,73
+6.11,Ionosphere,351,33,pred15,SF,72
+6.11,Ionosphere,351,33,pred15,VP,71
+6.11,Ionosphere,351,33,pred15,VM,71
+6.11,Ionosphere,351,33,pred15,VF,71
+6.11,Ionosphere,351,33,pred50,SP,72
+6.11,Ionosphere,351,33,pred50,SM,72
+6.11,Ionosphere,351,33,pred50,SF,72
+6.11,Ionosphere,351,33,pred50,VP,73
+6.11,Ionosphere,351,33,pred50,VM,72
+6.11,Ionosphere,351,33,pred50,VF,72
+6.11,Ionosphere,351,33,pred90,SP,72
+6.11,Ionosphere,351,33,pred90,SM,72
+6.11,Ionosphere,351,33,pred90,SF,72
+6.11,Ionosphere,351,33,pred90,VP,72
+6.11,Ionosphere,351,33,pred90,VM,71
+6.11,Ionosphere,351,33,pred90,VF,71
+6.11,Tourism,365,4,fit95,SP,41
+6.11,Tourism,365,4,fit95,SM,61
+6.11,Tourism,365,4,fit95,SF,69
+6.11,Tourism,365,4,fit95,VP,64
+6.11,Tourism,365,4,fit95,VM,64
+6.11,Tourism,365,4,fit95,VF,71
+6.11,Tourism,365,4,pred15,SP,44
+6.11,Tourism,365,4,pred15,SM,60
+6.11,Tourism,365,4,pred15,SF,68
+6.11,Tourism,365,4,pred15,VP,61
+6.11,Tourism,365,4,pred15,VM,61
+6.11,Tourism,365,4,pred15,VF,68
+6.11,Tourism,365,4,pred50,SP,42
+6.11,Tourism,365,4,pred50,SM,59
+6.11,Tourism,365,4,pred50,SF,67
+6.11,Tourism,365,4,pred50,VP,62
+6.11,Tourism,365,4,pred50,VM,62
+6.11,Tourism,365,4,pred50,VF,68
+6.11,Tourism,365,4,pred90,SP,38
+6.11,Tourism,365,4,pred90,SM,57
+6.11,Tourism,365,4,pred90,SF,66
+6.11,Tourism,365,4,pred90,VP,61
+6.11,Tourism,365,4,pred90,VM,61
+6.11,Tourism,365,4,pred90,VF,68
+6.11,Voting,402,16,fit95,SP,93
+6.11,Voting,402,16,fit95,SM,97
+6.11,Voting,402,16,fit95,SF,97
+6.11,Voting,402,16,fit95,VP,95
+6.11,Voting,402,16,fit95,VM,95
+6.11,Voting,402,16,fit95,VF,95
+6.11,Voting,402,16,pred15,SP,86
+6.11,Voting,402,16,pred15,SM,94
+6.11,Voting,402,16,pred15,SF,94
+6.11,Voting,402,16,pred15,VP,92
+6.11,Voting,402,16,pred15,VM,92
+6.11,Voting,402,16,pred15,VF,92
+6.11,Voting,402,16,pred50,SP,91
+6.11,Voting,402,16,pred50,SM,96
+6.11,Voting,402,16,pred50,SF,96
+6.11,Voting,402,16,pred50,VP,95
+6.11,Voting,402,16,pred50,VM,95
+6.11,Voting,402,16,pred50,VF,95
+6.11,Voting,402,16,pred90,SP,93
+6.11,Voting,402,16,pred90,SM,96
+6.11,Voting,402,16,pred90,SF,96
+6.11,Voting,402,16,pred90,VP,95
+6.11,Voting,402,16,pred90,VM,95
+6.11,Voting,402,16,pred90,VF,95
+6.11,Education,435,4,fit95,SP,51
+6.11,Education,435,4,fit95,SM,51
+6.11,Education,435,4,fit95,SF,51
+6.11,Education,435,4,fit95,VP,75
+6.11,Education,435,4,fit95,VM,74
+6.11,Education,435,4,fit95,VF,74
+6.11,Education,435,4,pred15,SP,59
+6.11,Education,435,4,pred15,SM,57
+6.11,Education,435,4,pred15,SF,57
+6.11,Education,435,4,pred15,VP,74
+6.11,Education,435,4,pred15,VM,71
+6.11,Education,435,4,pred15,VF,71
+6.11,Education,435,4,pred50,SP,54
+6.11,Education,435,4,pred50,SM,54
+6.11,Education,435,4,pred50,SF,55
+6.11,Education,435,4,pred50,VP,74
+6.11,Education,435,4,pred50,VM,72
+6.11,Education,435,4,pred50,VF,72
+6.11,Education,435,4,pred90,SP,51
+6.11,Education,435,4,pred90,SM,51
+6.11,Education,435,4,pred90,SF,51
+6.11,Education,435,4,pred90,VP,75
+6.11,Education,435,4,pred90,VM,75
+6.11,Education,435,4,pred90,VF,74
+6.11,Cardiac,558,5,fit95,SP,57
+6.11,Cardiac,558,5,fit95,SM,71
+6.11,Cardiac,558,5,fit95,SF,82
+6.11,Cardiac,558,5,fit95,VP,60
+6.11,Cardiac,558,5,fit95,VM,60
+6.11,Cardiac,558,5,fit95,VF,78
+6.11,Cardiac,558,5,pred15,SP,47
+6.11,Cardiac,558,5,pred15,SM,68
+6.11,Cardiac,558,5,pred15,SF,79
+6.11,Cardiac,558,5,pred15,VP,61
+6.11,Cardiac,558,5,pred15,VM,61
+6.11,Cardiac,558,5,pred15,VF,76
+6.11,Cardiac,558,5,pred50,SP,54
+6.11,Cardiac,558,5,pred50,SM,70
+6.11,Cardiac,558,5,pred50,SF,81
+6.11,Cardiac,558,5,pred50,VP,61
+6.11,Cardiac,558,5,pred50,VM,61
+6.11,Cardiac,558,5,pred50,VF,77
+6.11,Cardiac,558,5,pred90,SP,56
+6.11,Cardiac,558,5,pred90,SM,71
+6.11,Cardiac,558,5,pred90,SF,81
+6.11,Cardiac,558,5,pred90,VP,59
+6.11,Cardiac,558,5,pred90,VM,59
+6.11,Cardiac,558,5,pred90,VF,76
+6.11,Football,672,4,fit95,SP,63
+6.11,Football,672,4,fit95,SM,63
+6.11,Football,672,4,fit95,SF,64
+6.11,Football,672,4,fit95,VP,64
+6.11,Football,672,4,fit95,VM,64
+6.11,Football,672,4,fit95,VF,65
+6.11,Football,672,4,pred15,SP,57
+6.11,Football,672,4,pred15,SM,62
+6.11,Football,672,4,pred15,SF,63
+6.11,Football,672,4,pred15,VP,62
+6.11,Football,672,4,pred15,VM,62
+6.11,Football,672,4,pred15,VF,63
+6.11,Football,672,4,pred50,SP,61
+6.11,Football,672,4,pred50,SM,63
+6.11,Football,672,4,pred50,SF,64
+6.11,Football,672,4,pred50,VP,64
+6.11,Football,672,4,pred50,VM,64
+6.11,Football,672,4,pred50,VF,64
+6.11,Football,672,4,pred90,SP,62
+6.11,Football,672,4,pred90,SM,63
+6.11,Football,672,4,pred90,SF,64
+6.11,Football,672,4,pred90,VP,64
+6.11,Football,672,4,pred90,VM,64
+6.11,Football,672,4,pred90,VF,65
+6.11,Breast Cancer,683,9,fit95,SP,85
+6.11,Breast Cancer,683,9,fit95,SM,80
+6.11,Breast Cancer,683,9,fit95,SF,80
+6.11,Breast Cancer,683,9,fit95,VP,96
+6.11,Breast Cancer,683,9,fit95,VM,96
+6.11,Breast Cancer,683,9,fit95,VF,96
+6.11,Breast Cancer,683,9,pred15,SP,86
+6.11,Breast Cancer,683,9,pred15,SM,83
+6.11,Breast Cancer,683,9,pred15,SF,82
+6.11,Breast Cancer,683,9,pred15,VP,95
+6.11,Breast Cancer,683,9,pred15,VM,95
+6.11,Breast Cancer,683,9,pred15,VF,95
+6.11,Breast Cancer,683,9,pred50,SP,86
+6.11,Breast Cancer,683,9,pred50,SM,81
+6.11,Breast Cancer,683,9,pred50,SF,81
+6.11,Breast Cancer,683,9,pred50,VP,96
+6.11,Breast Cancer,683,9,pred50,VM,96
+6.11,Breast Cancer,683,9,pred50,VF,96
+6.11,Breast Cancer,683,9,pred90,SP,86
+6.11,Breast Cancer,683,9,pred90,SM,80
+6.11,Breast Cancer,683,9,pred90,SF,80
+6.11,Breast Cancer,683,9,pred90,VP,96
+6.11,Breast Cancer,683,9,pred90,VM,96
+6.11,Breast Cancer,683,9,pred90,VF,96
+6.11,Diabetes,786,6,fit95,SP,64
+6.11,Diabetes,786,6,fit95,SM,72
+6.11,Diabetes,786,6,fit95,SF,72
+6.11,Diabetes,786,6,fit95,VP,71
+6.11,Diabetes,786,6,fit95,VM,71
+6.11,Diabetes,786,6,fit95,VF,71
+6.11,Diabetes,786,6,pred15,SP,64
+6.11,Diabetes,786,6,pred15,SM,70
+6.11,Diabetes,786,6,pred15,SF,70
+6.11,Diabetes,786,6,pred15,VP,71
+6.11,Diabetes,786,6,pred15,VM,71
+6.11,Diabetes,786,6,pred15,VF,71
+6.11,Diabetes,786,6,pred50,SP,63
+6.11,Diabetes,786,6,pred50,SM,71
+6.11,Diabetes,786,6,pred50,SF,71
+6.11,Diabetes,786,6,pred50,VP,71
+6.11,Diabetes,786,6,pred50,VM,71
+6.11,Diabetes,786,6,pred50,VF,71
+6.11,Diabetes,786,6,pred90,SP,64
+6.11,Diabetes,786,6,pred90,SM,72
+6.11,Diabetes,786,6,pred90,SF,72
+6.11,Diabetes,786,6,pred90,VP,72
+6.11,Diabetes,786,6,pred90,VM,72
+6.11,Diabetes,786,6,pred90,VF,72
+6.11,Authorship,841,69,fit95,SP,60
+6.11,Authorship,841,69,fit95,SM,86
+6.11,Authorship,841,69,fit95,SF,79
+6.11,Authorship,841,69,fit95,VP,80
+6.11,Authorship,841,69,fit95,VM,80
+6.11,Authorship,841,69,fit95,VF,87
+6.11,Authorship,841,69,pred15,SP,60
+6.11,Authorship,841,69,pred15,SM,78
+6.11,Authorship,841,69,pred15,SF,81
+6.11,Authorship,841,69,pred15,VP,80
+6.11,Authorship,841,69,pred15,VM,80
+6.11,Authorship,841,69,pred15,VF,88
+6.11,Authorship,841,69,pred50,SP,61
+6.11,Authorship,841,69,pred50,SM,82
+6.11,Authorship,841,69,pred50,SF,79
+6.11,Authorship,841,69,pred50,VP,79
+6.11,Authorship,841,69,pred50,VM,79
+6.11,Authorship,841,69,pred50,VF,87
+6.11,Authorship,841,69,pred90,SP,60
+6.11,Authorship,841,69,pred90,SM,86
+6.11,Authorship,841,69,pred90,SF,79
+6.11,Authorship,841,69,pred90,VP,79
+6.11,Authorship,841,69,pred90,VM,79
+6.11,Authorship,841,69,pred90,VF,86
+6.11,Baseball HoF,1320,15,fit95,SP,57
+6.11,Baseball HoF,1320,15,fit95,SM,74
+6.11,Baseball HoF,1320,15,fit95,SF,84
+6.11,Baseball HoF,1320,15,fit95,VP,65
+6.11,Baseball HoF,1320,15,fit95,VM,65
+6.11,Baseball HoF,1320,15,fit95,VF,72
+6.11,Baseball HoF,1320,15,pred15,SP,56
+6.11,Baseball HoF,1320,15,pred15,SM,73
+6.11,Baseball HoF,1320,15,pred15,SF,83
+6.11,Baseball HoF,1320,15,pred15,VP,65
+6.11,Baseball HoF,1320,15,pred15,VM,65
+6.11,Baseball HoF,1320,15,pred15,VF,75
+6.11,Baseball HoF,1320,15,pred50,SP,57
+6.11,Baseball HoF,1320,15,pred50,SM,74
+6.11,Baseball HoF,1320,15,pred50,SF,84
+6.11,Baseball HoF,1320,15,pred50,VP,64
+6.11,Baseball HoF,1320,15,pred50,VM,65
+6.11,Baseball HoF,1320,15,pred50,VF,72
+6.11,Baseball HoF,1320,15,pred90,SP,57
+6.11,Baseball HoF,1320,15,pred90,SM,74
+6.11,Baseball HoF,1320,15,pred90,SF,84
+6.11,Baseball HoF,1320,15,pred90,VP,65
+6.11,Baseball HoF,1320,15,pred90,VM,65
+6.11,Baseball HoF,1320,15,pred90,VF,71
+6.11,Yeast,1484,8,fit95,SP,69
+6.11,Yeast,1484,8,fit95,SM,69
+6.11,Yeast,1484,8,fit95,SF,69
+6.11,Yeast,1484,8,fit95,VP,63
+6.11,Yeast,1484,8,fit95,VM,63
+6.11,Yeast,1484,8,fit95,VF,68
+6.11,Yeast,1484,8,pred15,SP,69
+6.11,Yeast,1484,8,pred15,SM,69
+6.11,Yeast,1484,8,pred15,SF,69
+6.11,Yeast,1484,8,pred15,VP,64
+6.11,Yeast,1484,8,pred15,VM,65
+6.11,Yeast,1484,8,pred15,VF,67
+6.11,Yeast,1484,8,pred50,SP,69
+6.11,Yeast,1484,8,pred50,SM,69
+6.11,Yeast,1484,8,pred50,SF,69
+6.11,Yeast,1484,8,pred50,VP,64
+6.11,Yeast,1484,8,pred50,VM,64
+6.11,Yeast,1484,8,pred50,VF,68
+6.11,Yeast,1484,8,pred90,SP,69
+6.11,Yeast,1484,8,pred90,SM,69
+6.11,Yeast,1484,8,pred90,SF,69
+6.11,Yeast,1484,8,pred90,VP,63
+6.11,Yeast,1484,8,pred90,VM,63
+6.11,Yeast,1484,8,pred90,VF,67
+6.11,Supreme Court,4052,7,fit95,SP,96
+6.11,Supreme Court,4052,7,fit95,SM,96
+6.11,Supreme Court,4052,7,fit95,SF,96
+6.11,Supreme Court,4052,7,fit95,VP,73
+6.11,Supreme Court,4052,7,fit95,VM,73
+6.11,Supreme Court,4052,7,fit95,VF,96
+6.11,Supreme Court,4052,7,pred15,SP,96
+6.11,Supreme Court,4052,7,pred15,SM,96
+6.11,Supreme Court,4052,7,pred15,SF,96
+6.11,Supreme Court,4052,7,pred15,VP,82
+6.11,Supreme Court,4052,7,pred15,VM,82
+6.11,Supreme Court,4052,7,pred15,VF,96
+6.11,Supreme Court,4052,7,pred50,SP,96
+6.11,Supreme Court,4052,7,pred50,SM,96
+6.11,Supreme Court,4052,7,pred50,SF,96
+6.11,Supreme Court,4052,7,pred50,VP,79
+6.11,Supreme Court,4052,7,pred50,VM,79
+6.11,Supreme Court,4052,7,pred50,VF,96
+6.11,Supreme Court,4052,7,pred90,SP,96
+6.11,Supreme Court,4052,7,pred90,SM,96
+6.11,Supreme Court,4052,7,pred90,SF,96
+6.11,Supreme Court,4052,7,pred90,VP,77
+6.11,Supreme Court,4052,7,pred90,VM,77
+6.11,Supreme Court,4052,7,pred90,VF,96
+6.12,Bankruptcy,50,5,fit95,LR,96
+6.12,Bankruptcy,50,5,fit95,CT,97
+6.12,Bankruptcy,50,5,fit95,Ex3,69
+6.12,Bankruptcy,50,5,fit95,Ex4,69
+6.12,Bankruptcy,50,5,fit95,Ex5,68
+6.12,Bankruptcy,50,5,pred15,LR,69
+6.12,Bankruptcy,50,5,pred15,CT,48
+6.12,Bankruptcy,50,5,pred15,Ex3,59
+6.12,Bankruptcy,50,5,pred15,Ex4,59
+6.12,Bankruptcy,50,5,pred15,Ex5,58
+6.12,Bankruptcy,50,5,pred50,LR,83
+6.12,Bankruptcy,50,5,pred50,CT,80
+6.12,Bankruptcy,50,5,pred50,Ex3,66
+6.12,Bankruptcy,50,5,pred50,Ex4,65
+6.12,Bankruptcy,50,5,pred50,Ex5,65
+6.12,Bankruptcy,50,5,pred90,LR,87
+6.12,Bankruptcy,50,5,pred90,CT,80
+6.12,Bankruptcy,50,5,pred90,Ex3,66
+6.12,Bankruptcy,50,5,pred90,Ex4,66
+6.12,Bankruptcy,50,5,pred90,Ex5,66
+6.12,Solvency,52,8,fit95,LR,94
+6.12,Solvency,52,8,fit95,CT,96
+6.12,Solvency,52,8,fit95,Ex3,80
+6.12,Solvency,52,8,fit95,Ex4,80
+6.12,Solvency,52,8,fit95,Ex5,81
+6.12,Solvency,52,8,pred15,LR,
+6.12,Solvency,52,8,pred15,CT,
+6.12,Solvency,52,8,pred15,Ex3,
+6.12,Solvency,52,8,pred15,Ex4,
+6.12,Solvency,52,8,pred15,Ex5,
+6.12,Solvency,52,8,pred50,LR,80
+6.12,Solvency,52,8,pred50,CT,74
+6.12,Solvency,52,8,pred50,Ex3,77
+6.12,Solvency,52,8,pred50,Ex4,78
+6.12,Solvency,52,8,pred50,Ex5,78
+6.12,Solvency,52,8,pred90,LR,82
+6.12,Solvency,52,8,pred90,CT,78
+6.12,Solvency,52,8,pred90,Ex3,79
+6.12,Solvency,52,8,pred90,Ex4,79
+6.12,Solvency,52,8,pred90,Ex5,79
+6.12,Echocardiogram,62,7,fit95,LR,83
+6.12,Echocardiogram,62,7,fit95,CT,93
+6.12,Echocardiogram,62,7,fit95,Ex3,72
+6.12,Echocardiogram,62,7,fit95,Ex4,73
+6.12,Echocardiogram,62,7,fit95,Ex5,72
+6.12,Echocardiogram,62,7,pred15,LR,60
+6.12,Echocardiogram,62,7,pred15,CT,68
+6.12,Echocardiogram,62,7,pred15,Ex3,64
+6.12,Echocardiogram,62,7,pred15,Ex4,65
+6.12,Echocardiogram,62,7,pred15,Ex5,66
+6.12,Echocardiogram,62,7,pred50,LR,70
+6.12,Echocardiogram,62,7,pred50,CT,68
+6.12,Echocardiogram,62,7,pred50,Ex3,68
+6.12,Echocardiogram,62,7,pred50,Ex4,69
+6.12,Echocardiogram,62,7,pred50,Ex5,70
+6.12,Echocardiogram,62,7,pred90,LR,73
+6.12,Echocardiogram,62,7,pred90,CT,68
+6.12,Echocardiogram,62,7,pred90,Ex3,71
+6.12,Echocardiogram,62,7,pred90,Ex4,71
+6.12,Echocardiogram,62,7,pred90,Ex5,71
+6.12,Post-Operative,86,8,fit95,LR,74
+6.12,Post-Operative,86,8,fit95,CT,80
+6.12,Post-Operative,86,8,fit95,Ex3,72
+6.12,Post-Operative,86,8,fit95,Ex4,72
+6.12,Post-Operative,86,8,fit95,Ex5,72
+6.12,Post-Operative,86,8,pred15,LR,54
+6.12,Post-Operative,86,8,pred15,CT,61
+6.12,Post-Operative,86,8,pred15,Ex3,65
+6.12,Post-Operative,86,8,pred15,Ex4,67
+6.12,Post-Operative,86,8,pred15,Ex5,68
+6.12,Post-Operative,86,8,pred50,LR,63
+6.12,Post-Operative,86,8,pred50,CT,61
+6.12,Post-Operative,86,8,pred50,Ex3,71
+6.12,Post-Operative,86,8,pred50,Ex4,72
+6.12,Post-Operative,86,8,pred50,Ex5,72
+6.12,Post-Operative,86,8,pred90,LR,70
+6.12,Post-Operative,86,8,pred90,CT,65
+6.12,Post-Operative,86,8,pred90,Ex3,72
+6.12,Post-Operative,86,8,pred90,Ex4,72
+6.12,Post-Operative,86,8,pred90,Ex5,72
+6.12,Broadway,89,5,fit95,LR,79
+6.12,Broadway,89,5,fit95,CT,88
+6.12,Broadway,89,5,fit95,Ex3,72
+6.12,Broadway,89,5,fit95,Ex4,73
+6.12,Broadway,89,5,fit95,Ex5,72
+6.12,Broadway,89,5,pred15,LR,65
+6.12,Broadway,89,5,pred15,CT,66
+6.12,Broadway,89,5,pred15,Ex3,63
+6.12,Broadway,89,5,pred15,Ex4,64
+6.12,Broadway,89,5,pred15,Ex5,66
+6.12,Broadway,89,5,pred50,LR,73
+6.12,Broadway,89,5,pred50,CT,69
+6.12,Broadway,89,5,pred50,Ex3,69
+6.12,Broadway,89,5,pred50,Ex4,70
+6.12,Broadway,89,5,pred50,Ex5,70
+6.12,Broadway,89,5,pred90,LR,76
+6.12,Broadway,89,5,pred90,CT,71
+6.12,Broadway,89,5,pred90,Ex3,71
+6.12,Broadway,89,5,pred90,Ex4,71
+6.12,Broadway,89,5,pred90,Ex5,70
+6.12,Credit Score,100,6,fit95,LR,95
+6.12,Credit Score,100,6,fit95,CT,99
+6.12,Credit Score,100,6,fit95,Ex3,71
+6.12,Credit Score,100,6,fit95,Ex4,73
+6.12,Credit Score,100,6,fit95,Ex5,73
+6.12,Credit Score,100,6,pred15,LR,54
+6.12,Credit Score,100,6,pred15,CT,96
+6.12,Credit Score,100,6,pred15,Ex3,65
+6.12,Credit Score,100,6,pred15,Ex4,66
+6.12,Credit Score,100,6,pred15,Ex5,69
+6.12,Credit Score,100,6,pred50,LR,86
+6.12,Credit Score,100,6,pred50,CT,97
+6.12,Credit Score,100,6,pred50,Ex3,66
+6.12,Credit Score,100,6,pred50,Ex4,70
+6.12,Credit Score,100,6,pred50,Ex5,72
+6.12,Credit Score,100,6,pred90,LR,91
+6.12,Credit Score,100,6,pred90,CT,98
+6.12,Credit Score,100,6,pred90,Ex3,70
+6.12,Credit Score,100,6,pred90,Ex4,73
+6.12,Credit Score,100,6,pred90,Ex5,73
+6.12,Zoo,101,16,fit95,LR,100
+6.12,Zoo,101,16,fit95,CT,100
+6.12,Zoo,101,16,fit95,Ex3,55
+6.12,Zoo,101,16,fit95,Ex4,56
+6.12,Zoo,101,16,fit95,Ex5,55
+6.12,Zoo,101,16,pred15,LR,
+6.12,Zoo,101,16,pred15,CT,
+6.12,Zoo,101,16,pred15,Ex3,
+6.12,Zoo,101,16,pred15,Ex4,
+6.12,Zoo,101,16,pred15,Ex5,
+6.12,Zoo,101,16,pred50,LR,98
+6.12,Zoo,101,16,pred50,CT,99
+6.12,Zoo,101,16,pred50,Ex3,55
+6.12,Zoo,101,16,pred50,Ex4,55
+6.12,Zoo,101,16,pred50,Ex5,55
+6.12,Zoo,101,16,pred90,LR,99
+6.12,Zoo,101,16,pred90,CT,100
+6.12,Zoo,101,16,pred90,Ex3,55
+6.12,Zoo,101,16,pred90,Ex4,55
+6.12,Zoo,101,16,pred90,Ex5,55
+6.12,Iris,150,4,fit95,LR,74
+6.12,Iris,150,4,fit95,CT,98
+6.12,Iris,150,4,fit95,Ex3,59
+6.12,Iris,150,4,fit95,Ex4,65
+6.12,Iris,150,4,fit95,Ex5,67
+6.12,Iris,150,4,pred15,LR,70
+6.12,Iris,150,4,pred15,CT,83
+6.12,Iris,150,4,pred15,Ex3,58
+6.12,Iris,150,4,pred15,Ex4,60
+6.12,Iris,150,4,pred15,Ex5,62
+6.12,Iris,150,4,pred50,LR,73
+6.12,Iris,150,4,pred50,CT,94
+6.12,Iris,150,4,pred50,Ex3,59
+6.12,Iris,150,4,pred50,Ex4,63
+6.12,Iris,150,4,pred50,Ex5,66
+6.12,Iris,150,4,pred90,LR,71
+6.12,Iris,150,4,pred90,CT,95
+6.12,Iris,150,4,pred90,Ex3,58
+6.12,Iris,150,4,pred90,Ex4,63
+6.12,Iris,150,4,pred90,Ex5,66
+6.12,Hepatitis,153,7,fit95,LR,83
+6.12,Hepatitis,153,7,fit95,CT,88
+6.12,Hepatitis,153,7,fit95,Ex3,79
+6.12,Hepatitis,153,7,fit95,Ex4,79
+6.12,Hepatitis,153,7,fit95,Ex5,79
+6.12,Hepatitis,153,7,pred15,LR,71
+6.12,Hepatitis,153,7,pred15,CT,72
+6.12,Hepatitis,153,7,pred15,Ex3,77
+6.12,Hepatitis,153,7,pred15,Ex4,78
+6.12,Hepatitis,153,7,pred15,Ex5,79
+6.12,Hepatitis,153,7,pred50,LR,78
+6.12,Hepatitis,153,7,pred50,CT,74
+6.12,Hepatitis,153,7,pred50,Ex3,79
+6.12,Hepatitis,153,7,pred50,Ex4,79
+6.12,Hepatitis,153,7,pred50,Ex5,79
+6.12,Hepatitis,153,7,pred90,LR,81
+6.12,Hepatitis,153,7,pred90,CT,75
+6.12,Hepatitis,153,7,pred90,Ex3,79
+6.12,Hepatitis,153,7,pred90,Ex4,79
+6.12,Hepatitis,153,7,pred90,Ex5,79
+6.12,Strikes,163,4,fit95,LR,73
+6.12,Strikes,163,4,fit95,CT,89
+6.12,Strikes,163,4,fit95,Ex3,73
+6.12,Strikes,163,4,fit95,Ex4,73
+6.12,Strikes,163,4,fit95,Ex5,72
+6.12,Strikes,163,4,pred15,LR,68
+6.12,Strikes,163,4,pred15,CT,69
+6.12,Strikes,163,4,pred15,Ex3,68
+6.12,Strikes,163,4,pred15,Ex4,67
+6.12,Strikes,163,4,pred15,Ex5,65
+6.12,Strikes,163,4,pred50,LR,70
+6.12,Strikes,163,4,pred50,CT,72
+6.12,Strikes,163,4,pred50,Ex3,71
+6.12,Strikes,163,4,pred50,Ex4,71
+6.12,Strikes,163,4,pred50,Ex5,71
+6.12,Strikes,163,4,pred90,LR,70
+6.12,Strikes,163,4,pred90,CT,70
+6.12,Strikes,163,4,pred90,Ex3,72
+6.12,Strikes,163,4,pred90,Ex4,72
+6.12,Strikes,163,4,pred90,Ex5,72
+6.12,Wine,178,13,fit95,LR,100
+6.12,Wine,178,13,fit95,CT,98
+6.12,Wine,178,13,fit95,Ex3,60
+6.12,Wine,178,13,fit95,Ex4,62
+6.12,Wine,178,13,fit95,Ex5,62
+6.12,Wine,178,13,pred15,LR,89
+6.12,Wine,178,13,pred15,CT,87
+6.12,Wine,178,13,pred15,Ex3,59
+6.12,Wine,178,13,pred15,Ex4,59
+6.12,Wine,178,13,pred15,Ex5,60
+6.12,Wine,178,13,pred50,LR,95
+6.12,Wine,178,13,pred50,CT,91
+6.12,Wine,178,13,pred50,Ex3,59
+6.12,Wine,178,13,pred50,Ex4,61
+6.12,Wine,178,13,pred50,Ex5,61
+6.12,Wine,178,13,pred90,LR,96
+6.12,Wine,178,13,pred90,CT,90
+6.12,Wine,178,13,pred90,Ex3,61
+6.12,Wine,178,13,pred90,Ex4,62
+6.12,Wine,178,13,pred90,Ex5,61
+6.12,Baseball CYY,189,9,fit95,LR,86
+6.12,Baseball CYY,189,9,fit95,CT,95
+6.12,Baseball CYY,189,9,fit95,Ex3,75
+6.12,Baseball CYY,189,9,fit95,Ex4,77
+6.12,Baseball CYY,189,9,fit95,Ex5,77
+6.12,Baseball CYY,189,9,pred15,LR,75
+6.12,Baseball CYY,189,9,pred15,CT,78
+6.12,Baseball CYY,189,9,pred15,Ex3,72
+6.12,Baseball CYY,189,9,pred15,Ex4,74
+6.12,Baseball CYY,189,9,pred15,Ex5,75
+6.12,Baseball CYY,189,9,pred50,LR,83
+6.12,Baseball CYY,189,9,pred50,CT,82
+6.12,Baseball CYY,189,9,pred50,Ex3,74
+6.12,Baseball CYY,189,9,pred50,Ex4,76
+6.12,Baseball CYY,189,9,pred50,Ex5,77
+6.12,Baseball CYY,189,9,pred90,LR,83
+6.12,Baseball CYY,189,9,pred90,CT,83
+6.12,Baseball CYY,189,9,pred90,Ex3,75
+6.12,Baseball CYY,189,9,pred90,Ex4,77
+6.12,Baseball CYY,189,9,pred90,Ex5,77
+6.12,Forensic Glass,214,9,fit95,LR,86
+6.12,Forensic Glass,214,9,fit95,CT,95
+6.12,Forensic Glass,214,9,fit95,Ex3,58
+6.12,Forensic Glass,214,9,fit95,Ex4,60
+6.12,Forensic Glass,214,9,fit95,Ex5,63
+6.12,Forensic Glass,214,9,pred15,LR,77
+6.12,Forensic Glass,214,9,pred15,CT,77
+6.12,Forensic Glass,214,9,pred15,Ex3,58
+6.12,Forensic Glass,214,9,pred15,Ex4,60
+6.12,Forensic Glass,214,9,pred15,Ex5,62
+6.12,Forensic Glass,214,9,pred50,LR,83
+6.12,Forensic Glass,214,9,pred50,CT,79
+6.12,Forensic Glass,214,9,pred50,Ex3,59
+6.12,Forensic Glass,214,9,pred50,Ex4,61
+6.12,Forensic Glass,214,9,pred50,Ex5,63
+6.12,Forensic Glass,214,9,pred90,LR,84
+6.12,Forensic Glass,214,9,pred90,CT,82
+6.12,Forensic Glass,214,9,pred90,Ex3,59
+6.12,Forensic Glass,214,9,pred90,Ex4,60
+6.12,Forensic Glass,214,9,pred90,Ex5,63
+6.12,Horse Colic,218,6,fit95,LR,69
+6.12,Horse Colic,218,6,fit95,CT,90
+6.12,Horse Colic,218,6,fit95,Ex3,58
+6.12,Horse Colic,218,6,fit95,Ex4,58
+6.12,Horse Colic,218,6,fit95,Ex5,59
+6.12,Horse Colic,218,6,pred15,LR,62
+6.12,Horse Colic,218,6,pred15,CT,62
+6.12,Horse Colic,218,6,pred15,Ex3,55
+6.12,Horse Colic,218,6,pred15,Ex4,55
+6.12,Horse Colic,218,6,pred15,Ex5,56
+6.12,Horse Colic,218,6,pred50,LR,66
+6.12,Horse Colic,218,6,pred50,CT,66
+6.12,Horse Colic,218,6,pred50,Ex3,57
+6.12,Horse Colic,218,6,pred50,Ex4,58
+6.12,Horse Colic,218,6,pred50,Ex5,58
+6.12,Horse Colic,218,6,pred90,LR,66
+6.12,Horse Colic,218,6,pred90,CT,66
+6.12,Horse Colic,218,6,pred90,Ex3,58
+6.12,Horse Colic,218,6,pred90,Ex4,58
+6.12,Horse Colic,218,6,pred90,Ex5,58
+6.12,SPECT,267,22,fit95,LR,88
+6.12,SPECT,267,22,fit95,CT,89
+6.12,SPECT,267,22,fit95,Ex3,75
+6.12,SPECT,267,22,fit95,Ex4,77
+6.12,SPECT,267,22,fit95,Ex5,80
+6.12,SPECT,267,22,pred15,LR,67
+6.12,SPECT,267,22,pred15,CT,76
+6.12,SPECT,267,22,pred15,Ex3,71
+6.12,SPECT,267,22,pred15,Ex4,72
+6.12,SPECT,267,22,pred15,Ex5,75
+6.12,SPECT,267,22,pred50,LR,79
+6.12,SPECT,267,22,pred50,CT,80
+6.12,SPECT,267,22,pred50,Ex3,74
+6.12,SPECT,267,22,pred50,Ex4,76
+6.12,SPECT,267,22,pred50,Ex5,78
+6.12,SPECT,267,22,pred90,LR,82
+6.12,SPECT,267,22,pred90,CT,81
+6.12,SPECT,267,22,pred90,Ex3,74
+6.12,SPECT,267,22,pred90,Ex4,76
+6.12,SPECT,267,22,pred90,Ex5,79
+6.12,Heart (Hungaria),294,10,fit95,LR,85
+6.12,Heart (Hungaria),294,10,fit95,CT,91
+6.12,Heart (Hungaria),294,10,fit95,Ex3,57
+6.12,Heart (Hungaria),294,10,fit95,Ex4,59
+6.12,Heart (Hungaria),294,10,fit95,Ex5,60
+6.12,Heart (Hungaria),294,10,pred15,LR,76
+6.12,Heart (Hungaria),294,10,pred15,CT,74
+6.12,Heart (Hungaria),294,10,pred15,Ex3,58
+6.12,Heart (Hungaria),294,10,pred15,Ex4,59
+6.12,Heart (Hungaria),294,10,pred15,Ex5,61
+6.12,Heart (Hungaria),294,10,pred50,LR,82
+6.12,Heart (Hungaria),294,10,pred50,CT,76
+6.12,Heart (Hungaria),294,10,pred50,Ex3,57
+6.12,Heart (Hungaria),294,10,pred50,Ex4,58
+6.12,Heart (Hungaria),294,10,pred50,Ex5,60
+6.12,Heart (Hungaria),294,10,pred90,LR,83
+6.12,Heart (Hungaria),294,10,pred90,CT,76
+6.12,Heart (Hungaria),294,10,pred90,Ex3,56
+6.12,Heart (Hungaria),294,10,pred90,Ex4,57
+6.12,Heart (Hungaria),294,10,pred90,Ex5,60
+6.12,Heart (Cleveland),297,13,fit95,LR,85
+6.12,Heart (Cleveland),297,13,fit95,CT,91
+6.12,Heart (Cleveland),297,13,fit95,Ex3,60
+6.12,Heart (Cleveland),297,13,fit95,Ex4,61
+6.12,Heart (Cleveland),297,13,fit95,Ex5,61
+6.12,Heart (Cleveland),297,13,pred15,LR,74
+6.12,Heart (Cleveland),297,13,pred15,CT,71
+6.12,Heart (Cleveland),297,13,pred15,Ex3,60
+6.12,Heart (Cleveland),297,13,pred15,Ex4,60
+6.12,Heart (Cleveland),297,13,pred15,Ex5,60
+6.12,Heart (Cleveland),297,13,pred50,LR,82
+6.12,Heart (Cleveland),297,13,pred50,CT,74
+6.12,Heart (Cleveland),297,13,pred50,Ex3,59
+6.12,Heart (Cleveland),297,13,pred50,Ex4,60
+6.12,Heart (Cleveland),297,13,pred50,Ex5,60
+6.12,Heart (Cleveland),297,13,pred90,LR,83
+6.12,Heart (Cleveland),297,13,pred90,CT,73
+6.12,Heart (Cleveland),297,13,pred90,Ex3,60
+6.12,Heart (Cleveland),297,13,pred90,Ex4,59
+6.12,Heart (Cleveland),297,13,pred90,Ex5,60
+6.12,Alcohol,345,5,fit95,LR,78
+6.12,Alcohol,345,5,fit95,CT,91
+6.12,Alcohol,345,5,fit95,Ex3,75
+6.12,Alcohol,345,5,fit95,Ex4,74
+6.12,Alcohol,345,5,fit95,Ex5,74
+6.12,Alcohol,345,5,pred15,LR,75
+6.12,Alcohol,345,5,pred15,CT,70
+6.12,Alcohol,345,5,pred15,Ex3,74
+6.12,Alcohol,345,5,pred15,Ex4,75
+6.12,Alcohol,345,5,pred15,Ex5,75
+6.12,Alcohol,345,5,pred50,LR,77
+6.12,Alcohol,345,5,pred50,CT,71
+6.12,Alcohol,345,5,pred50,Ex3,75
+6.12,Alcohol,345,5,pred50,Ex4,74
+6.12,Alcohol,345,5,pred50,Ex5,74
+6.12,Alcohol,345,5,pred90,LR,77
+6.12,Alcohol,345,5,pred90,CT,71
+6.12,Alcohol,345,5,pred90,Ex3,74
+6.12,Alcohol,345,5,pred90,Ex4,75
+6.12,Alcohol,345,5,pred90,Ex5,75
+6.12,Ionosphere,351,33,fit95,LR,94
+6.12,Ionosphere,351,33,fit95,CT,98
+6.12,Ionosphere,351,33,fit95,Ex3,59
+6.12,Ionosphere,351,33,fit95,Ex4,60
+6.12,Ionosphere,351,33,fit95,Ex5,61
+6.12,Ionosphere,351,33,pred15,LR,76
+6.12,Ionosphere,351,33,pred15,CT,84
+6.12,Ionosphere,351,33,pred15,Ex3,58
+6.12,Ionosphere,351,33,pred15,Ex4,59
+6.12,Ionosphere,351,33,pred15,Ex5,60
+6.12,Ionosphere,351,33,pred50,LR,85
+6.12,Ionosphere,351,33,pred50,CT,87
+6.12,Ionosphere,351,33,pred50,Ex3,58
+6.12,Ionosphere,351,33,pred50,Ex4,60
+6.12,Ionosphere,351,33,pred50,Ex5,60
+6.12,Ionosphere,351,33,pred90,LR,88
+6.12,Ionosphere,351,33,pred90,CT,88
+6.12,Ionosphere,351,33,pred90,Ex3,58
+6.12,Ionosphere,351,33,pred90,Ex4,60
+6.12,Ionosphere,351,33,pred90,Ex5,61
+6.12,Tourism,365,4,fit95,LR,77
+6.12,Tourism,365,4,fit95,CT,88
+6.12,Tourism,365,4,fit95,Ex3,77
+6.12,Tourism,365,4,fit95,Ex4,77
+6.12,Tourism,365,4,fit95,Ex5,77
+6.12,Tourism,365,4,pred15,LR,75
+6.12,Tourism,365,4,pred15,CT,69
+6.12,Tourism,365,4,pred15,Ex3,77
+6.12,Tourism,365,4,pred15,Ex4,77
+6.12,Tourism,365,4,pred15,Ex5,77
+6.12,Tourism,365,4,pred50,LR,77
+6.12,Tourism,365,4,pred50,CT,70
+6.12,Tourism,365,4,pred50,Ex3,77
+6.12,Tourism,365,4,pred50,Ex4,77
+6.12,Tourism,365,4,pred50,Ex5,77
+6.12,Tourism,365,4,pred90,LR,77
+6.12,Tourism,365,4,pred90,CT,70
+6.12,Tourism,365,4,pred90,Ex3,77
+6.12,Tourism,365,4,pred90,Ex4,77
+6.12,Tourism,365,4,pred90,Ex5,77
+6.12,Voting,402,16,fit95,LR,98
+6.12,Voting,402,16,fit95,CT,98
+6.12,Voting,402,16,fit95,Ex3,49
+6.12,Voting,402,16,fit95,Ex4,49
+6.12,Voting,402,16,fit95,Ex5,49
+6.12,Voting,402,16,pred15,LR,93
+6.12,Voting,402,16,pred15,CT,94
+6.12,Voting,402,16,pred15,Ex3,48
+6.12,Voting,402,16,pred15,Ex4,48
+6.12,Voting,402,16,pred15,Ex5,50
+6.12,Voting,402,16,pred50,LR,95
+6.12,Voting,402,16,pred50,CT,95
+6.12,Voting,402,16,pred50,Ex3,48
+6.12,Voting,402,16,pred50,Ex4,48
+6.12,Voting,402,16,pred50,Ex5,49
+6.12,Voting,402,16,pred90,LR,96
+6.12,Voting,402,16,pred90,CT,95
+6.12,Voting,402,16,pred90,Ex3,49
+6.12,Voting,402,16,pred90,Ex4,49
+6.12,Voting,402,16,pred90,Ex5,49
+6.12,Education,435,4,fit95,LR,77
+6.12,Education,435,4,fit95,CT,86
+6.12,Education,435,4,fit95,Ex3,56
+6.12,Education,435,4,fit95,Ex4,56
+6.12,Education,435,4,fit95,Ex5,56
+6.12,Education,435,4,pred15,LR,75
+6.12,Education,435,4,pred15,CT,71
+6.12,Education,435,4,pred15,Ex3,54
+6.12,Education,435,4,pred15,Ex4,55
+6.12,Education,435,4,pred15,Ex5,53
+6.12,Education,435,4,pred50,LR,76
+6.12,Education,435,4,pred50,CT,71
+6.12,Education,435,4,pred50,Ex3,55
+6.12,Education,435,4,pred50,Ex4,55
+6.12,Education,435,4,pred50,Ex5,55
+6.12,Education,435,4,pred90,LR,77
+6.12,Education,435,4,pred90,CT,71
+6.12,Education,435,4,pred90,Ex3,56
+6.12,Education,435,4,pred90,Ex4,56
+6.12,Education,435,4,pred90,Ex5,55
+6.12,Cardiac,558,5,fit95,LR,84
+6.12,Cardiac,558,5,fit95,CT,93
+6.12,Cardiac,558,5,fit95,Ex3,84
+6.12,Cardiac,558,5,fit95,Ex4,84
+6.12,Cardiac,558,5,fit95,Ex5,84
+6.12,Cardiac,558,5,pred15,LR,81
+6.12,Cardiac,558,5,pred15,CT,74
+6.12,Cardiac,558,5,pred15,Ex3,84
+6.12,Cardiac,558,5,pred15,Ex4,84
+6.12,Cardiac,558,5,pred15,Ex5,84
+6.12,Cardiac,558,5,pred50,LR,84
+6.12,Cardiac,558,5,pred50,CT,74
+6.12,Cardiac,558,5,pred50,Ex3,84
+6.12,Cardiac,558,5,pred50,Ex4,84
+6.12,Cardiac,558,5,pred50,Ex5,84
+6.12,Cardiac,558,5,pred90,LR,84
+6.12,Cardiac,558,5,pred90,CT,74
+6.12,Cardiac,558,5,pred90,Ex3,84
+6.12,Cardiac,558,5,pred90,Ex4,84
+6.12,Cardiac,558,5,pred90,Ex5,84
+6.12,Football,672,4,fit95,LR,68
+6.12,Football,672,4,fit95,CT,79
+6.12,Football,672,4,fit95,Ex3,67
+6.12,Football,672,4,fit95,Ex4,67
+6.12,Football,672,4,fit95,Ex5,67
+6.12,Football,672,4,pred15,LR,66
+6.12,Football,672,4,pred15,CT,59
+6.12,Football,672,4,pred15,Ex3,67
+6.12,Football,672,4,pred15,Ex4,67
+6.12,Football,672,4,pred15,Ex5,67
+6.12,Football,672,4,pred50,LR,67
+6.12,Football,672,4,pred50,CT,59
+6.12,Football,672,4,pred50,Ex3,67
+6.12,Football,672,4,pred50,Ex4,67
+6.12,Football,672,4,pred50,Ex5,67
+6.12,Football,672,4,pred90,LR,68
+6.12,Football,672,4,pred90,CT,57
+6.12,Football,672,4,pred90,Ex3,67
+6.12,Football,672,4,pred90,Ex4,67
+6.12,Football,672,4,pred90,Ex5,67
+6.12,Breast Cancer,683,9,fit95,LR,97
+6.12,Breast Cancer,683,9,fit95,CT,98
+6.12,Breast Cancer,683,9,fit95,Ex3,50
+6.12,Breast Cancer,683,9,fit95,Ex4,52
+6.12,Breast Cancer,683,9,fit95,Ex5,52
+6.12,Breast Cancer,683,9,pred15,LR,94
+6.12,Breast Cancer,683,9,pred15,CT,93
+6.12,Breast Cancer,683,9,pred15,Ex3,57
+6.12,Breast Cancer,683,9,pred15,Ex4,59
+6.12,Breast Cancer,683,9,pred15,Ex5,61
+6.12,Breast Cancer,683,9,pred50,LR,96
+6.12,Breast Cancer,683,9,pred50,CT,94
+6.12,Breast Cancer,683,9,pred50,Ex3,53
+6.12,Breast Cancer,683,9,pred50,Ex4,53
+6.12,Breast Cancer,683,9,pred50,Ex5,58
+6.12,Breast Cancer,683,9,pred90,LR,97
+6.12,Breast Cancer,683,9,pred90,CT,95
+6.12,Breast Cancer,683,9,pred90,Ex3,50
+6.12,Breast Cancer,683,9,pred90,Ex4,51
+6.12,Breast Cancer,683,9,pred90,Ex5,54
+6.12,Diabetes,786,6,fit95,LR,77
+6.12,Diabetes,786,6,fit95,CT,92
+6.12,Diabetes,786,6,fit95,Ex3,69
+6.12,Diabetes,786,6,fit95,Ex4,69
+6.12,Diabetes,786,6,fit95,Ex5,68
+6.12,Diabetes,786,6,pred15,LR,76
+6.12,Diabetes,786,6,pred15,CT,69
+6.12,Diabetes,786,6,pred15,Ex3,68
+6.12,Diabetes,786,6,pred15,Ex4,68
+6.12,Diabetes,786,6,pred15,Ex5,67
+6.12,Diabetes,786,6,pred50,LR,77
+6.12,Diabetes,786,6,pred50,CT,71
+6.12,Diabetes,786,6,pred50,Ex3,69
+6.12,Diabetes,786,6,pred50,Ex4,68
+6.12,Diabetes,786,6,pred50,Ex5,68
+6.12,Diabetes,786,6,pred90,LR,77
+6.12,Diabetes,786,6,pred90,CT,72
+6.12,Diabetes,786,6,pred90,Ex3,69
+6.12,Diabetes,786,6,pred90,Ex4,69
+6.12,Diabetes,786,6,pred90,Ex5,68
+6.12,Authorship,841,69,fit95,LR,100
+6.12,Authorship,841,69,fit95,CT,99
+6.12,Authorship,841,69,fit95,Ex3,73
+6.12,Authorship,841,69,fit95,Ex4,73
+6.12,Authorship,841,69,fit95,Ex5,75
+6.12,Authorship,841,69,pred15,LR,96
+6.12,Authorship,841,69,pred15,CT,93
+6.12,Authorship,841,69,pred15,Ex3,72
+6.12,Authorship,841,69,pred15,Ex4,72
+6.12,Authorship,841,69,pred15,Ex5,73
+6.12,Authorship,841,69,pred50,LR,98
+6.12,Authorship,841,69,pred50,CT,95
+6.12,Authorship,841,69,pred50,Ex3,72
+6.12,Authorship,841,69,pred50,Ex4,73
+6.12,Authorship,841,69,pred50,Ex5,74
+6.12,Authorship,841,69,pred90,LR,98
+6.12,Authorship,841,69,pred90,CT,95
+6.12,Authorship,841,69,pred90,Ex3,72
+6.12,Authorship,841,69,pred90,Ex4,73
+6.12,Authorship,841,69,pred90,Ex5,74
+6.12,Baseball HoF,1320,15,fit95,LR,95
+6.12,Baseball HoF,1320,15,fit95,CT,98
+6.12,Baseball HoF,1320,15,fit95,Ex3,91
+6.12,Baseball HoF,1320,15,fit95,Ex4,91
+6.12,Baseball HoF,1320,15,fit95,Ex5,91
+6.12,Baseball HoF,1320,15,pred15,LR,92
+6.12,Baseball HoF,1320,15,pred15,CT,92
+6.12,Baseball HoF,1320,15,pred15,Ex3,90
+6.12,Baseball HoF,1320,15,pred15,Ex4,90
+6.12,Baseball HoF,1320,15,pred15,Ex5,91
+6.12,Baseball HoF,1320,15,pred50,LR,94
+6.12,Baseball HoF,1320,15,pred50,CT,93
+6.12,Baseball HoF,1320,15,pred50,Ex3,91
+6.12,Baseball HoF,1320,15,pred50,Ex4,91
+6.12,Baseball HoF,1320,15,pred50,Ex5,91
+6.12,Baseball HoF,1320,15,pred90,LR,95
+6.12,Baseball HoF,1320,15,pred90,CT,93
+6.12,Baseball HoF,1320,15,pred90,Ex3,91
+6.12,Baseball HoF,1320,15,pred90,Ex4,91
+6.12,Baseball HoF,1320,15,pred90,Ex5,91
+6.12,Yeast,1484,8,fit95,LR,68
+6.12,Yeast,1484,8,fit95,CT,91
+6.12,Yeast,1484,8,fit95,Ex3,69
+6.12,Yeast,1484,8,fit95,Ex4,69
+6.12,Yeast,1484,8,fit95,Ex5,69
+6.12,Yeast,1484,8,pred15,LR,68
+6.12,Yeast,1484,8,pred15,CT,67
+6.12,Yeast,1484,8,pred15,Ex3,68
+6.12,Yeast,1484,8,pred15,Ex4,69
+6.12,Yeast,1484,8,pred15,Ex5,69
+6.12,Yeast,1484,8,pred50,LR,68
+6.12,Yeast,1484,8,pred50,CT,69
+6.12,Yeast,1484,8,pred50,Ex3,69
+6.12,Yeast,1484,8,pred50,Ex4,69
+6.12,Yeast,1484,8,pred50,Ex5,69
+6.12,Yeast,1484,8,pred90,LR,68
+6.12,Yeast,1484,8,pred90,CT,70
+6.12,Yeast,1484,8,pred90,Ex3,69
+6.12,Yeast,1484,8,pred90,Ex4,69
+6.12,Yeast,1484,8,pred90,Ex5,69
+6.12,Supreme Court,4052,7,fit95,LR,96
+6.12,Supreme Court,4052,7,fit95,CT,97
+6.12,Supreme Court,4052,7,fit95,Ex3,96
+6.12,Supreme Court,4052,7,fit95,Ex4,96
+6.12,Supreme Court,4052,7,fit95,Ex5,96
+6.12,Supreme Court,4052,7,pred15,LR,96
+6.12,Supreme Court,4052,7,pred15,CT,96
+6.12,Supreme Court,4052,7,pred15,Ex3,96
+6.12,Supreme Court,4052,7,pred15,Ex4,96
+6.12,Supreme Court,4052,7,pred15,Ex5,96
+6.12,Supreme Court,4052,7,pred50,LR,96
+6.12,Supreme Court,4052,7,pred50,CT,96
+6.12,Supreme Court,4052,7,pred50,Ex3,96
+6.12,Supreme Court,4052,7,pred50,Ex4,96
+6.12,Supreme Court,4052,7,pred50,Ex5,96
+6.12,Supreme Court,4052,7,pred90,LR,96
+6.12,Supreme Court,4052,7,pred90,CT,96
+6.12,Supreme Court,4052,7,pred90,Ex3,96
+6.12,Supreme Court,4052,7,pred90,Ex4,96
+6.12,Supreme Court,4052,7,pred90,Ex5,96

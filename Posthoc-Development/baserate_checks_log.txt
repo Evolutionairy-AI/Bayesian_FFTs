@@ -1,0 +1,24 @@
+A. Woike's published accuracies: how many datasets fall BELOW the base rate, by group (13 majority-only / 17 both verdicts)
+   pred15: VF 9/13 vs 2/15 | MV 10/13 vs 2/15 | ZV 13/13 vs 3/15 | MS 11/13 vs 7/15 | ZS 13/13 vs 4/15 | MA 9/13 vs 6/15 | SF 8/13 vs 4/15 | VM 11/13 vs 2/15 | LR 9/13 vs 2/15 | CT 9/13 vs 2/15
+   pred50: VF 9/13 vs 0/17 | MV 8/13 vs 1/17 | ZV 13/13 vs 3/17 | MS 11/13 vs 8/17 | ZS 13/13 vs 4/17 | MA 8/13 vs 3/17 | SF 9/13 vs 2/17 | VM 12/13 vs 0/17 | LR 6/13 vs 1/17 | CT 7/13 vs 1/17
+   pred90: VF 9/13 vs 0/17 | MV 9/13 vs 1/17 | ZV 13/13 vs 3/17 | MS 11/13 vs 7/17 | ZS 12/13 vs 3/17 | MA 9/13 vs 4/17 | SF 8/13 vs 1/17 | VM 12/13 vs 0/17 | LR 3/13 vs 0/17 | CT 6/13 vs 1/17
+
+B. Gain of the better of LR and CART over the base rate, as a share of the headroom (median), by group
+   pred15: majority-only -3% (n=13) | both verdicts 44% (n=15)
+   pred50: majority-only 3% (n=13) | both verdicts 61% (n=17)
+   pred90: majority-only 9% (n=13) | both verdicts 63% (n=17)
+
+C. Holte's sixteen: the same look, with his own C4 and 1R accuracies
+   majority-only: n = 3 ['HE', 'HY', 'SE']
+      base rates [79.4, 90.7, 95.2]
+      C4 gain over base rate, points: [1.8, 3.9, 7.0]; share of headroom median 75%
+      1R below base rate: 1/3
+   both verdicts: n = 13 ['BC', 'CH', 'GL', 'G2', 'HD', 'HO', 'IR', 'LA', 'LY', 'MU', 'SO', 'VO', 'V1']
+      base rates [33.3, 35.5, 36.2, 51.8, 52.2, 53.4, 54.5, 54.7, 61.4, 61.4, 63.0, 64.9, 70.3]
+      C4 gain over base rate, points: [1.7, 47.0, 27.7, 20.9, 19.1, 20.6, 60.5, 12.3, 22.8, 48.2, 61.3, 34.2, 28.0]; share of headroom median 56%
+      1R below base rate: 1/13
+
+D. Is the audit simply 'no single attribute outweighs the prior'?  Z_beats_prior by group (thirty)
+   majority-only: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+   both verdicts: [0, 1, 1, 1, 1, 1, 3, 4, 4, 4, 5, 6, 8, 8, 9, 11, 13]
+   Holte majority-only: [('HE', '0'), ('HY', '0'), ('SE', '0')] | both verdicts: [0, 0, 2, 4, 4, 5, 6, 9, 11, 12, 13, 15, 19]

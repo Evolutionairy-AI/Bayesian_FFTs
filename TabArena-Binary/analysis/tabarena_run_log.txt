@@ -1,0 +1,154 @@
+selftest OK on the thirty: partial(S, G | base) = -0.777 (Freedman-Lane p = 5e-05); partial(S, G | strongest reading) = -0.344 (p = 0.0311)
+[1/29] blood-transfusion-service-center: n=748 S=+0.55 G=8.0 Ak=73.7 A=75.3 q=48.3 price=-0.83 depth=2 asked=2 (4 s)
+[2/29] credit-g: n=1000 S=+0.24 G=17.2 Ak=81.8 A=80.0 q=59.8 price=+3.92 depth=2 asked=2 (7 s)
+[3/29] qsar-biodeg: n=1054 S=-0.18 G=61.3 Ak=85.7 A=85.6 q=73.6 price=+6.81 depth=1 asked=1 (8 s)
+[4/29] Fitness_Club: n=1500 S=-0.03 G=25.5 Ak=100.0 A=99.5 q=40.5 price=-0.09 depth=3 asked=2 (5 s)
+[5/29] Is-this-a-good-customer: n=1723 S=+1.34 G=-1.2 Ak=98.7 A=98.7 q=41.0 price=-0.24 depth=2 asked=2 (7 s)
+[6/29] Marketing_Campaign: n=2240 S=+0.52 G=22.6 Ak=93.0 A=91.3 q=59.8 price=+1.70 depth=2 asked=2 (11 s)
+[7/29] hazelnut-spread-contaminant-detection: n=2400 S=-1.03 G=77.7 Ak=79.2 A=79.1 q=54.7 price=+1.95 depth=2 asked=1 (23 s)
+[8/29] seismic-bumps: n=2584 S=+2.03 G=0.0 Ak=75.0 A=74.9 q=15.8 price=-17.19 depth=1 asked=1 (8 s)
+[9/29] Bioresponse: n=3751 S=-0.86 G=46.8 Ak=70.8 A=69.0 q=36.1 price=-8.64 depth=3 asked=3 (439 s)
+[10/29] churn: n=5000 S=+1.52 G=62.5 Ak=96.5 A=96.5 q=51.2 price=+0.08 depth=1 asked=1 (33 s)
+[11/29] polish_companies_bankruptcy: n=5910 S=+2.02 G=46.1 Ak=66.9 A=66.9 q=15.0 price=-23.15 depth=1 asked=1 (155 s)
+[12/29] taiwanese_bankruptcy_prediction: n=6819 S=+2.70 G=-0.0 Ak=75.8 A=75.9 q=11.6 price=-18.52 depth=1 asked=1 (169 s)
+[13/29] NATICUSdroid: n=7491 S=-0.32 G=81.8 Ak=78.1 A=78.1 q=90.5 price=+17.74 depth=1 asked=1 (79 s)
+[14/29] coil2000_insurance_policies: n=9822 S=+2.13 G=0.0 Ak=82.8 A=82.8 q=14.7 price=-12.15 depth=2 asked=2 (81 s)
+[15/29] Bank_Customer_Churn: n=10000 S=+0.75 G=30.0 Ak=91.2 A=91.2 q=57.0 price=+1.24 depth=2 asked=2 (31 s)
+[16/29] heloc: n=10459 S=-0.72 G=40.8 Ak=89.3 A=89.3 q=48.2 price=-0.38 depth=2 asked=1 (5 s)
+[17/29] jm1: n=10885 S=+0.89 G=3.3 Ak=57.1 A=57.1 q=27.0 price=-19.72 depth=2 asked=2 (5 s)
+[18/29] E-CommereShippingData: n=10999 S=-0.30 G=21.6 Ak=99.4 A=99.4 q=56.3 price=+0.08 depth=2 asked=2 (3 s)
+[19/29] online_shoppers_intention: n=12330 S=+0.18 G=34.4 Ak=93.4 A=93.4 q=19.7 price=-3.98 depth=2 asked=2 (8 s)
+[20/29] in_vehicle_coupon_recommendation: n=12684 S=-0.15 G=33.3 Ak=77.6 A=77.3 q=58.8 price=+4.01 depth=2 asked=2 (17 s)
+[21/29] HR_Analytics_Job_Change_of_Data_Scientists: n=19158 S=+0.55 G=18.8 Ak=76.8 A=77.0 q=47.7 price=-1.06 depth=1 asked=1 (15 s)
+[22/29] credit_card_clients_default: n=30000 S=+0.69 G=17.9 Ak=88.6 A=88.6 q=54.8 price=+1.10 depth=1 asked=1 (19 s)
+[23/29] Amazon_employee_access: n=32769 S=+2.60 G=0.3 Ak=100.0 A=100.0 q=nan price=+0.00 depth=1 asked=1 (12 s)
+[24/29] bank-marketing: n=45211 S=+1.61 G=8.4 Ak=86.6 A=86.7 q=28.4 price=-5.76 depth=2 asked=2 (14 s)
+[25/29] kddcup09_appetency: n=50000 S=+2.70 G=0.0 Ak=88.3 A=87.4 q=3.2 price=-11.81 depth=1 asked=1 (227 s)
+[26/29] Diabetes130US: n=71518 S=+2.01 G=0.1 Ak=99.3 A=99.3 q=21.3 price=-0.43 depth=1 asked=1 (274 s)
+[27/29] APSFailure: n=76000 S=+2.28 G=51.0 Ak=82.6 A=82.8 q=9.7 price=-13.89 depth=1 asked=1 (754 s)
+[28/29] customer_satisfaction_in_airline: n=129880 S=-0.41 G=87.0 Ak=64.0 A=63.9 q=68.3 price=+13.18 depth=1 asked=1 (188 s)
+[29/29] GiveMeSomeCredit: n=150000 S=+2.05 G=3.1 Ak=95.0 A=95.0 q=45.0 price=-0.50 depth=1 asked=1 (38 s)
+{
+  "addendum_b_sha256": "714b4331f569494443d68ca59829201a499c67215c937a9ac5c28223bae3d9f4",
+  "prespecification_sha256": "91d2a59caf902cc39d2e8e8492114333c2fe4bd32b60628957e778efed632a5c",
+  "selftest": {
+    "H4a_on_thirty": {
+      "partial_rho": -0.777,
+      "p_one_sided": 5e-05,
+      "n": 30
+    },
+    "H4b_on_thirty": {
+      "partial_rho": -0.344,
+      "p_one_sided": 0.0311,
+      "n": 30
+    }
+  },
+  "protocol": {
+    "folds": 10,
+    "seed": 20260918,
+    "permutations": 20000,
+    "repeats": "10 if n <= 10,000 else 1",
+    "sklearn": "1.7.2",
+    "ccp_alphas": [
+      0.0,
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01
+    ]
+  },
+  "resumed_after_datasets": [],
+  "tests": {
+    "H4a_S_G_given_base_rate": {
+      "partial_rho": -0.334,
+      "p_one_sided": 0.04935,
+      "n": 29
+    },
+    "H4b_S_G_given_strongest_reading": {
+      "partial_rho": -0.656,
+      "p_one_sided": 5e-05,
+      "n": 29
+    },
+    "H4_supported_against_both_rivals": true,
+    "H3_Ak_vs_auc_margin_secondary": {
+      "rho": -0.026,
+      "p_one_sided": 0.44768,
+      "n": 29
+    }
+  },
+  "descriptive": {
+    "H4a_with_S2": {
+      "partial_rho": -0.398,
+      "p_one_sided": 0.02485,
+      "n": 29
+    },
+    "H4b_with_S2": {
+      "partial_rho": -0.641,
+      "p_one_sided": 5e-05,
+      "n": 29
+    },
+    "H4a_with_one_verdict_indicator": {
+      "partial_rho": -0.18,
+      "p_one_sided": 0.17969,
+      "n": 29
+    },
+    "H4b_with_one_verdict_indicator": {
+      "partial_rho": -0.548,
+      "p_one_sided": 0.0018,
+      "n": 29
+    },
+    "H4a_without_leakage_candidates": {
+      "partial_rho": -0.289,
+      "p_one_sided": 0.10344,
+      "n": 21
+    },
+    "H4b_without_leakage_candidates": {
+      "partial_rho": -0.625,
+      "p_one_sided": 0.0022,
+      "n": 21
+    },
+    "flagged_S_gt_0": 20,
+    "median_G_flagged_unflagged": [
+      8.21,
+      46.83
+    ],
+    "price_all": {
+      "n": 29,
+      "median_disagreement": 14.4,
+      "median_q": 46.36,
+      "median_price": -0.38,
+      "negative": 17,
+      "within_1.5": 5,
+      "above_1.5": 7
+    },
+    "price_both_verdicts": {
+      "n": 13,
+      "median_disagreement": 14.4,
+      "median_q": 56.34,
+      "median_price": 1.7,
+      "negative": 4,
+      "within_1.5": 2,
+      "above_1.5": 7
+    },
+    "counts": {
+      "datasets": 29,
+      "units": 29,
+      "both_verdicts": 13,
+      "certified_depth": {
+        "2": 13,
+        "1": 14,
+        "3": 2
+      },
+      "questions_asked_both_verdict_trees": {
+        "2": 6,
+        "1": 6,
+        "3": 1
+      },
+      "identity_mismatch_cases": 0,
+      "identity_mismatch_profiles": 0,
+      "median_tree_gain_over_base_both_verdicts": 5.01
+    }
+  }
+}
+exit 0

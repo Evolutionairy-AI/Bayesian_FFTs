@@ -1,0 +1,90 @@
+BANK: Ak=98.0 kmax=2 CV spine=86.2 full=86.6 margin=7.0
+SOLV: Ak=92.3 kmax=1 CV spine=75.2 full=80.4 margin=5.0
+ECHO: Ak=90.3 kmax=2 CV spine=75.6 full=77.6 margin=-1.0
+POST: Ak=94.2 kmax=1 CV spine=71.3 full=70.5 margin=-1.0
+BWAY: Ak=74.2 kmax=1 CV spine=68.5 full=75.2 margin=-4.0
+CRED: Ak=69.0 kmax=1 CV spine=76.4 full=84.8 margin=22.0
+ZOO: Ak=100.0 kmax=2 CV spine=99.7 full=100.0 margin=6.0
+IRIS: Ak=100.0 kmax=3 CV spine=62.9 full=67.5 margin=27.0
+HEPA: Ak=75.8 kmax=2 CV spine=77.5 full=77.2 margin=9.0
+STRK: Ak=96.9 kmax=1 CV spine=74.5 full=75.1 margin=-4.0
+WINE: Ak=88.8 kmax=1 CV spine=84.7 full=92.0 margin=4.0
+CYY: Ak=53.4 kmax=1 CV spine=77.2 full=67.9 margin=16.0
+GLAS: Ak=75.2 kmax=1 CV spine=72.7 full=81.3 margin=2.0
+HORS: Ak=89.0 kmax=1 CV spine=67.9 full=76.1 margin=-8.0
+SPCT: Ak=68.9 kmax=1 CV spine=79.4 full=78.7 margin=13.0
+HUNG: Ak=82.3 kmax=1 CV spine=78.6 full=83.3 margin=1.0
+CLEV: Ak=79.5 kmax=1 CV spine=72.7 full=83.0 margin=6.0
+ALCO: Ak=79.7 kmax=1 CV spine=74.6 full=78.4 margin=-1.0
+IONO: Ak=81.8 kmax=1 CV spine=60.9 full=74.8 margin=17.0
+TOUR: Ak=100.0 kmax=1 CV spine=76.7 full=76.7 margin=9.0
+VOTE: Ak=93.8 kmax=2 CV spine=96.3 full=91.1 margin=1.0
+EDUC: Ak=81.8 kmax=1 CV spine=71.1 full=77.6 margin=3.0
+CARD: Ak=100.0 kmax=1 CV spine=84.1 full=84.1 margin=8.0
+FOOT: Ak=100.0 kmax=3 CV spine=67.1 full=67.0 margin=3.0
+BCW: Ak=91.7 kmax=1 CV spine=90.0 full=96.0 margin=1.0
+PIMA: Ak=90.8 kmax=2 CV spine=72.3 full=71.8 margin=5.0
+AUTH: Ak=77.6 kmax=1 CV spine=79.4 full=97.9 margin=12.0
+HOF: Ak=69.0 kmax=1 CV spine=90.6 full=77.5 margin=24.0
+YEAS: Ak=89.6 kmax=1 CV spine=68.8 full=69.4 margin=3.0
+SCOT: Ak=100.0 kmax=2 CV spine=95.8 full=95.8 margin=0.0
+{
+  "status": "robustness check, not confirmatory",
+  "prespecification_sha256": "91d2a59caf902cc39d2e8e8492114333c2fe4bd32b60628957e778efed632a5c",
+  "addendum_a_sha256": "6aec075c1e1f28c5b9ed338d2eb9968aaf54ce120b5f6a22e843eef95116078e",
+  "protocol": {
+    "repeats": 10,
+    "folds": 10,
+    "seed": 20260918,
+    "permutations": 20000
+  },
+  "tests_rho_p_one_sided": {
+    "H1_Ak_vs_margin": [
+      -0.214,
+      0.1279
+    ],
+    "H2_Ak_vs_cv_spine_accuracy": [
+      0.067,
+      0.3578
+    ],
+    "S_a_H1_without_HORS_VOTE": [
+      -0.22,
+      0.1302
+    ],
+    "S_b_H1_CART_minus_Zig": [
+      -0.192,
+      0.1521
+    ],
+    "S_c_H1_nondegenerate_only": [
+      -0.006,
+      0.4926
+    ]
+  },
+  "n_nondegenerate": 17,
+  "counts": {
+    "datasets": 30,
+    "condition_over_all_attributes": 0,
+    "certified_prefix_deeper_than_one": 9,
+    "attributes_kept": 336,
+    "attributes_outweighing_prior": 77,
+    "spine_cv_at_least_full": [
+      "POST",
+      "HEPA",
+      "CYY",
+      "SPCT",
+      "TOUR",
+      "VOTE",
+      "CARD",
+      "FOOT",
+      "PIMA",
+      "HOF",
+      "SCOT"
+    ],
+    "spine_cv_within_1.5_of_full": [
+      "BANK",
+      "ZOO",
+      "STRK",
+      "YEAS"
+    ]
+  }
+}

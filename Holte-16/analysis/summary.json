@@ -1,0 +1,21 @@
+{
+  "spearman_agree1_vs_margin": -0.413,
+  "spearman_agree1_vs_margin_binary12": -0.525,
+  "binary12_codes": [
+    "BC",
+    "CH",
+    "G2",
+    "HD",
+    "HE",
+    "HO",
+    "HY",
+    "LA",
+    "MU",
+    "SE",
+    "VO",
+    "V1"
+  ],
+  "spearman_accgap_vs_margin": 0.343,
+  "total_objects": 20407,
+  "spine_identity_holds_everywhere": true
+}

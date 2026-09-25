@@ -1,0 +1,57 @@
+{
+  "prespecification_sha256": "91d2a59caf902cc39d2e8e8492114333c2fe4bd32b60628957e778efed632a5c",
+  "protocol": {
+    "repeats": 10,
+    "folds": 10,
+    "seed": 20260918,
+    "permutations": 20000
+  },
+  "tests_rho_p_one_sided": {
+    "H1_Ak_vs_margin": [
+      -0.324,
+      0.0413
+    ],
+    "H2_Ak_vs_cv_spine_accuracy": [
+      -0.016,
+      0.531
+    ],
+    "S_a_H1_without_HORS_VOTE": [
+      -0.334,
+      0.042
+    ],
+    "S_b_H1_CART_minus_Zig": [
+      -0.193,
+      0.1516
+    ],
+    "S_c_H1_nondegenerate_only": [
+      0.057,
+      0.5887
+    ]
+  },
+  "n_nondegenerate": 17,
+  "counts": {
+    "datasets": 30,
+    "condition_over_all_attributes": 0,
+    "certified_prefix_deeper_than_one": 10,
+    "attributes_kept": 389,
+    "attributes_outweighing_prior": 80,
+    "spine_cv_at_least_full": [
+      "POST",
+      "CYY",
+      "SPCT",
+      "VOTE",
+      "CARD",
+      "FOOT",
+      "PIMA",
+      "HOF",
+      "SCOT"
+    ],
+    "spine_cv_within_1.5_of_full": [
+      "BANK",
+      "ZOO",
+      "STRK",
+      "HORS",
+      "YEAS"
+    ]
+  }
+}
