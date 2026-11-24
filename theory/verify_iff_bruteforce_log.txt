@@ -1,0 +1,7 @@
+Part A: the Bayesian (linear threshold) classifier is a fast-and-frugal tree for every threshold if and only if w_i >= sum_{j>i} w_j
+k = 3, entries 1..12: 1728 weight vectors; condition holds for 858 (with equality somewhere for 288); FFT in decreasing order for every threshold: 858; agreement 1728, mismatches 0; any-order check mismatches 0
+k = 4, entries 1..10: 10000 weight vectors; condition holds for 960 (with equality somewhere for 792); FFT in decreasing order for every threshold: 960; agreement 10000, mismatches 0; any-order check mismatches 0
+Part B: the examples of the Methods paragraph
+example 1: Condition (1) holds: False; weaker inequality w1 = 10.1 >= w2 = 2.0: True; the Bayesian classifier is a fast-and-frugal tree for every prior: True
+example 2: base rate 1/5 for C1, factors 5, 3, 2: Condition (1) holds: False; weaker inequality holds: False; tree of Result 1 equals the Bayesian classifier on all 8 objects: True; C1 exactly when the first two attributes are present: True
+Part A mismatches: 0; Part B as stated: True

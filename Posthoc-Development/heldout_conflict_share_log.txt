@@ -1,0 +1,117 @@
+BC {'collection': 'Holte-16', 'code': 'BC', 'n': 286, 'both_verdicts': True, 'in_c': 32.5, 'in_s': 28.0, 'in_A': 76.6, 'cv_cases': 2860, 'cv_c': 32.7, 'cv_s': 29.2, 'cv_A': 76.8, 'cv_q': 53.2, 'cv_price': 1.5, 'cv_acc_tree': 70.9, 'cv_acc_full': 72.4}
+CH {'collection': 'Holte-16', 'code': 'CH', 'n': 3196, 'both_verdicts': True, 'in_c': 47.6, 'in_s': 27.7, 'in_A': 65.6, 'cv_cases': 31960, 'cv_c': 47.7, 'cv_s': 27.5, 'cv_A': 65.4, 'cv_q': 78.3, 'cv_price': 19.6, 'cv_acc_tree': 68.2, 'cv_acc_full': 87.8}
+GL {'collection': 'Holte-16', 'code': 'GL', 'n': 214, 'both_verdicts': True, 'in_c': 31.8, 'in_s': 58.8, 'in_A': 86.9, 'cv_cases': 2140, 'cv_c': 37.0, 'cv_s': 59.0, 'cv_A': 84.8, 'cv_q': 74.8, 'cv_price': 7.5, 'cv_acc_tree': 62.1, 'cv_acc_full': 69.7}
+G2 {'collection': 'Holte-16', 'code': 'G2', 'n': 163, 'both_verdicts': True, 'in_c': 36.8, 'in_s': 68.3, 'in_A': 88.3, 'cv_cases': 1630, 'cv_c': 38.8, 'cv_s': 66.5, 'cv_A': 87.0, 'cv_q': 32.1, 'cv_price': -4.7, 'cv_acc_tree': 66.3, 'cv_acc_full': 61.6}
+HD {'collection': 'Holte-16', 'code': 'HD', 'n': 303, 'both_verdicts': True, 'in_c': 29.4, 'in_s': 30.3, 'in_A': 79.5, 'cv_cases': 3030, 'cv_c': 30.3, 'cv_s': 30.0, 'cv_A': 78.8, 'cv_q': 75.1, 'cv_price': 10.7, 'cv_acc_tree': 73.7, 'cv_acc_full': 84.3}
+HE {'collection': 'Holte-16', 'code': 'HE', 'n': 155, 'both_verdicts': False, 'in_c': 32.3, 'in_s': 16.0, 'in_A': 72.9, 'cv_cases': 1550, 'cv_c': 33.2, 'cv_s': 19.1, 'cv_A': 73.2, 'cv_q': 52.6, 'cv_price': 1.4, 'cv_acc_tree': 78.3, 'cv_acc_full': 79.7}
+HO {'collection': 'Holte-16', 'code': 'HO', 'n': 368, 'both_verdicts': True, 'in_c': 32.3, 'in_s': 28.6, 'in_A': 76.9, 'cv_cases': 3680, 'cv_c': 33.8, 'cv_s': 30.9, 'cv_A': 76.6, 'cv_q': 37.3, 'cv_price': -5.9, 'cv_acc_tree': 81.5, 'cv_acc_full': 75.6}
+HY {'collection': 'Holte-16', 'code': 'HY', 'n': 3163, 'both_verdicts': False, 'in_c': 32.8, 'in_s': 63.4, 'in_A': 88.0, 'cv_cases': 31630, 'cv_c': 32.6, 'cv_s': 63.1, 'cv_A': 88.0, 'cv_q': 28.2, 'cv_price': -5.2, 'cv_acc_tree': 95.2, 'cv_acc_full': 90.0}
+IR {'collection': 'Holte-16', 'code': 'IR', 'n': 150, 'both_verdicts': True, 'in_c': 5.3, 'in_s': 25.0, 'in_A': 96.0, 'cv_cases': 1500, 'cv_c': 11.5, 'cv_s': 11.6, 'cv_A': 89.8, 'cv_q': 88.2, 'cv_price': 7.8, 'cv_acc_tree': 79.2, 'cv_acc_full': 87.0}
+LA {'collection': 'Holte-16', 'code': 'LA', 'n': 57, 'both_verdicts': True, 'in_c': 26.3, 'in_s': 13.3, 'in_A': 77.2, 'cv_cases': 570, 'cv_c': 28.1, 'cv_s': 17.5, 'cv_A': 76.8, 'cv_q': 87.9, 'cv_price': 17.5, 'cv_acc_tree': 75.4, 'cv_acc_full': 93.0}
+LY {'collection': 'Holte-16', 'code': 'LY', 'n': 148, 'both_verdicts': True, 'in_c': 43.2, 'in_s': 25.0, 'in_A': 67.6, 'cv_cases': 1480, 'cv_c': 44.2, 'cv_s': 28.0, 'cv_A': 68.2, 'cv_q': 66.7, 'cv_price': 10.6, 'cv_acc_tree': 71.8, 'cv_acc_full': 82.4}
+MU {'collection': 'Holte-16', 'code': 'MU', 'n': 8124, 'both_verdicts': True, 'in_c': 10.4, 'in_s': 79.9, 'in_A': 97.9, 'cv_cases': 81240, 'cv_c': 10.4, 'cv_s': 80.0, 'cv_A': 97.9, 'cv_q': 23.1, 'cv_price': -1.1, 'cv_acc_tree': 98.5, 'cv_acc_full': 97.4}
+SE {'collection': 'Holte-16', 'code': 'SE', 'n': 3163, 'both_verdicts': False, 'in_c': 45.7, 'in_s': 52.2, 'in_A': 78.2, 'cv_cases': 31630, 'cv_c': 46.0, 'cv_s': 52.4, 'cv_A': 78.1, 'cv_q': 31.9, 'cv_price': -7.9, 'cv_acc_tree': 90.7, 'cv_acc_full': 82.8}
+SO {'collection': 'Holte-16', 'code': 'SO', 'n': 47, 'both_verdicts': True, 'in_c': 12.8, 'in_s': 83.3, 'in_A': 97.9, 'cv_cases': 470, 'cv_c': 15.5, 'cv_s': 75.3, 'cv_A': 96.2, 'cv_q': 0.0, 'cv_price': -3.8, 'cv_acc_tree': 97.9, 'cv_acc_full': 94.0}
+VO {'collection': 'Holte-16', 'code': 'VO', 'n': 435, 'both_verdicts': True, 'in_c': 10.3, 'in_s': 37.8, 'in_A': 93.6, 'cv_cases': 4350, 'cv_c': 10.5, 'cv_s': 37.7, 'cv_A': 93.5, 'cv_q': 9.2, 'cv_price': -5.3, 'cv_acc_tree': 95.6, 'cv_acc_full': 90.3}
+V1 {'collection': 'Holte-16', 'code': 'V1', 'n': 435, 'both_verdicts': True, 'in_c': 12.9, 'in_s': 23.2, 'in_A': 90.1, 'cv_cases': 4350, 'cv_c': 13.2, 'cv_s': 22.6, 'cv_A': 89.8, 'cv_q': 51.5, 'cv_price': 0.3, 'cv_acc_tree': 86.9, 'cv_acc_full': 87.2}
+MKW08-30 BANK {'in_c': 36.0, 'in_s': 94.4, 'in_A': 98.0, 'cv_cases': 500, 'cv_c': 41.6, 'cv_s': 92.3, 'cv_A': 96.8, 'cv_q': 56.2, 'cv_price': 0.4}
+MKW08-30 SOLV {'in_c': 9.6, 'in_s': 20.0, 'in_A': 92.3, 'cv_cases': 520, 'cv_c': 15.2, 'cv_s': 32.9, 'cv_A': 89.8, 'cv_q': 75.5, 'cv_price': 5.2}
+MKW08-30 ECHO {'in_c': 41.9, 'in_s': 65.4, 'in_A': 85.5, 'cv_cases': 620, 'cv_c': 39.8, 'cv_s': 59.9, 'cv_A': 84.0, 'cv_q': 55.6, 'cv_price': 1.8}
+MKW08-30 POST {'in_c': 40.7, 'in_s': 88.6, 'in_A': 95.3, 'cv_cases': 860, 'cv_c': 42.1, 'cv_s': 88.4, 'cv_A': 95.1, 'cv_q': 28.6, 'cv_price': -2.1}
+MKW08-30 BWAY {'in_c': 34.8, 'in_s': 25.8, 'in_A': 74.2, 'cv_cases': 890, 'cv_c': 35.8, 'cv_s': 45.1, 'cv_A': 80.3, 'cv_q': 74.9, 'cv_price': 9.8}
+MKW08-30 CRED {'in_c': 43.0, 'in_s': 27.9, 'in_A': 69.0, 'cv_cases': 1000, 'cv_c': 45.4, 'cv_s': 24.7, 'cv_A': 65.8, 'cv_q': 62.3, 'cv_price': 8.4}
+MKW08-30 ZOO {'in_c': 2.0, 'in_s': 100.0, 'in_A': 100.0, 'cv_cases': 1010, 'cv_c': 3.1, 'cv_s': 90.3, 'cv_A': 99.7, 'cv_q': 100.0, 'cv_price': 0.3}
+MKW08-30 IRIS {'in_c': 0.0, 'in_s': None, 'in_A': 100.0, 'cv_cases': 1500, 'cv_c': 41.6, 'cv_s': 72.8, 'cv_A': 88.7, 'cv_q': 70.6, 'cv_price': 4.7}
+MKW08-30 HEPA {'in_c': 33.3, 'in_s': 17.6, 'in_A': 72.5, 'cv_cases': 1530, 'cv_c': 31.1, 'cv_s': 17.2, 'cv_A': 74.2, 'cv_q': 56.1, 'cv_price': 3.1}
+MKW08-30 STRK {'in_c': 25.8, 'in_s': 88.1, 'in_A': 96.9, 'cv_cases': 1630, 'cv_c': 22.0, 'cv_s': 58.2, 'cv_A': 90.8, 'cv_q': 53.3, 'cv_price': 0.6}
+MKW08-30 WINE {'in_c': 25.3, 'in_s': 55.6, 'in_A': 88.8, 'cv_cases': 1780, 'cv_c': 26.4, 'cv_s': 50.0, 'cv_A': 86.8, 'cv_q': 77.4, 'cv_price': 7.2}
+MKW08-30 CYY {'in_c': 49.7, 'in_s': 6.4, 'in_A': 53.4, 'cv_cases': 1890, 'cv_c': 50.6, 'cv_s': 4.9, 'cv_A': 51.9, 'cv_q': 40.3, 'cv_price': -9.4}
+MKW08-30 GLAS {'in_c': 35.0, 'in_s': 29.3, 'in_A': 75.2, 'cv_cases': 2140, 'cv_c': 33.0, 'cv_s': 33.2, 'cv_A': 77.9, 'cv_q': 69.5, 'cv_price': 8.6}
+MKW08-30 HORS {'in_c': 25.1, 'in_s': 32.6, 'in_A': 83.1, 'cv_cases': 3660, 'cv_c': 25.6, 'cv_s': 33.8, 'cv_A': 83.0, 'cv_q': 51.5, 'cv_price': 0.5}
+MKW08-30 SPCT {'in_c': 41.6, 'in_s': 25.2, 'in_A': 68.9, 'cv_cases': 2670, 'cv_c': 41.5, 'cv_s': 23.4, 'cv_A': 68.2, 'cv_q': 49.5, 'cv_price': -0.3}
+MKW08-30 HUNG {'in_c': 26.9, 'in_s': 24.1, 'in_A': 79.6, 'cv_cases': 2940, 'cv_c': 27.5, 'cv_s': 24.1, 'cv_A': 79.1, 'cv_q': 56.0, 'cv_price': 2.5}
+MKW08-30 CLEV {'in_c': 26.9, 'in_s': 23.8, 'in_A': 79.5, 'cv_cases': 2970, 'cv_c': 29.7, 'cv_s': 28.0, 'cv_A': 78.6, 'cv_q': 73.7, 'cv_price': 10.1}
+MKW08-30 ALCO {'in_c': 41.4, 'in_s': 51.0, 'in_A': 79.7, 'cv_cases': 3450, 'cv_c': 38.7, 'cv_s': 57.0, 'cv_A': 83.3, 'cv_q': 59.8, 'cv_price': 3.3}
+MKW08-30 IONO {'in_c': 21.4, 'in_s': 14.7, 'in_A': 81.8, 'cv_cases': 3510, 'cv_c': 27.6, 'cv_s': 11.5, 'cv_A': 75.6, 'cv_q': 76.3, 'cv_price': 12.9}
+MKW08-30 TOUR {'in_c': 37.8, 'in_s': 69.6, 'in_A': 88.5, 'cv_cases': 3650, 'cv_c': 39.5, 'cv_s': 71.9, 'cv_A': 88.9, 'cv_q': 59.5, 'cv_price': 2.1}
+MKW08-30 VOTE {'in_c': 10.3, 'in_s': 37.8, 'in_A': 93.6, 'cv_cases': 4350, 'cv_c': 10.7, 'cv_s': 39.0, 'cv_A': 93.5, 'cv_q': 9.5, 'cv_price': -5.3}
+MKW08-30 EDUC {'in_c': 37.0, 'in_s': 50.9, 'in_A': 81.8, 'cv_cases': 4350, 'cv_c': 38.7, 'cv_s': 52.7, 'cv_A': 81.7, 'cv_q': 69.5, 'cv_price': 7.1}
+MKW08-30 CARD {'in_c': 37.6, 'in_s': 43.3, 'in_A': 78.7, 'cv_cases': 5580, 'cv_c': 37.3, 'cv_s': 45.2, 'cv_A': 79.6, 'cv_q': 31.9, 'cv_price': -7.4}
+MKW08-30 FOOT {'in_c': 66.7, 'in_s': 100.0, 'in_A': 100.0, 'cv_cases': 6720, 'cv_c': 51.2, 'cv_s': 99.4, 'cv_A': 99.7, 'cv_q': 10.0, 'cv_price': -0.2}
+MKW08-30 BCW {'in_c': 10.2, 'in_s': 18.6, 'in_A': 91.7, 'cv_cases': 6830, 'cv_c': 10.2, 'cv_s': 18.4, 'cv_A': 91.7, 'cv_q': 86.3, 'cv_price': 6.0}
+MKW08-30 PIMA {'in_c': 38.9, 'in_s': 66.2, 'in_A': 86.8, 'cv_cases': 7680, 'cv_c': 39.8, 'cv_s': 67.2, 'cv_A': 86.9, 'cv_q': 43.1, 'cv_price': -1.8}
+MKW08-30 AUTH {'in_c': 22.7, 'in_s': 1.6, 'in_A': 77.6, 'cv_cases': 8410, 'cv_c': 23.3, 'cv_s': 3.1, 'cv_A': 77.5, 'cv_q': 90.8, 'cv_price': 18.4}
+MKW08-30 HOF {'in_c': 36.6, 'in_s': 14.9, 'in_A': 68.9, 'cv_cases': 13200, 'cv_c': 36.2, 'cv_s': 14.2, 'cv_A': 68.9, 'cv_q': 28.7, 'cv_price': -13.3}
+MKW08-30 YEAS {'in_c': 47.4, 'in_s': 78.1, 'in_A': 89.6, 'cv_cases': 14840, 'cv_c': 47.7, 'cv_s': 74.6, 'cv_A': 87.9, 'cv_q': 52.4, 'cv_price': 0.6}
+MKW08-30 SCOT {'in_c': 60.9, 'in_s': 100.0, 'in_A': 100.0, 'cv_cases': 40520, 'cv_c': 66.5, 'cv_s': 100.0, 'cv_A': 100.0, 'cv_q': None, 'cv_price': 0.0}
+MKW08-30-Woike BANK {'in_c': 36.0, 'in_s': 94.4, 'in_A': 98.0, 'cv_cases': 500, 'cv_c': 41.6, 'cv_s': 92.3, 'cv_A': 96.8, 'cv_q': 56.2, 'cv_price': 0.4}
+MKW08-30-Woike SOLV {'in_c': 9.6, 'in_s': 20.0, 'in_A': 92.3, 'cv_cases': 520, 'cv_c': 15.2, 'cv_s': 32.9, 'cv_A': 89.8, 'cv_q': 75.5, 'cv_price': 5.2}
+MKW08-30-Woike ECHO {'in_c': 33.9, 'in_s': 71.4, 'in_A': 90.3, 'cv_cases': 620, 'cv_c': 34.0, 'cv_s': 69.7, 'cv_A': 89.7, 'cv_q': 59.4, 'cv_price': 1.9}
+MKW08-30-Woike POST {'in_c': 19.8, 'in_s': 70.6, 'in_A': 94.2, 'cv_cases': 860, 'cv_c': 39.2, 'cv_s': 93.8, 'cv_A': 97.6, 'cv_q': 33.3, 'cv_price': -0.8}
+MKW08-30-Woike BWAY {'in_c': 31.5, 'in_s': 17.9, 'in_A': 74.2, 'cv_cases': 890, 'cv_c': 33.9, 'cv_s': 36.8, 'cv_A': 78.5, 'cv_q': 65.4, 'cv_price': 6.6}
+MKW08-30-Woike CRED {'in_c': 43.0, 'in_s': 27.9, 'in_A': 69.0, 'cv_cases': 1000, 'cv_c': 45.4, 'cv_s': 24.7, 'cv_A': 65.8, 'cv_q': 62.3, 'cv_price': 8.4}
+MKW08-30-Woike ZOO {'in_c': 2.0, 'in_s': 100.0, 'in_A': 100.0, 'cv_cases': 1010, 'cv_c': 3.1, 'cv_s': 90.3, 'cv_A': 99.7, 'cv_q': 100.0, 'cv_price': 0.3}
+MKW08-30-Woike IRIS {'in_c': 0.0, 'in_s': None, 'in_A': 100.0, 'cv_cases': 1500, 'cv_c': 41.6, 'cv_s': 72.8, 'cv_A': 88.7, 'cv_q': 70.6, 'cv_price': 4.7}
+MKW08-30-Woike HEPA {'in_c': 51.6, 'in_s': 53.2, 'in_A': 75.8, 'cv_cases': 1530, 'cv_c': 46.3, 'cv_s': 55.9, 'cv_A': 79.5, 'cv_q': 49.2, 'cv_price': -0.3}
+MKW08-30-Woike STRK {'in_c': 25.8, 'in_s': 88.1, 'in_A': 96.9, 'cv_cases': 1630, 'cv_c': 22.0, 'cv_s': 58.2, 'cv_A': 90.8, 'cv_q': 53.3, 'cv_price': 0.6}
+MKW08-30-Woike WINE {'in_c': 25.3, 'in_s': 55.6, 'in_A': 88.8, 'cv_cases': 1780, 'cv_c': 26.4, 'cv_s': 50.0, 'cv_A': 86.8, 'cv_q': 77.4, 'cv_price': 7.2}
+MKW08-30-Woike CYY {'in_c': 49.7, 'in_s': 6.4, 'in_A': 53.4, 'cv_cases': 1890, 'cv_c': 50.6, 'cv_s': 4.9, 'cv_A': 51.9, 'cv_q': 40.3, 'cv_price': -9.4}
+MKW08-30-Woike GLAS {'in_c': 35.0, 'in_s': 29.3, 'in_A': 75.2, 'cv_cases': 2140, 'cv_c': 33.0, 'cv_s': 33.2, 'cv_A': 77.9, 'cv_q': 69.5, 'cv_price': 8.6}
+MKW08-30-Woike HORS {'in_c': 28.9, 'in_s': 61.9, 'in_A': 89.0, 'cv_cases': 2180, 'cv_c': 30.2, 'cv_s': 61.2, 'cv_A': 88.3, 'cv_q': 84.8, 'cv_price': 8.2}
+MKW08-30-Woike SPCT {'in_c': 41.6, 'in_s': 25.2, 'in_A': 68.9, 'cv_cases': 2670, 'cv_c': 41.8, 'cv_s': 23.2, 'cv_A': 67.9, 'cv_q': 49.0, 'cv_price': -0.7}
+MKW08-30-Woike HUNG {'in_c': 23.5, 'in_s': 24.6, 'in_A': 82.3, 'cv_cases': 2940, 'cv_c': 24.1, 'cv_s': 25.0, 'cv_A': 81.9, 'cv_q': 63.0, 'cv_price': 4.7}
+MKW08-30-Woike CLEV {'in_c': 26.9, 'in_s': 23.8, 'in_A': 79.5, 'cv_cases': 2970, 'cv_c': 29.5, 'cv_s': 27.4, 'cv_A': 78.6, 'cv_q': 74.1, 'cv_price': 10.3}
+MKW08-30-Woike ALCO {'in_c': 41.4, 'in_s': 51.0, 'in_A': 79.7, 'cv_cases': 3450, 'cv_c': 39.4, 'cv_s': 57.8, 'cv_A': 83.4, 'cv_q': 61.7, 'cv_price': 3.9}
+MKW08-30-Woike IONO {'in_c': 21.4, 'in_s': 14.7, 'in_A': 81.8, 'cv_cases': 3510, 'cv_c': 28.2, 'cv_s': 11.7, 'cv_A': 75.1, 'cv_q': 77.8, 'cv_price': 13.9}
+MKW08-30-Woike TOUR {'in_c': 47.9, 'in_s': 100.0, 'in_A': 100.0, 'cv_cases': 3650, 'cv_c': 45.3, 'cv_s': 100.0, 'cv_A': 100.0, 'cv_q': None, 'cv_price': 0.0}
+MKW08-30-Woike VOTE {'in_c': 10.7, 'in_s': 41.9, 'in_A': 93.8, 'cv_cases': 4020, 'cv_c': 10.7, 'cv_s': 41.6, 'cv_A': 93.8, 'cv_q': 8.4, 'cv_price': -5.2}
+MKW08-30-Woike EDUC {'in_c': 37.0, 'in_s': 50.9, 'in_A': 81.8, 'cv_cases': 4350, 'cv_c': 39.5, 'cv_s': 56.8, 'cv_A': 82.9, 'cv_q': 69.2, 'cv_price': 6.6}
+MKW08-30-Woike CARD {'in_c': 45.7, 'in_s': 100.0, 'in_A': 100.0, 'cv_cases': 5580, 'cv_c': 46.3, 'cv_s': 100.0, 'cv_A': 100.0, 'cv_q': None, 'cv_price': 0.0}
+MKW08-30-Woike FOOT {'in_c': 66.7, 'in_s': 100.0, 'in_A': 100.0, 'cv_cases': 6720, 'cv_c': 48.8, 'cv_s': 99.6, 'cv_A': 99.8, 'cv_q': 30.8, 'cv_price': -0.1}
+MKW08-30-Woike BCW {'in_c': 10.2, 'in_s': 18.6, 'in_A': 91.7, 'cv_cases': 6830, 'cv_c': 10.2, 'cv_s': 18.3, 'cv_A': 91.7, 'cv_q': 86.0, 'cv_price': 6.0}
+MKW08-30-Woike PIMA {'in_c': 40.1, 'in_s': 76.9, 'in_A': 90.8, 'cv_cases': 7680, 'cv_c': 39.9, 'cv_s': 76.7, 'cv_A': 90.7, 'cv_q': 47.3, 'cv_price': -0.5}
+MKW08-30-Woike AUTH {'in_c': 22.7, 'in_s': 1.6, 'in_A': 77.6, 'cv_cases': 8410, 'cv_c': 23.2, 'cv_s': 3.2, 'cv_A': 77.6, 'cv_q': 91.2, 'cv_price': 18.5}
+MKW08-30-Woike HOF {'in_c': 35.9, 'in_s': 13.7, 'in_A': 69.0, 'cv_cases': 13200, 'cv_c': 36.4, 'cv_s': 15.1, 'cv_A': 69.1, 'cv_q': 28.8, 'cv_price': -13.1}
+MKW08-30-Woike YEAS {'in_c': 47.4, 'in_s': 78.1, 'in_A': 89.6, 'cv_cases': 14840, 'cv_c': 47.8, 'cv_s': 75.0, 'cv_A': 88.1, 'cv_q': 52.5, 'cv_price': 0.6}
+MKW08-30-Woike SCOT {'in_c': 60.9, 'in_s': 100.0, 'in_A': 100.0, 'cv_cases': 40520, 'cv_c': 67.5, 'cv_s': 100.0, 'cv_A': 100.0, 'cv_q': None, 'cv_price': 0.0}
+blood-transfusion-service-center {'in_c': 44.0, 'in_s': 40.1, 'in_A': 73.7, 'cv_cases': 7480, 'cv_c': 42.1, 'cv_s': 41.4, 'cv_A': 75.3, 'cv_q': 48.3, 'cv_price': -0.8}
+credit-g {'in_c': 38.5, 'in_s': 52.7, 'in_A': 81.8, 'cv_cases': 10000, 'cv_c': 40.4, 'cv_s': 50.5, 'cv_A': 80.0, 'cv_q': 59.8, 'cv_price': 3.9}
+qsar-biodeg {'in_c': 16.7, 'in_s': 14.2, 'in_A': 85.7, 'cv_cases': 10540, 'cv_c': 16.9, 'cv_s': 15.0, 'cv_A': 85.6, 'cv_q': 73.6, 'cv_price': 6.8}
+Fitness_Club {'in_c': 49.4, 'in_s': 100.0, 'in_A': 100.0, 'cv_cases': 15000, 'cv_c': 51.3, 'cv_s': 99.0, 'cv_A': 99.5, 'cv_q': 40.5, 'cv_price': -0.1}
+Is-this-a-good-customer {'in_c': 43.6, 'in_s': 97.1, 'in_A': 98.7, 'cv_cases': 17230, 'cv_c': 40.8, 'cv_s': 96.7, 'cv_A': 98.7, 'cv_q': 41.0, 'cv_price': -0.2}
+Marketing_Campaign {'in_c': 27.6, 'in_s': 74.8, 'in_A': 93.0, 'cv_cases': 22400, 'cv_c': 30.1, 'cv_s': 71.2, 'cv_A': 91.3, 'cv_q': 59.8, 'cv_price': 1.7}
+hazelnut-spread-contaminant-detection {'in_c': 31.2, 'in_s': 33.5, 'in_A': 79.2, 'cv_cases': 24000, 'cv_c': 31.4, 'cv_s': 33.4, 'cv_A': 79.1, 'cv_q': 54.7, 'cv_price': 2.0}
+seismic-bumps {'in_c': 37.0, 'in_s': 32.4, 'in_A': 75.0, 'cv_cases': 25840, 'cv_c': 35.9, 'cv_s': 29.9, 'cv_A': 74.9, 'cv_q': 15.8, 'cv_price': -17.2}
+Bioresponse {'in_c': 30.7, 'in_s': 4.7, 'in_A': 70.8, 'cv_cases': 37510, 'cv_c': 32.5, 'cv_s': 4.7, 'cv_A': 69.0, 'cv_q': 36.1, 'cv_price': -8.6}
+churn {'in_c': 40.6, 'in_s': 91.3, 'in_A': 96.5, 'cv_cases': 50000, 'cv_c': 41.3, 'cv_s': 91.5, 'cv_A': 96.5, 'cv_q': 51.2, 'cv_price': 0.1}
+polish_companies_bankruptcy {'in_c': 36.0, 'in_s': 8.0, 'in_A': 66.9, 'cv_cases': 59100, 'cv_c': 36.1, 'cv_s': 8.5, 'cv_A': 66.9, 'cv_q': 15.0, 'cv_price': -23.1}
+taiwanese_bankruptcy_prediction {'in_c': 26.3, 'in_s': 8.1, 'in_A': 75.8, 'cv_cases': 68190, 'cv_c': 26.3, 'cv_s': 8.4, 'cv_A': 75.9, 'cv_q': 11.6, 'cv_price': -18.5}
+NATICUSdroid {'in_c': 28.3, 'in_s': 22.7, 'in_A': 78.1, 'cv_cases': 74910, 'cv_c': 28.4, 'cv_s': 22.8, 'cv_A': 78.1, 'cv_q': 90.5, 'cv_price': 17.7}
+coil2000_insurance_policies {'in_c': 36.0, 'in_s': 52.2, 'in_A': 82.8, 'cv_cases': 98220, 'cv_c': 36.1, 'cv_s': 52.3, 'cv_A': 82.8, 'cv_q': 14.7, 'cv_price': -12.1}
+Bank_Customer_Churn {'in_c': 43.4, 'in_s': 79.8, 'in_A': 91.2, 'cv_cases': 100000, 'cv_c': 43.3, 'cv_s': 79.7, 'cv_A': 91.2, 'cv_q': 57.0, 'cv_price': 1.2}
+heloc {'in_c': 19.8, 'in_s': 45.9, 'in_A': 89.3, 'cv_cases': 10459, 'cv_c': 19.8, 'cv_s': 45.9, 'cv_A': 89.3, 'cv_q': 48.2, 'cv_price': -0.4}
+jm1 {'in_c': 47.3, 'in_s': 9.5, 'in_A': 57.1, 'cv_cases': 10885, 'cv_c': 47.4, 'cv_s': 9.5, 'cv_A': 57.1, 'cv_q': 27.0, 'cv_price': -19.7}
+E-CommereShippingData {'in_c': 55.5, 'in_s': 98.9, 'in_A': 99.4, 'cv_cases': 10999, 'cv_c': 55.5, 'cv_s': 98.8, 'cv_A': 99.4, 'cv_q': 56.3, 'cv_price': 0.1}
+online_shoppers_intention {'in_c': 32.2, 'in_s': 79.4, 'in_A': 93.4, 'cv_cases': 12330, 'cv_c': 32.2, 'cv_s': 79.6, 'cv_A': 93.4, 'cv_q': 19.7, 'cv_price': -4.0}
+in_vehicle_coupon_recommendation {'in_c': 41.6, 'in_s': 46.3, 'in_A': 77.6, 'cv_cases': 12684, 'cv_c': 42.0, 'cv_s': 45.9, 'cv_A': 77.3, 'cv_q': 58.8, 'cv_price': 4.0}
+HR_Analytics_Job_Change_of_Data_Scientists {'in_c': 38.3, 'in_s': 39.3, 'in_A': 76.8, 'cv_cases': 19158, 'cv_c': 38.4, 'cv_s': 40.0, 'cv_A': 77.0, 'cv_q': 47.7, 'cv_price': -1.1}
+credit_card_clients_default {'in_c': 23.6, 'in_s': 51.6, 'in_A': 88.6, 'cv_cases': 30000, 'cv_c': 23.7, 'cv_s': 51.7, 'cv_A': 88.6, 'cv_q': 54.8, 'cv_price': 1.1}
+Amazon_employee_access {'in_c': 46.0, 'in_s': 100.0, 'in_A': 100.0, 'cv_cases': 32769, 'cv_c': 44.2, 'cv_s': 100.0, 'cv_A': 100.0, 'cv_q': None, 'cv_price': 0.0}
+bank-marketing {'in_c': 24.6, 'in_s': 45.5, 'in_A': 86.6, 'cv_cases': 45211, 'cv_c': 24.8, 'cv_s': 46.3, 'cv_A': 86.7, 'cv_q': 28.4, 'cv_price': -5.8}
+kddcup09_appetency {'in_c': 18.9, 'in_s': 38.3, 'in_A': 88.3, 'cv_cases': 50000, 'cv_c': 20.5, 'cv_s': 38.3, 'cv_A': 87.4, 'cv_q': 3.2, 'cv_price': -11.8}
+Diabetes130US {'in_c': 41.8, 'in_s': 98.3, 'in_A': 99.3, 'cv_cases': 71518, 'cv_c': 41.5, 'cv_s': 98.2, 'cv_A': 99.3, 'cv_q': 21.3, 'cv_price': -0.4}
+APSFailure {'in_c': 20.7, 'in_s': 16.1, 'in_A': 82.6, 'cv_cases': 76000, 'cv_c': 20.5, 'cv_s': 16.1, 'cv_A': 82.8, 'cv_q': 9.7, 'cv_price': -13.9}
+customer_satisfaction_in_airline {'in_c': 41.7, 'in_s': 13.5, 'in_A': 64.0, 'cv_cases': 129880, 'cv_c': 41.6, 'cv_s': 13.4, 'cv_A': 63.9, 'cv_q': 68.3, 'cv_price': 13.2}
+GiveMeSomeCredit {'in_c': 17.9, 'in_s': 71.9, 'in_A': 95.0, 'cv_cases': 150000, 'cv_c': 17.9, 'cv_s': 71.8, 'cv_A': 95.0, 'cv_q': 45.0, 'cv_price': -0.5}
+
+MEDIANS (percent; price in points)
+Holte-16 all 16 in_c 32.0 in_s 29.5 in_A 83.2 | cv_c 32.7 cv_s 30.5 (n_s 16 ) cv_A 81.8 cv_1-A 18.2 cv_q 52.1 cv_price 0.9
+Holte-16 both 13 in_c 29.4 in_s 28.6 in_A 86.9 | cv_c 30.3 cv_s 30.0 (n_s 13 ) cv_A 84.8 cv_1-A 15.2 cv_q 53.2 cv_price 1.5
+MKW08-30 all 30 in_c 35.5 in_s 37.8 in_A 84.3 | cv_c 36.8 cv_s 45.2 (n_s 30 ) cv_A 83.7 cv_1-A 16.3 cv_q 56.2 cv_price 1.9
+MKW08-30 both 17 in_c 25.8 in_s 35.2 in_A 86.8 | cv_c 27.6 cv_s 39.0 (n_s 17 ) cv_A 86.8 cv_1-A 13.2 cv_q 69.5 cv_price 4.7
+MKW08-30-Woike all 30 in_c 34.5 in_s 51.0 in_A 89.3 | cv_c 37.8 cv_s 56.3 (n_s 30 ) cv_A 88.2 cv_1-A 11.8 cv_q 62.3 cv_price 1.3
+MKW08-30-Woike both 17 in_c 25.8 in_s 46.4 in_A 90.3 | cv_c 29.5 cv_s 50.0 (n_s 17 ) cv_A 88.7 cv_1-A 11.3 cv_q 69.5 cv_price 5.2
+TabArena-29 all 29 in_c 36.0 in_s 45.9 in_A 85.7 | cv_c 36.1 cv_s 45.9 (n_s 29 ) cv_A 85.6 cv_1-A 14.4 cv_q 46.4 cv_price -0.4
+TabArena-29 both 13 in_c 31.2 in_s 46.3 in_A 85.7 | cv_c 32.2 cv_s 45.9 (n_s 13 ) cv_A 85.6 cv_1-A 14.4 cv_q 56.3 cv_price 1.7
+saved 105 rows; every held-out disagreement was a conflict; 1-A = c(1-s) and the price identity held in whole cases; saved accuracies, A, q and in-sample c, s reproduced
+exit 0

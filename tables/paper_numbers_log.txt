@@ -1,0 +1,50 @@
+== Summary paragraph
+certified depth 2 or 3 (Holte kmax, MKW kmax, TabArena certified_depth): [7, 10, 15] total 32 of 75 | deepest certified depth: 3
+median agreement A over all 75 datasets (one-decimal rule): 84.0 | unrounded: 84.0323
+trees that offer both verdicts: 43 | median price over the 43: 2.0 | negative: 11
+== Section 3
+Holte-16: attributes kept 273, attributes that outweigh the prior singly 100, datasets where Condition (1) holds over all attributes 0
+MKW08-30: attributes kept 389, attributes that outweigh the prior singly 80, datasets where Condition (1) holds over all attributes 1
+TabArena-29: attributes kept 2870, attributes that outweigh the prior singly 168, datasets where Condition (1) holds over all attributes 0
+all three: 348 of 3,532 attributes outweigh the prior log-odds of their dataset
+median A, all datasets: ['81.8', '83.7', '85.6'] -> whole percent [82, 84, 86]
+median c, all datasets: ['32.7', '36.8', '36.1'] -> whole percent [33, 37, 36]
+median s, all datasets: ['30.4', '45.2', '45.9'] -> whole percent [30, 45, 46]
+trees that offer both verdicts: [13, 17, 13] | one-class trees: [3, 13, 16]
+questions asked by the 43 trees: one 28 two 14 three 1 | stop before their certified depth: 10 ['HO', 'MU', 'VO', 'BANK', 'ZOO', 'IRIS', 'VOTE', 'Fitness_Club', 'hazelnut-spread-contaminant-detection', 'heloc']
+median gain of the 43 trees over the base rate (share of the larger class), points: ['17.1', '18.8', '5.0']
+median price by collection: ['1.5', '4.7', '1.7']
+of the 43: price <= 0 (tree matches or exceeds B): 11 | 0 < price <= 1.5: 8 | price > 1.5: 24 from 1.7 to 19.6
+Iris (thirty): tree 62.9 Bayesian classifier 67.5 | Woike's CART at 90% training: 95.0
+TabArena tasks where the Bayesian classifier is below the base rate: 15 of 29
+the thirty, one-class trees: 13 | median base rate: 77.2
+== Methods
+objects: Holte 20,407 + thirty 15,120 = 35,527; Woike's files 14,939; TabArena cases 723,935 (identity mismatches: cases 0, profiles 0)
+attribute lists against Woike's counts: equal 21 | more 9 | fewer 0
+row rules of the thirty: no reduction 18 | a reduction 9 ['ECHO', 'POST', 'BWAY', 'HEPA', 'CLEV', 'TOUR', 'EDUC', 'BCW', 'HOF'] | transposed count 1 | not reconstructed ['HORS', 'VOTE']
+sources of the thirty (manifest families): {'ACD': 10, 'UCI': 16, 'StatLib': 2, 'UCLA Statistics (dead) via hbiostat and the Internet Archive': 1, 'OpenML': 1}
+Woike's published Iris accuracy, LR, by block: {'fit95': '74', 'pred15': '70', 'pred50': '73', 'pred90': '71'}
+Woike's published Iris accuracy, CT, by block: {'fit95': '98', 'pred15': '83', 'pred50': '94', 'pred90': '95'}
+TabArena tasks with more than 10,000 cases (one repetition): 14 | every other task with ten repetitions: True
+ties of the two classes: [('hazelnut-spread-contaminant-detection', '2400', '50.0'), ('BANK', '50', '50.0')]
+TabArena: flagged tasks 20 | median G flagged, unflagged [8.21, 46.83] | median gain of the 13 two-verdict trees over the base rate 5.01
+TabArena: H4 tests {'partial_rho': -0.334, 'p_one_sided': 0.04935, 'n': 29} {'partial_rho': -0.656, 'p_one_sided': 5e-05, 'n': 29} | H3 {'rho': -0.026, 'p_one_sided': 0.44768, 'n': 29}
+TabArena descriptive variants of H4b: rho [-0.641, -0.548, -0.625] p [5e-05, 0.0018, 0.0022]
+TabArena descriptive variants of H4a: rho [-0.398, -0.18, -0.289] p [0.02485, 0.17969, 0.10344]
+exploratory correlations on the sixteen: 60 | strongest: Ak_agree_spine|holte_margin|binary12 {'rho': -0.771, 'perm_p_two_sided': 0.005, 'n': 12}
+== Extended Data Table 1 (quantities derived from per-dataset files)
+primary: median in sample A 84.3, c 35.5, s 37.8 | out of sample A 83.7, c 36.8, s 45.2
+primary: median cross-validated accuracy, tree 75.8, Bayesian classifier 78.5
+primary: the 17 two-verdict trees: median disagreement 13.2, q 69.5, price 4.7; negative prices [('VOTE', '-5.3'), ('PIMA', '-1.8')]
+primary: one-class trees 13; published tree (Zig, 90%) below the base rate: 9 of the one-class datasets, 0 of the others
+primary: median gain of the better of LR and CART over the base rate, points: 1.9 (one-class) against 25.5
+primary: Bayesian classifier below the base rate out of sample, among the one-class datasets: 6 ['POST', 'CYY', 'SPCT', 'CARD', 'FOOT', 'HOF']
+primary: Spearman rho(Ak, margin) within the one-class datasets: -0.66
+Woike's files: median in sample A 89.3, c 34.5, s 51.0 | out of sample A 88.2, c 37.8, s 56.3
+Woike's files: median cross-validated accuracy, tree 76.0, Bayesian classifier 78.0
+Woike's files: the 17 two-verdict trees: median disagreement 11.3, q 69.5, price 5.2; negative prices [('VOTE', '-5.2'), ('PIMA', '-0.5')]
+Woike's files: one-class trees 13; published tree (Zig, 90%) below the base rate: 9 of the one-class datasets, 0 of the others
+Woike's files: median gain of the better of LR and CART over the base rate, points: 1.9 (one-class) against 25.5
+Woike's files: Bayesian classifier below the base rate out of sample, among the one-class datasets: 6 ['POST', 'HEPA', 'CYY', 'SPCT', 'FOOT', 'HOF']
+Woike's files: Spearman rho(Ak, margin) within the one-class datasets: -0.48
+Extended Data Table 2: datasets with a difference 12 | other datasets 18 with identical in-sample quantities; largest difference in cross-validated accuracy there: 0.8

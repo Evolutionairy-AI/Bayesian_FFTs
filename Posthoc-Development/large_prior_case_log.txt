@@ -1,0 +1,5 @@
+Holte-16: 0 of 16 datasets meet the large-prior case over all kept attributes
+MKW08-30: 2 of 30 datasets meet the large-prior case over all kept attributes (code, prior log-odds, combined opposing evidence, kept attributes): [('FOOT', 0.71, -0.6, 4), ('SCOT', 3.13, -1.0, 6)]
+MKW08-30-Woike: 4 of 30 datasets meet the large-prior case over all kept attributes (code, prior log-odds, combined opposing evidence, kept attributes): [('TOUR', 1.19, -0.86, 4), ('CARD', 1.66, -1.09, 8), ('FOOT', 0.71, -0.6, 4), ('SCOT', 3.13, -1.0, 6)]
+TabArena-29: 1 of 29 datasets meet the large-prior case over all kept attributes (code, prior log-odds, combined opposing evidence, kept attributes): [('Amazon_employee_access', 2.79, -1.1, 9)]
+the first two collections together: 2; all three: 3
