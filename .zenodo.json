@@ -1,0 +1,25 @@
+{
+  "title": "Bayesian fast-and-frugal trees: code and results for \"The price or bonus of transparency\"",
+  "upload_type": "software",
+  "description": "<p>The harness, the build and analysis scripts, and the results files that reproduce every number in the paper <em>The price or bonus of transparency: Bayesian fast-and-frugal trees</em>, by Alex Bogdan and Konstantinos V. Katsikopoulos. The raw datasets are not included: <code>fetch_data.py</code> downloads each file from its public source and checks it against the SHA-256 recorded when it was first retrieved. See the README for what each folder holds and how to rerun the analyses.</p>",
+  "creators": [
+    {
+      "name": "Bogdan, Alex",
+      "affiliation": "Evolutionairy.ai, Toronto, Canada"
+    },
+    {
+      "name": "Katsikopoulos, Konstantinos V.",
+      "affiliation": "University of Southampton Business School, Southampton, UK",
+      "orcid": "0000-0002-9572-1980"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "fast-and-frugal trees",
+    "Bayesian classifier",
+    "decision trees",
+    "transparency",
+    "interpretability",
+    "heuristics"
+  ]
+}

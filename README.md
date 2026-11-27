@@ -1,6 +1,6 @@
 # Bayesian fast-and-frugal trees: code and results
 
-Code, pre-specification and results for the paper *The price or bonus of transparency: Bayesian fast-and-frugal trees*, by Alex Bogdan and Konstantinos V. Katsikopoulos. Citation details will be added on publication.
+Code and results for the paper *The price or bonus of transparency: Bayesian fast-and-frugal trees*, by Alex Bogdan and Konstantinos V. Katsikopoulos. Citation details will be added on publication.
 
 The repository holds every script that produced a number in the paper and the output files of those runs. It does not hold the raw data: `fetch_data.py` downloads each public file from its source and checks it against the SHA-256 recorded when it was first retrieved.
 
@@ -92,7 +92,7 @@ Superseded, kept for the record:
 
 ## Pre-specification
 
-A pre-specification fixed the confirmatory analysis of the thirty before any quantity was computed on them (frozen on 19 September 2026); Addendum A fixed the single re-run on Woike's files (21 September 2026), and Addendum B fixed the test on TabArena (24 September 2026). These three documents are not part of this repository for now. The drivers read them from `MKW08-30/analysis/` (`PRESPECIFICATION_FROZEN.md`, `ADDENDUM_A_FROZEN.md`, `ADDENDUM_B_FROZEN.md`) and refuse to run without them, so the confirmatory drivers run here only in their self-test modes (`--selftest` and `--smoke`).
+A pre-specification fixed the confirmatory analysis of the thirty before any quantity was computed on them (frozen on 19 September 2026); Addendum A fixed the single re-run on Woike's files (21 September 2026), and Addendum B fixed the test on TabArena (24 September 2026). These three documents are not part of this repository; they are available from the corresponding author on request. The drivers read them from `MKW08-30/analysis/` (`PRESPECIFICATION_FROZEN.md`, `ADDENDUM_A_FROZEN.md`, `ADDENDUM_B_FROZEN.md`) and refuse to run without them, so the confirmatory drivers run here only in their self-test modes (`--selftest` and `--smoke`).
 
 Each driver recorded the SHA-256 of the documents it read in the summary it wrote (`prespecification_sha256` in `MKW08-30/analysis/confirmatory_summary.json`; `addendum_a_sha256` in `robustness_woike_summary.json`; `addendum_b_sha256` in `TabArena-Binary/analysis/tabarena_summary.json`), so a copy of any of them can be checked against the run that used it:
 
@@ -104,7 +104,7 @@ The history of this repository begins after the runs, so it does not time-stamp 
 
 ## What is not here, and why
 
-- **The frozen pre-specification and addenda.** Not included for now (see Pre-specification).
+- **The frozen pre-specification and addenda.** Available from the corresponding author on request (see Pre-specification).
 - **Raw data.** The datasets remain under their sources' terms (UCI Machine Learning Repository, the companion site of Simonoff's *Analyzing Categorical Data*, StatLib, hbiostat.org, OpenML); `fetch_data.py` downloads them, and each collection's `SOURCES.md` records where every file came from.
 - **Woike's files.** The robustness analysis used the thirty data files of Jan K. Woike's dissertation, which he supplied privately; they are not redistributed. The outputs of that analysis are included, and `tables/make_paper_tables.py` tabulates Extended Data Table 2 from them; the outputs themselves, and the cell-by-cell comparison of his files with ours, cannot be recomputed from this repository.
 - **Papers and dissertations.** PDF copies mentioned in the collection READMEs (under `references/`) are not included. As part of its acquisition step, `Holte-16/scripts/holte16.py` downloads the author-hosted copy of Holte (1993) and checks its SHA-256.
