@@ -2,6 +2,8 @@
 
 Code and results for the paper *The price or bonus of transparency: Bayesian fast-and-frugal trees*, by Alex Bogdan and Konstantinos V. Katsikopoulos. Citation details will be added on publication.
 
+Archived at Zenodo: https://doi.org/10.5281/zenodo.24598484 (release v1.0, the version cited in the paper; all versions: https://doi.org/10.5281/zenodo.24598481).
+
 The repository holds every script that produced a number in the paper and the output files of those runs. It does not hold the raw data: `fetch_data.py` downloads each public file from its source and checks it against the SHA-256 recorded when it was first retrieved.
 
 ## Contents
